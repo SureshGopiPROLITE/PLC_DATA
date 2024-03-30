@@ -11,100 +11,9 @@ from datetime import datetime
 import time
 from PyQt5 import QtWidgets
 from timeloop import Timeloop
-
-
-
-class Worker(QThread):
-    data_logged = pyqtSignal(str)
-
-    # def __init__(self, offsets_df, plc, cursor, conn):
-    #     super(Worker, self).__init__()
-    #     self.offsets_df = offsets_df
-    #     self.plc = plc
-    #     self.cursor = cursor
-    #     self.conn = conn
-
-    def plc_connect(self):
-        # if self.worker is None or not self.worker.isRunning():
-            self.offsets_df = pd.read_excel("C:\prolite\Plc_data\PLC_DB_Access.xlsx")
-            try:
-                self.plc = snap7.client.Client()
-                self.plc.connect('192.168.0.1', 0, 1)
-
-                self.conn = pyodbc.connect(
-                    'DRIVER=SQL Server;'
-                    'SERVER=SURESHGOPI;'
-                    'DATABASE=PLCDB2;'
-                )
-                self.cursor = self.conn.cursor()
-                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                self.log.append('PLC is connected', timestamp)
-                self.run()
-
-                self.worker = Worker(self.offsets_df, self.plc, self.cursor, self.conn)
-                self.worker.data_logged.connect(self.update_log)
-                self.worker.start()
-
-            except Exception as e:
-                self.log.append('PLC is not connected: {}'.format(e))
-        # else:
-            # self.log.append('PLC connection is already in progress.')
-
-    def plc_disconnect(self):
-        # if self.worker and self.worker.isRunning():
-            # self.worker.quit()  # Request the thread to exit
-            # self.worker.wait()  # Wait for the thread to exit
-        # t1.stop()
-        self.log.append('PLC is Disconnected')
-
-    def update_log(self, message):
-        self.log.append(message)
-
-
-    def run(self):
-        try:
-            if t2 == True:
-                for index, row in self.offsets_df.iterrows():
-                    db_number = row['db_number']
-                    start_offset = row['start_offset']
-                    data_type = row['data_type']
-                    name = row['Name']
-                    bit_offset = row['bit_offset']
-                    self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
-                time.sleep(5)
-            
-
-        except KeyboardInterrupt:
-            print("Program terminated by user.")
-
-        finally:
-            self.cursor.close()
-            self.conn.close()
-            self.plc.disconnect()
-
-    def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
-        if data_type == 'BOOL':
-            reading = self.plc.db_read(db_number, start_offset, 1)
-            value = snap7.util.get_bool(reading, 0, bit_offset)
-        elif data_type == 'REAL':
-            reading = self.plc.db_read(db_number, start_offset, 4)
-            value = struct.unpack('>f', reading)[0]
-        elif data_type == 'INT':
-            reading = self.plc.db_read(db_number, start_offset, 2)
-            value = struct.unpack('>h', reading)[0]
-        else:
-            print("Unsupported data type:", data_type)
-            return
-        
-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        log_message = 'DB Number: {}, Start Offset: {}, Data Type: {}, Value: {}, Name: {}'.format(db_number, start_offset, data_type, value, name)
-
-        self.data_logged.emit(log_message)
-
-        self.cursor.execute('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
-                            VALUES (?, ?, ?, ?)''', (timestamp, name, data_type, value))
-        self.conn.commit()
-
+import requests
+import time
+import concurrent.futures
 
 
 
@@ -124,8 +33,46 @@ class PLCDataLogger(QMainWindow):
 
         self.log = self.findChild(QtWidgets.QTextEdit, 'textStatus')
 
-        self.worker = None
+        
+    # with concurrent.futures.ThreadPoolExecutor() as executor:
+    #     if con_status == True:
+    #         executor.submit(run_logging, offsets_df) 
+    
+    def plc_connect(self):
+        self.offsets_df = pd.read_excel("C:\prolite\Plc_data\PLC_DB_Access.xlsx")
+        print(self.offsets_df)
+        try:
+            self.plc = snap7.client.Client()
+            self.plc.connect('192.168.0.1', 0, 1)
 
+            self.conn = pyodbc.connect(
+                'DRIVER=SQL Server;'
+                'SERVER=SURESHGOPI;'
+                'DATABASE=PLCDB2;'
+            )
+            self.cursor = self.conn.cursor()
+            # timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            self.log.append('PLC is connected')
+            self.con_status = True
+            print(self.con_status)
+            
+
+        except Exception as e:
+            self.log.append('PLC is not connected: {}'.format(e))
+    # if self.con_status == True:
+    #     executor.submit(run_logging, )
+
+    def plc_disconnect(self):
+        # Disconnect from PLC
+        self.plc.disconnect()
+        # Close SQL Server connection
+        self.cursor.close()
+        self.log.append('PLC is Disconnected')
+        self.con_status = False
+        print(self.con_status)
+
+    def update_log(self, message):
+        self.log.append(message)
 
     
     
@@ -171,9 +118,51 @@ class PLCDataLogger(QMainWindow):
         file_name, _ = QFileDialog.getSaveFileName(self, "Save File", "", "Excel files (*.xlsx)")
         if file_name:
             df.to_excel(file_name, index=False)
-t2 = PLCDataLogger()
-# t1 = Worker()
-   
+            
+    def run_logging(self):
+        try:
+            self.log.append('PLC is connected')
+            # Loop to log data every 5 seconds until interrupted
+            for index, row in self.offsets_df.iterrows():
+                db_number = row['db_number']
+                start_offset = row['start_offset']
+                data_type = row['data_type']
+                name = row['Name']
+                bit_offset = row['bit_offset']
+                print(db_number, start_offset, data_type, name)
+                self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
+            time.sleep(5)  # Sleep for 5 second
+        except KeyboardInterrupt:
+            print("Program terminated by user.")
+
+        finally:
+            self.cursor.close()
+            self.conn.close()
+            self.plc.disconnect()
+
+    def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
+        if data_type == 'BOOL':
+            reading = self.plc.db_read(db_number, start_offset, 1)
+            value = snap7.util.get_bool(reading, 0, bit_offset)
+        elif data_type == 'REAL':
+            reading = self.plc.db_read(db_number, start_offset, 4)
+            value = struct.unpack('>f', reading)[0]
+        elif data_type == 'INT':
+            reading = self.plc.db_read(db_number, start_offset, 2)
+            value = struct.unpack('>h', reading)[0]
+        else:
+            print("Unsupported data type:", data_type)
+            return
+        
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        log_message = 'DB Number: {}, Start Offset: {}, Data Type: {}, Value: {}, Name: {}'.format(db_number, start_offset, data_type, value, name)
+
+        self.data_logged.emit(log_message)
+
+        self.cursor.execute('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
+                            VALUES (?, ?, ?, ?)''', (timestamp, name, data_type, value))
+        self.conn.commit()
+    
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

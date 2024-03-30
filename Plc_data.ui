@@ -236,7 +236,7 @@ font: 8pt &quot;Poppins&quot;;
          <x>0</x>
          <y>10</y>
          <width>701</width>
-         <height>701</height>
+         <height>741</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -277,7 +277,17 @@ background-color: #191C24;
           <x>40</x>
           <y>180</y>
           <width>631</width>
-          <height>461</height>
+          <height>221</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QListView" name="listView">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>420</y>
+          <width>631</width>
+          <height>241</height>
          </rect>
         </property>
        </widget>
