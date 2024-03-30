@@ -54,7 +54,7 @@ class Worker(QThread):
         # if self.worker and self.worker.isRunning():
             # self.worker.quit()  # Request the thread to exit
             # self.worker.wait()  # Wait for the thread to exit
-        t1.stop()
+        # t1.stop()
         self.log.append('PLC is Disconnected')
 
     def update_log(self, message):
