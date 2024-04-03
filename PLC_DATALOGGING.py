@@ -32,11 +32,11 @@ class PLCDataLogger(QMainWindow):
         self.navHelp.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.helpPage))
 
         self.log = self.findChild(QtWidgets.QTextEdit, 'textStatus')
-
         
-    # with concurrent.futures.ThreadPoolExecutor() as executor:
-    #     if con_status == True:
-    #         executor.submit(run_logging, offsets_df) 
+        
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+        #     if con_status == True:
+            executor.submit(self.plc_connect) 
     
     def plc_connect(self):
         self.offsets_df = pd.read_excel("C:\prolite\Plc_data\PLC_DB_Access.xlsx")
