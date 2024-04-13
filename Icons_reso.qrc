@@ -1,0 +1,9 @@
+<RCC>
+  <qresource>
+    <file>Icons/export.png</file>
+    <file>Icons/help.png</file>
+    <file>Icons/home.png</file>
+    <file>Icons/import.png</file>
+    <file>Icons/lod.png</file>
+  </qresource>
+</RCC>

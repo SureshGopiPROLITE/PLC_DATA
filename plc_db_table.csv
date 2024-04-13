@@ -2618,6 +2618,6 @@ GeometryConvexHullAggregate,sys,aggregate function
 GeometryEnvelopeAggregate,sys,aggregate function
 GeometryUnionAggregate,sys,aggregate function
 ORMask,sys,aggregate function
-sp_FuzzyLookupTableMaintenanceInstall,sys," assembly stored procedure"
-sp_FuzzyLookupTableMaintenanceInvoke,sys," assembly stored procedure"
-sp_FuzzyLookupTableMaintenanceUninstall,sys," assembly stored procedure"
+sp_FuzzyLookupTableMaintenanceInstall,sys, assembly stored procedure
+sp_FuzzyLookupTableMaintenanceInvoke,sys, assembly stored procedure
+sp_FuzzyLookupTableMaintenanceUninstall,sys, assembly stored procedure
