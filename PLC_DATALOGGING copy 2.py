@@ -257,22 +257,27 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 # print(self.dfPlcdb)
                   
     def run_logging(self):
-        try:  
+        try: 
+            self.logField.append('PLC data fetching')
             while self.local_connStatus == True:
                 # if local_connStatus == True:
-                self.logField.append('PLC data fetching')
                 # Loop to log data every 5 seconds until interrupted
                 for index, row in self.dfPlcdb.iterrows():
                     db_number = row['db_number']
+                    db_number = int(db_number)
                     start_offset = row['start_offset']
+                    start_offset = int(start_offset)
                     data_type = row['data_type']
                     name = row['Name']
                     bit_offset = row['bit_offset']
-                    print(db_number, start_offset, data_type, name)
+                    bit_offset = int(bit_offset)
+                    print(db_number, start_offset, bit_offset, data_type, name)
                     self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
                 time.sleep(5)  # Sleep for 5 second
         except KeyboardInterrupt:
             print("Program terminated by user.")
+
+
                                                                                     
     def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
         try:
@@ -301,8 +306,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 print((f"Error: {e}"))
     
     def show_data(self):
-        from_time = self.from_time.dateTime().toString(Qt.ISODate)
-        to_time = self.to_time.dateTime().toString(Qt.ISODate)
+        from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
+        to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
 
         # Query database for data between specified timestamps
         query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
@@ -318,11 +323,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 model.setItem(row_num, col_num, item)
 
         # Set the model for the QTableView
-        self.table_view.setModel(model)
+        self.Ui.table_view.setModel(model)
 
     def export_data(self):
         # Get the data from the QStandardItemModel
-        model = self.table_view.model()
+        model = self.Ui.table_view.model()
         if not model:
             return  # No data to export
                             
