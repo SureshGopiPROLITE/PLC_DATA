@@ -18,11 +18,11 @@ print(gma())
 from sqlalchemy import create_engine
 from PyQt5.QtCore import QTimer
 # from Welcome_plc_ui import Ui_WelcomeWindow
-global connStatus
+global local_connStatus
 global A
 
 executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
-
+global plc
 
 
 class PLCDataLogger(QtWidgets.QMainWindow):
@@ -33,19 +33,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
         self.btnConnectDb.clicked.connect(self.dbConnection)
         # self.btnConnectDb.clicked.connect(self.openWindow)
-
-          # Create a QTimer instance
-        self.timer = QTimer(self)
-        # Connect the timeout signal to a method
-        self.timer.timeout.connect(self.timer_callback)
-        # Start the timer with an interval (in milliseconds)
-        self.timer.start(1000) 
     
-    def timer_callback(self):
-        # This method will be called each time the timer times out
-        # Implement your timer logic here
-        pass
-
     def openWindow(self):
         if self.local_A == True & self.dateExp == True:
             self.window = QtWidgets.QMainWindow()
@@ -54,17 +42,16 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             Mainwindow.hide()
             self.window.show()
             
-            # self.log = self.findChild(QtWidgets.QTextEdit, 'textStatus')
-            # self.logField = self.findChild(QtWidgets.QTextEdit, 'logField')
-            # self.logImp = self.findChild(QtWidgets.QTextEdit, 'logImp')
-            # self.Ui.logImp.setObjectName("logImp")
             self.logImp = self.Ui.logImp
             self.logField = self.Ui.logField
             self.log = self.Ui.textStatus
             self.Ui.show_data_btn.clicked.connect(self.show_data)
             self.Ui.export_btn.clicked.connect(self.export_data)
+            # self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
             self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
             self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
+            # self.Ui.btnConnect.clicked.connect(self.dfPlc())
+            self.Ui.sampleBtn.clicked.connect(self.run_logging)
             self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
             self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
             self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
@@ -74,20 +61,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         else:
             self.logcon.append('Error: Contact admin')
             
-    def authentication(self):
-        for index, row in self.dfInfo.iterrows():
-            if row['Particulars'] == 'Local_System_Macid':
-                if row['Info'] == gma():
-                    print(self.dfInfo)
-                    self.local_A = True
-                    return self.local_A
-                else:
-                    print(self.dfInfo)
-                    self.local_A = False
-                    return self.local_A             
-                     
-        # return 2
-   
     def restrict_soft(self):
         for index, row in self.dfInfo.iterrows():
             if row['Particulars'] == 'Software_type':
@@ -128,7 +101,21 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                     pass
             # Check for other restrictions and return True if all conditions are met
         return self.dateExp
-
+ 
+    def authentication(self):
+        for index, row in self.dfInfo.iterrows():
+            if row['Particulars'] == 'Local_System_Macid':
+                if row['Info'] == gma():
+                    print(self.dfInfo)
+                    self.local_A = True
+                    return self.local_A
+                else:
+                    print(self.dfInfo)
+                    self.local_A = False
+                    return self.local_A             
+                     
+        # return 2
+   
     def thread_and_handle(self, func):
         future = executor.submit(func)
         future.add_done_callback(self.handle_result)
@@ -173,24 +160,25 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             print("DB Connected", self.cursor)
             print("DB Connected", self.conn)
             self.log.append('PLC is connected')
-            local_connStatus = True
+            self.local_connStatus = True
             self.dfPlc()
-            self.run_logging(local_connStatus)
+            self.run_logging()
         except Exception as e:
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
-            local_connStatus = False
-        return local_connStatus
+            self.local_connStatus = False
+        return self.local_connStatus
 
     def plcDisconnect(self):
         try:
             self.plc.disconnect()
             self.log.append('PLC is Disconnected')
-            local_connStatus = False
+            self.local_connStatus = False
+            self.run_logging()
         except Exception as e:
             print("Error while disconnecting:", e)
-            local_connStatus = False
-        return local_connStatus
+            self.local_connStatus = False
+        return self.local_connStatus
 
     def open_excel_file(self):
         # Open file dialog to select Excel file
@@ -267,13 +255,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 except Exception as e:
                     self.logImp.append(f"Error inserting data into MySQL table: {e}")
                 # print(self.dfPlcdb)
-                
-
-        
-
-    def run_logging(self, local_connStatus):
-        if local_connStatus == True:
-            try:
+                  
+    def run_logging(self):
+        try:  
+            while self.local_connStatus == True:
+                # if local_connStatus == True:
                 self.logField.append('PLC data fetching')
                 # Loop to log data every 5 seconds until interrupted
                 for index, row in self.dfPlcdb.iterrows():
@@ -285,30 +271,34 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                     print(db_number, start_offset, data_type, name)
                     self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
                 time.sleep(5)  # Sleep for 5 second
-            except KeyboardInterrupt:
-                print("Program terminated by user.")
+        except KeyboardInterrupt:
+            print("Program terminated by user.")
                                                                                     
     def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
-        if data_type == 'BOOL':
-            reading = self.plc.db_read(db_number, start_offset, 1)
-            value = snap7.util.get_bool(reading, 0, bit_offset)
-        elif data_type == 'REAL':
-            reading = self.plc.db_read(db_number, start_offset, 4)
-            value = struct.unpack('>f', reading)[0]
-        elif data_type == 'INT':
-            reading = self.plc.db_read(db_number, start_offset, 2)
-            value = struct.unpack('>h', reading)[0]
-        else:
-            print("Unsupported data type:", data_type)
-            return
-        
-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        log_message = 'DB Number: {}, Start Offset: {}, Data Type: {}, Value: {}, Name: {}'.format(db_number, start_offset, data_type, value, name)
-        print(log_message)
+        try:
+            if data_type == 'BOOL':
+                reading = self.plc.db_read(db_number, start_offset, 1)
+                value = snap7.util.get_bool(reading, 0, bit_offset)
+            elif data_type == 'REAL':
+                reading = self.plc.db_read(db_number, start_offset, 4)
+                value = struct.unpack('>f', reading)[0]
+            elif data_type == 'INT':
+                reading = self.plc.db_read(db_number, start_offset, 2)
+                value = struct.unpack('>h', reading)[0]
+            else:
+                print("Unsupported data type:", data_type)
+                return
+            
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            log_message = 'DB Number: {}, Start Offset: {}, Data Type: {}, Value: {}, Name: {}'.format(db_number, start_offset, data_type, value, name)
+            print(log_message)
 
-        self.cursor.execute('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
-                            VALUES (?, ?, ?, ?)''', (timestamp, name, data_type, value))
-        self.conn.commit()
+            self.cursor.execute('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
+                                VALUES (?, ?, ?, ?)''', (timestamp, name, data_type, value))
+            self.conn.commit()
+        except Exception as e:
+                self.logField.append(f"Error: {e}")
+                print((f"Error: {e}"))
     
     def show_data(self):
         from_time = self.from_time.dateTime().toString(Qt.ISODate)
@@ -359,11 +349,5 @@ if __name__ == '__main__':
     Mainwindow = PLCDataLogger()
     Mainwindow.show()
     sys.exit(app.exec_())
-
-
-
-
-
-
 
 

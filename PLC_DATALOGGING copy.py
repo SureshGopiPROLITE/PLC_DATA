@@ -131,22 +131,22 @@ class PLCDataLogger(QMainWindow):
 
 
     def run_logging(self, local_connStatus):
-        while local_connStatus:
-            try:
-                self.logField.append('PLC data fetching')
-                # Loop to log data every 5 seconds until interrupted
-                for index, row in self.dfPlcdb.iterrows():
-                    db_number = row['db_number']
-                    start_offset = row['start_offset']
-                    data_type = row['data_type']
-                    name = row['Name']
-                    bit_offset = row['bit_offset']
-                    print(db_number, start_offset, data_type, name)
-                    self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
-                time.sleep(5)  # Sleep for 5 second
-            except KeyboardInterrupt:
-                print("Program terminated by user.")
-                                                                                    
+        # while local_connStatus:
+        try:
+            self.logField.append('PLC data fetching')
+            # Loop to log data every 5 seconds until interrupted
+            for index, row in self.dfPlcdb.iterrows():
+                db_number = row['db_number']
+                start_offset = row['start_offset']
+                data_type = row['data_type']
+                name = row['Name']
+                bit_offset = row['bit_offset']
+                print(db_number, start_offset, data_type, name)
+                self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
+            time.sleep(5)  # Sleep for 5 second
+        except KeyboardInterrupt:
+            print("Program terminated by user.")
+                                                                                
     def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
         if data_type == 'BOOL':
             reading = self.plc.db_read(db_number, start_offset, 1)

@@ -243,7 +243,7 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("font: 24pt \"MS Shell Dlg 2\";")
         self.label.setObjectName("label")
         self.widget_3 = QtWidgets.QWidget(self.widget)
-        self.widget_3.setGeometry(QtCore.QRect(-1, 90, 191, 741))
+        self.widget_3.setGeometry(QtCore.QRect(-1, 90, 191, 751))
         self.widget_3.setStyleSheet("\n"
 "QPushButton{\n"
 " font: 12pt \"Poppins\";\n"
@@ -359,7 +359,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_4.setObjectName("widget_4")
         self.gridLayoutWidget = QtWidgets.QWidget(self.widget_4)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(40, 50, 631, 123))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(40, 20, 631, 123))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -373,6 +373,9 @@ class Ui_MainWindow(object):
         self.textStatus = QtWidgets.QTextEdit(self.widget_4)
         self.textStatus.setGeometry(QtCore.QRect(40, 180, 631, 521))
         self.textStatus.setObjectName("textStatus")
+        self.sampleBtn = QtWidgets.QPushButton(self.widget_4)
+        self.sampleBtn.setGeometry(QtCore.QRect(530, 150, 75, 23))
+        self.sampleBtn.setObjectName("sampleBtn")
         self.stackedWidget.addWidget(self.homePage)
         self.exportPage = QtWidgets.QWidget()
         self.exportPage.setObjectName("exportPage")
@@ -487,12 +490,17 @@ class Ui_MainWindow(object):
         self.navImp.setText(_translate("MainWindow", "Import Excel"))
         self.btnConnect.setText(_translate("MainWindow", "Connect"))
         self.btnDisconnect.setText(_translate("MainWindow", "Disconnect"))
+        self.sampleBtn.setText(_translate("MainWindow", "Sample"))
         self.label_3.setText(_translate("MainWindow", "To :"))
         self.export_btn.setText(_translate("MainWindow", "Export Excel"))
         self.show_data_btn.setText(_translate("MainWindow", "Show Data"))
         self.label_2.setText(_translate("MainWindow", "From :"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
 # import Icons_reso_rc
+
+
+
+
 
 
 if __name__ == "__main__":

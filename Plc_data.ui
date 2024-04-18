@@ -488,7 +488,7 @@ background-color: #191C24;
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>50</y>
+          <y>20</y>
           <width>631</width>
           <height>123</height>
          </rect>
@@ -518,6 +518,19 @@ background-color: #191C24;
           <width>631</width>
           <height>521</height>
          </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="sampleBtn">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>150</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Sample</string>
         </property>
        </widget>
       </widget>
