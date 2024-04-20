@@ -57,6 +57,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
             self.Ui.navHelp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.helpPage))
             self.Ui.navImp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.importPage))
+            self.Ui.navAbout.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.aboutPage))
             self.Ui.btnImpExcel.clicked.connect(self.open_excel_file)
         else:
             self.logcon.append('Error: Contact admin')
@@ -67,21 +68,21 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 software_type = row['Info']
                 print("Software Type:", software_type)
                 
-            elif row['Particulars'] == 'Release_date':
-                release_date_str = row['Info']
-                print("Release Date String:", release_date_str)
+            elif row['Particulars'] == 'Software_sold_date':
+                Software_sold_date = row['Info']
+                print("Release Date String:", Software_sold_date)
                 
                 try:
                     # Assuming the date format is 'DD/MM/YYYY'
-                    release_date = datetime.strptime(release_date_str, '%d/%m/%Y')
-                    print("Release Date:", release_date)
+                    Software_date = datetime.strptime(Software_sold_date, '%d/%m/%Y')
+                    print("Release Date:", Software_date)
                     
-                    current_date = datetime.now()
-                    print(current_date)
+                    self.current_date = datetime.now()
+                    print(self.current_date)
 
                     if software_type == '0':
                         # Check if the software is within the allowed time period (1 month)
-                        if (current_date - release_date).days > 30:
+                        if (self.current_date - Software_date).days > 30:
                             self.dateExp = False
                             print("Date Expired:", self.dateExp) 
                         else:
@@ -154,12 +155,14 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         # self.self.dfPlcdb = pd.read_excel("C:\prolite\Plc_data\PLC_DB_Access.xlsx")
         # print(self.self.dfPlcdb)
         try:
+            self.current_date = datetime.now()
             self.plc = snap7.client.Client()
             self.plc.connect('192.168.0.1', 0, 1)
             print("PLC Connected", self.plc)
             print("DB Connected", self.cursor)
             print("DB Connected", self.conn)
             self.log.append('PLC is connected')
+            self.logField.append('PLC is connected ' + str(self.current_date))
             self.local_connStatus = True
             self.dfPlc()
             self.run_logging()
@@ -171,13 +174,15 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
     def plcDisconnect(self):
         try:
+            self.current_date = datetime.now()
             self.plc.disconnect()
             self.log.append('PLC is Disconnected')
             self.local_connStatus = False
-            self.run_logging()
+            self.logField.append('PLC data fetching Disconnected' + str(self.current_date))
         except Exception as e:
             print("Error while disconnecting:", e)
             self.local_connStatus = False
+            
         return self.local_connStatus
 
     def open_excel_file(self):
@@ -258,8 +263,10 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                   
     def run_logging(self):
         try: 
-            self.logField.append('PLC data fetching')
+            
             while self.local_connStatus == True:
+                self.current_date = datetime.now()
+                self.logField.append('Data Fetching From Plc ' + str(self.current_date))
                 # if local_connStatus == True:
                 # Loop to log data every 5 seconds until interrupted
                 for index, row in self.dfPlcdb.iterrows():
@@ -276,8 +283,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 time.sleep(5)  # Sleep for 5 second
         except KeyboardInterrupt:
             print("Program terminated by user.")
-
-
+            
                                                                                     
     def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
         try:

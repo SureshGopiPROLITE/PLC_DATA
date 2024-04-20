@@ -215,7 +215,7 @@ class Ui_MainWindow(object):
         self.widget.setGeometry(QtCore.QRect(10, 0, 951, 841))
         self.widget.setObjectName("widget")
         self.widget_2 = QtWidgets.QWidget(self.widget)
-        self.widget_2.setGeometry(QtCore.QRect(0, -10, 941, 101))
+        self.widget_2.setGeometry(QtCore.QRect(0, -10, 951, 101))
         self.widget_2.setStyleSheet("QWidget{\n"
 "background-color: rgb(25, 28, 36);\n"
 "}\n"
@@ -231,17 +231,20 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.widget_2.setObjectName("widget_2")
-        self.label = QtWidgets.QLabel(self.widget_2)
-        self.label.setGeometry(QtCore.QRect(410, 30, 141, 41))
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_2)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.label_4 = QtWidgets.QLabel(self.widget_2)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(24)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.label.setFont(font)
-        self.label.setStyleSheet("font: 24pt \"MS Shell Dlg 2\";")
-        self.label.setObjectName("label")
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("font: 24pt \"MS Shell Dlg 2\";")
+        self.label_4.setObjectName("label_4")
+        self.verticalLayout_3.addWidget(self.label_4)
         self.widget_3 = QtWidgets.QWidget(self.widget)
         self.widget_3.setGeometry(QtCore.QRect(-1, 90, 191, 751))
         self.widget_3.setStyleSheet("\n"
@@ -329,6 +332,18 @@ class Ui_MainWindow(object):
         self.navHelp.setIconSize(QtCore.QSize(20, 20))
         self.navHelp.setObjectName("navHelp")
         self.verticalLayout.addWidget(self.navHelp)
+        self.navAbout = QtWidgets.QPushButton(self.widget_3)
+        font = QtGui.QFont()
+        font.setFamily("Poppins")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.navAbout.setFont(font)
+        self.navAbout.setIcon(icon2)
+        self.navAbout.setIconSize(QtCore.QSize(20, 20))
+        self.navAbout.setObjectName("navAbout")
+        self.verticalLayout.addWidget(self.navAbout)
         self.navImp = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
         font.setFamily("Poppins")
@@ -352,14 +367,14 @@ class Ui_MainWindow(object):
         self.homePage = QtWidgets.QWidget()
         self.homePage.setObjectName("homePage")
         self.widget_4 = QtWidgets.QWidget(self.homePage)
-        self.widget_4.setGeometry(QtCore.QRect(-10, 20, 741, 741))
+        self.widget_4.setGeometry(QtCore.QRect(-10, 20, 751, 741))
         self.widget_4.setStyleSheet("QWidget{\n"
 "background-color: #191C24;\n"
 "}\n"
 "")
         self.widget_4.setObjectName("widget_4")
         self.gridLayoutWidget = QtWidgets.QWidget(self.widget_4)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(40, 20, 631, 123))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(70, 20, 631, 123))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -371,7 +386,7 @@ class Ui_MainWindow(object):
         self.btnDisconnect.setObjectName("btnDisconnect")
         self.gridLayout.addWidget(self.btnDisconnect, 0, 1, 1, 1)
         self.textStatus = QtWidgets.QTextEdit(self.widget_4)
-        self.textStatus.setGeometry(QtCore.QRect(40, 180, 631, 521))
+        self.textStatus.setGeometry(QtCore.QRect(70, 180, 631, 521))
         self.textStatus.setObjectName("textStatus")
         self.sampleBtn = QtWidgets.QPushButton(self.widget_4)
         self.sampleBtn.setGeometry(QtCore.QRect(530, 150, 75, 23))
@@ -390,6 +405,9 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.from_time = QtWidgets.QDateTimeEdit(self.exportPage)
         self.from_time.setGeometry(QtCore.QRect(70, 40, 191, 31))
+        self.from_time.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 3), QtCore.QTime(5, 30, 0)))
+        self.from_time.setTime(QtCore.QTime(5, 30, 0))
+        self.from_time.setTimeSpec(QtCore.Qt.LocalTime)
         self.from_time.setObjectName("from_time")
         self.to_time = QtWidgets.QDateTimeEdit(self.exportPage)
         self.to_time.setGeometry(QtCore.QRect(350, 40, 194, 22))
@@ -442,7 +460,22 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.logPage)
         self.helpPage = QtWidgets.QWidget()
         self.helpPage.setObjectName("helpPage")
+        self.widget_6 = QtWidgets.QWidget(self.helpPage)
+        self.widget_6.setGeometry(QtCore.QRect(10, 20, 721, 721))
+        self.widget_6.setStyleSheet("QWidget{\n"
+"background-color: #191C24;\n"
+"}")
+        self.widget_6.setObjectName("widget_6")
         self.stackedWidget.addWidget(self.helpPage)
+        self.aboutPage = QtWidgets.QWidget()
+        self.aboutPage.setObjectName("aboutPage")
+        self.widget_7 = QtWidgets.QWidget(self.aboutPage)
+        self.widget_7.setGeometry(QtCore.QRect(10, 20, 721, 721))
+        self.widget_7.setStyleSheet("QWidget{\n"
+"background-color: #191C24;\n"
+"}")
+        self.widget_7.setObjectName("widget_7")
+        self.stackedWidget.addWidget(self.aboutPage)
         self.importPage = QtWidgets.QWidget()
         self.importPage.setObjectName("importPage")
         self.widget_5 = QtWidgets.QWidget(self.importPage)
@@ -476,17 +509,18 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "PLC Data"))
+        self.label_4.setText(_translate("MainWindow", "PLC Data"))
         self.navHome.setText(_translate("MainWindow", "Home"))
         self.navExport.setText(_translate("MainWindow", "Export"))
         self.navLog.setText(_translate("MainWindow", "Log"))
         self.navHelp.setText(_translate("MainWindow", "Help"))
+        self.navAbout.setText(_translate("MainWindow", "About"))
         self.navImp.setText(_translate("MainWindow", "Import Excel"))
         self.btnConnect.setText(_translate("MainWindow", "Connect"))
         self.btnDisconnect.setText(_translate("MainWindow", "Disconnect"))
@@ -496,11 +530,7 @@ class Ui_MainWindow(object):
         self.show_data_btn.setText(_translate("MainWindow", "Show Data"))
         self.label_2.setText(_translate("MainWindow", "From :"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
-# import Icons_reso_rc
-
-
-
-
+import main_icons_rc
 
 
 if __name__ == "__main__":

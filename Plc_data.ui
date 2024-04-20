@@ -226,7 +226,7 @@ font: 8pt &quot;Poppins&quot;;
       <rect>
        <x>0</x>
        <y>-10</y>
-       <width>941</width>
+       <width>951</width>
        <height>101</height>
       </rect>
      </property>
@@ -246,31 +246,27 @@ border-color: rgb(251, 220, 175);
 }
 </string>
      </property>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>30</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>24</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>PLC Data</string>
-      </property>
-     </widget>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>24</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>PLC Data</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
     <widget class="QWidget" name="widget_3" native="true">
      <property name="geometry">
@@ -324,7 +320,7 @@ background-color: #191C24;
            <string>Home</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons_reso.qrc">
+           <iconset resource="Icons/main_icons.qrc">
             <normaloff>:/Icons/home.png</normaloff>:/Icons/home.png</iconset>
           </property>
           <property name="iconSize">
@@ -350,7 +346,7 @@ background-color: #191C24;
            <string>Export</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons_reso.qrc">
+           <iconset resource="Icons/main_icons.qrc">
             <normaloff>:/Icons/export.png</normaloff>:/Icons/export.png</iconset>
           </property>
           <property name="iconSize">
@@ -376,7 +372,7 @@ background-color: #191C24;
            <string>Log</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons_reso.qrc">
+           <iconset resource="Icons/main_icons.qrc">
             <normaloff>:/Icons/lod.png</normaloff>:/Icons/lod.png</iconset>
           </property>
           <property name="iconSize">
@@ -402,8 +398,34 @@ background-color: #191C24;
            <string>Help</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons_reso.qrc">
+           <iconset resource="Icons/main_icons.qrc">
             <normaloff>:/Icons/help.png</normaloff>:/Icons/help.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="navAbout">
+          <property name="font">
+           <font>
+            <family>Poppins</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>About</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons/main_icons.qrc">
+            <normaloff>:/Icons/lod.png</normaloff>:/Icons/lod.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -428,7 +450,7 @@ background-color: #191C24;
            <string>Import Excel</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons_reso.qrc">
+           <iconset resource="Icons/main_icons.qrc">
             <normaloff>:/Icons/import.png</normaloff>:/Icons/import.png</iconset>
           </property>
           <property name="iconSize">
@@ -466,7 +488,7 @@ background-color: #191C24;
       </rect>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="homePage">
       <widget class="QWidget" name="widget_4" native="true">
@@ -474,7 +496,7 @@ background-color: #191C24;
         <rect>
          <x>-10</x>
          <y>20</y>
-         <width>741</width>
+         <width>751</width>
          <height>741</height>
         </rect>
        </property>
@@ -487,7 +509,7 @@ background-color: #191C24;
        <widget class="QWidget" name="gridLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>70</x>
           <y>20</y>
           <width>631</width>
           <height>123</height>
@@ -513,7 +535,7 @@ background-color: #191C24;
        <widget class="QTextEdit" name="textStatus">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>70</x>
           <y>180</y>
           <width>631</width>
           <height>521</height>
@@ -565,6 +587,26 @@ background-color: #191C24;
          <width>191</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>5</hour>
+         <minute>30</minute>
+         <second>0</second>
+         <year>2000</year>
+         <month>1</month>
+         <day>3</day>
+        </datetime>
+       </property>
+       <property name="time">
+        <time>
+         <hour>5</hour>
+         <minute>30</minute>
+         <second>0</second>
+        </time>
+       </property>
+       <property name="timeSpec">
+        <enum>Qt::LocalTime</enum>
        </property>
       </widget>
       <widget class="QDateTimeEdit" name="to_time">
@@ -672,7 +714,40 @@ background-color: #191C24;
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="helpPage"/>
+     <widget class="QWidget" name="helpPage">
+      <widget class="QWidget" name="widget_6" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>721</width>
+         <height>721</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+background-color: #191C24;
+}</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="aboutPage">
+      <widget class="QWidget" name="widget_7" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>721</width>
+         <height>721</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+background-color: #191C24;
+}</string>
+       </property>
+      </widget>
+     </widget>
      <widget class="QWidget" name="importPage">
       <widget class="QWidget" name="widget_5" native="true">
        <property name="geometry">
@@ -739,7 +814,7 @@ background-color: #191C24;
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Icons_reso.qrc"/>
+  <include location="Icons/main_icons.qrc"/>
  </resources>
  <connections/>
 </ui>
