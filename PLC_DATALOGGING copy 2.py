@@ -15,7 +15,7 @@ import concurrent.futures
 from plc_data_ui import Ui_MainWindow
 from getmac import get_mac_address as gma
 print(gma())
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from PyQt5.QtCore import QTimer
 # from Welcome_plc_ui import Ui_WelcomeWindow
 global local_connStatus
@@ -130,26 +130,32 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         try:
             self.conn = pyodbc.connect(
             'DRIVER=SQL Server;'
-            'SERVER=SURESHGOPI;'
+            'SERVER=localhost\sqlexpress;'
             'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
             # Create SQLAlchemy engine
-            self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-
+            #self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            #self.engine = create_engine('mssql+pyodbc://DESKTOP-HMESSLO\SQLEXPRESS/PLCDB2?driver=SQL+Server')
+            self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             # Execute SQL query and read data into DataFrame
-            sql = "SELECT * FROM Info_DB"
-            self.dfInfo = pd.read_sql(sql, self.engine)
+            self.con = self.engine.connect()
+            query = text('SELECT * FROM Info_DB')
+            self.dfInfo = pd.read_sql_query(query, self.con)         
+
+            #sql = "SELECT * FROM Info_DB"
+            #self.dfInfo = pd.read_sql(sql, self.engine)
 
             # self.logImp.append('PLC is connected')
             # self.thread_and_handle(self.authentication)
-            self.logcon.append('PLC is connected')
+            self.logcon.append('SQL DB is connected')
             self.authentication()
             self.restrict_soft()
             self.openWindow()
             
         except Exception as e:
             print("Error connecting to database:", e)
+            self.logcon.append("Error connecting to database:" + str(e))
 
     def plcConnect(self):
         # self.self.dfPlcdb = pd.read_excel("C:\prolite\Plc_data\PLC_DB_Access.xlsx")
@@ -241,10 +247,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                     if software_type == 0 or software_type == 1:
                         print("Software Type:", software_type)
                         # Retrieve data from MySQL table after insertion
-                        select_query = "SELECT  * FROM Data"
+                        select_query = text("SELECT  * FROM Data")
                         # self.cursor.execute(select_query)
                         # data_from_sql = self.cursor.fetchall()
-                        self.dfdemo = pd.read_sql(select_query, self.engine)
+                        self.dfdemo = pd.read_sql_query(select_query, self.con)
+
                         self.dfPlcdb = self.dfdemo.head(50)
                         # Load data into a DataFrame
                         # columns = [col[0] for col in data_from_sql]
