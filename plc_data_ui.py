@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(974, 891)
+        MainWindow.resize(971, 891)
         MainWindow.setStyleSheet("background-color: rgb(20, 20, 20);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -388,9 +388,6 @@ class Ui_MainWindow(object):
         self.textStatus = QtWidgets.QTextEdit(self.widget_4)
         self.textStatus.setGeometry(QtCore.QRect(70, 180, 631, 521))
         self.textStatus.setObjectName("textStatus")
-        self.sampleBtn = QtWidgets.QPushButton(self.widget_4)
-        self.sampleBtn.setGeometry(QtCore.QRect(530, 150, 75, 23))
-        self.sampleBtn.setObjectName("sampleBtn")
         self.stackedWidget.addWidget(self.homePage)
         self.exportPage = QtWidgets.QWidget()
         self.exportPage.setObjectName("exportPage")
@@ -405,12 +402,16 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.from_time = QtWidgets.QDateTimeEdit(self.exportPage)
         self.from_time.setGeometry(QtCore.QRect(70, 40, 191, 31))
-        self.from_time.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 3), QtCore.QTime(5, 30, 0)))
-        self.from_time.setTime(QtCore.QTime(5, 30, 0))
+        self.from_time.setDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.from_time.setDate(QtCore.QDate(2024, 1, 1))
+        self.from_time.setTime(QtCore.QTime(0, 0, 0))
+        self.from_time.setMinimumDate(QtCore.QDate(2024, 1, 1))
         self.from_time.setTimeSpec(QtCore.Qt.LocalTime)
         self.from_time.setObjectName("from_time")
         self.to_time = QtWidgets.QDateTimeEdit(self.exportPage)
         self.to_time.setGeometry(QtCore.QRect(350, 40, 194, 22))
+        self.to_time.setDate(QtCore.QDate(2024, 1, 1))
+        self.to_time.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
         self.to_time.setObjectName("to_time")
         self.export_btn = QtWidgets.QPushButton(self.exportPage)
         self.export_btn.setGeometry(QtCore.QRect(570, 90, 111, 51))
@@ -457,6 +458,9 @@ class Ui_MainWindow(object):
         self.logField = QtWidgets.QTextEdit(self.logPage)
         self.logField.setGeometry(QtCore.QRect(0, 30, 731, 681))
         self.logField.setObjectName("logField")
+        self.btnClearLog = QtWidgets.QPushButton(self.logPage)
+        self.btnClearLog.setGeometry(QtCore.QRect(600, 100, 75, 23))
+        self.btnClearLog.setObjectName("btnClearLog")
         self.stackedWidget.addWidget(self.logPage)
         self.helpPage = QtWidgets.QWidget()
         self.helpPage.setObjectName("helpPage")
@@ -501,7 +505,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.importPage)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 974, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 971, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -509,7 +513,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -524,11 +528,11 @@ class Ui_MainWindow(object):
         self.navImp.setText(_translate("MainWindow", "Import Excel"))
         self.btnConnect.setText(_translate("MainWindow", "Connect"))
         self.btnDisconnect.setText(_translate("MainWindow", "Disconnect"))
-        self.sampleBtn.setText(_translate("MainWindow", "Sample"))
         self.label_3.setText(_translate("MainWindow", "To :"))
         self.export_btn.setText(_translate("MainWindow", "Export Excel"))
         self.show_data_btn.setText(_translate("MainWindow", "Show Data"))
         self.label_2.setText(_translate("MainWindow", "From :"))
+        self.btnClearLog.setText(_translate("MainWindow", "Clear"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
 import main_icons_rc
 

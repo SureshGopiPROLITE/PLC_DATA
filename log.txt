@@ -1,0 +1,2362 @@
+PLC is connected 2024-04-24 12:23:15.243074
+Data Fetching From Plc 2024-04-24 12:23:15.332471
+Data Fetching From Plc 2024-04-24 12:23:20.476028
+Data Fetching From Plc 2024-04-24 12:23:25.633791
+Data Fetching From Plc 2024-04-24 12:23:30.801525
+Data Fetching From Plc 2024-04-24 12:23:35.962588
+Data Fetching From Plc 2024-04-24 12:23:41.129218
+Data Fetching From Plc 2024-04-24 12:23:46.288407
+Data Fetching From Plc 2024-04-24 12:23:51.448616
+Data Fetching From Plc 2024-04-24 12:23:56.624680
+Data Fetching From Plc 2024-04-24 12:24:01.755957
+Data Fetching From Plc 2024-04-24 12:24:06.892751
+Data Fetching From Plc 2024-04-24 12:24:12.068641
+Data Fetching From Plc 2024-04-24 12:24:17.239784
+Data Fetching From Plc 2024-04-24 12:24:22.424951
+Data Fetching From Plc 2024-04-24 12:24:27.592478
+Data Fetching From Plc 2024-04-24 12:24:32.765339
+Data Fetching From Plc 2024-04-24 12:24:37.925185
+Data Fetching From Plc 2024-04-24 12:24:43.086475
+Data Fetching From Plc 2024-04-24 12:24:48.323831
+Data Fetching From Plc 2024-04-24 12:24:53.578093
+Data Fetching From Plc 2024-04-24 12:24:58.758648
+Data Fetching From Plc 2024-04-24 12:25:03.919093
+Data Fetching From Plc 2024-04-24 12:25:09.081063
+Data Fetching From Plc 2024-04-24 12:25:14.250217
+Data Fetching From Plc 2024-04-24 12:25:19.414144
+Data Fetching From Plc 2024-04-24 12:25:24.572804
+Data Fetching From Plc 2024-04-24 12:25:29.771852
+Data Fetching From Plc 2024-04-24 12:25:34.929609
+Data Fetching From Plc 2024-04-24 12:25:40.087489
+Data Fetching From Plc 2024-04-24 12:25:45.249663
+Data Fetching From Plc 2024-04-24 12:25:50.416818
+Data Fetching From Plc 2024-04-24 12:25:55.582605
+Data Fetching From Plc 2024-04-24 12:26:00.774899
+Data Fetching From Plc 2024-04-24 12:26:05.942260
+Data Fetching From Plc 2024-04-24 12:26:11.103427
+Data Fetching From Plc 2024-04-24 12:26:16.289310
+Data Fetching From Plc 2024-04-24 12:26:21.499710
+Data Fetching From Plc 2024-04-24 12:26:26.673762
+Data Fetching From Plc 2024-04-24 12:26:31.864255
+Data Fetching From Plc 2024-04-24 12:26:37.029831
+Data Fetching From Plc 2024-04-24 12:26:42.188284
+Data Fetching From Plc 2024-04-24 12:26:47.344989
+Data Fetching From Plc 2024-04-24 12:26:52.510651
+Data Fetching From Plc 2024-04-24 12:26:57.678700
+Data Fetching From Plc 2024-04-24 12:27:02.936174
+Data Fetching From Plc 2024-04-24 12:27:08.181603
+Data Fetching From Plc 2024-04-24 12:27:13.341204
+Data Fetching From Plc 2024-04-24 12:27:18.502337
+Data Fetching From Plc 2024-04-24 12:27:23.685089
+Data Fetching From Plc 2024-04-24 12:27:28.874574
+Data Fetching From Plc 2024-04-24 12:27:34.051077
+Data Fetching From Plc 2024-04-24 12:27:39.246886
+Data Fetching From Plc 2024-04-24 12:27:44.413548
+Data Fetching From Plc 2024-04-24 12:27:49.588631
+Data Fetching From Plc 2024-04-24 12:27:54.776148
+Data Fetching From Plc 2024-04-24 12:27:59.938300
+Data Fetching From Plc 2024-04-24 12:28:05.107672
+Data Fetching From Plc 2024-04-24 12:28:10.325347
+Data Fetching From Plc 2024-04-24 12:28:15.490183
+Data Fetching From Plc 2024-04-24 12:28:20.665705
+Data Fetching From Plc 2024-04-24 12:28:25.830363
+Data Fetching From Plc 2024-04-24 12:28:31.079469
+Data Fetching From Plc 2024-04-24 12:28:36.262625
+Data Fetching From Plc 2024-04-24 12:28:41.424312
+Data Fetching From Plc 2024-04-24 12:28:46.611848
+Data Fetching From Plc 2024-04-24 12:28:51.785812
+Data Fetching From Plc 2024-04-24 12:28:56.950004
+Data Fetching From Plc 2024-04-24 12:29:02.113566
+Data Fetching From Plc 2024-04-24 12:29:07.299098
+Data Fetching From Plc 2024-04-24 12:29:12.488378
+Data Fetching From Plc 2024-04-24 12:29:17.730117
+Data Fetching From Plc 2024-04-24 12:29:22.897883
+Data Fetching From Plc 2024-04-24 12:29:28.086005
+Data Fetching From Plc 2024-04-24 12:29:33.251291
+Data Fetching From Plc 2024-04-24 12:29:38.432923
+Data Fetching From Plc 2024-04-24 12:29:43.618564
+Data Fetching From Plc 2024-04-24 12:29:48.790087
+Data Fetching From Plc 2024-04-24 12:29:53.955596
+Data Fetching From Plc 2024-04-24 12:29:59.126094
+Data Fetching From Plc 2024-04-24 12:30:04.294717
+Data Fetching From Plc 2024-04-24 12:30:09.473221
+Data Fetching From Plc 2024-04-24 12:30:14.650674
+Data Fetching From Plc 2024-04-24 12:30:19.856180
+Data Fetching From Plc 2024-04-24 12:30:25.027408
+Data Fetching From Plc 2024-04-24 12:30:30.197037
+Data Fetching From Plc 2024-04-24 12:30:35.384442
+Data Fetching From Plc 2024-04-24 12:30:40.554503
+Data Fetching From Plc 2024-04-24 12:30:45.743698
+Data Fetching From Plc 2024-04-24 12:30:50.909108
+Data Fetching From Plc 2024-04-24 12:30:56.065914
+Data Fetching From Plc 2024-04-24 12:31:01.235542
+Data Fetching From Plc 2024-04-24 12:31:06.409861
+Data Fetching From Plc 2024-04-24 12:31:11.583233
+Data Fetching From Plc 2024-04-24 12:31:16.745880
+Data Fetching From Plc 2024-04-24 12:31:21.907433
+Data Fetching From Plc 2024-04-24 12:31:27.137000
+Data Fetching From Plc 2024-04-24 12:31:32.363298
+Data Fetching From Plc 2024-04-24 12:31:37.525609
+Data Fetching From Plc 2024-04-24 12:31:42.700199
+Data Fetching From Plc 2024-04-24 12:31:47.860627
+Data Fetching From Plc 2024-04-24 12:31:53.034766
+Data Fetching From Plc 2024-04-24 12:31:58.207192
+Data Fetching From Plc 2024-04-24 12:32:03.371175
+Data Fetching From Plc 2024-04-24 12:32:08.531225
+Data Fetching From Plc 2024-04-24 12:32:13.710102
+Data Fetching From Plc 2024-04-24 12:32:18.872064
+Data Fetching From Plc 2024-04-24 12:32:24.069541
+Data Fetching From Plc 2024-04-24 12:32:29.255348
+Data Fetching From Plc 2024-04-24 12:32:34.415939
+Data Fetching From Plc 2024-04-24 12:32:39.576401
+Data Fetching From Plc 2024-04-24 12:32:44.749806
+Data Fetching From Plc 2024-04-24 12:32:49.915637
+Data Fetching From Plc 2024-04-24 12:32:55.090321
+Data Fetching From Plc 2024-04-24 12:33:00.321049
+Data Fetching From Plc 2024-04-24 12:33:05.491581
+Data Fetching From Plc 2024-04-24 12:33:10.663910
+Data Fetching From Plc 2024-04-24 12:33:15.842375
+Data Fetching From Plc 2024-04-24 12:33:21.022330
+Data Fetching From Plc 2024-04-24 12:33:26.186844
+Data Fetching From Plc 2024-04-24 12:33:31.373321
+Data Fetching From Plc 2024-04-24 12:33:36.562730
+Data Fetching From Plc 2024-04-24 12:33:41.768933
+Data Fetching From Plc 2024-04-24 12:33:46.937454
+Data Fetching From Plc 2024-04-24 12:33:52.106412
+Data Fetching From Plc 2024-04-24 12:33:57.263915
+Data Fetching From Plc 2024-04-24 12:34:02.477567
+Data Fetching From Plc 2024-04-24 12:34:07.708730
+Data Fetching From Plc 2024-04-24 12:34:12.869392
+Data Fetching From Plc 2024-04-24 12:34:18.095451
+Data Fetching From Plc 2024-04-24 12:34:23.259089
+Data Fetching From Plc 2024-04-24 12:34:28.429646
+Data Fetching From Plc 2024-04-24 12:34:33.598907
+Data Fetching From Plc 2024-04-24 12:34:38.777579
+Data Fetching From Plc 2024-04-24 12:34:43.996741
+Data Fetching From Plc 2024-04-24 12:34:49.201161
+Data Fetching From Plc 2024-04-24 12:34:54.385408
+Data Fetching From Plc 2024-04-24 12:34:59.551791
+Data Fetching From Plc 2024-04-24 12:35:04.712973
+Data Fetching From Plc 2024-04-24 12:35:09.909663
+Data Fetching From Plc 2024-04-24 12:35:15.090373
+Data Fetching From Plc 2024-04-24 12:35:20.271725
+Data Fetching From Plc 2024-04-24 12:35:25.449059
+Data Fetching From Plc 2024-04-24 12:35:30.622703
+Data Fetching From Plc 2024-04-24 12:35:35.785257
+Data Fetching From Plc 2024-04-24 12:35:40.956997
+Data Fetching From Plc 2024-04-24 12:35:46.124128
+Data Fetching From Plc 2024-04-24 12:35:51.347201
+Data Fetching From Plc 2024-04-24 12:35:56.649156
+Data Fetching From Plc 2024-04-24 12:36:01.808385
+Data Fetching From Plc 2024-04-24 12:36:06.972555
+Data Fetching From Plc 2024-04-24 12:36:12.152810
+Data Fetching From Plc 2024-04-24 12:36:17.318407
+Data Fetching From Plc 2024-04-24 12:36:22.517105
+Data Fetching From Plc 2024-04-24 12:36:27.708228
+Data Fetching From Plc 2024-04-24 12:36:32.865679
+Data Fetching From Plc 2024-04-24 12:36:38.040842
+Data Fetching From Plc 2024-04-24 12:36:43.229697
+Data Fetching From Plc 2024-04-24 12:36:48.398946
+Data Fetching From Plc 2024-04-24 12:36:53.599641
+Data Fetching From Plc 2024-04-24 12:36:58.882558
+Data Fetching From Plc 2024-04-24 12:37:04.053364
+Data Fetching From Plc 2024-04-24 12:37:09.224812
+Data Fetching From Plc 2024-04-24 12:37:14.390285
+Data Fetching From Plc 2024-04-24 12:37:19.615402
+Data Fetching From Plc 2024-04-24 12:37:24.888815
+Data Fetching From Plc 2024-04-24 12:37:30.060319
+Data Fetching From Plc 2024-04-24 12:37:35.262449
+Data Fetching From Plc 2024-04-24 12:37:40.433167
+Data Fetching From Plc 2024-04-24 12:37:45.598717
+Data Fetching From Plc 2024-04-24 12:37:50.770392
+Data Fetching From Plc 2024-04-24 12:37:55.937801
+Data Fetching From Plc 2024-04-24 12:38:01.086985
+Data Fetching From Plc 2024-04-24 12:38:06.251488
+Data Fetching From Plc 2024-04-24 12:38:11.383817
+Data Fetching From Plc 2024-04-24 12:38:16.532975
+Data Fetching From Plc 2024-04-24 12:38:21.676842
+Data Fetching From Plc 2024-04-24 12:38:26.826142
+Data Fetching From Plc 2024-04-24 12:38:32.001378
+Data Fetching From Plc 2024-04-24 12:38:37.135076
+Data Fetching From Plc 2024-04-24 12:38:42.262503
+Data Fetching From Plc 2024-04-24 12:38:47.393794
+Data Fetching From Plc 2024-04-24 12:38:52.537774
+Data Fetching From Plc 2024-04-24 12:38:57.668225
+Data Fetching From Plc 2024-04-24 12:39:02.806329
+Data Fetching From Plc 2024-04-24 12:39:07.976001
+Data Fetching From Plc 2024-04-24 12:39:13.104824
+Data Fetching From Plc 2024-04-24 12:39:18.254533
+Data Fetching From Plc 2024-04-24 12:39:23.403181
+Data Fetching From Plc 2024-04-24 12:39:28.539168
+Data Fetching From Plc 2024-04-24 12:39:33.714335
+Data Fetching From Plc 2024-04-24 12:39:38.882365
+Data Fetching From Plc 2024-04-24 12:39:44.007984
+Data Fetching From Plc 2024-04-24 12:39:49.135895
+Data Fetching From Plc 2024-04-24 12:39:54.318035
+Data Fetching From Plc 2024-04-24 12:39:59.488739
+Data Fetching From Plc 2024-04-24 12:40:04.655244
+Data Fetching From Plc 2024-04-24 12:40:09.820116
+Data Fetching From Plc 2024-04-24 12:40:15.115511
+Data Fetching From Plc 2024-04-24 12:40:20.384539
+Data Fetching From Plc 2024-04-24 12:40:25.556783
+Data Fetching From Plc 2024-04-24 12:40:30.759577
+Data Fetching From Plc 2024-04-24 12:40:35.922419
+Data Fetching From Plc 2024-04-24 12:40:41.162179
+Data Fetching From Plc 2024-04-24 12:40:46.448781
+Data Fetching From Plc 2024-04-24 12:40:51.608325
+Data Fetching From Plc 2024-04-24 12:40:56.814364
+Data Fetching From Plc 2024-04-24 12:41:01.988769
+Data Fetching From Plc 2024-04-24 12:41:07.158311
+Data Fetching From Plc 2024-04-24 12:41:12.324002
+Data Fetching From Plc 2024-04-24 12:41:17.482984
+Data Fetching From Plc 2024-04-24 12:41:22.665772
+Data Fetching From Plc 2024-04-24 12:41:27.855458
+Data Fetching From Plc 2024-04-24 12:41:33.021143
+Data Fetching From Plc 2024-04-24 12:41:38.192157
+Data Fetching From Plc 2024-04-24 12:41:43.378326
+Data Fetching From Plc 2024-04-24 12:41:48.623827
+Data Fetching From Plc 2024-04-24 12:41:53.785577
+Data Fetching From Plc 2024-04-24 12:41:58.959058
+Data Fetching From Plc 2024-04-24 12:42:04.123645
+Data Fetching From Plc 2024-04-24 12:42:09.293222
+Data Fetching From Plc 2024-04-24 12:42:14.477220
+Data Fetching From Plc 2024-04-24 12:42:19.648409
+Data Fetching From Plc 2024-04-24 12:42:24.841016
+Data Fetching From Plc 2024-04-24 12:42:30.108208
+Data Fetching From Plc 2024-04-24 12:42:35.271685
+Data Fetching From Plc 2024-04-24 12:42:40.436118
+Data Fetching From Plc 2024-04-24 12:42:45.607908
+Data Fetching From Plc 2024-04-24 12:42:50.801899
+Data Fetching From Plc 2024-04-24 12:42:55.960527
+Data Fetching From Plc 2024-04-24 12:43:01.118897
+Data Fetching From Plc 2024-04-24 12:43:06.302286
+Data Fetching From Plc 2024-04-24 12:43:11.467511
+Data Fetching From Plc 2024-04-24 12:43:16.640716
+Data Fetching From Plc 2024-04-24 12:43:21.811218
+Data Fetching From Plc 2024-04-24 12:43:26.983092
+Data Fetching From Plc 2024-04-24 12:43:32.165841
+Data Fetching From Plc 2024-04-24 12:43:37.389299
+Data Fetching From Plc 2024-04-24 12:43:42.554529
+Data Fetching From Plc 2024-04-24 12:43:47.710574
+Data Fetching From Plc 2024-04-24 12:43:52.877074
+Data Fetching From Plc 2024-04-24 12:43:58.041015
+Data Fetching From Plc 2024-04-24 12:44:03.203622
+Data Fetching From Plc 2024-04-24 12:44:08.368373
+Data Fetching From Plc 2024-04-24 12:44:13.533458
+Data Fetching From Plc 2024-04-24 12:44:18.691926
+Data Fetching From Plc 2024-04-24 12:44:23.855357
+Data Fetching From Plc 2024-04-24 12:44:29.024114
+Data Fetching From Plc 2024-04-24 12:44:34.187956
+Data Fetching From Plc 2024-04-24 12:44:39.368841
+Data Fetching From Plc 2024-04-24 12:44:44.570670
+Data Fetching From Plc 2024-04-24 12:44:49.741205
+Data Fetching From Plc 2024-04-24 12:44:54.925939
+Data Fetching From Plc 2024-04-24 12:45:00.085647
+Data Fetching From Plc 2024-04-24 12:45:05.274632
+Data Fetching From Plc 2024-04-24 12:45:10.432274
+Data Fetching From Plc 2024-04-24 12:45:15.636559
+Data Fetching From Plc 2024-04-24 12:45:20.800703
+Data Fetching From Plc 2024-04-24 12:45:25.960464
+Data Fetching From Plc 2024-04-24 12:45:31.124309
+Data Fetching From Plc 2024-04-24 12:45:36.285102
+Data Fetching From Plc 2024-04-24 12:45:41.464184
+Data Fetching From Plc 2024-04-24 12:45:46.712609
+Data Fetching From Plc 2024-04-24 12:45:51.878316
+Data Fetching From Plc 2024-04-24 12:45:57.042771
+Data Fetching From Plc 2024-04-24 12:46:02.232972
+Data Fetching From Plc 2024-04-24 12:46:07.405958
+Data Fetching From Plc 2024-04-24 12:46:12.599658
+Data Fetching From Plc 2024-04-24 12:46:17.770101
+Data Fetching From Plc 2024-04-24 12:46:22.933330
+Data Fetching From Plc 2024-04-24 12:46:28.096862
+Data Fetching From Plc 2024-04-24 12:46:33.261071
+Data Fetching From Plc 2024-04-24 12:46:38.421337
+Data Fetching From Plc 2024-04-24 12:46:43.596656
+Data Fetching From Plc 2024-04-24 12:46:48.789659
+Data Fetching From Plc 2024-04-24 12:46:53.981717
+Data Fetching From Plc 2024-04-24 12:46:59.149512
+Data Fetching From Plc 2024-04-24 12:47:04.324440
+Data Fetching From Plc 2024-04-24 12:47:09.489309
+Data Fetching From Plc 2024-04-24 12:47:14.683131
+Data Fetching From Plc 2024-04-24 12:47:19.895878
+Data Fetching From Plc 2024-04-24 12:47:25.097394
+Data Fetching From Plc 2024-04-24 12:47:30.272093
+Data Fetching From Plc 2024-04-24 12:47:35.432239
+Data Fetching From Plc 2024-04-24 12:47:40.590609
+Data Fetching From Plc 2024-04-24 12:47:45.755945
+Data Fetching From Plc 2024-04-24 12:47:50.917933
+Data Fetching From Plc 2024-04-24 12:47:56.130806
+Data Fetching From Plc 2024-04-24 12:48:01.317801
+Data Fetching From Plc 2024-04-24 12:48:06.483407
+Data Fetching From Plc 2024-04-24 12:48:11.650614
+Data Fetching From Plc 2024-04-24 12:48:16.810894
+Data Fetching From Plc 2024-04-24 12:48:21.977909
+Data Fetching From Plc 2024-04-24 12:48:27.185915
+Data Fetching From Plc 2024-04-24 12:48:32.357459
+Data Fetching From Plc 2024-04-24 12:48:37.525307
+Data Fetching From Plc 2024-04-24 12:48:42.686191
+Data Fetching From Plc 2024-04-24 12:48:47.862508
+Data Fetching From Plc 2024-04-24 12:48:53.063954
+Data Fetching From Plc 2024-04-24 12:48:58.223474
+Data Fetching From Plc 2024-04-24 12:49:03.427676
+Data Fetching From Plc 2024-04-24 12:49:08.635697
+Data Fetching From Plc 2024-04-24 12:49:13.781026
+Data Fetching From Plc 2024-04-24 12:49:18.921762
+Data Fetching From Plc 2024-04-24 12:49:24.065979
+Data Fetching From Plc 2024-04-24 12:49:29.225283
+Data Fetching From Plc 2024-04-24 12:49:34.364944
+Data Fetching From Plc 2024-04-24 12:49:39.487626
+Data Fetching From Plc 2024-04-24 12:49:44.622652
+Data Fetching From Plc 2024-04-24 12:49:49.765774
+Data Fetching From Plc 2024-04-24 12:49:54.895637
+Data Fetching From Plc 2024-04-24 12:50:00.035030
+Data Fetching From Plc 2024-04-24 12:50:05.193367
+Data Fetching From Plc 2024-04-24 12:50:10.330131
+Data Fetching From Plc 2024-04-24 12:50:15.468494
+Data Fetching From Plc 2024-04-24 12:50:20.611577
+Data Fetching From Plc 2024-04-24 12:50:25.728829
+Data Fetching From Plc 2024-04-24 12:50:30.876023
+Data Fetching From Plc 2024-04-24 12:50:36.050272
+Data Fetching From Plc 2024-04-24 12:50:41.170931
+Data Fetching From Plc 2024-04-24 12:50:46.307235
+Data Fetching From Plc 2024-04-24 12:50:51.448184
+Data Fetching From Plc 2024-04-24 12:50:56.577123
+Data Fetching From Plc 2024-04-24 12:51:01.716125
+Data Fetching From Plc 2024-04-24 12:51:06.859917
+Data Fetching From Plc 2024-04-24 12:51:11.987722
+Data Fetching From Plc 2024-04-24 12:51:17.142628
+Data Fetching From Plc 2024-04-24 12:51:22.279697
+Data Fetching From Plc 2024-04-24 12:51:27.402006
+Data Fetching From Plc 2024-04-24 12:51:32.542902
+Data Fetching From Plc 2024-04-24 12:51:37.680463
+Data Fetching From Plc 2024-04-24 12:51:42.834587
+Data Fetching From Plc 2024-04-24 12:51:47.963103
+Data Fetching From Plc 2024-04-24 12:51:53.131038
+Data Fetching From Plc 2024-04-24 12:51:58.254892
+Data Fetching From Plc 2024-04-24 12:52:03.381734
+Data Fetching From Plc 2024-04-24 12:52:08.516388
+Data Fetching From Plc 2024-04-24 12:52:13.650926
+Data Fetching From Plc 2024-04-24 12:52:18.791876
+Data Fetching From Plc 2024-04-24 12:52:23.956536
+Data Fetching From Plc 2024-04-24 12:52:29.118690
+Data Fetching From Plc 2024-04-24 12:52:34.249632
+Data Fetching From Plc 2024-04-24 12:52:39.384343
+Data Fetching From Plc 2024-04-24 12:52:44.545877
+Data Fetching From Plc 2024-04-24 12:52:49.686015
+Data Fetching From Plc 2024-04-24 12:52:54.823787
+Data Fetching From Plc 2024-04-24 12:52:59.974869
+Data Fetching From Plc 2024-04-24 12:53:05.154120
+Data Fetching From Plc 2024-04-24 12:53:10.318342
+Data Fetching From Plc 2024-04-24 12:53:15.484231
+Data Fetching From Plc 2024-04-24 12:53:20.644087
+Data Fetching From Plc 2024-04-24 12:53:25.836656
+Data Fetching From Plc 2024-04-24 12:53:31.147447
+Data Fetching From Plc 2024-04-24 12:53:36.312923
+Data Fetching From Plc 2024-04-24 12:53:41.473144
+Data Fetching From Plc 2024-04-24 12:53:46.661877
+Data Fetching From Plc 2024-04-24 12:53:51.820892
+Data Fetching From Plc 2024-04-24 12:53:57.010921
+Data Fetching From Plc 2024-04-24 12:54:02.221092
+Data Fetching From Plc 2024-04-24 12:54:07.385456
+Data Fetching From Plc 2024-04-24 12:54:12.560292
+Data Fetching From Plc 2024-04-24 12:54:17.732814
+Data Fetching From Plc 2024-04-24 12:54:22.901031
+Data Fetching From Plc 2024-04-24 12:54:28.063819
+Data Fetching From Plc 2024-04-24 12:54:33.369006
+Data Fetching From Plc 2024-04-24 12:54:38.574601
+Data Fetching From Plc 2024-04-24 12:54:43.745676
+Data Fetching From Plc 2024-04-24 12:54:48.913348
+Data Fetching From Plc 2024-04-24 12:54:54.105265
+Data Fetching From Plc 2024-04-24 12:54:59.294682
+Data Fetching From Plc 2024-04-24 12:55:04.459873
+Data Fetching From Plc 2024-04-24 12:55:09.623921
+Data Fetching From Plc 2024-04-24 12:55:14.786711
+Data Fetching From Plc 2024-04-24 12:55:19.950853
+Data Fetching From Plc 2024-04-24 12:55:25.116523
+Data Fetching From Plc 2024-04-24 12:55:30.275723
+Data Fetching From Plc 2024-04-24 12:55:35.477006
+Data Fetching From Plc 2024-04-24 12:55:40.684519
+Data Fetching From Plc 2024-04-24 12:55:45.861936
+Data Fetching From Plc 2024-04-24 12:55:51.041055
+Data Fetching From Plc 2024-04-24 12:55:56.213808
+Data Fetching From Plc 2024-04-24 12:56:01.399268
+Data Fetching From Plc 2024-04-24 12:56:06.597596
+Data Fetching From Plc 2024-04-24 12:56:11.757315
+Data Fetching From Plc 2024-04-24 12:56:16.919740
+Data Fetching From Plc 2024-04-24 12:56:22.099732
+Data Fetching From Plc 2024-04-24 12:56:27.290397
+Data Fetching From Plc 2024-04-24 12:56:32.457711
+Data Fetching From Plc 2024-04-24 12:56:37.621126
+Data Fetching From Plc 2024-04-24 12:56:42.805332
+Data Fetching From Plc 2024-04-24 12:56:47.972434
+Data Fetching From Plc 2024-04-24 12:56:53.142125
+Data Fetching From Plc 2024-04-24 12:56:58.315553
+Data Fetching From Plc 2024-04-24 12:57:03.511732
+Data Fetching From Plc 2024-04-24 12:57:08.688350
+Data Fetching From Plc 2024-04-24 12:57:13.875101
+Data Fetching From Plc 2024-04-24 12:57:19.036293
+Data Fetching From Plc 2024-04-24 12:57:24.200506
+Data Fetching From Plc 2024-04-24 12:57:29.381675
+Data Fetching From Plc 2024-04-24 12:57:34.568595
+Data Fetching From Plc 2024-04-24 12:57:39.739175
+Data Fetching From Plc 2024-04-24 12:57:44.904575
+Data Fetching From Plc 2024-04-24 12:57:50.088714
+Data Fetching From Plc 2024-04-24 12:57:55.281084
+Data Fetching From Plc 2024-04-24 12:58:00.450575
+Data Fetching From Plc 2024-04-24 12:58:05.630003
+Data Fetching From Plc 2024-04-24 12:58:10.796890
+Data Fetching From Plc 2024-04-24 12:58:16.011602
+Data Fetching From Plc 2024-04-24 12:58:21.193243
+Data Fetching From Plc 2024-04-24 12:58:26.351549
+Data Fetching From Plc 2024-04-24 12:58:31.515842
+Data Fetching From Plc 2024-04-24 12:58:36.687738
+Data Fetching From Plc 2024-04-24 12:58:41.848169
+Data Fetching From Plc 2024-04-24 12:58:47.014504
+Data Fetching From Plc 2024-04-24 12:58:52.210642
+Data Fetching From Plc 2024-04-24 12:58:57.390319
+Data Fetching From Plc 2024-04-24 12:59:02.555593
+Data Fetching From Plc 2024-04-24 12:59:07.720958
+Data Fetching From Plc 2024-04-24 12:59:12.883852
+Data Fetching From Plc 2024-04-24 12:59:18.129607
+Data Fetching From Plc 2024-04-24 12:59:23.337406
+Data Fetching From Plc 2024-04-24 12:59:28.498088
+Data Fetching From Plc 2024-04-24 12:59:33.662064
+Data Fetching From Plc 2024-04-24 12:59:38.827145
+Data Fetching From Plc 2024-04-24 12:59:43.987673
+Data Fetching From Plc 2024-04-24 12:59:49.157771
+Data Fetching From Plc 2024-04-24 12:59:54.341396
+Data Fetching From Plc 2024-04-24 12:59:59.528867
+Data Fetching From Plc 2024-04-24 13:00:04.742530
+Data Fetching From Plc 2024-04-24 13:00:09.919512
+Data Fetching From Plc 2024-04-24 13:00:15.092678
+Data Fetching From Plc 2024-04-24 13:00:20.251321
+Data Fetching From Plc 2024-04-24 13:00:25.433830
+Data Fetching From Plc 2024-04-24 13:00:30.637264
+Data Fetching From Plc 2024-04-24 13:00:35.799191
+Data Fetching From Plc 2024-04-24 13:00:40.985667
+Data Fetching From Plc 2024-04-24 13:00:46.157036
+Data Fetching From Plc 2024-04-24 13:00:51.315242
+Data Fetching From Plc 2024-04-24 13:00:56.484481
+Data Fetching From Plc 2024-04-24 13:01:01.644249
+Data Fetching From Plc 2024-04-24 13:01:06.812003
+Data Fetching From Plc 2024-04-24 13:01:11.983398
+Data Fetching From Plc 2024-04-24 13:01:17.170716
+Data Fetching From Plc 2024-04-24 13:01:22.330027
+Data Fetching From Plc 2024-04-24 13:01:27.498980
+Data Fetching From Plc 2024-04-24 13:01:32.684135
+Data Fetching From Plc 2024-04-24 13:01:37.880347
+Data Fetching From Plc 2024-04-24 13:01:43.062745
+Data Fetching From Plc 2024-04-24 13:01:48.231337
+Data Fetching From Plc 2024-04-24 13:01:53.392383
+Data Fetching From Plc 2024-04-24 13:01:58.558550
+Data Fetching From Plc 2024-04-24 13:02:03.717731
+Data Fetching From Plc 2024-04-24 13:02:08.879078
+Data Fetching From Plc 2024-04-24 13:02:14.128903
+Data Fetching From Plc 2024-04-24 13:02:19.378514
+Data Fetching From Plc 2024-04-24 13:02:24.541580
+Data Fetching From Plc 2024-04-24 13:02:29.716988
+Data Fetching From Plc 2024-04-24 13:02:34.880389
+Data Fetching From Plc 2024-04-24 13:02:40.041116
+Data Fetching From Plc 2024-04-24 13:02:45.201688
+Data Fetching From Plc 2024-04-24 13:02:50.393279
+Data Fetching From Plc 2024-04-24 13:02:55.552554
+Data Fetching From Plc 2024-04-24 13:03:00.713154
+Data Fetching From Plc 2024-04-24 13:03:05.875919
+Data Fetching From Plc 2024-04-24 13:03:11.045124
+Data Fetching From Plc 2024-04-24 13:03:16.224788
+Data Fetching From Plc 2024-04-24 13:03:21.393821
+Data Fetching From Plc 2024-04-24 13:03:26.555634
+Data Fetching From Plc 2024-04-24 13:03:31.721867
+Data Fetching From Plc 2024-04-24 13:03:36.900757
+Data Fetching From Plc 2024-04-24 13:03:42.162818
+Data Fetching From Plc 2024-04-24 13:03:47.364194
+Data Fetching From Plc 2024-04-24 13:03:52.523837
+Data Fetching From Plc 2024-04-24 13:03:57.684913
+Data Fetching From Plc 2024-04-24 13:04:02.849869
+Data Fetching From Plc 2024-04-24 13:04:08.025294
+Data Fetching From Plc 2024-04-24 13:04:13.219575
+Data Fetching From Plc 2024-04-24 13:04:18.404418
+Data Fetching From Plc 2024-04-24 13:04:23.573971
+Data Fetching From Plc 2024-04-24 13:04:28.787095
+Data Fetching From Plc 2024-04-24 13:04:33.957183
+Data Fetching From Plc 2024-04-24 13:04:39.125658
+Data Fetching From Plc 2024-04-24 13:04:44.300310
+Data Fetching From Plc 2024-04-24 13:04:49.479051
+Data Fetching From Plc 2024-04-24 13:04:54.719283
+Data Fetching From Plc 2024-04-24 13:04:59.883799
+Data Fetching From Plc 2024-04-24 13:05:05.047081
+Data Fetching From Plc 2024-04-24 13:05:10.205548
+Data Fetching From Plc 2024-04-24 13:05:15.380628
+Data Fetching From Plc 2024-04-24 13:05:20.552599
+Data Fetching From Plc 2024-04-24 13:05:25.720698
+Data Fetching From Plc 2024-04-24 13:05:30.919769
+Data Fetching From Plc 2024-04-24 13:05:36.109361
+Data Fetching From Plc 2024-04-24 13:05:41.276173
+Data Fetching From Plc 2024-04-24 13:05:46.448317
+Data Fetching From Plc 2024-04-24 13:05:51.614881
+Data Fetching From Plc 2024-04-24 13:05:56.838865
+Data Fetching From Plc 2024-04-24 13:06:01.997721
+Data Fetching From Plc 2024-04-24 13:06:07.190648
+Data Fetching From Plc 2024-04-24 13:06:12.372961
+Data Fetching From Plc 2024-04-24 13:06:17.556478
+Data Fetching From Plc 2024-04-24 13:06:22.726102
+Data Fetching From Plc 2024-04-24 13:06:27.907634
+Data Fetching From Plc 2024-04-24 13:06:33.079840
+Data Fetching From Plc 2024-04-24 13:06:38.271785
+Data Fetching From Plc 2024-04-24 13:06:43.437743
+Data Fetching From Plc 2024-04-24 13:06:48.600787
+Data Fetching From Plc 2024-04-24 13:06:53.769570
+Data Fetching From Plc 2024-04-24 13:06:58.953881
+Data Fetching From Plc 2024-04-24 13:07:04.139008
+Data Fetching From Plc 2024-04-24 13:07:09.316641
+Data Fetching From Plc 2024-04-24 13:07:14.476476
+Data Fetching From Plc 2024-04-24 13:07:19.644978
+Data Fetching From Plc 2024-04-24 13:07:24.827845
+Data Fetching From Plc 2024-04-24 13:07:29.986397
+Data Fetching From Plc 2024-04-24 13:07:35.156347
+Data Fetching From Plc 2024-04-24 13:07:40.374761
+Data Fetching From Plc 2024-04-24 13:07:45.535424
+Data Fetching From Plc 2024-04-24 13:07:50.700015
+Data Fetching From Plc 2024-04-24 13:07:55.862678
+Data Fetching From Plc 2024-04-24 13:08:01.034493
+Data Fetching From Plc 2024-04-24 13:08:06.205259
+Data Fetching From Plc 2024-04-24 13:08:11.369068
+Data Fetching From Plc 2024-04-24 13:08:16.537749
+Data Fetching From Plc 2024-04-24 13:08:21.707496
+Data Fetching From Plc 2024-04-24 13:08:26.900962
+Data Fetching From Plc 2024-04-24 13:08:32.060268
+Data Fetching From Plc 2024-04-24 13:08:37.217782
+Data Fetching From Plc 2024-04-24 13:08:42.374488
+Data Fetching From Plc 2024-04-24 13:08:47.549282
+Data Fetching From Plc 2024-04-24 13:08:52.717241
+Data Fetching From Plc 2024-04-24 13:08:57.877616
+Data Fetching From Plc 2024-04-24 13:09:03.039820
+Data Fetching From Plc 2024-04-24 13:09:08.209431
+Data Fetching From Plc 2024-04-24 13:09:13.411256
+Data Fetching From Plc 2024-04-24 13:09:18.579933
+Data Fetching From Plc 2024-04-24 13:09:23.741296
+Data Fetching From Plc 2024-04-24 13:09:28.908171
+Data Fetching From Plc 2024-04-24 13:09:34.080560
+Data Fetching From Plc 2024-04-24 13:09:39.250105
+Data Fetching From Plc 2024-04-24 13:09:44.421165
+Data Fetching From Plc 2024-04-24 13:09:49.580592
+Data Fetching From Plc 2024-04-24 13:09:54.745690
+Data Fetching From Plc 2024-04-24 13:09:59.907181
+Data Fetching From Plc 2024-04-24 13:10:05.092934
+Data Fetching From Plc 2024-04-24 13:10:10.261534
+Data Fetching From Plc 2024-04-24 13:10:15.439564
+Data Fetching From Plc 2024-04-24 13:10:20.601258
+Data Fetching From Plc 2024-04-24 13:10:25.786058
+Data Fetching From Plc 2024-04-24 13:10:30.968832
+Data Fetching From Plc 2024-04-24 13:10:36.135145
+Data Fetching From Plc 2024-04-24 13:10:41.301215
+Data Fetching From Plc 2024-04-24 13:10:46.469675
+Data Fetching From Plc 2024-04-24 13:10:51.647133
+Data Fetching From Plc 2024-04-24 13:10:56.820689
+Data Fetching From Plc 2024-04-24 13:11:02.053974
+Data Fetching From Plc 2024-04-24 13:11:07.227487
+Data Fetching From Plc 2024-04-24 13:11:12.387989
+Data Fetching From Plc 2024-04-24 13:11:17.551268
+Data Fetching From Plc 2024-04-24 13:11:22.799043
+Data Fetching From Plc 2024-04-24 13:11:27.979177
+Data Fetching From Plc 2024-04-24 13:11:33.150679
+Data Fetching From Plc 2024-04-24 13:11:38.319109
+Data Fetching From Plc 2024-04-24 13:11:43.493410
+Data Fetching From Plc 2024-04-24 13:11:48.654886
+Data Fetching From Plc 2024-04-24 13:11:53.842012
+Data Fetching From Plc 2024-04-24 13:11:59.007167
+Data Fetching From Plc 2024-04-24 13:12:04.176452
+Data Fetching From Plc 2024-04-24 13:12:09.417096
+Data Fetching From Plc 2024-04-24 13:12:14.579517
+Data Fetching From Plc 2024-04-24 13:12:19.752685
+Data Fetching From Plc 2024-04-24 13:12:24.938746
+Data Fetching From Plc 2024-04-24 13:12:30.132441
+Data Fetching From Plc 2024-04-24 13:12:35.311407
+Data Fetching From Plc 2024-04-24 13:12:40.480388
+Data Fetching From Plc 2024-04-24 13:12:45.652767
+Data Fetching From Plc 2024-04-24 13:12:50.851885
+Data Fetching From Plc 2024-04-24 13:12:56.016622
+Data Fetching From Plc 2024-04-24 13:13:01.177799
+Data Fetching From Plc 2024-04-24 13:13:06.340788
+Data Fetching From Plc 2024-04-24 13:13:11.552685
+Data Fetching From Plc 2024-04-24 13:13:16.796912
+Data Fetching From Plc 2024-04-24 13:13:21.956903
+Data Fetching From Plc 2024-04-24 13:13:27.140768
+Data Fetching From Plc 2024-04-24 13:13:32.303267
+Data Fetching From Plc 2024-04-24 13:13:37.483041
+Data Fetching From Plc 2024-04-24 13:13:42.663908
+Data Fetching From Plc 2024-04-24 13:13:47.828009
+Data Fetching From Plc 2024-04-24 13:13:52.999803
+Data Fetching From Plc 2024-04-24 13:13:58.158564
+Data Fetching From Plc 2024-04-24 13:14:03.320419
+Data Fetching From Plc 2024-04-24 13:14:08.487522
+Data Fetching From Plc 2024-04-24 13:14:13.652318
+Data Fetching From Plc 2024-04-24 13:14:18.847240
+Data Fetching From Plc 2024-04-24 13:14:24.009896
+Data Fetching From Plc 2024-04-24 13:14:29.187125
+Data Fetching From Plc 2024-04-24 13:14:34.349287
+Data Fetching From Plc 2024-04-24 13:14:39.532893
+Data Fetching From Plc 2024-04-24 13:14:44.701831
+Data Fetching From Plc 2024-04-24 13:14:49.934277
+Data Fetching From Plc 2024-04-24 13:14:55.104123
+Data Fetching From Plc 2024-04-24 13:15:00.265089
+Data Fetching From Plc 2024-04-24 13:15:05.428466
+Data Fetching From Plc 2024-04-24 13:15:10.585718
+Data Fetching From Plc 2024-04-24 13:15:15.751601
+Data Fetching From Plc 2024-04-24 13:15:20.922230
+Data Fetching From Plc 2024-04-24 13:15:26.154151
+Data Fetching From Plc 2024-04-24 13:15:31.370865
+Data Fetching From Plc 2024-04-24 13:15:36.540719
+Data Fetching From Plc 2024-04-24 13:15:41.713407
+Data Fetching From Plc 2024-04-24 13:15:46.885958
+Data Fetching From Plc 2024-04-24 13:15:52.133627
+Data Fetching From Plc 2024-04-24 13:15:57.298969
+Data Fetching From Plc 2024-04-24 13:16:02.467447
+Data Fetching From Plc 2024-04-24 13:16:07.635217
+Data Fetching From Plc 2024-04-24 13:16:12.804790
+Data Fetching From Plc 2024-04-24 13:16:17.975608
+Data Fetching From Plc 2024-04-24 13:16:23.140147
+Data Fetching From Plc 2024-04-24 13:16:28.356490
+Data Fetching From Plc 2024-04-24 13:16:33.538677
+Data Fetching From Plc 2024-04-24 13:16:38.701264
+Data Fetching From Plc 2024-04-24 13:16:43.874936
+Data Fetching From Plc 2024-04-24 13:16:49.033823
+Data Fetching From Plc 2024-04-24 13:16:54.316397
+Data Fetching From Plc 2024-04-24 13:16:59.507675
+Data Fetching From Plc 2024-04-24 13:17:04.709270
+Data Fetching From Plc 2024-04-24 13:17:09.881045
+Data Fetching From Plc 2024-04-24 13:17:15.039431
+Data Fetching From Plc 2024-04-24 13:17:20.211138
+Data Fetching From Plc 2024-04-24 13:17:25.387151
+Data Fetching From Plc 2024-04-24 13:17:30.556527
+PLC data fetching Disconnected2024-04-24 13:17:32.687617
+PLC is connected 2024-04-24 15:09:20.129090
+PLC is connected 2024-04-24 15:11:05.065825
+PLC is connected 2024-04-24 15:32:51.605597
+PLC is connected 2024-04-24 15:38:02.988364
+Data Fetching From Plc 2024-04-24 15:38:03.076711
+Data Fetching From Plc 2024-04-24 15:38:03.215854
+Data Fetching From Plc 2024-04-24 15:38:03.336411
+Data Fetching From Plc 2024-04-24 15:38:03.458177
+Data Fetching From Plc 2024-04-24 15:38:03.575541
+Data Fetching From Plc 2024-04-24 15:38:03.698502
+Data Fetching From Plc 2024-04-24 15:38:03.823012
+Data Fetching From Plc 2024-04-24 15:38:03.973089
+Data Fetching From Plc 2024-04-24 15:38:04.099441
+Data Fetching From Plc 2024-04-24 15:38:04.218465
+Data Fetching From Plc 2024-04-24 15:38:04.346000
+Data Fetching From Plc 2024-04-24 15:38:04.463157
+Data Fetching From Plc 2024-04-24 15:38:04.584989
+Data Fetching From Plc 2024-04-24 15:38:04.705147
+Data Fetching From Plc 2024-04-24 15:38:04.828090
+Data Fetching From Plc 2024-04-24 15:38:04.953441
+Data Fetching From Plc 2024-04-24 15:38:05.077534
+Data Fetching From Plc 2024-04-24 15:38:05.216142
+Data Fetching From Plc 2024-04-24 15:38:05.331933
+Data Fetching From Plc 2024-04-24 15:38:05.452957
+Data Fetching From Plc 2024-04-24 15:38:05.576299
+Data Fetching From Plc 2024-04-24 15:38:05.699592
+Data Fetching From Plc 2024-04-24 15:38:05.829591
+Data Fetching From Plc 2024-04-24 15:38:05.950598
+Data Fetching From Plc 2024-04-24 15:38:06.066854
+Data Fetching From Plc 2024-04-24 15:38:06.189218
+Data Fetching From Plc 2024-04-24 15:38:06.310380
+Data Fetching From Plc 2024-04-24 15:38:06.448824
+Data Fetching From Plc 2024-04-24 15:38:06.571791
+Data Fetching From Plc 2024-04-24 15:38:06.688899
+Data Fetching From Plc 2024-04-24 15:38:06.810139
+Data Fetching From Plc 2024-04-24 15:38:06.924043
+Data Fetching From Plc 2024-04-24 15:38:07.045528
+Data Fetching From Plc 2024-04-24 15:38:07.167682
+Data Fetching From Plc 2024-04-24 15:38:07.291480
+Data Fetching From Plc 2024-04-24 15:38:07.418635
+Data Fetching From Plc 2024-04-24 15:38:07.569871
+Data Fetching From Plc 2024-04-24 15:38:07.706433
+Data Fetching From Plc 2024-04-24 15:38:07.838982
+Data Fetching From Plc 2024-04-24 15:38:07.974666
+Data Fetching From Plc 2024-04-24 15:38:08.113214
+Data Fetching From Plc 2024-04-24 15:38:08.246032
+Data Fetching From Plc 2024-04-24 15:38:08.383992
+Data Fetching From Plc 2024-04-24 15:38:08.548882
+Data Fetching From Plc 2024-04-24 15:38:08.675476
+Data Fetching From Plc 2024-04-24 15:38:08.812743
+Data Fetching From Plc 2024-04-24 15:38:08.940301
+Data Fetching From Plc 2024-04-24 15:38:09.070869
+Data Fetching From Plc 2024-04-24 15:38:09.189915
+Data Fetching From Plc 2024-04-24 15:38:09.316851
+Data Fetching From Plc 2024-04-24 15:38:09.454975
+Data Fetching From Plc 2024-04-24 15:38:09.580055
+Data Fetching From Plc 2024-04-24 15:38:09.745103
+Data Fetching From Plc 2024-04-24 15:38:09.882530
+Data Fetching From Plc 2024-04-24 15:38:10.028034
+Data Fetching From Plc 2024-04-24 15:38:10.162810
+Data Fetching From Plc 2024-04-24 15:38:10.301852
+Data Fetching From Plc 2024-04-24 15:38:10.442082
+Data Fetching From Plc 2024-04-24 15:38:10.575778
+Data Fetching From Plc 2024-04-24 15:38:10.713420
+Data Fetching From Plc 2024-04-24 15:38:10.862622
+Data Fetching From Plc 2024-04-24 15:38:11.003224
+Data Fetching From Plc 2024-04-24 15:38:11.130438
+Data Fetching From Plc 2024-04-24 15:38:11.268164
+Data Fetching From Plc 2024-04-24 15:38:11.395492
+Data Fetching From Plc 2024-04-24 15:38:11.534653
+Data Fetching From Plc 2024-04-24 15:38:11.668269
+Data Fetching From Plc 2024-04-24 15:38:11.808498
+Data Fetching From Plc 2024-04-24 15:38:11.971319
+Data Fetching From Plc 2024-04-24 15:38:12.105981
+Data Fetching From Plc 2024-04-24 15:38:12.230529
+Data Fetching From Plc 2024-04-24 15:38:12.365609
+Data Fetching From Plc 2024-04-24 15:38:12.493613
+Data Fetching From Plc 2024-04-24 15:38:12.629238
+Data Fetching From Plc 2024-04-24 15:38:12.764310
+Data Fetching From Plc 2024-04-24 15:38:12.890910
+Data Fetching From Plc 2024-04-24 15:38:13.047345
+Data Fetching From Plc 2024-04-24 15:38:13.180643
+Data Fetching From Plc 2024-04-24 15:38:13.307396
+Data Fetching From Plc 2024-04-24 15:38:13.435572
+Data Fetching From Plc 2024-04-24 15:38:13.568298
+Data Fetching From Plc 2024-04-24 15:38:13.694698
+Data Fetching From Plc 2024-04-24 15:38:13.828598
+Data Fetching From Plc 2024-04-24 15:38:13.977876
+Data Fetching From Plc 2024-04-24 15:38:14.122919
+Data Fetching From Plc 2024-04-24 15:38:14.256917
+Data Fetching From Plc 2024-04-24 15:38:14.391556
+Data Fetching From Plc 2024-04-24 15:38:14.523423
+Data Fetching From Plc 2024-04-24 15:38:14.645206
+Data Fetching From Plc 2024-04-24 15:38:14.790746
+Data Fetching From Plc 2024-04-24 15:38:14.929730
+Data Fetching From Plc 2024-04-24 15:38:15.063373
+Data Fetching From Plc 2024-04-24 15:38:15.205239
+Data Fetching From Plc 2024-04-24 15:38:15.375219
+Data Fetching From Plc 2024-04-24 15:38:15.531418
+Data Fetching From Plc 2024-04-24 15:38:15.676053
+Data Fetching From Plc 2024-04-24 15:38:15.814978
+Data Fetching From Plc 2024-04-24 15:38:15.947713
+Data Fetching From Plc 2024-04-24 15:38:16.082193
+Data Fetching From Plc 2024-04-24 15:38:16.220951
+Data Fetching From Plc 2024-04-24 15:38:16.363916
+Data Fetching From Plc 2024-04-24 15:38:16.525342
+Data Fetching From Plc 2024-04-24 15:38:16.662661
+Data Fetching From Plc 2024-04-24 15:38:16.798752
+Data Fetching From Plc 2024-04-24 15:38:16.932271
+Data Fetching From Plc 2024-04-24 15:38:17.063707
+Data Fetching From Plc 2024-04-24 15:38:17.196934
+Data Fetching From Plc 2024-04-24 15:38:17.350334
+Data Fetching From Plc 2024-04-24 15:38:17.513824
+Data Fetching From Plc 2024-04-24 15:38:17.655298
+Data Fetching From Plc 2024-04-24 15:38:17.783064
+Data Fetching From Plc 2024-04-24 15:38:17.915307
+Data Fetching From Plc 2024-04-24 15:38:18.046499
+Data Fetching From Plc 2024-04-24 15:38:18.192668
+PLC data fetching Disconnected2024-04-24 15:38:18.307219
+PLC is connected 2024-04-24 15:39:41.706597
+Data Fetching From Plc 2024-04-24 15:39:41.790607
+Data Fetching From Plc 2024-04-24 15:39:41.925490
+Data Fetching From Plc 2024-04-24 15:39:42.045766
+Data Fetching From Plc 2024-04-24 15:39:42.200586
+Data Fetching From Plc 2024-04-24 15:39:42.324805
+Data Fetching From Plc 2024-04-24 15:39:42.447351
+Data Fetching From Plc 2024-04-24 15:39:42.576555
+Data Fetching From Plc 2024-04-24 15:39:42.695003
+Data Fetching From Plc 2024-04-24 15:39:42.826546
+Data Fetching From Plc 2024-04-24 15:39:42.952244
+Data Fetching From Plc 2024-04-24 15:39:43.084916
+Data Fetching From Plc 2024-04-24 15:39:43.210573
+Data Fetching From Plc 2024-04-24 15:39:43.373790
+Data Fetching From Plc 2024-04-24 15:39:43.508785
+Data Fetching From Plc 2024-04-24 15:39:43.643543
+Data Fetching From Plc 2024-04-24 15:39:43.778871
+Data Fetching From Plc 2024-04-24 15:39:43.905571
+Data Fetching From Plc 2024-04-24 15:39:44.030088
+Data Fetching From Plc 2024-04-24 15:39:44.155716
+Data Fetching From Plc 2024-04-24 15:39:44.282066
+Data Fetching From Plc 2024-04-24 15:39:44.401528
+Data Fetching From Plc 2024-04-24 15:39:44.555417
+Data Fetching From Plc 2024-04-24 15:39:44.681525
+Data Fetching From Plc 2024-04-24 15:39:44.803591
+Data Fetching From Plc 2024-04-24 15:39:44.935652
+Data Fetching From Plc 2024-04-24 15:39:45.061186
+Data Fetching From Plc 2024-04-24 15:39:45.190116
+Data Fetching From Plc 2024-04-24 15:39:45.320392
+Data Fetching From Plc 2024-04-24 15:39:45.463947
+Data Fetching From Plc 2024-04-24 15:39:45.638570
+Data Fetching From Plc 2024-04-24 15:39:45.778680
+Data Fetching From Plc 2024-04-24 15:39:45.901695
+Data Fetching From Plc 2024-04-24 15:39:46.021868
+Data Fetching From Plc 2024-04-24 15:39:46.153060
+Data Fetching From Plc 2024-04-24 15:39:46.279558
+Data Fetching From Plc 2024-04-24 15:39:46.402560
+Data Fetching From Plc 2024-04-24 15:39:46.528922
+Data Fetching From Plc 2024-04-24 15:39:46.682760
+Data Fetching From Plc 2024-04-24 15:39:46.800963
+Data Fetching From Plc 2024-04-24 15:39:46.928895
+Data Fetching From Plc 2024-04-24 15:39:47.049508
+Data Fetching From Plc 2024-04-24 15:39:47.169402
+Data Fetching From Plc 2024-04-24 15:39:47.291913
+Data Fetching From Plc 2024-04-24 15:39:47.419030
+Data Fetching From Plc 2024-04-24 15:39:47.546717
+Data Fetching From Plc 2024-04-24 15:39:47.708767
+Data Fetching From Plc 2024-04-24 15:39:47.847329
+Data Fetching From Plc 2024-04-24 15:39:47.984824
+Data Fetching From Plc 2024-04-24 15:39:48.115602
+Data Fetching From Plc 2024-04-24 15:39:48.248317
+Data Fetching From Plc 2024-04-24 15:39:48.373754
+Data Fetching From Plc 2024-04-24 15:39:48.499651
+Data Fetching From Plc 2024-04-24 15:39:48.635423
+Data Fetching From Plc 2024-04-24 15:39:48.807154
+Data Fetching From Plc 2024-04-24 15:39:48.946218
+Data Fetching From Plc 2024-04-24 15:39:49.089880
+Data Fetching From Plc 2024-04-24 15:39:49.216280
+Data Fetching From Plc 2024-04-24 15:39:49.345363
+Data Fetching From Plc 2024-04-24 15:39:49.496003
+Data Fetching From Plc 2024-04-24 15:39:49.701625
+Data Fetching From Plc 2024-04-24 15:39:49.857952
+Data Fetching From Plc 2024-04-24 15:39:49.984222
+Data Fetching From Plc 2024-04-24 15:39:50.105727
+Data Fetching From Plc 2024-04-24 15:39:50.228406
+Data Fetching From Plc 2024-04-24 15:39:50.354322
+Data Fetching From Plc 2024-04-24 15:39:50.482442
+Data Fetching From Plc 2024-04-24 15:39:50.606263
+Data Fetching From Plc 2024-04-24 15:39:50.725139
+Data Fetching From Plc 2024-04-24 15:39:50.848022
+Data Fetching From Plc 2024-04-24 15:39:50.999101
+Data Fetching From Plc 2024-04-24 15:39:51.122866
+Data Fetching From Plc 2024-04-24 15:39:51.246166
+Data Fetching From Plc 2024-04-24 15:39:51.369939
+Data Fetching From Plc 2024-04-24 15:39:51.494207
+Data Fetching From Plc 2024-04-24 15:39:51.640838
+Data Fetching From Plc 2024-04-24 15:39:51.764473
+Data Fetching From Plc 2024-04-24 15:39:51.894797
+Data Fetching From Plc 2024-04-24 15:39:52.052004
+Data Fetching From Plc 2024-04-24 15:39:52.176614
+Data Fetching From Plc 2024-04-24 15:39:52.309646
+Data Fetching From Plc 2024-04-24 15:39:52.439200
+Data Fetching From Plc 2024-04-24 15:39:52.565146
+Data Fetching From Plc 2024-04-24 15:39:52.690725
+Data Fetching From Plc 2024-04-24 15:39:52.867287
+Data Fetching From Plc 2024-04-24 15:39:53.015229
+Data Fetching From Plc 2024-04-24 15:39:53.141538
+Data Fetching From Plc 2024-04-24 15:39:53.300040
+Data Fetching From Plc 2024-04-24 15:39:53.425985
+Data Fetching From Plc 2024-04-24 15:39:53.562193
+Data Fetching From Plc 2024-04-24 15:39:53.700565
+Data Fetching From Plc 2024-04-24 15:39:53.832516
+Data Fetching From Plc 2024-04-24 15:39:53.963992
+Data Fetching From Plc 2024-04-24 15:39:54.107175
+Data Fetching From Plc 2024-04-24 15:39:54.241147
+Data Fetching From Plc 2024-04-24 15:39:54.394830
+Data Fetching From Plc 2024-04-24 15:39:54.540567
+Data Fetching From Plc 2024-04-24 15:39:54.671229
+Data Fetching From Plc 2024-04-24 15:39:54.789628
+Data Fetching From Plc 2024-04-24 15:39:54.907440
+Data Fetching From Plc 2024-04-24 15:39:55.029963
+Data Fetching From Plc 2024-04-24 15:39:55.146008
+Data Fetching From Plc 2024-04-24 15:39:55.265952
+Data Fetching From Plc 2024-04-24 15:39:55.383684
+Data Fetching From Plc 2024-04-24 15:39:55.528968
+Data Fetching From Plc 2024-04-24 15:39:55.649959
+Data Fetching From Plc 2024-04-24 15:39:55.765965
+Data Fetching From Plc 2024-04-24 15:39:55.885481
+Data Fetching From Plc 2024-04-24 15:39:56.003738
+Data Fetching From Plc 2024-04-24 15:39:56.126754
+Data Fetching From Plc 2024-04-24 15:39:56.246326
+Data Fetching From Plc 2024-04-24 15:39:56.376019
+Data Fetching From Plc 2024-04-24 15:39:56.494690
+Data Fetching From Plc 2024-04-24 15:39:56.652882
+Data Fetching From Plc 2024-04-24 15:39:56.769028
+Data Fetching From Plc 2024-04-24 15:39:56.897087
+Data Fetching From Plc 2024-04-24 15:39:57.017294
+Data Fetching From Plc 2024-04-24 15:39:57.138190
+Data Fetching From Plc 2024-04-24 15:39:57.255094
+PLC data fetching Disconnected2024-04-24 15:39:57.298545
+PLC is connected 2024-04-24 15:42:34.978725
+Data Fetching From Plc 2024-04-24 15:42:35.065741
+Data Fetching From Plc 2024-04-24 15:42:35.211134
+PLC is connected 2024-04-24 15:42:35.335400
+Data Fetching From Plc 2024-04-24 15:42:35.427929
+Data Fetching From Plc 2024-04-24 15:42:35.548959
+PLC is connected 2024-04-24 15:42:35.674961
+Data Fetching From Plc 2024-04-24 15:42:35.766290
+Data Fetching From Plc 2024-04-24 15:42:35.893864
+PLC is connected 2024-04-24 15:42:36.021519
+Data Fetching From Plc 2024-04-24 15:42:36.117989
+Data Fetching From Plc 2024-04-24 15:42:36.240192
+PLC is connected 2024-04-24 15:42:36.362375
+Data Fetching From Plc 2024-04-24 15:42:36.454115
+Data Fetching From Plc 2024-04-24 15:42:36.576839
+PLC is connected 2024-04-24 15:42:36.704120
+Data Fetching From Plc 2024-04-24 15:42:36.795045
+Data Fetching From Plc 2024-04-24 15:42:36.915492
+PLC is connected 2024-04-24 15:42:37.034048
+Data Fetching From Plc 2024-04-24 15:42:37.128162
+Data Fetching From Plc 2024-04-24 15:42:37.252044
+PLC is connected 2024-04-24 15:42:37.394039
+Data Fetching From Plc 2024-04-24 15:42:37.483135
+Data Fetching From Plc 2024-04-24 15:42:37.612049
+PLC is connected 2024-04-24 15:42:37.732057
+Data Fetching From Plc 2024-04-24 15:42:37.822064
+Data Fetching From Plc 2024-04-24 15:42:37.940677
+PLC is connected 2024-04-24 15:42:38.061879
+Data Fetching From Plc 2024-04-24 15:42:38.152105
+Data Fetching From Plc 2024-04-24 15:42:38.270900
+PLC is connected 2024-04-24 15:42:38.397000
+Data Fetching From Plc 2024-04-24 15:42:38.493153
+Data Fetching From Plc 2024-04-24 15:42:38.614155
+PLC is connected 2024-04-24 15:42:38.781707
+Data Fetching From Plc 2024-04-24 15:42:38.880735
+Data Fetching From Plc 2024-04-24 15:42:39.016002
+PLC is connected 2024-04-24 15:42:39.175851
+Data Fetching From Plc 2024-04-24 15:42:39.272341
+Data Fetching From Plc 2024-04-24 15:42:39.424578
+PLC is connected 2024-04-24 15:42:39.572872
+Data Fetching From Plc 2024-04-24 15:42:39.665511
+Data Fetching From Plc 2024-04-24 15:42:39.820858
+PLC is connected 2024-04-24 15:42:39.994223
+Data Fetching From Plc 2024-04-24 15:42:40.086879
+Data Fetching From Plc 2024-04-24 15:42:40.252029
+PLC is connected 2024-04-24 15:42:40.420973
+PLC data fetching Disconnected2024-04-24 15:42:40.501963
+Data Fetching From Plc 2024-04-24 15:42:40.528995
+Data Fetching From Plc 2024-04-24 15:42:40.546976
+PLC is connected 2024-04-24 15:42:40.558471
+Data Fetching From Plc 2024-04-24 15:42:40.642966
+Data Fetching From Plc 2024-04-24 15:42:40.809198
+PLC is connected 2024-04-24 15:42:40.964377
+Data Fetching From Plc 2024-04-24 15:42:41.059257
+Data Fetching From Plc 2024-04-24 15:42:41.241615
+PLC is connected 2024-04-24 15:42:41.382269
+Data Fetching From Plc 2024-04-24 15:42:41.494696
+Data Fetching From Plc 2024-04-24 15:42:41.675805
+PLC is connected 2024-04-24 15:42:41.834955
+Data Fetching From Plc 2024-04-24 15:42:41.926716
+Data Fetching From Plc 2024-04-24 15:42:42.066818
+PLC is connected 2024-04-24 15:42:42.213716
+Data Fetching From Plc 2024-04-24 15:42:42.314114
+Data Fetching From Plc 2024-04-24 15:42:42.486941
+PLC is connected 2024-04-24 15:42:42.648443
+Data Fetching From Plc 2024-04-24 15:42:42.744199
+Data Fetching From Plc 2024-04-24 15:42:42.884031
+PLC is connected 2024-04-24 15:42:43.012289
+PLC data fetching Disconnected2024-04-24 15:42:43.093764
+Data Fetching From Plc 2024-04-24 15:42:43.105753
+Data Fetching From Plc 2024-04-24 15:42:43.121297
+PLC is connected 2024-04-24 15:42:43.134313
+Data Fetching From Plc 2024-04-24 15:42:43.209206
+PLC data fetching Disconnected2024-04-24 15:42:43.281536
+PLC data fetching Disconnected2024-04-24 15:42:43.467812
+PLC data fetching Disconnected2024-04-24 15:42:43.651091
+PLC data fetching Disconnected2024-04-24 15:42:43.832504
+PLC data fetching Disconnected2024-04-24 15:42:44.013880
+Data Fetching From Plc 2024-04-24 15:42:46.284752
+PLC is connected 2024-04-24 15:42:46.302150
+Data Fetching From Plc 2024-04-24 15:42:46.395041
+Data Fetching From Plc 2024-04-24 15:42:46.527939
+PLC is connected 2024-04-24 15:42:46.660786
+Data Fetching From Plc 2024-04-24 15:42:46.760333
+Data Fetching From Plc 2024-04-24 15:42:46.886416
+PLC is connected 2024-04-24 15:42:47.009269
+Data Fetching From Plc 2024-04-24 15:42:47.104946
+Data Fetching From Plc 2024-04-24 15:42:47.239045
+PLC is connected 2024-04-24 15:42:47.364411
+Data Fetching From Plc 2024-04-24 15:42:47.459101
+Data Fetching From Plc 2024-04-24 15:42:47.592700
+PLC data fetching Disconnected2024-04-24 15:42:47.788940
+PLC is connected 2024-04-24 15:42:50.770009
+Data Fetching From Plc 2024-04-24 15:42:50.845185
+Data Fetching From Plc 2024-04-24 15:42:50.968701
+PLC is connected 2024-04-24 15:42:51.091682
+Data Fetching From Plc 2024-04-24 15:42:51.183694
+Data Fetching From Plc 2024-04-24 15:42:51.312470
+PLC is connected 2024-04-24 15:42:51.433147
+Data Fetching From Plc 2024-04-24 15:42:51.524255
+Data Fetching From Plc 2024-04-24 15:42:51.650631
+PLC is connected 2024-04-24 15:42:51.772114
+Data Fetching From Plc 2024-04-24 15:42:51.867275
+PLC data fetching Disconnected2024-04-24 15:42:51.897341
+Data Fetching From Plc 2024-04-24 15:42:54.909807
+PLC is connected 2024-04-24 15:42:54.926076
+Data Fetching From Plc 2024-04-24 15:42:55.025277
+Data Fetching From Plc 2024-04-24 15:42:55.157892
+PLC is connected 2024-04-24 15:42:55.290409
+Data Fetching From Plc 2024-04-24 15:42:55.390470
+Data Fetching From Plc 2024-04-24 15:42:55.525859
+PLC is connected 2024-04-24 15:42:55.656163
+Data Fetching From Plc 2024-04-24 15:42:55.753431
+Data Fetching From Plc 2024-04-24 15:42:55.880125
+PLC data fetching Disconnected2024-04-24 15:42:55.986156
+PLC is connected 2024-04-24 15:42:58.985276
+Data Fetching From Plc 2024-04-24 15:42:59.066866
+Data Fetching From Plc 2024-04-24 15:42:59.195406
+PLC is connected 2024-04-24 15:42:59.348007
+Data Fetching From Plc 2024-04-24 15:42:59.449368
+Data Fetching From Plc 2024-04-24 15:42:59.572117
+PLC is connected 2024-04-24 15:42:59.708894
+Data Fetching From Plc 2024-04-24 15:42:59.804572
+Data Fetching From Plc 2024-04-24 15:42:59.935026
+PLC is connected 2024-04-24 15:43:00.059703
+Data Fetching From Plc 2024-04-24 15:43:00.149572
+Data Fetching From Plc 2024-04-24 15:43:00.272261
+PLC is connected 2024-04-24 15:43:00.393090
+Data Fetching From Plc 2024-04-24 15:43:00.492062
+Data Fetching From Plc 2024-04-24 15:43:00.646528
+PLC is connected 2024-04-24 15:43:00.781510
+Data Fetching From Plc 2024-04-24 15:43:00.883854
+Data Fetching From Plc 2024-04-24 15:43:01.015688
+PLC is connected 2024-04-24 15:43:01.147136
+Data Fetching From Plc 2024-04-24 15:43:01.236993
+Data Fetching From Plc 2024-04-24 15:43:01.358888
+PLC is connected 2024-04-24 15:43:01.480407
+Data Fetching From Plc 2024-04-24 15:43:01.578701
+PLC data fetching Disconnected2024-04-24 15:43:01.641992
+Data Fetching From Plc 2024-04-24 15:43:01.651610
+PLC is connected 2024-04-24 15:43:01.659613
+Data Fetching From Plc 2024-04-24 15:43:01.736456
+Data Fetching From Plc 2024-04-24 15:43:01.890301
+PLC is connected 2024-04-24 15:43:02.023512
+Data Fetching From Plc 2024-04-24 15:43:02.118907
+Data Fetching From Plc 2024-04-24 15:43:02.240709
+PLC is connected 2024-04-24 15:43:02.372652
+Data Fetching From Plc 2024-04-24 15:43:02.471877
+Data Fetching From Plc 2024-04-24 15:43:02.598294
+PLC is connected 2024-04-24 15:43:02.723024
+Data Fetching From Plc 2024-04-24 15:43:02.818436
+Data Fetching From Plc 2024-04-24 15:43:02.953559
+PLC is connected 2024-04-24 15:43:03.076451
+Data Fetching From Plc 2024-04-24 15:43:03.170283
+Data Fetching From Plc 2024-04-24 15:43:03.335723
+PLC is connected 2024-04-24 15:43:03.470324
+Data Fetching From Plc 2024-04-24 15:43:03.565302
+Data Fetching From Plc 2024-04-24 15:43:03.690235
+PLC is connected 2024-04-24 15:43:03.822615
+Data Fetching From Plc 2024-04-24 15:43:03.920306
+Data Fetching From Plc 2024-04-24 15:43:04.054339
+PLC is connected 2024-04-24 15:43:04.182778
+Data Fetching From Plc 2024-04-24 15:43:04.281490
+Data Fetching From Plc 2024-04-24 15:43:04.414871
+PLC is connected 2024-04-24 15:43:04.598437
+Data Fetching From Plc 2024-04-24 15:43:04.697005
+Data Fetching From Plc 2024-04-24 15:43:04.830183
+PLC is connected 2024-04-24 15:43:04.962726
+Data Fetching From Plc 2024-04-24 15:43:05.062978
+Data Fetching From Plc 2024-04-24 15:43:05.193268
+PLC is connected 2024-04-24 15:43:05.324842
+Data Fetching From Plc 2024-04-24 15:43:05.417882
+Data Fetching From Plc 2024-04-24 15:43:05.546771
+PLC is connected 2024-04-24 15:43:05.681143
+Data Fetching From Plc 2024-04-24 15:43:05.770215
+Data Fetching From Plc 2024-04-24 15:43:05.892869
+PLC is connected 2024-04-24 15:43:06.032093
+Data Fetching From Plc 2024-04-24 15:43:06.124995
+Data Fetching From Plc 2024-04-24 15:43:06.253177
+PLC is connected 2024-04-24 15:43:06.386135
+Data Fetching From Plc 2024-04-24 15:43:06.481876
+Data Fetching From Plc 2024-04-24 15:43:06.607588
+PLC is connected 2024-04-24 15:43:06.729196
+Data Fetching From Plc 2024-04-24 15:43:06.824814
+Data Fetching From Plc 2024-04-24 15:43:06.944396
+PLC is connected 2024-04-24 15:43:07.068447
+Data Fetching From Plc 2024-04-24 15:43:07.165520
+Data Fetching From Plc 2024-04-24 15:43:07.290951
+PLC is connected 2024-04-24 15:43:07.423409
+Data Fetching From Plc 2024-04-24 15:43:07.517087
+Data Fetching From Plc 2024-04-24 15:43:07.635104
+PLC is connected 2024-04-24 15:43:07.763575
+Data Fetching From Plc 2024-04-24 15:43:07.854572
+Data Fetching From Plc 2024-04-24 15:43:07.970767
+PLC is connected 2024-04-24 15:43:08.092028
+Data Fetching From Plc 2024-04-24 15:43:08.185517
+Data Fetching From Plc 2024-04-24 15:43:08.306228
+PLC is connected 2024-04-24 15:43:08.428782
+Data Fetching From Plc 2024-04-24 15:43:08.523623
+Data Fetching From Plc 2024-04-24 15:43:08.646473
+PLC is connected 2024-04-24 15:43:08.771326
+Data Fetching From Plc 2024-04-24 15:43:08.863622
+Data Fetching From Plc 2024-04-24 15:43:09.027614
+PLC is connected 2024-04-24 15:43:09.151469
+Data Fetching From Plc 2024-04-24 15:43:09.245239
+Data Fetching From Plc 2024-04-24 15:43:09.366237
+PLC is connected 2024-04-24 15:43:09.493498
+Data Fetching From Plc 2024-04-24 15:43:09.587709
+PLC is connected 2024-04-24 15:44:54.813168
+Data Fetching From Plc 2024-04-24 15:44:54.907407
+Data Fetching From Plc 2024-04-24 15:44:55.049644
+PLC is connected 2024-04-24 15:44:55.179236
+Data Fetching From Plc 2024-04-24 15:44:55.272385
+Data Fetching From Plc 2024-04-24 15:44:55.396790
+PLC is connected 2024-04-24 15:44:55.522176
+Data Fetching From Plc 2024-04-24 15:44:55.613790
+Data Fetching From Plc 2024-04-24 15:44:55.742587
+PLC is connected 2024-04-24 15:44:55.860719
+Data Fetching From Plc 2024-04-24 15:44:55.952764
+Data Fetching From Plc 2024-04-24 15:44:56.076872
+PLC is connected 2024-04-24 15:44:56.200252
+Data Fetching From Plc 2024-04-24 15:44:56.291267
+Data Fetching From Plc 2024-04-24 15:44:56.410652
+PLC is connected 2024-04-24 15:44:56.537760
+Data Fetching From Plc 2024-04-24 15:44:56.638770
+Data Fetching From Plc 2024-04-24 15:44:56.790664
+PLC data fetching Disconnected2024-04-24 15:44:56.882670
+PLC is connected 2024-04-24 15:44:59.885590
+Data Fetching From Plc 2024-04-24 15:44:59.956772
+Data Fetching From Plc 2024-04-24 15:45:00.080634
+PLC is connected 2024-04-24 15:45:00.200635
+Data Fetching From Plc 2024-04-24 15:45:00.292903
+Data Fetching From Plc 2024-04-24 15:45:00.410180
+PLC is connected 2024-04-24 15:45:00.527182
+Data Fetching From Plc 2024-04-24 15:45:00.624443
+Data Fetching From Plc 2024-04-24 15:45:00.748991
+PLC is connected 2024-04-24 15:45:00.869614
+Data Fetching From Plc 2024-04-24 15:45:00.958943
+Data Fetching From Plc 2024-04-24 15:45:01.096706
+PLC is connected 2024-04-24 15:45:01.222426
+Data Fetching From Plc 2024-04-24 15:45:01.311486
+Data Fetching From Plc 2024-04-24 15:45:01.430731
+PLC is connected 2024-04-24 15:45:01.550541
+Data Fetching From Plc 2024-04-24 15:45:01.642102
+Data Fetching From Plc 2024-04-24 15:45:01.765115
+PLC is connected 2024-04-24 15:45:01.882446
+Data Fetching From Plc 2024-04-24 15:45:01.973455
+Data Fetching From Plc 2024-04-24 15:45:02.086515
+PLC is connected 2024-04-24 15:45:02.206716
+Data Fetching From Plc 2024-04-24 15:45:02.294751
+Data Fetching From Plc 2024-04-24 15:45:02.437910
+PLC is connected 2024-04-24 15:45:02.561923
+Data Fetching From Plc 2024-04-24 15:45:02.655927
+Data Fetching From Plc 2024-04-24 15:45:02.780546
+PLC is connected 2024-04-24 15:45:02.901600
+Data Fetching From Plc 2024-04-24 15:45:02.995598
+Data Fetching From Plc 2024-04-24 15:45:03.117906
+PLC is connected 2024-04-24 15:45:03.246411
+Data Fetching From Plc 2024-04-24 15:45:03.348547
+Data Fetching From Plc 2024-04-24 15:45:03.479098
+PLC is connected 2024-04-24 15:45:03.619596
+Data Fetching From Plc 2024-04-24 15:45:03.708304
+Data Fetching From Plc 2024-04-24 15:45:03.842596
+PLC data fetching Disconnected2024-04-24 15:45:03.954875
+PLC is connected 2024-04-24 15:45:06.954482
+Data Fetching From Plc 2024-04-24 15:45:07.028931
+Data Fetching From Plc 2024-04-24 15:45:07.159136
+PLC is connected 2024-04-24 15:45:07.288464
+Data Fetching From Plc 2024-04-24 15:45:07.384317
+Data Fetching From Plc 2024-04-24 15:45:07.514899
+PLC is connected 2024-04-24 15:45:07.645507
+Data Fetching From Plc 2024-04-24 15:45:07.738010
+Data Fetching From Plc 2024-04-24 15:45:07.886735
+PLC is connected 2024-04-24 15:45:08.007236
+Data Fetching From Plc 2024-04-24 15:45:08.100099
+Data Fetching From Plc 2024-04-24 15:45:08.225834
+PLC is connected 2024-04-24 15:45:08.360549
+Data Fetching From Plc 2024-04-24 15:45:08.456445
+Data Fetching From Plc 2024-04-24 15:45:08.587421
+PLC is connected 2024-04-24 15:45:08.715155
+Data Fetching From Plc 2024-04-24 15:45:08.805713
+Data Fetching From Plc 2024-04-24 15:45:08.931440
+PLC is connected 2024-04-24 15:45:09.119771
+Data Fetching From Plc 2024-04-24 15:45:09.214439
+Data Fetching From Plc 2024-04-24 15:45:09.335038
+PLC is connected 2024-04-24 15:45:09.453673
+Data Fetching From Plc 2024-04-24 15:45:09.541923
+Data Fetching From Plc 2024-04-24 15:45:09.664338
+PLC is connected 2024-04-24 15:45:09.782103
+Data Fetching From Plc 2024-04-24 15:45:09.877049
+Data Fetching From Plc 2024-04-24 15:45:10.001494
+PLC is connected 2024-04-24 15:45:10.127141
+Data Fetching From Plc 2024-04-24 15:45:10.223936
+Data Fetching From Plc 2024-04-24 15:45:10.363141
+PLC is connected 2024-04-24 15:45:10.494555
+Data Fetching From Plc 2024-04-24 15:45:10.598662
+Data Fetching From Plc 2024-04-24 15:45:10.725195
+PLC is connected 2024-04-24 15:45:10.843774
+Data Fetching From Plc 2024-04-24 15:45:10.932967
+Data Fetching From Plc 2024-04-24 15:45:11.059505
+PLC is connected 2024-04-24 15:45:11.186818
+Data Fetching From Plc 2024-04-24 15:45:11.283729
+Data Fetching From Plc 2024-04-24 15:45:11.423021
+PLC is connected 2024-04-24 15:45:11.542395
+Data Fetching From Plc 2024-04-24 15:45:11.644398
+Data Fetching From Plc 2024-04-24 15:45:11.763327
+PLC is connected 2024-04-24 15:45:11.891884
+Data Fetching From Plc 2024-04-24 15:45:11.985644
+Data Fetching From Plc 2024-04-24 15:45:12.106697
+PLC is connected 2024-04-24 15:45:12.235477
+Data Fetching From Plc 2024-04-24 15:45:12.334695
+Data Fetching From Plc 2024-04-24 15:45:12.465606
+PLC is connected 2024-04-24 15:45:12.585760
+Data Fetching From Plc 2024-04-24 15:45:12.700925
+Data Fetching From Plc 2024-04-24 15:45:12.827526
+PLC is connected 2024-04-24 15:45:12.952003
+Data Fetching From Plc 2024-04-24 15:45:13.043302
+Data Fetching From Plc 2024-04-24 15:45:13.172151
+PLC is connected 2024-04-24 15:45:13.298589
+Data Fetching From Plc 2024-04-24 15:45:13.390352
+Data Fetching From Plc 2024-04-24 15:45:13.520031
+PLC is connected 2024-04-24 15:45:13.640305
+Data Fetching From Plc 2024-04-24 15:45:13.734822
+Data Fetching From Plc 2024-04-24 15:45:13.853737
+PLC is connected 2024-04-24 15:45:13.982598
+Data Fetching From Plc 2024-04-24 15:45:14.075996
+Data Fetching From Plc 2024-04-24 15:45:14.204310
+PLC is connected 2024-04-24 15:45:14.334821
+Data Fetching From Plc 2024-04-24 15:45:14.432386
+Data Fetching From Plc 2024-04-24 15:45:14.555281
+PLC is connected 2024-04-24 15:45:14.675122
+Data Fetching From Plc 2024-04-24 15:45:14.768442
+Data Fetching From Plc 2024-04-24 15:45:14.885911
+PLC is connected 2024-04-24 15:45:15.014172
+Data Fetching From Plc 2024-04-24 15:45:15.105178
+Data Fetching From Plc 2024-04-24 15:45:15.226025
+PLC is connected 2024-04-24 15:45:15.347791
+Data Fetching From Plc 2024-04-24 15:45:15.439796
+Data Fetching From Plc 2024-04-24 15:45:15.564844
+PLC is connected 2024-04-24 15:45:15.719353
+Data Fetching From Plc 2024-04-24 15:45:15.806819
+Data Fetching From Plc 2024-04-24 15:45:15.925585
+PLC is connected 2024-04-24 15:45:16.048902
+Data Fetching From Plc 2024-04-24 15:45:16.139524
+Data Fetching From Plc 2024-04-24 15:45:16.263033
+PLC is connected 2024-04-24 15:45:16.394452
+Data Fetching From Plc 2024-04-24 15:45:16.485480
+Data Fetching From Plc 2024-04-24 15:45:16.611681
+PLC is connected 2024-04-24 15:45:16.731643
+Data Fetching From Plc 2024-04-24 15:45:16.827341
+Data Fetching From Plc 2024-04-24 15:45:16.950958
+PLC is connected 2024-04-24 15:45:17.074639
+Data Fetching From Plc 2024-04-24 15:45:17.179745
+Data Fetching From Plc 2024-04-24 15:45:17.307175
+PLC is connected 2024-04-24 15:45:17.432898
+Data Fetching From Plc 2024-04-24 15:45:17.523030
+Data Fetching From Plc 2024-04-24 15:45:17.650847
+PLC is connected 2024-04-24 15:45:17.768843
+Data Fetching From Plc 2024-04-24 15:45:17.862357
+Data Fetching From Plc 2024-04-24 15:45:17.984025
+PLC is connected 2024-04-24 15:45:18.104406
+Data Fetching From Plc 2024-04-24 15:45:18.199637
+Data Fetching From Plc 2024-04-24 15:45:18.320718
+PLC is connected 2024-04-24 15:48:39.869948
+Data Fetching From Plc 2024-04-24 15:48:39.969007
+PLC is connected 2024-04-24 15:48:41.595442
+Data Fetching From Plc 2024-04-24 15:48:41.697012
+PLC is connected 2024-04-24 15:48:44.297127
+Data Fetching From Plc 2024-04-24 15:48:44.387277
+PLC is connected 2024-04-24 15:50:41.715698
+Data Fetching From Plc 2024-04-24 15:50:41.807235
+PLC is connected 2024-04-24 15:50:43.451344
+Data Fetching From Plc 2024-04-24 15:50:43.552819
+PLC is connected 2024-04-24 15:51:46.100721
+Data Fetching From Plc 2024-04-24 15:51:46.195957
+Data Fetching From Plc 2024-04-24 15:51:46.346608
+PLC is connected 2024-04-24 15:51:48.530968
+Data Fetching From Plc 2024-04-24 15:51:48.624458
+Data Fetching From Plc 2024-04-24 15:51:48.754653
+PLC is connected 2024-04-24 15:51:50.401720
+Data Fetching From Plc 2024-04-24 15:51:50.500509
+Data Fetching From Plc 2024-04-24 15:51:50.630657
+PLC is connected 2024-04-24 15:51:52.219023
+Data Fetching From Plc 2024-04-24 15:51:52.315571
+Data Fetching From Plc 2024-04-24 15:51:52.445812
+PLC is connected 2024-04-24 15:51:54.292935
+Data Fetching From Plc 2024-04-24 15:51:54.394986
+Data Fetching From Plc 2024-04-24 15:51:54.532375
+PLC is connected 2024-04-24 15:54:41.378906
+Data Fetching From Plc 2024-04-24 15:54:41.473381
+Data Fetching From Plc 2024-04-24 15:54:41.616509
+PLC is connected 2024-04-24 15:54:43.091369
+Data Fetching From Plc 2024-04-24 15:54:43.185760
+Data Fetching From Plc 2024-04-24 15:54:43.316690
+PLC is connected 2024-04-24 15:56:16.244009
+Data Fetching From Plc 2024-04-24 15:56:16.335604
+PLC is connected 2024-04-24 16:01:04.690630
+Data Fetching From Plc 2024-04-24 16:01:04.786899
+Data Fetching From Plc 2024-04-24 16:01:04.931445
+PLC is connected 2024-04-24 16:02:15.328763
+Data Fetching From Plc 2024-04-24 16:02:15.418590
+Data Fetching From Plc 2024-04-24 16:02:15.560598
+PLC data fetching Disconnected2024-04-24 16:02:31.703327
+PLC is connected 2024-04-24 16:02:32.888288
+Data Fetching From Plc 2024-04-24 16:02:32.965261
+Data Fetching From Plc 2024-04-24 16:02:33.110306
+PLC is connected 2024-04-24 16:04:03.903979
+Data Fetching From Plc 2024-04-24 16:04:03.994465
+PLC is connected 2024-04-24 16:07:11.168960
+Data Fetching From Plc 2024-04-24 16:07:11.256455
+PLC is connected 2024-04-24 16:08:46.200555
+Data Fetching From Plc 2024-04-24 16:08:46.292502
+PLC is connected 2024-04-24 16:24:22.645157
+Data Fetching From Plc 2024-04-24 16:24:22.734147
+Data Fetching From Plc 2024-04-24 16:24:22.889941
+Data Fetching From Plc 2024-04-24 16:24:23.040821
+Data Fetching From Plc 2024-04-24 16:24:23.193484
+Data Fetching From Plc 2024-04-24 16:24:23.328245
+Data Fetching From Plc 2024-04-24 16:24:23.525687
+Data Fetching From Plc 2024-04-24 16:24:23.659440
+Data Fetching From Plc 2024-04-24 16:24:23.807362
+Data Fetching From Plc 2024-04-24 16:24:23.955819
+Data Fetching From Plc 2024-04-24 16:24:24.090076
+Data Fetching From Plc 2024-04-24 16:24:24.239057
+Data Fetching From Plc 2024-04-24 16:24:24.378105
+Data Fetching From Plc 2024-04-24 16:24:24.560573
+Data Fetching From Plc 2024-04-24 16:24:24.706068
+Data Fetching From Plc 2024-04-24 16:24:24.858906
+Data Fetching From Plc 2024-04-24 16:24:25.007872
+Data Fetching From Plc 2024-04-24 16:24:25.159061
+Data Fetching From Plc 2024-04-24 16:24:25.309782
+Data Fetching From Plc 2024-04-24 16:24:25.461407
+Data Fetching From Plc 2024-04-24 16:24:25.675613
+Data Fetching From Plc 2024-04-24 16:24:25.840878
+Data Fetching From Plc 2024-04-24 16:24:25.989603
+Data Fetching From Plc 2024-04-24 16:24:26.126133
+Data Fetching From Plc 2024-04-24 16:24:26.277843
+Data Fetching From Plc 2024-04-24 16:24:26.415300
+Data Fetching From Plc 2024-04-24 16:24:26.573416
+Data Fetching From Plc 2024-04-24 16:24:26.707034
+Data Fetching From Plc 2024-04-24 16:24:26.832158
+Data Fetching From Plc 2024-04-24 16:24:26.957611
+Data Fetching From Plc 2024-04-24 16:24:27.080042
+Data Fetching From Plc 2024-04-24 16:24:27.205116
+Data Fetching From Plc 2024-04-24 16:24:27.325823
+Data Fetching From Plc 2024-04-24 16:24:27.454825
+Data Fetching From Plc 2024-04-24 16:24:27.601007
+Data Fetching From Plc 2024-04-24 16:24:27.725115
+Data Fetching From Plc 2024-04-24 16:24:27.855220
+Data Fetching From Plc 2024-04-24 16:24:27.972563
+Data Fetching From Plc 2024-04-24 16:24:28.094566
+Data Fetching From Plc 2024-04-24 16:24:28.219870
+Data Fetching From Plc 2024-04-24 16:24:28.349297
+Data Fetching From Plc 2024-04-24 16:24:28.474876
+Data Fetching From Plc 2024-04-24 16:24:28.627055
+Data Fetching From Plc 2024-04-24 16:24:28.748051
+Data Fetching From Plc 2024-04-24 16:24:28.873215
+Data Fetching From Plc 2024-04-24 16:24:28.994340
+Data Fetching From Plc 2024-04-24 16:24:29.118395
+Data Fetching From Plc 2024-04-24 16:24:29.240102
+Data Fetching From Plc 2024-04-24 16:24:29.371378
+Data Fetching From Plc 2024-04-24 16:24:29.491626
+Data Fetching From Plc 2024-04-24 16:24:29.642157
+Data Fetching From Plc 2024-04-24 16:24:29.768358
+Data Fetching From Plc 2024-04-24 16:24:29.899952
+Data Fetching From Plc 2024-04-24 16:24:30.017951
+Data Fetching From Plc 2024-04-24 16:24:30.141952
+Data Fetching From Plc 2024-04-24 16:24:30.272953
+Data Fetching From Plc 2024-04-24 16:24:30.397151
+Data Fetching From Plc 2024-04-24 16:24:30.515177
+Data Fetching From Plc 2024-04-24 16:24:30.701710
+Data Fetching From Plc 2024-04-24 16:24:30.857486
+Data Fetching From Plc 2024-04-24 16:24:31.012940
+Data Fetching From Plc 2024-04-24 16:24:31.168446
+Data Fetching From Plc 2024-04-24 16:24:31.324008
+Data Fetching From Plc 2024-04-24 16:24:31.478914
+Data Fetching From Plc 2024-04-24 16:24:31.634159
+Data Fetching From Plc 2024-04-24 16:24:31.790416
+Data Fetching From Plc 2024-04-24 16:24:31.946869
+Data Fetching From Plc 2024-04-24 16:24:32.132166
+Data Fetching From Plc 2024-04-24 16:24:32.318787
+Data Fetching From Plc 2024-04-24 16:24:32.493140
+Data Fetching From Plc 2024-04-24 16:24:32.658759
+Data Fetching From Plc 2024-04-24 16:24:32.813602
+Data Fetching From Plc 2024-04-24 16:24:33.001282
+Data Fetching From Plc 2024-04-24 16:24:33.174468
+Data Fetching From Plc 2024-04-24 16:24:33.343758
+Data Fetching From Plc 2024-04-24 16:24:33.501072
+Data Fetching From Plc 2024-04-24 16:24:33.658755
+Data Fetching From Plc 2024-04-24 16:24:33.859972
+Data Fetching From Plc 2024-04-24 16:24:34.015168
+Data Fetching From Plc 2024-04-24 16:24:34.169565
+Data Fetching From Plc 2024-04-24 16:24:34.326222
+Data Fetching From Plc 2024-04-24 16:24:34.477903
+Data Fetching From Plc 2024-04-24 16:24:34.649957
+Data Fetching From Plc 2024-04-24 16:24:34.819010
+Data Fetching From Plc 2024-04-24 16:24:34.976743
+Data Fetching From Plc 2024-04-24 16:24:35.190927
+Data Fetching From Plc 2024-04-24 16:24:35.346564
+Data Fetching From Plc 2024-04-24 16:24:35.533200
+Data Fetching From Plc 2024-04-24 16:24:35.724535
+Data Fetching From Plc 2024-04-24 16:24:35.890215
+Data Fetching From Plc 2024-04-24 16:24:36.063409
+Data Fetching From Plc 2024-04-24 16:24:36.232033
+Data Fetching From Plc 2024-04-24 16:24:36.390112
+Data Fetching From Plc 2024-04-24 16:24:36.544609
+Data Fetching From Plc 2024-04-24 16:24:36.730370
+Data Fetching From Plc 2024-04-24 16:24:36.933353
+Data Fetching From Plc 2024-04-24 16:24:37.122684
+Data Fetching From Plc 2024-04-24 16:24:37.308597
+Data Fetching From Plc 2024-04-24 16:24:37.491888
+Data Fetching From Plc 2024-04-24 16:24:37.710207
+Data Fetching From Plc 2024-04-24 16:24:37.897782
+Data Fetching From Plc 2024-04-24 16:24:38.101092
+Data Fetching From Plc 2024-04-24 16:24:38.272346
+PLC data fetching Disconnected2024-04-24 16:24:38.366710
+PLC is connected 2024-04-24 16:25:50.901573
+Data Fetching From Plc 2024-04-24 16:25:50.985363
+Data Fetching From Plc 2024-04-24 16:25:51.124444
+Data Fetching From Plc 2024-04-24 16:25:51.251975
+Data Fetching From Plc 2024-04-24 16:25:51.377745
+Data Fetching From Plc 2024-04-24 16:25:51.507928
+Data Fetching From Plc 2024-04-24 16:25:51.678703
+Data Fetching From Plc 2024-04-24 16:25:51.814108
+Data Fetching From Plc 2024-04-24 16:25:51.941342
+Data Fetching From Plc 2024-04-24 16:25:52.065902
+Data Fetching From Plc 2024-04-24 16:25:52.191635
+Data Fetching From Plc 2024-04-24 16:25:52.323049
+Data Fetching From Plc 2024-04-24 16:25:52.457795
+Data Fetching From Plc 2024-04-24 16:25:52.581126
+Data Fetching From Plc 2024-04-24 16:25:52.716221
+Data Fetching From Plc 2024-04-24 16:25:52.857909
+Data Fetching From Plc 2024-04-24 16:25:52.997034
+Data Fetching From Plc 2024-04-24 16:25:53.126006
+Data Fetching From Plc 2024-04-24 16:25:53.256607
+Data Fetching From Plc 2024-04-24 16:25:53.385146
+Data Fetching From Plc 2024-04-24 16:25:53.517418
+Data Fetching From Plc 2024-04-24 16:25:53.642405
+Data Fetching From Plc 2024-04-24 16:25:53.781243
+Data Fetching From Plc 2024-04-24 16:25:53.920895
+Data Fetching From Plc 2024-04-24 16:25:54.051439
+Data Fetching From Plc 2024-04-24 16:25:54.177962
+Data Fetching From Plc 2024-04-24 16:25:54.314605
+PLC data fetching Disconnected2024-04-24 16:25:54.325601
+PLC is connected 2024-04-24 16:28:58.352044
+Data Fetching From Plc 2024-04-24 16:28:58.450376
+Data Fetching From Plc 2024-04-24 16:29:03.608314
+Data Fetching From Plc 2024-04-24 16:29:08.771093
+Data Fetching From Plc 2024-04-24 16:29:13.981319
+Data Fetching From Plc 2024-04-24 16:29:19.180558
+Data Fetching From Plc 2024-04-24 16:29:24.357543
+PLC data fetching Disconnected2024-04-24 16:29:25.010464
+PLC is connected 2024-04-24 16:37:21.255461
+Data Fetching From Plc 2024-04-24 16:37:21.349534
+Data Fetching From Plc 2024-04-24 16:37:26.507786
+PLC data fetching Disconnected2024-04-24 16:37:29.495050
+PLC is connected 2024-04-24 16:38:55.326640
+Data Fetching From Plc 2024-04-24 16:38:55.414400
+Data Fetching From Plc 2024-04-24 16:39:45.589948
+Data Fetching From Plc 2024-04-24 16:40:35.764425
+PLC data fetching Disconnected2024-04-24 16:40:49.670336
+PLC data fetching Disconnected2024-04-24 16:40:59.004414
+PLC data fetching Disconnected2024-04-24 16:41:06.882720
+PLC data fetching Disconnected2024-04-24 16:41:07.042719
+PLC data fetching Disconnected2024-04-24 16:41:07.210065
+PLC data fetching Disconnected2024-04-24 16:41:07.362350
+PLC data fetching Disconnected2024-04-24 16:41:07.586930
+PLC data fetching Disconnected2024-04-24 16:41:07.763567
+PLC data fetching Disconnected2024-04-24 16:41:07.933007
+PLC data fetching Disconnected2024-04-24 16:41:08.109367
+PLC data fetching Disconnected2024-04-24 16:41:08.282701
+PLC data fetching Disconnected2024-04-24 16:41:08.444237
+PLC data fetching Disconnected2024-04-24 16:41:08.630383
+PLC is connected 2024-04-24 17:13:57.090919
+Data Fetching From Plc 2024-04-24 17:13:57.191142
+Data Fetching From Plc 2024-04-24 17:14:02.396672
+Data Fetching From Plc 2024-04-24 17:14:07.560563
+Data Fetching From Plc 2024-04-24 17:14:12.720664
+PLC is connected 2024-04-24 17:24:03.350635
+Data Fetching From Plc 2024-04-24 17:24:03.440143
+PLC is connected 2024-04-24 17:26:01.518081
+Data Fetching From Plc 2024-04-24 17:26:01.606924
+Data Fetching From Plc 2024-04-24 17:26:06.751116
+Data Fetching From Plc 2024-04-24 17:26:11.894760
+Data Fetching From Plc 2024-04-24 17:26:17.030651
+Data Fetching From Plc 2024-04-24 17:26:22.169213
+Data Fetching From Plc 2024-04-24 17:26:27.305727
+Data Fetching From Plc 2024-04-24 17:26:32.438288
+Data Fetching From Plc 2024-04-24 17:26:37.570516
+Data Fetching From Plc 2024-04-24 17:26:42.704787
+Data Fetching From Plc 2024-04-24 17:26:47.831198
+Data Fetching From Plc 2024-04-24 17:26:52.966465
+Data Fetching From Plc 2024-04-24 17:26:58.088807
+Data Fetching From Plc 2024-04-24 17:27:03.216064
+Data Fetching From Plc 2024-04-24 17:27:08.353413
+Data Fetching From Plc 2024-04-24 17:27:13.501685
+Data Fetching From Plc 2024-04-24 17:27:18.653254
+Data Fetching From Plc 2024-04-24 17:27:23.780721
+Data Fetching From Plc 2024-04-24 17:27:28.934705
+Data Fetching From Plc 2024-04-24 17:27:34.087538
+Data Fetching From Plc 2024-04-24 17:27:39.237100
+Data Fetching From Plc 2024-04-24 17:27:44.366556
+PLC is connected 2024-04-24 17:42:16.518325
+Data Fetching From Plc 2024-04-24 17:42:16.615369
+Data Fetching From Plc 2024-04-24 17:42:21.765517
+Data Fetching From Plc 2024-04-24 17:42:26.921323
+Data Fetching From Plc 2024-04-24 17:42:32.042339
+Data Fetching From Plc 2024-04-24 17:42:37.182949
+Data Fetching From Plc 2024-04-24 17:42:42.318492
+PLC is connected 2024-04-24 17:43:58.406825
+Data Fetching From Plc 2024-04-24 17:43:58.494168
+Data Fetching From Plc 2024-04-24 17:44:03.634428
+Data Fetching From Plc 2024-04-24 17:44:08.768786
+Data Fetching From Plc 2024-04-24 17:44:13.899908
+PLC is connected 2024-04-25 10:22:07.778722
+PLC is connected 2024-04-25 10:23:39.753986
+PLC is connected 2024-04-25 10:24:57.735187
+PLC is connected 2024-04-25 10:25:24.686141
+PLC is connected 2024-04-25 10:26:30.128309
+PLC is connected 2024-04-25 10:42:06.424657
+PLC data fetching Disconnected2024-04-25 10:43:36.812415
+PLC is connected 2024-04-25 10:45:40.132100
+Data fetching from PLC 2024-04-25 10:45:40.132100
+Data fetching from PLC 2024-04-25 10:45:40.132100
+Data fetching from PLC 2024-04-25 10:45:40.132100
+Data fetching from PLC 2024-04-25 10:45:40.132100
+Data fetching from PLC 2024-04-25 10:45:40.132100
+PLC data fetching Disconnected2024-04-25 10:46:04.694859
+PLC is connected 2024-04-25 10:48:05.875896
+Data fetching from PLC 2024-04-25 10:48:05.977081
+Data fetching from PLC 2024-04-25 10:48:11.119608
+Data fetching from PLC 2024-04-25 10:48:16.254081
+Data fetching from PLC 2024-04-25 10:48:21.382171
+Data fetching from PLC 2024-04-25 10:48:26.502606
+Data fetching from PLC 2024-04-25 10:48:31.630956
+Data fetching from PLC 2024-04-25 10:48:36.764308
+Data fetching from PLC 2024-04-25 10:48:41.889783
+Data fetching from PLC 2024-04-25 10:48:47.020802
+Data fetching from PLC 2024-04-25 10:48:52.155074
+Data fetching from PLC 2024-04-25 10:48:57.283243
+Data fetching from PLC 2024-04-25 10:49:02.417303
+Data fetching from PLC 2024-04-25 10:49:07.572298
+Data fetching from PLC 2024-04-25 10:49:12.732412
+Data fetching from PLC 2024-04-25 10:49:17.862410
+Data fetching from PLC 2024-04-25 10:49:23.006625
+Data fetching from PLC 2024-04-25 10:49:28.148109
+Data fetching from PLC 2024-04-25 10:49:33.271303
+Data fetching from PLC 2024-04-25 10:49:38.399777
+Data fetching from PLC 2024-04-25 10:49:43.529743
+Data fetching from PLC 2024-04-25 10:49:48.650001
+Data fetching from PLC 2024-04-25 10:49:53.788024
+Data fetching from PLC 2024-04-25 10:49:58.927551
+Data fetching from PLC 2024-04-25 10:50:04.051348
+Data fetching from PLC 2024-04-25 10:50:09.179173
+Data fetching from PLC 2024-04-25 10:50:14.340637
+Data fetching from PLC 2024-04-25 10:50:19.494045
+Data fetching from PLC 2024-04-25 10:50:24.636590
+Data fetching from PLC 2024-04-25 10:50:29.782985
+Data fetching from PLC 2024-04-25 10:50:34.918567
+Data fetching from PLC 2024-04-25 10:50:40.051861
+Data fetching from PLC 2024-04-25 10:50:45.183059
+Data fetching from PLC 2024-04-25 10:50:50.307447
+Data fetching from PLC 2024-04-25 10:50:55.440879
+Data fetching from PLC 2024-04-25 10:51:00.633505
+Data fetching from PLC 2024-04-25 10:51:05.818427
+Data fetching from PLC 2024-04-25 10:51:11.003780
+Data fetching from PLC 2024-04-25 10:51:16.225838
+Data fetching from PLC 2024-04-25 10:51:21.433171
+Data fetching from PLC 2024-04-25 10:51:26.618042
+Data fetching from PLC 2024-04-25 10:51:31.790411
+Data fetching from PLC 2024-04-25 10:51:36.967051
+Data fetching from PLC 2024-04-25 10:51:42.210538
+Data fetching from PLC 2024-04-25 10:51:47.388343
+Data fetching from PLC 2024-04-25 10:51:52.578925
+Data fetching from PLC 2024-04-25 10:51:57.763634
+Data fetching from PLC 2024-04-25 10:52:02.965262
+Data fetching from PLC 2024-04-25 10:52:08.153432
+Data fetching from PLC 2024-04-25 10:52:13.334392
+Data fetching from PLC 2024-04-25 10:52:18.520951
+Data fetching from PLC 2024-04-25 10:52:23.740316
+Data fetching from PLC 2024-04-25 10:52:28.950479
+Data fetching from PLC 2024-04-25 10:52:34.133040
+Data fetching from PLC 2024-04-25 10:52:39.314934
+Data fetching from PLC 2024-04-25 10:52:44.491900
+Data fetching from PLC 2024-04-25 10:52:49.678118
+Data fetching from PLC 2024-04-25 10:52:54.867568
+Data fetching from PLC 2024-04-25 10:53:00.056189
+Data fetching from PLC 2024-04-25 10:53:05.238460
+Data fetching from PLC 2024-04-25 10:53:10.417710
+Data fetching from PLC 2024-04-25 10:53:15.600718
+Data fetching from PLC 2024-04-25 10:53:20.778479
+Data fetching from PLC 2024-04-25 10:53:25.958110
+Data fetching from PLC 2024-04-25 10:53:31.170911
+Data fetching from PLC 2024-04-25 10:53:36.415132
+Data fetching from PLC 2024-04-25 10:53:41.595946
+Data fetching from PLC 2024-04-25 10:53:46.784968
+Data fetching from PLC 2024-04-25 10:53:51.965272
+Data fetching from PLC 2024-04-25 10:53:57.149868
+Data fetching from PLC 2024-04-25 10:54:02.319689
+Data fetching from PLC 2024-04-25 10:54:07.519653
+Data fetching from PLC 2024-04-25 10:54:12.711899
+Data fetching from PLC 2024-04-25 10:54:17.884268
+Data fetching from PLC 2024-04-25 10:54:23.070844
+Data fetching from PLC 2024-04-25 10:54:28.246350
+Data fetching from PLC 2024-04-25 10:54:33.424382
+Data fetching from PLC 2024-04-25 10:54:38.639162
+Data fetching from PLC 2024-04-25 10:54:43.824025
+Data fetching from PLC 2024-04-25 10:54:49.008331
+Data fetching from PLC 2024-04-25 10:54:54.195879
+Data fetching from PLC 2024-04-25 10:54:59.373777
+Data fetching from PLC 2024-04-25 10:55:04.568696
+Data fetching from PLC 2024-04-25 10:55:09.741485
+Data fetching from PLC 2024-04-25 10:55:14.921782
+Data fetching from PLC 2024-04-25 10:55:20.102668
+Data fetching from PLC 2024-04-25 10:55:25.276833
+Data fetching from PLC 2024-04-25 10:55:30.461053
+Data fetching from PLC 2024-04-25 10:55:35.646308
+Data fetching from PLC 2024-04-25 10:55:40.860688
+Data fetching from PLC 2024-04-25 10:55:46.021632
+Data fetching from PLC 2024-04-25 10:55:51.151235
+Data fetching from PLC 2024-04-25 10:55:56.277577
+Data fetching from PLC 2024-04-25 10:56:01.411690
+Data fetching from PLC 2024-04-25 10:56:06.604488
+Data fetching from PLC 2024-04-25 10:56:11.783158
+Data fetching from PLC 2024-04-25 10:56:16.969826
+Data fetching from PLC 2024-04-25 10:56:22.153877
+Data fetching from PLC 2024-04-25 10:56:27.327594
+Data fetching from PLC 2024-04-25 10:56:32.505203
+Data fetching from PLC 2024-04-25 10:56:37.687051
+Data fetching from PLC 2024-04-25 10:56:42.862899
+Data fetching from PLC 2024-04-25 10:56:48.070972
+Data fetching from PLC 2024-04-25 10:56:53.269433
+Data fetching from PLC 2024-04-25 10:56:58.445715
+Data fetching from PLC 2024-04-25 10:57:03.640857
+Data fetching from PLC 2024-04-25 10:57:08.820368
+Data fetching from PLC 2024-04-25 10:57:14.006041
+Data fetching from PLC 2024-04-25 10:57:19.188627
+Data fetching from PLC 2024-04-25 10:57:24.365363
+Data fetching from PLC 2024-04-25 10:57:29.541935
+Data fetching from PLC 2024-04-25 10:57:34.721256
+Data fetching from PLC 2024-04-25 10:57:39.905188
+Data fetching from PLC 2024-04-25 10:57:45.080027
+Data fetching from PLC 2024-04-25 10:57:50.260248
+Data fetching from PLC 2024-04-25 10:57:55.486664
+Data fetching from PLC 2024-04-25 10:58:00.663414
+Data fetching from PLC 2024-04-25 10:58:05.839815
+Data fetching from PLC 2024-04-25 10:58:11.025810
+Data fetching from PLC 2024-04-25 10:58:16.224482
+Data fetching from PLC 2024-04-25 10:58:21.395254
+Data fetching from PLC 2024-04-25 10:58:26.577962
+Data fetching from PLC 2024-04-25 10:58:31.753812
+Data fetching from PLC 2024-04-25 10:58:36.931319
+Data fetching from PLC 2024-04-25 10:58:42.115607
+Data fetching from PLC 2024-04-25 10:58:47.301158
+Data fetching from PLC 2024-04-25 10:58:52.476694
+Data fetching from PLC 2024-04-25 10:58:57.679188
+Data fetching from PLC 2024-04-25 10:59:02.895557
+Data fetching from PLC 2024-04-25 10:59:08.071950
+Data fetching from PLC 2024-04-25 10:59:13.249065
+Data fetching from PLC 2024-04-25 10:59:18.458389
+Data fetching from PLC 2024-04-25 10:59:23.641910
+Data fetching from PLC 2024-04-25 10:59:28.824992
+Data fetching from PLC 2024-04-25 10:59:34.015498
+Data fetching from PLC 2024-04-25 10:59:39.196361
+Data fetching from PLC 2024-04-25 10:59:44.393953
+Data fetching from PLC 2024-04-25 10:59:49.585232
+Data fetching from PLC 2024-04-25 10:59:54.768728
+Data fetching from PLC 2024-04-25 10:59:59.949394
+Data fetching from PLC 2024-04-25 11:00:05.178885
+Data fetching from PLC 2024-04-25 11:00:10.390266
+Data fetching from PLC 2024-04-25 11:00:15.587527
+Data fetching from PLC 2024-04-25 11:00:20.784543
+Data fetching from PLC 2024-04-25 11:00:25.976506
+Data fetching from PLC 2024-04-25 11:00:31.164516
+Data fetching from PLC 2024-04-25 11:00:36.339856
+Data fetching from PLC 2024-04-25 11:00:41.519550
+Data fetching from PLC 2024-04-25 11:00:46.703840
+Data fetching from PLC 2024-04-25 11:00:51.893093
+Data fetching from PLC 2024-04-25 11:00:57.079219
+Data fetching from PLC 2024-04-25 11:01:02.267902
+Data fetching from PLC 2024-04-25 11:01:07.446116
+Data fetching from PLC 2024-04-25 11:01:12.663334
+Data fetching from PLC 2024-04-25 11:01:17.853184
+Data fetching from PLC 2024-04-25 11:01:23.029038
+Data fetching from PLC 2024-04-25 11:01:28.211634
+Data fetching from PLC 2024-04-25 11:01:33.394489
+Data fetching from PLC 2024-04-25 11:01:38.569099
+Data fetching from PLC 2024-04-25 11:01:43.754107
+Data fetching from PLC 2024-04-25 11:01:48.934422
+Data fetching from PLC 2024-04-25 11:01:54.123906
+Data fetching from PLC 2024-04-25 11:01:59.304954
+Data fetching from PLC 2024-04-25 11:02:04.487862
+Data fetching from PLC 2024-04-25 11:02:09.671861
+Data fetching from PLC 2024-04-25 11:02:14.886338
+Data fetching from PLC 2024-04-25 11:02:20.089366
+Data fetching from PLC 2024-04-25 11:02:25.277344
+Data fetching from PLC 2024-04-25 11:02:30.469549
+Data fetching from PLC 2024-04-25 11:02:35.643925
+Data fetching from PLC 2024-04-25 11:02:40.835420
+Data fetching from PLC 2024-04-25 11:02:46.021566
+Data fetching from PLC 2024-04-25 11:02:51.210580
+Data fetching from PLC 2024-04-25 11:02:56.387441
+Data fetching from PLC 2024-04-25 11:03:01.569397
+Data fetching from PLC 2024-04-25 11:03:06.749553
+Data fetching from PLC 2024-04-25 11:03:11.934964
+Data fetching from PLC 2024-04-25 11:03:17.119892
+Data fetching from PLC 2024-04-25 11:03:22.342837
+Data fetching from PLC 2024-04-25 11:03:27.566343
+Data fetching from PLC 2024-04-25 11:03:32.754128
+Data fetching from PLC 2024-04-25 11:03:37.939312
+Data fetching from PLC 2024-04-25 11:03:43.131710
+Data fetching from PLC 2024-04-25 11:03:48.313408
+Data fetching from PLC 2024-04-25 11:03:53.506805
+Data fetching from PLC 2024-04-25 11:03:58.697346
+Data fetching from PLC 2024-04-25 11:04:03.895272
+Data fetching from PLC 2024-04-25 11:04:09.091638
+Data fetching from PLC 2024-04-25 11:04:14.281152
+Data fetching from PLC 2024-04-25 11:04:19.472864
+Data fetching from PLC 2024-04-25 11:04:24.655371
+Data fetching from PLC 2024-04-25 11:04:29.893916
+Data fetching from PLC 2024-04-25 11:04:35.086730
+Data fetching from PLC 2024-04-25 11:04:40.278366
+Data fetching from PLC 2024-04-25 11:04:45.456235
+Data fetching from PLC 2024-04-25 11:04:50.644026
+Data fetching from PLC 2024-04-25 11:04:55.831946
+Data fetching from PLC 2024-04-25 11:05:01.014530
+Data fetching from PLC 2024-04-25 11:05:06.213473
+Data fetching from PLC 2024-04-25 11:05:11.407036
+Data fetching from PLC 2024-04-25 11:05:16.591466
+Data fetching from PLC 2024-04-25 11:05:21.806611
+Data fetching from PLC 2024-04-25 11:05:26.982143
+Data fetching from PLC 2024-04-25 11:05:32.204059
+Data fetching from PLC 2024-04-25 11:05:37.424349
+Data fetching from PLC 2024-04-25 11:05:42.625144
+Data fetching from PLC 2024-04-25 11:05:47.805722
+Data fetching from PLC 2024-04-25 11:05:52.990746
+Data fetching from PLC 2024-04-25 11:05:58.182384
+Data fetching from PLC 2024-04-25 11:06:03.364198
+Data fetching from PLC 2024-04-25 11:06:08.545881
+Data fetching from PLC 2024-04-25 11:06:13.731994
+Data fetching from PLC 2024-04-25 11:06:18.908542
+Data fetching from PLC 2024-04-25 11:06:24.099448
+Data fetching from PLC 2024-04-25 11:06:29.291462
+Data fetching from PLC 2024-04-25 11:06:34.478924
+Data fetching from PLC 2024-04-25 11:06:39.705079
+Data fetching from PLC 2024-04-25 11:06:44.923007
+Data fetching from PLC 2024-04-25 11:06:50.105815
+Data fetching from PLC 2024-04-25 11:06:55.297359
+Data fetching from PLC 2024-04-25 11:07:00.485204
+Data fetching from PLC 2024-04-25 11:07:05.670132
+Data fetching from PLC 2024-04-25 11:07:10.861599
+Data fetching from PLC 2024-04-25 11:07:16.050625
+Data fetching from PLC 2024-04-25 11:07:21.253536
+Data fetching from PLC 2024-04-25 11:07:26.452948
+Data fetching from PLC 2024-04-25 11:07:31.637764
+Data fetching from PLC 2024-04-25 11:07:36.822557
+Data fetching from PLC 2024-04-25 11:07:42.016620
+Data fetching from PLC 2024-04-25 11:07:47.248556
+Data fetching from PLC 2024-04-25 11:07:52.460231
+Data fetching from PLC 2024-04-25 11:07:57.641088
+Data fetching from PLC 2024-04-25 11:08:02.822893
+Data fetching from PLC 2024-04-25 11:08:08.020125
+Data fetching from PLC 2024-04-25 11:08:13.198551
+Data fetching from PLC 2024-04-25 11:08:18.389335
+Data fetching from PLC 2024-04-25 11:08:23.576715
+Data fetching from PLC 2024-04-25 11:08:28.766831
+Data fetching from PLC 2024-04-25 11:08:33.956225
+Data fetching from PLC 2024-04-25 11:08:39.140186
+Data fetching from PLC 2024-04-25 11:08:44.320352
+Data fetching from PLC 2024-04-25 11:08:49.525971
+Data fetching from PLC 2024-04-25 11:08:54.739812
+Data fetching from PLC 2024-04-25 11:08:59.909912
+Data fetching from PLC 2024-04-25 11:09:05.092535
+Data fetching from PLC 2024-04-25 11:09:10.276270
+Data fetching from PLC 2024-04-25 11:09:15.455751
+PLC data fetching Disconnected2024-04-25 11:09:19.322676
+PLC is connected 2024-04-25 11:11:14.876020
+Data fetching from PLC 2024-04-25 11:11:14.998236
+PLC data fetching Disconnected2024-04-25 11:11:47.115993
+PLC is connected 2024-04-25 11:14:05.379248
+Data fetching from PLC 2024-04-25 11:14:05.485427
+PLC is connected 2024-04-25 11:14:05.687150
+Data fetching from PLC 2024-04-25 11:14:05.806055
+PLC is connected 2024-04-25 11:14:05.983542
+Data fetching from PLC 2024-04-25 11:14:06.103221
+PLC is connected 2024-04-25 11:14:06.274899
+Data fetching from PLC 2024-04-25 11:14:06.387781
+PLC is connected 2024-04-25 11:14:06.554493
+Data fetching from PLC 2024-04-25 11:14:06.678412
+PLC is connected 2024-04-25 11:14:06.850273
+Data fetching from PLC 2024-04-25 11:14:06.974922
+PLC is connected 2024-04-25 11:14:07.141706
+Data fetching from PLC 2024-04-25 11:14:07.252893
+PLC is connected 2024-04-25 11:14:07.425183
+Data fetching from PLC 2024-04-25 11:14:07.534790
+PLC is connected 2024-04-25 11:14:07.704620
+Data fetching from PLC 2024-04-25 11:14:07.831780
+PLC is connected 2024-04-25 11:14:08.015053
+Data fetching from PLC 2024-04-25 11:14:08.133188
+PLC is connected 2024-04-25 11:14:10.697268
+Data fetching from PLC 2024-04-25 11:14:10.799365
+PLC is connected 2024-04-25 11:14:10.995102
+Data fetching from PLC 2024-04-25 11:14:11.092483
+PLC is connected 2024-04-25 11:14:11.279205
+Data fetching from PLC 2024-04-25 11:14:11.386942
+PLC is connected 2024-04-25 11:14:11.559250
+Data fetching from PLC 2024-04-25 11:14:11.661734
+PLC is connected 2024-04-25 11:14:11.856292
+Data fetching from PLC 2024-04-25 11:14:11.958751
+PLC is connected 2024-04-25 11:14:12.152402
+Data fetching from PLC 2024-04-25 11:14:12.256037
+PLC is connected 2024-04-25 11:14:12.432819
+Data fetching from PLC 2024-04-25 11:14:12.534484
+PLC is connected 2024-04-25 11:14:12.716028
+Data fetching from PLC 2024-04-25 11:14:12.831517
+PLC is connected 2024-04-25 11:14:13.027151
+Data fetching from PLC 2024-04-25 11:14:13.146146
+PLC is connected 2024-04-25 11:14:13.324395
+Data fetching from PLC 2024-04-25 11:14:13.443106
+PLC is connected 2024-04-25 11:14:15.928559
+Data fetching from PLC 2024-04-25 11:14:16.033399
+PLC data fetching Disconnected2024-04-25 11:14:16.216022
+PLC is connected 2024-04-25 11:14:16.218002
+Data fetching from PLC 2024-04-25 11:14:16.319532
+PLC is connected 2024-04-25 11:14:16.516348
+Data fetching from PLC 2024-04-25 11:14:16.635751
+PLC is connected 2024-04-25 11:14:16.793600
+Data fetching from PLC 2024-04-25 11:14:16.899864
+PLC is connected 2024-04-25 11:14:17.092856
+Data fetching from PLC 2024-04-25 11:14:17.191399
+PLC is connected 2024-04-25 11:14:17.384930
+Data fetching from PLC 2024-04-25 11:14:17.487634
+PLC is connected 2024-04-25 11:14:17.665167
+Data fetching from PLC 2024-04-25 11:14:17.765145
+PLC is connected 2024-04-25 11:14:17.981549
+Data fetching from PLC 2024-04-25 11:14:18.089460
+PLC is connected 2024-04-25 11:14:18.311263
+Data fetching from PLC 2024-04-25 11:14:18.405186
+PLC is connected 2024-04-25 11:14:18.594192
+Data fetching from PLC 2024-04-25 11:14:18.690788
+PLC is connected 2024-04-25 11:14:21.182518
+Data fetching from PLC 2024-04-25 11:14:21.283785
+PLC data fetching Disconnected2024-04-25 11:14:21.445642
+PLC is connected 2024-04-25 11:14:21.447640
+Data fetching from PLC 2024-04-25 11:14:21.543268
+PLC is connected 2024-04-25 11:14:21.794442
+Data fetching from PLC 2024-04-25 11:14:21.893336
+PLC is connected 2024-04-25 11:14:22.046690
+Data fetching from PLC 2024-04-25 11:14:22.143863
+PLC is connected 2024-04-25 11:14:22.315731
+Data fetching from PLC 2024-04-25 11:14:22.420657
+PLC is connected 2024-04-25 11:14:22.619152
+Data fetching from PLC 2024-04-25 11:14:22.725211
+PLC is connected 2024-04-25 11:14:22.890414
+Data fetching from PLC 2024-04-25 11:14:22.992039
+PLC is connected 2024-04-25 11:14:23.216504
+Data fetching from PLC 2024-04-25 11:14:23.320535
+PLC is connected 2024-04-25 11:14:23.533204
+Data fetching from PLC 2024-04-25 11:14:23.635873
+PLC is connected 2024-04-25 11:14:23.823026
+Data fetching from PLC 2024-04-25 11:14:23.927920
+PLC is connected 2024-04-25 11:14:26.408456
+Data fetching from PLC 2024-04-25 11:14:26.512551
+PLC is connected 2024-04-25 11:14:26.672127
+Data fetching from PLC 2024-04-25 11:14:26.774600
+PLC is connected 2024-04-25 11:14:27.022285
+Data fetching from PLC 2024-04-25 11:14:27.133365
+PLC is connected 2024-04-25 11:14:27.276913
+Data fetching from PLC 2024-04-25 11:14:27.389358
+PLC is connected 2024-04-25 11:14:27.549592
+Data fetching from PLC 2024-04-25 11:14:27.664854
+PLC is connected 2024-04-25 11:14:27.850307
+Data fetching from PLC 2024-04-25 11:14:27.949874
+PLC is connected 2024-04-25 11:14:28.125494
+Data fetching from PLC 2024-04-25 11:14:28.228715
+PLC is connected 2024-04-25 11:14:28.446615
+Data fetching from PLC 2024-04-25 11:14:28.551726
+PLC is connected 2024-04-25 11:14:28.761673
+Data fetching from PLC 2024-04-25 11:14:28.861663
+PLC is connected 2024-04-25 11:14:29.060455
+Data fetching from PLC 2024-04-25 11:14:29.159868
+PLC is connected 2024-04-25 11:15:24.700855
+Data fetching from PLC 2024-04-25 11:15:24.800928
+PLC is connected 2024-04-25 11:15:29.958574
+Data fetching from PLC 2024-04-25 11:15:30.067511
+PLC is connected 2024-04-25 11:15:35.197805
+Data fetching from PLC 2024-04-25 11:15:35.297815
+PLC is connected 2024-04-25 11:15:40.421780
+Data fetching from PLC 2024-04-25 11:15:40.522618
+PLC data fetching Disconnected2024-04-25 11:15:41.786590
+PLC is connected 2024-04-25 11:15:45.652890
+Data fetching from PLC 2024-04-25 11:15:45.735490
+PLC data fetching Disconnected2024-04-25 11:15:50.769005
+PLC is connected 2024-04-25 11:15:50.868853
+Data fetching from PLC 2024-04-25 11:15:50.956267
+PLC is connected 2024-04-25 11:17:37.884543
+Data fetching from PLC 2024-04-25 11:17:37.997089
+Data fetching from PLC 2024-04-25 11:17:43.153042
+Data fetching from PLC 2024-04-25 11:17:48.278313
+Data fetching from PLC 2024-04-25 11:17:53.416732
+Data fetching from PLC 2024-04-25 11:17:58.546358
+Data fetching from PLC 2024-04-25 11:18:03.673674
+Data fetching from PLC 2024-04-25 11:18:08.803729
+Data fetching from PLC 2024-04-25 11:18:13.961803
+Data fetching from PLC 2024-04-25 11:18:19.119853
+Data fetching from PLC 2024-04-25 11:18:24.251876
+Data fetching from PLC 2024-04-25 11:18:29.386928
+Data fetching from PLC 2024-04-25 11:18:34.519640
+Data fetching from PLC 2024-04-25 11:18:39.653628
+Data fetching from PLC 2024-04-25 11:18:44.795723
+Data fetching from PLC 2024-04-25 11:18:49.952280
+Data fetching from PLC 2024-04-25 11:18:55.083043
+Data fetching from PLC 2024-04-25 11:19:00.222201
+Data fetching from PLC 2024-04-25 11:19:05.356192
+Data fetching from PLC 2024-04-25 11:19:10.484711
+Data fetching from PLC 2024-04-25 11:19:15.636292
+Data fetching from PLC 2024-04-25 11:19:20.802384
+Data fetching from PLC 2024-04-25 11:19:25.932593
+Data fetching from PLC 2024-04-25 11:19:31.066614
+Data fetching from PLC 2024-04-25 11:19:36.189139
+Data fetching from PLC 2024-04-25 11:19:41.315678
+Data fetching from PLC 2024-04-25 11:19:46.444044
+Data fetching from PLC 2024-04-25 11:19:51.594350
+Data fetching from PLC 2024-04-25 11:19:56.723858
+Data fetching from PLC 2024-04-25 11:20:01.858685
+Data fetching from PLC 2024-04-25 11:20:06.991006
+Data fetching from PLC 2024-04-25 11:20:12.121541
+Data fetching from PLC 2024-04-25 11:20:17.252642
+Data fetching from PLC 2024-04-25 11:20:22.400902
+Data fetching from PLC 2024-04-25 11:20:27.553031
+Data fetching from PLC 2024-04-25 11:20:32.683574
+Data fetching from PLC 2024-04-25 11:20:37.805526
+Data fetching from PLC 2024-04-25 11:20:42.935400
+Data fetching from PLC 2024-04-25 11:20:48.068238
+Data fetching from PLC 2024-04-25 11:20:53.196639
+Data fetching from PLC 2024-04-25 11:20:58.353231
+Data fetching from PLC 2024-04-25 11:21:03.481652
+Data fetching from PLC 2024-04-25 11:21:08.619360
+Data fetching from PLC 2024-04-25 11:21:13.745485
+Data fetching from PLC 2024-04-25 11:21:18.873414
+Data fetching from PLC 2024-04-25 11:21:24.005952
+Data fetching from PLC 2024-04-25 11:21:29.148407
+Data fetching from PLC 2024-04-25 11:21:34.297619
+Data fetching from PLC 2024-04-25 11:21:39.430383
+Data fetching from PLC 2024-04-25 11:21:44.562924
+Data fetching from PLC 2024-04-25 11:21:49.688680
+Data fetching from PLC 2024-04-25 11:21:54.826739
+Data fetching from PLC 2024-04-25 11:21:59.987989
+Data fetching from PLC 2024-04-25 11:22:05.140320
+Data fetching from PLC 2024-04-25 11:22:10.270159
+Data fetching from PLC 2024-04-25 11:22:15.401099
+Data fetching from PLC 2024-04-25 11:22:20.530069
+Data fetching from PLC 2024-04-25 11:22:25.669572
+Data fetching from PLC 2024-04-25 11:22:30.808842
+Data fetching from PLC 2024-04-25 11:22:35.964101
+Data fetching from PLC 2024-04-25 11:22:41.116915
+Data fetching from PLC 2024-04-25 11:22:46.247388
+Data fetching from PLC 2024-04-25 11:22:51.375581
+Data fetching from PLC 2024-04-25 11:22:56.505593
+Data fetching from PLC 2024-04-25 11:23:01.638097
+Data fetching from PLC 2024-04-25 11:23:06.790835
+Data fetching from PLC 2024-04-25 11:23:11.947280
+Data fetching from PLC 2024-04-25 11:23:17.077098
+Data fetching from PLC 2024-04-25 11:23:22.201667
+Data fetching from PLC 2024-04-25 11:23:27.339193
+Data fetching from PLC 2024-04-25 11:23:32.485160
+Data fetching from PLC 2024-04-25 11:23:37.617245
+Data fetching from PLC 2024-04-25 11:23:42.768132
+Data fetching from PLC 2024-04-25 11:23:47.924017
+Data fetching from PLC 2024-04-25 11:23:53.056844
+Data fetching from PLC 2024-04-25 11:23:58.182100
+Data fetching from PLC 2024-04-25 11:24:03.314240
+Data fetching from PLC 2024-04-25 11:24:08.445791
+Data fetching from PLC 2024-04-25 11:24:13.590076
+Data fetching from PLC 2024-04-25 11:24:18.749303
+Data fetching from PLC 2024-04-25 11:24:23.882071
+Data fetching from PLC 2024-04-25 11:24:29.009667
+Data fetching from PLC 2024-04-25 11:24:34.146317
+Data fetching from PLC 2024-04-25 11:24:39.278562
+Data fetching from PLC 2024-04-25 11:24:44.407647
+Data fetching from PLC 2024-04-25 11:24:49.575801
+Data fetching from PLC 2024-04-25 11:24:54.733586
+Data fetching from PLC 2024-04-25 11:24:59.857792
+Data fetching from PLC 2024-04-25 11:25:04.998387
+Data fetching from PLC 2024-04-25 11:25:10.133775
+Data fetching from PLC 2024-04-25 11:25:15.256290
+Data fetching from PLC 2024-04-25 11:25:20.419599
+Data fetching from PLC 2024-04-25 11:25:25.574676
+Data fetching from PLC 2024-04-25 11:25:30.704692
+Data fetching from PLC 2024-04-25 11:25:35.848687
+Data fetching from PLC 2024-04-25 11:25:40.986091
+Data fetching from PLC 2024-04-25 11:25:46.113763
+Data fetching from PLC 2024-04-25 11:25:51.265396
+Data fetching from PLC 2024-04-25 11:25:56.418864
+Data fetching from PLC 2024-04-25 11:26:01.557963
+Data fetching from PLC 2024-04-25 11:26:06.688240
+Data fetching from PLC 2024-04-25 11:26:11.824292
+Data fetching from PLC 2024-04-25 11:26:16.962149
+Data fetching from PLC 2024-04-25 11:26:22.090117
+Data fetching from PLC 2024-04-25 11:26:27.243079
+PLC data fetching Disconnected2024-04-25 11:26:31.391932
+PLC is connected 2024-04-25 11:40:54.525157
+Data fetching from PLC 2024-04-25 11:40:54.614349
+Data fetching from PLC 2024-04-25 11:40:59.757571
+Data fetching from PLC 2024-04-25 11:41:04.887606
+Data fetching from PLC 2024-04-25 11:41:10.019277
+Data fetching from PLC 2024-04-25 11:41:15.158137
+Data fetching from PLC 2024-04-25 11:41:20.306018
+Data fetching from PLC 2024-04-25 11:41:25.436645
+Data fetching from PLC 2024-04-25 11:41:30.557985
+PLC data fetching Disconnected2024-04-25 11:41:31.128511
+PLC is connected 2024-04-25 11:44:13.880245
+Data fetching from PLC 2024-04-25 11:44:13.980061
+Data fetching from PLC 2024-04-25 11:44:19.137403
+Data fetching from PLC 2024-04-25 11:44:24.273789
+Data fetching from PLC 2024-04-25 11:44:29.410030
+Data fetching from PLC 2024-04-25 11:44:34.545943
+Data fetching from PLC 2024-04-25 11:44:39.697631
+Data fetching from PLC 2024-04-25 11:44:44.820247
+Data fetching from PLC 2024-04-25 11:44:49.950475
+Data fetching from PLC 2024-04-25 11:44:55.086185
+PLC is connected 2024-04-25 11:46:31.277525
+PLC is connected 2024-04-25 11:48:10.168290
+Data fetching from PLC 2024-04-25 11:48:10.265732
+Data fetching from PLC 2024-04-25 11:48:15.410414
+Data fetching from PLC 2024-04-25 11:48:20.535406
+Data fetching from PLC 2024-04-25 11:48:25.689774
+Data fetching from PLC 2024-04-25 11:48:30.840677
+Data fetching from PLC 2024-04-25 11:48:35.974833
+Data fetching from PLC 2024-04-25 11:48:41.104787
+Data fetching from PLC 2024-04-25 11:48:46.223317
+Data fetching from PLC 2024-04-25 11:48:51.353236
+Data fetching from PLC 2024-04-25 11:48:56.485115
+PLC is connected 2024-04-25 11:50:54.601407
+PLC is connected 2024-04-25 12:17:55.459255
+PLC is connected 2024-04-25 12:25:20.500199
+PLC is connected 2024-04-25 12:26:29.137765
+Data fetching from PLC 2024-04-25 12:26:29.228518
+Data fetching from PLC 2024-04-25 12:26:34.369502
+Data fetching from PLC 2024-04-25 12:26:39.488086
+Data fetching from PLC 2024-04-25 12:26:44.609448
+Data fetching from PLC 2024-04-25 12:26:49.731444
+Data fetching from PLC 2024-04-25 12:26:54.857356
+Data fetching from PLC 2024-04-25 12:27:00.009291
+Data fetching from PLC 2024-04-25 12:27:05.134500
+Data fetching from PLC 2024-04-25 12:27:10.257037
+Data fetching from PLC 2024-04-25 12:27:15.391553
+Data fetching from PLC 2024-04-25 12:27:20.524302
+Data fetching from PLC 2024-04-25 12:27:25.647354
+Data fetching from PLC 2024-04-25 12:27:30.793433
+Data fetching from PLC 2024-04-25 12:27:35.949337
+Data fetching from PLC 2024-04-25 12:27:41.070420
+Data fetching from PLC 2024-04-25 12:27:46.203621
+Data fetching from PLC 2024-04-25 12:27:51.336477
+Data fetching from PLC 2024-04-25 12:27:56.462357
+Data fetching from PLC 2024-04-25 12:28:01.603088
+Data fetching from PLC 2024-04-25 12:28:06.752856
+Data fetching from PLC 2024-04-25 12:28:11.875332
+Data fetching from PLC 2024-04-25 12:28:17.003375
+Data fetching from PLC 2024-04-25 12:28:22.134516
+Data fetching from PLC 2024-04-25 12:28:27.272474
+Data fetching from PLC 2024-04-25 12:28:32.411364
+Data fetching from PLC 2024-04-25 12:28:37.548486
+Data fetching from PLC 2024-04-25 12:28:42.696322
+Data fetching from PLC 2024-04-25 12:28:47.825150
+Data fetching from PLC 2024-04-25 12:28:52.958607
+Data fetching from PLC 2024-04-25 12:28:58.085452
+Data fetching from PLC 2024-04-25 12:29:03.205787
+Data fetching from PLC 2024-04-25 12:29:08.406190
+Data fetching from PLC 2024-04-25 12:29:13.613357
+Data fetching from PLC 2024-04-25 12:29:18.788023
+Data fetching from PLC 2024-04-25 12:29:23.962060
+Data fetching from PLC 2024-04-25 12:29:29.143450
+Data fetching from PLC 2024-04-25 12:29:34.320230
+Data fetching from PLC 2024-04-25 12:29:39.492421
+Data fetching from PLC 2024-04-25 12:29:44.674018
+Data fetching from PLC 2024-04-25 12:29:49.867932
+Data fetching from PLC 2024-04-25 12:29:55.041119
+Data fetching from PLC 2024-04-25 12:30:00.211916
+Data fetching from PLC 2024-04-25 12:30:05.336682
+Data fetching from PLC 2024-04-25 12:30:10.464484
+Data fetching from PLC 2024-04-25 12:30:15.681395
+Data fetching from PLC 2024-04-25 12:30:20.878186
+Data fetching from PLC 2024-04-25 12:30:26.059193
+Data fetching from PLC 2024-04-25 12:30:31.240977
+Data fetching from PLC 2024-04-25 12:30:36.423360
+Data fetching from PLC 2024-04-25 12:30:41.596265
+Data fetching from PLC 2024-04-25 12:30:46.768937
+Data fetching from PLC 2024-04-25 12:30:51.956927
+Data fetching from PLC 2024-04-25 12:30:57.129920
+Data fetching from PLC 2024-04-25 12:31:02.312467
+Data fetching from PLC 2024-04-25 12:31:07.490464
+Data fetching from PLC 2024-04-25 12:31:12.671009
+Data fetching from PLC 2024-04-25 12:31:17.876346
+Data fetching from PLC 2024-04-25 12:31:23.090985
+Data fetching from PLC 2024-04-25 12:31:28.268475
+Data fetching from PLC 2024-04-25 12:31:33.448849
+Data fetching from PLC 2024-04-25 12:31:38.633550
+PLC data fetching Disconnected2024-04-25 12:31:40.473049
+PLC is connected 2024-04-25 12:32:41.031988
+Data fetching from PLC 2024-04-25 12:32:41.123884
+Data fetching from PLC 2024-04-25 12:32:46.266626
+Data fetching from PLC 2024-04-25 12:32:51.402907
+Data fetching from PLC 2024-04-25 12:32:56.533684
+Data fetching from PLC 2024-04-25 12:33:01.677400
+Data fetching from PLC 2024-04-25 12:33:06.829275
+PLC is connected 2024-04-25 12:44:37.375955
+Data fetching from PLC 2024-04-25 12:44:37.465431
+Data fetching from PLC 2024-04-25 12:44:42.618719
+Data fetching from PLC 2024-04-25 12:44:47.745815
+Data fetching from PLC 2024-04-25 12:44:52.877739
+Data fetching from PLC 2024-04-25 12:44:58.010804
+Data fetching from PLC 2024-04-25 12:45:03.136279
+Data fetching from PLC 2024-04-25 12:45:08.289621
+Data fetching from PLC 2024-04-25 12:45:13.441585
+PLC is connected 2024-04-25 12:47:16.958606
+Data fetching from PLC 2024-04-25 12:47:17.055429
+Data fetching from PLC 2024-04-25 12:47:22.191797
+Data fetching from PLC 2024-04-25 12:47:27.334980
+Data fetching from PLC 2024-04-25 12:47:32.467676
+PLC is connected 2024-04-25 12:48:08.161318
+Data fetching from PLC 2024-04-25 12:48:08.253314
+Data fetching from PLC 2024-04-25 12:48:13.391807
+Data fetching from PLC 2024-04-25 12:48:18.524597
+Data fetching from PLC 2024-04-25 12:48:23.653854
+Data fetching from PLC 2024-04-25 12:48:28.789749
+Data fetching from PLC 2024-04-25 12:48:33.939769
+Data fetching from PLC 2024-04-25 12:48:39.072689
+Data fetching from PLC 2024-04-25 12:48:44.194201
+Data fetching from PLC 2024-04-25 12:48:49.327541
+Data fetching from PLC 2024-04-25 12:48:54.459760
+Data fetching from PLC 2024-04-25 12:48:59.609042
+Data fetching from PLC 2024-04-25 12:49:04.737284
+Data fetching from PLC 2024-04-25 12:49:09.872493
+Data fetching from PLC 2024-04-25 12:49:15.011680
+Data fetching from PLC 2024-04-25 12:49:20.144953
+Data fetching from PLC 2024-04-25 12:49:25.264401
+PLC is connected 2024-04-25 13:38:13.898284
+Data fetching from PLC 2024-04-25 13:38:13.995057
+Data fetching from PLC 2024-04-25 13:38:19.155027
+Data fetching from PLC 2024-04-25 13:38:24.284298
+Data fetching from PLC 2024-04-25 13:38:29.435433
+Data fetching from PLC 2024-04-25 13:38:34.582889
+Data fetching from PLC 2024-04-25 13:38:39.705670
+Data fetching from PLC 2024-04-25 13:38:44.836265
+Data fetching from PLC 2024-04-25 13:38:49.972981
+Data fetching from PLC 2024-04-25 13:38:55.099365
+Data fetching from PLC 2024-04-25 13:39:00.230034
+PLC is connected 2024-04-25 13:47:53.933540
+Data fetching from PLC 2024-04-25 13:47:54.028894
+Data fetching from PLC 2024-04-25 13:47:59.176028
+Data fetching from PLC 2024-04-25 13:48:04.306695
+Data fetching from PLC 2024-04-25 13:48:09.437689
+Data fetching from PLC 2024-04-25 13:48:14.556939
+Data fetching from PLC 2024-04-25 13:48:19.687462
+Data fetching from PLC 2024-04-25 13:48:24.828356
+Data fetching from PLC 2024-04-25 13:48:29.964693
+Data fetching from PLC 2024-04-25 13:48:35.092151
+Data fetching from PLC 2024-04-25 13:48:40.219276
+Data fetching from PLC 2024-04-25 13:48:45.345611
+Data fetching from PLC 2024-04-25 13:48:50.470802
+Data fetching from PLC 2024-04-25 13:48:55.590520
+Data fetching from PLC 2024-04-25 13:49:00.729944
+Data fetching from PLC 2024-04-25 13:49:05.864602
+Data fetching from PLC 2024-04-25 13:49:11.001060
+Data fetching from PLC 2024-04-25 13:49:16.131148
+Data fetching from PLC 2024-04-25 13:49:21.263720
+Data fetching from PLC 2024-04-25 13:49:26.397460
+Data fetching from PLC 2024-04-25 13:49:31.545659
+Data fetching from PLC 2024-04-25 13:49:36.693030
+Data fetching from PLC 2024-04-25 13:49:41.822551
+Data fetching from PLC 2024-04-25 13:49:46.955493
+Data fetching from PLC 2024-04-25 13:49:52.076574
+Data fetching from PLC 2024-04-25 13:49:57.196683
+Data fetching from PLC 2024-04-25 13:50:02.330949
+Data fetching from PLC 2024-04-25 13:50:07.477572
+Data fetching from PLC 2024-04-25 13:50:12.621451
+Data fetching from PLC 2024-04-25 13:50:17.749213
+Data fetching from PLC 2024-04-25 13:50:22.866486
+Data fetching from PLC 2024-04-25 13:50:28.001614
+Data fetching from PLC 2024-04-25 13:50:33.130411
+Data fetching from PLC 2024-04-25 13:50:38.274163
+Data fetching from PLC 2024-04-25 13:50:43.423836
+Data fetching from PLC 2024-04-25 13:50:48.554782
+Data fetching from PLC 2024-04-25 13:50:53.683906
+Data fetching from PLC 2024-04-25 13:50:58.808346
+Data fetching from PLC 2024-04-25 13:51:03.945414
+Data fetching from PLC 2024-04-25 13:51:09.065130
+Data fetching from PLC 2024-04-25 13:51:14.225576
+Data fetching from PLC 2024-04-25 13:51:19.362234
+Data fetching from PLC 2024-04-25 13:51:24.491339
+Data fetching from PLC 2024-04-25 13:51:29.627639
+Data fetching from PLC 2024-04-25 13:51:34.759085
+Data fetching from PLC 2024-04-25 13:51:39.894016
+Data fetching from PLC 2024-04-25 13:51:45.050626
+Data fetching from PLC 2024-04-25 13:51:50.178599
+Data fetching from PLC 2024-04-25 13:51:55.311723
+Data fetching from PLC 2024-04-25 13:52:00.433304
+Data fetching from PLC 2024-04-25 13:52:05.572307
+Data fetching from PLC 2024-04-25 13:52:10.702562
+Data fetching from PLC 2024-04-25 13:52:15.852293
+Data fetching from PLC 2024-04-25 13:52:20.983726
+Data fetching from PLC 2024-04-25 13:52:26.118725
+Data fetching from PLC 2024-04-25 13:52:31.251577
+Data fetching from PLC 2024-04-25 13:52:36.388949
+Data fetching from PLC 2024-04-25 13:52:41.527325
+Data fetching from PLC 2024-04-25 13:52:46.669540
+Data fetching from PLC 2024-04-25 13:52:51.810365
+Data fetching from PLC 2024-04-25 13:52:56.930601
+Data fetching from PLC 2024-04-25 13:53:02.058838
+Data fetching from PLC 2024-04-25 13:53:07.187116
+Data fetching from PLC 2024-04-25 13:53:12.322250
+Data fetching from PLC 2024-04-25 13:53:17.446611
+Data fetching from PLC 2024-04-25 13:53:22.602907
+Data fetching from PLC 2024-04-25 13:53:27.755026
+Data fetching from PLC 2024-04-25 13:53:32.875694
+Data fetching from PLC 2024-04-25 13:53:38.006886
+Data fetching from PLC 2024-04-25 13:53:43.138549
+Data fetching from PLC 2024-04-25 13:53:48.265720
+Data fetching from PLC 2024-04-25 13:53:53.402817
+Data fetching from PLC 2024-04-25 13:53:58.562748
+Data fetching from PLC 2024-04-25 13:54:03.699543
+Data fetching from PLC 2024-04-25 13:54:08.837171
+Data fetching from PLC 2024-04-25 13:54:13.973910
+Data fetching from PLC 2024-04-25 13:54:19.109636
+Data fetching from PLC 2024-04-25 13:54:24.235112
+Data fetching from PLC 2024-04-25 13:54:29.385504
+Data fetching from PLC 2024-04-25 13:54:34.538472
+Data fetching from PLC 2024-04-25 13:54:39.660589
+Data fetching from PLC 2024-04-25 13:54:44.793753
+Data fetching from PLC 2024-04-25 13:54:49.924857
+Data fetching from PLC 2024-04-25 13:54:55.054531
+Data fetching from PLC 2024-04-25 13:55:00.201494
+Data fetching from PLC 2024-04-25 13:55:05.353735
+Data fetching from PLC 2024-04-25 13:55:10.492914
+Data fetching from PLC 2024-04-25 13:55:15.625876
+Data fetching from PLC 2024-04-25 13:55:20.757392
+Data fetching from PLC 2024-04-25 13:55:25.887340
+Data fetching from PLC 2024-04-25 13:55:31.016095
+Data fetching from PLC 2024-04-25 13:55:36.184417
+Data fetching from PLC 2024-04-25 13:55:41.330125
+Data fetching from PLC 2024-04-25 13:55:46.462900
+Data fetching from PLC 2024-04-25 13:55:51.595919
+Data fetching from PLC 2024-04-25 13:55:56.722858
+Data fetching from PLC 2024-04-25 13:56:01.854862
+Data fetching from PLC 2024-04-25 13:56:07.000787
+Data fetching from PLC 2024-04-25 13:56:12.150330
+Data fetching from PLC 2024-04-25 13:56:17.286674
+Data fetching from PLC 2024-04-25 13:56:22.420097
+Data fetching from PLC 2024-04-25 13:56:27.550921
+Data fetching from PLC 2024-04-25 13:56:32.675884
+Data fetching from PLC 2024-04-25 13:56:37.805867
+Data fetching from PLC 2024-04-25 13:56:42.947975
+Data fetching from PLC 2024-04-25 13:56:48.086518
+Data fetching from PLC 2024-04-25 13:56:53.217215
+Data fetching from PLC 2024-04-25 13:56:58.359860
+Data fetching from PLC 2024-04-25 13:57:03.490032
+Data fetching from PLC 2024-04-25 13:57:08.629186
+Data fetching from PLC 2024-04-25 13:57:13.777686
+Data fetching from PLC 2024-04-25 13:57:18.908099
+Data fetching from PLC 2024-04-25 13:57:24.039066
+Data fetching from PLC 2024-04-25 13:57:29.168719
+Data fetching from PLC 2024-04-25 13:57:34.298244
+Data fetching from PLC 2024-04-25 13:57:39.435344
+Data fetching from PLC 2024-04-25 13:57:44.566833
+Data fetching from PLC 2024-04-25 13:57:49.702182
+Data fetching from PLC 2024-04-25 13:57:54.845570
+Data fetching from PLC 2024-04-25 13:57:59.976874
+Data fetching from PLC 2024-04-25 13:58:05.098394
+Data fetching from PLC 2024-04-25 13:58:10.222038
+Data fetching from PLC 2024-04-25 13:58:15.353418
+Data fetching from PLC 2024-04-25 13:58:20.489949
+Data fetching from PLC 2024-04-25 13:58:25.619518
+Data fetching from PLC 2024-04-25 13:58:30.739777
+Data fetching from PLC 2024-04-25 13:58:35.865080
+Data fetching from PLC 2024-04-25 13:58:41.001906
+Data fetching from PLC 2024-04-25 13:58:46.135857
+Data fetching from PLC 2024-04-25 13:58:51.291367
+Data fetching from PLC 2024-04-25 13:58:56.446191
+Data fetching from PLC 2024-04-25 13:59:01.578812
+Data fetching from PLC 2024-04-25 13:59:06.710341
+Data fetching from PLC 2024-04-25 13:59:11.833900
+Data fetching from PLC 2024-04-25 13:59:16.974130
+Data fetching from PLC 2024-04-25 13:59:22.103711
+Data fetching from PLC 2024-04-25 13:59:27.240010
+Data fetching from PLC 2024-04-25 13:59:32.370307
+Data fetching from PLC 2024-04-25 13:59:37.495833
+Data fetching from PLC 2024-04-25 13:59:42.628509
+Data fetching from PLC 2024-04-25 13:59:47.756821
+Data fetching from PLC 2024-04-25 13:59:52.880938
+Data fetching from PLC 2024-04-25 13:59:58.036998
+Data fetching from PLC 2024-04-25 14:00:03.195158
+Data fetching from PLC 2024-04-25 14:00:08.334267
+Data fetching from PLC 2024-04-25 14:00:13.466071
+Data fetching from PLC 2024-04-25 14:00:18.602811
+Data fetching from PLC 2024-04-25 14:00:23.732588
+Data fetching from PLC 2024-04-25 14:00:28.858327
+Data fetching from PLC 2024-04-25 14:00:34.015212
+Data fetching from PLC 2024-04-25 14:00:39.150142
+Data fetching from PLC 2024-04-25 14:00:44.275074
+Data fetching from PLC 2024-04-25 14:00:49.408320
+Data fetching from PLC 2024-04-25 14:00:54.542281
+Data fetching from PLC 2024-04-25 14:00:59.675394
+Data fetching from PLC 2024-04-25 14:01:04.809574
+Data fetching from PLC 2024-04-25 14:01:09.952938
+Data fetching from PLC 2024-04-25 14:01:15.085427
+Data fetching from PLC 2024-04-25 14:01:20.225413
+Data fetching from PLC 2024-04-25 14:01:25.365921
+Data fetching from PLC 2024-04-25 14:01:30.502690
+Data fetching from PLC 2024-04-25 14:01:35.628966
+Data fetching from PLC 2024-04-25 14:01:40.779948
+Data fetching from PLC 2024-04-25 14:01:45.910932
+Data fetching from PLC 2024-04-25 14:01:51.036798
+Data fetching from PLC 2024-04-25 14:01:56.172352
+Data fetching from PLC 2024-04-25 14:02:01.307530
+Data fetching from PLC 2024-04-25 14:02:06.437300
+Data fetching from PLC 2024-04-25 14:02:11.571674
+Data fetching from PLC 2024-04-25 14:02:16.739641
+Data fetching from PLC 2024-04-25 14:02:21.870948
+Data fetching from PLC 2024-04-25 14:02:27.005124
+Data fetching from PLC 2024-04-25 14:02:32.136708
+Data fetching from PLC 2024-04-25 14:02:37.257552
+Data fetching from PLC 2024-04-25 14:02:42.416655
+Data fetching from PLC 2024-04-25 14:02:47.570402
+Data fetching from PLC 2024-04-25 14:02:52.692089
+Data fetching from PLC 2024-04-25 14:02:57.822631
+Data fetching from PLC 2024-04-25 14:03:02.949628
+Data fetching from PLC 2024-04-25 14:03:08.073332
+Data fetching from PLC 2024-04-25 14:03:13.212732
+Data fetching from PLC 2024-04-25 14:03:18.370689
+Data fetching from PLC 2024-04-25 14:03:23.527840
+Data fetching from PLC 2024-04-25 14:03:28.652190
+Data fetching from PLC 2024-04-25 14:03:33.779042
+Data fetching from PLC 2024-04-25 14:03:38.905274
+Data fetching from PLC 2024-04-25 14:03:44.033495
+Data fetching from PLC 2024-04-25 14:03:49.175572
+Data fetching from PLC 2024-04-25 14:03:54.314329
+Data fetching from PLC 2024-04-25 14:03:59.438419
+Data fetching from PLC 2024-04-25 14:04:04.561447
+Data fetching from PLC 2024-04-25 14:04:09.687954
+Data fetching from PLC 2024-04-25 14:04:14.814921
+Data fetching from PLC 2024-04-25 14:04:19.938115
+Data fetching from PLC 2024-04-25 14:04:25.085163
+Data fetching from PLC 2024-04-25 14:04:30.227122
+Data fetching from PLC 2024-04-25 14:04:35.358608
+Data fetching from PLC 2024-04-25 14:04:40.489919
+Data fetching from PLC 2024-04-25 14:04:45.617658
+Data fetching from PLC 2024-04-25 14:04:50.745039
+Data fetching from PLC 2024-04-25 14:04:55.884640
+Data fetching from PLC 2024-04-25 14:05:01.032255
+Data fetching from PLC 2024-04-25 14:05:06.161792
+Data fetching from PLC 2024-04-25 14:44:17.939476
+PLC is connected 2024-04-25 15:00:43.992975
+Data fetching from PLC 2024-04-25 15:00:44.095534
+Data fetching from PLC 2024-04-25 15:00:49.241783
+Data fetching from PLC 2024-04-25 15:00:54.361874
+Data fetching from PLC 2024-04-25 15:00:59.499923
+Data fetching from PLC 2024-04-25 15:01:04.651966
+Data fetching from PLC 2024-04-25 15:01:09.774275
+Data fetching from PLC 2024-04-25 15:01:14.902708
+Data fetching from PLC 2024-04-25 15:01:20.031315
+Data fetching from PLC 2024-04-25 15:01:25.159951
+Data fetching from PLC 2024-04-25 15:01:30.291879
+Data fetching from PLC 2024-04-25 15:01:35.423407
+Data fetching from PLC 2024-04-25 15:01:40.546394
+Data fetching from PLC 2024-04-25 15:01:45.667060
+Data fetching from PLC 2024-04-25 15:01:50.795615
+Data fetching from PLC 2024-04-25 15:01:55.926238
+Data fetching from PLC 2024-04-25 15:02:01.065264
+Data fetching from PLC 2024-04-25 15:02:06.220074
+Data fetching from PLC 2024-04-25 15:02:11.343975
+Data fetching from PLC 2024-04-25 15:02:16.466734
+Data fetching from PLC 2024-04-25 15:02:21.591261
+Data fetching from PLC 2024-04-25 15:02:26.718274
+Data fetching from PLC 2024-04-25 15:02:31.841247
+Data fetching from PLC 2024-04-25 15:02:36.972022
+Data fetching from PLC 2024-04-25 15:02:42.094400
+Data fetching from PLC 2024-04-25 15:02:47.213668
+Data fetching from PLC 2024-04-25 15:02:52.341615
+Data fetching from PLC 2024-04-25 15:02:57.470511
+PLC is connected 2024-04-25 15:03:49.145838
+Data fetching from PLC 2024-04-25 15:03:49.244250
+Data fetching from PLC 2024-04-25 15:03:54.402429
+Data fetching from PLC 2024-04-25 15:03:59.537309
+Data fetching from PLC 2024-04-25 15:04:04.671892
+Data fetching from PLC 2024-04-25 15:04:09.797263
+Data fetching from PLC 2024-04-25 15:04:14.944057
+Data fetching from PLC 2024-04-25 15:04:20.086583
+PLC is connected 2024-04-25 15:13:07.598616
+Data fetching from PLC 2024-04-25 15:13:07.685617
+PLC data fetching Disconnected2024-04-25 15:13:12.448580

@@ -15,7 +15,7 @@ import concurrent.futures
 from plc_data_ui import Ui_MainWindow
 from getmac import get_mac_address as gma
 print(gma())
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from PyQt5.QtCore import QTimer
 # from Welcome_plc_ui import Ui_WelcomeWindow
 global local_connStatus
@@ -32,7 +32,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         uic.loadUi('Welcome_plc.ui', self)
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
         self.btnConnectDb.clicked.connect(self.dbConnection)
-        # self.btnConnectDb.clicked.connect(self.openWindow)
+        # self.logging_loop_active = False
     
     def openWindow(self):
         if self.local_A == True & self.dateExp == True:
@@ -41,17 +41,19 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.Ui.setupUi(self.window)
             Mainwindow.hide()
             self.window.show()
+
+            # self.logging_loop_active = False
+            # self.window.closeEvent = self.local_connStatus = False      
+    
             
             self.logImp = self.Ui.logImp
             self.logField = self.Ui.logField
             self.log = self.Ui.textStatus
             self.Ui.show_data_btn.clicked.connect(self.show_data)
             self.Ui.export_btn.clicked.connect(self.export_data)
-            # self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
             self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
             self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
-            # self.Ui.btnConnect.clicked.connect(self.dfPlc())
-            self.Ui.sampleBtn.clicked.connect(self.run_logging)
+            self.Ui.btnClearLog.clicked.connect(self.clear_logs)
             self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
             self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
             self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
@@ -62,6 +64,29 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         else:
             self.logcon.append('Error: Contact admin')
             
+    def stop_logging(self):
+        # Method to stop the logging loop
+        self.local_connStatus = False
+
+    def log_to_file(self, message):
+        # timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S] ")
+        with open('log.txt', 'a') as file:
+            file.write( message + '\n')
+        self.logField.append(message)
+
+    def clear_logs(self):
+        self.logField.clear()  # Clear the text editor
+        with open('log.txt', 'w') as file:
+            file.write('')  # Clear the log file
+
+    def closeEvent(self, event):
+        # Called when the Ui_MainWindow is closed
+        self.stop_logging
+        print("Ui_MainWindow closed")  # Stop the loop
+        event.accept() 
+
+        # Call the default closeEvent method
+
     def restrict_soft(self):
         for index, row in self.dfInfo.iterrows():
             if row['Particulars'] == 'Software_type':
@@ -87,20 +112,13 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                             print("Date Expired:", self.dateExp) 
                         else:
                             self.dateExp = True
+                            self.logcon.append("License Expired" )
                             print("Date Expired:", self.dateExp)
                         
                 except ValueError as e:
                     print("Error parsing release date:", e)
                     
-        
-                
-                if software_type == '1':
-                    # Check if the software has read access restricted to 50 data from PLC
-                    # Assuming '50 data from PLC' is one of the restrictions
-
-                    # Implement other restrictions similarly
-                    pass
-            # Check for other restrictions and return True if all conditions are met
+    
         return self.dateExp
  
     def authentication(self):
@@ -113,10 +131,9 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 else:
                     print(self.dfInfo)
                     self.local_A = False
+                    self.logcon.append("License Invalid" )
                     return self.local_A             
-                     
-        # return 2
-   
+                        
     def thread_and_handle(self, func):
         future = executor.submit(func)
         future.add_done_callback(self.handle_result)
@@ -136,24 +153,21 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.cursor = self.conn.cursor()
             # Create SQLAlchemy engine
             self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-
             # Execute SQL query and read data into DataFrame
-            sql = "SELECT * FROM Info_DB"
-            self.dfInfo = pd.read_sql(sql, self.engine)
+            self.con = self.engine.connect()
+            query = text('SELECT * FROM Info_DB')
+            self.dfInfo = pd.read_sql_query(query, self.con)         
 
-            # self.logImp.append('PLC is connected')
-            # self.thread_and_handle(self.authentication)
-            self.logcon.append('PLC is connected')
+            self.logcon.append('SQL DB is connected')
             self.authentication()
             self.restrict_soft()
             self.openWindow()
             
         except Exception as e:
             print("Error connecting to database:", e)
+            self.logcon.append("Error connecting to database:" + str(e))
 
     def plcConnect(self):
-        # self.self.dfPlcdb = pd.read_excel("C:\prolite\Plc_data\PLC_DB_Access.xlsx")
-        # print(self.self.dfPlcdb)
         try:
             self.current_date = datetime.now()
             self.plc = snap7.client.Client()
@@ -162,7 +176,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             print("DB Connected", self.cursor)
             print("DB Connected", self.conn)
             self.log.append('PLC is connected')
-            self.logField.append('PLC is connected ' + str(self.current_date))
+            message = 'PLC is connected ' + str(self.current_date)
+            self.log_to_file(message)
             self.local_connStatus = True
             self.dfPlc()
             self.run_logging()
@@ -170,6 +185,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
             self.local_connStatus = False
+            # Retry connecting after a delay
+            # QTimer.singleShot(240000000, self.plcConnect())  # Retry after 5 seconds
         return self.local_connStatus
 
     def plcDisconnect(self):
@@ -178,7 +195,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.plc.disconnect()
             self.log.append('PLC is Disconnected')
             self.local_connStatus = False
-            self.logField.append('PLC data fetching Disconnected' + str(self.current_date))
+            message = 'PLC data fetching Disconnected' + str(self.current_date)
+            self.log_to_file(message)
         except Exception as e:
             print("Error while disconnecting:", e)
             self.local_connStatus = False
@@ -241,75 +259,68 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                     if software_type == 0 or software_type == 1:
                         print("Software Type:", software_type)
                         # Retrieve data from MySQL table after insertion
-                        select_query = "SELECT  * FROM Data"
-                        # self.cursor.execute(select_query)
-                        # data_from_sql = self.cursor.fetchall()
-                        self.dfdemo = pd.read_sql(select_query, self.engine)
-                        self.dfPlcdb = self.dfdemo.head(50)
+                        select_query = text("SELECT  * FROM Data")
                         # Load data into a DataFrame
-                        # columns = [col[0] for col in data_from_sql]
-                        # self.dfPlcdb = pd.DataFrame(data_from_sql, columns=columns)
+                        self.dfdemo = pd.read_sql_query(select_query, self.con)
+
+                        self.dfPlcdb = self.dfdemo.head(50)
+                        self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
+                        self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
+                        self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
                         print(self.dfPlcdb)
                         return self.dfPlcdb
                     else:
                         select_query = "SELECT  * FROM Data"
                         self.dfPlcdb = pd.read_sql(select_query, self.engine)
+                        self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
+                        self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
+                        self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
                         print(self.dfPlcdb)
                         return self.dfPlcdb
                     
                 except Exception as e:
                     self.logImp.append(f"Error inserting data into MySQL table: {e}")
                 # print(self.dfPlcdb)
-                  
+
     def run_logging(self):
         try: 
-            
             while self.local_connStatus == True:
                 self.current_date = datetime.now()
-                self.logField.append('Data Fetching From Plc ' + str(self.current_date))
-                # if local_connStatus == True:
-                # Loop to log data every 5 seconds until interrupted
-                for index, row in self.dfPlcdb.iterrows():
-                    db_number = row['db_number']
-                    db_number = int(db_number)
-                    start_offset = row['start_offset']
-                    start_offset = int(start_offset)
-                    data_type = row['data_type']
-                    name = row['Name']
-                    bit_offset = row['bit_offset']
-                    bit_offset = int(bit_offset)
-                    print(db_number, start_offset, bit_offset, data_type, name)
-                    self.read_and_insert(db_number, start_offset, data_type, bit_offset, name)
-                time.sleep(5)  # Sleep for 5 second
-        except KeyboardInterrupt:
-            print("Program terminated by user.")
-            
-                                                                                    
-    def read_and_insert(self, db_number, start_offset, data_type, bit_offset, name):
-        try:
-            if data_type == 'BOOL':
-                reading = self.plc.db_read(db_number, start_offset, 1)
-                value = snap7.util.get_bool(reading, 0, bit_offset)
-            elif data_type == 'REAL':
-                reading = self.plc.db_read(db_number, start_offset, 4)
-                value = struct.unpack('>f', reading)[0]
-            elif data_type == 'INT':
-                reading = self.plc.db_read(db_number, start_offset, 2)
-                value = struct.unpack('>h', reading)[0]
-            else:
-                print("Unsupported data type:", data_type)
-                return
-            
-            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            log_message = 'DB Number: {}, Start Offset: {}, Data Type: {}, Value: {}, Name: {}'.format(db_number, start_offset, data_type, value, name)
-            print(log_message)
+                message = 'Data fetching from PLC ' + str(self.current_date)
+                self.log_to_file(message)
+                print("1")
+                # Apply the plcDataSnap7 function to each row of the DataFrame
+                self.dfPlcdb[['Value', 'timestamp']] = self.dfPlcdb.apply(lambda row: pd.Series(self.plcDataSnap7(row['db_number'], row['data_type'], row['start_offset'], row['bit_offset'])), axis=1)
+                # Assuming 'cursor' is your database cursor object
+                # Create a list of tuples containing the values to be inserted
+                values = [(row['timestamp'], row['Name'], row['data_type'], row['Value']) for _, row in self.dfPlcdb.iterrows()]
 
-            self.cursor.execute('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
-                                VALUES (?, ?, ?, ?)''', (timestamp, name, data_type, value))
-            self.conn.commit()
-        except Exception as e:
-                self.logField.append(f"Error: {e}")
-                print((f"Error: {e}"))
+                # Execute the query to insert multiple rows
+                self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
+                                    VALUES (?, ?, ?, ?)''', values)      
+                self.conn.commit() 
+                time.sleep(5) 
+    
+        
+        except KeyboardInterrupt:
+            print("Program terminated by user.") 
+
+    def plcDataSnap7(self, db_number, data_type, start_offset, bit_offset):
+        if data_type == 'BOOL':
+            reading = self.plc.db_read(db_number, start_offset, 1)
+            value = snap7.util.get_bool(reading, 0, bit_offset)
+        elif data_type == 'REAL':
+            reading = self.plc.db_read(db_number, start_offset, 4)
+            value = struct.unpack('>f', reading)[0]
+        elif data_type == 'INT':
+            reading = self.plc.db_read(db_number, start_offset, 2)
+            value = struct.unpack('>h', reading)[0]
+        else:
+            print("Unsupported data type:", data_type)
+            return None
+        
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+        return value, timestamp     
     
     def show_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
@@ -354,11 +365,9 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         if file_name:
             df.to_excel(file_name, index=False)
 
-
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     Mainwindow = PLCDataLogger()
     Mainwindow.show()
     sys.exit(app.exec_())
-
 

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>974</width>
+    <width>971</width>
     <height>891</height>
    </rect>
   </property>
@@ -488,7 +488,7 @@ background-color: #191C24;
       </rect>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="homePage">
       <widget class="QWidget" name="widget_4" native="true">
@@ -542,19 +542,6 @@ background-color: #191C24;
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="sampleBtn">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>150</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Sample</string>
-        </property>
-       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="exportPage">
@@ -590,20 +577,34 @@ background-color: #191C24;
        </property>
        <property name="dateTime">
         <datetime>
-         <hour>5</hour>
-         <minute>30</minute>
+         <hour>0</hour>
+         <minute>0</minute>
          <second>0</second>
-         <year>2000</year>
+         <year>2024</year>
          <month>1</month>
-         <day>3</day>
+         <day>1</day>
         </datetime>
+       </property>
+       <property name="date">
+        <date>
+         <year>2024</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
        </property>
        <property name="time">
         <time>
-         <hour>5</hour>
-         <minute>30</minute>
+         <hour>0</hour>
+         <minute>0</minute>
          <second>0</second>
         </time>
+       </property>
+       <property name="minimumDate">
+        <date>
+         <year>2024</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
        </property>
        <property name="timeSpec">
         <enum>Qt::LocalTime</enum>
@@ -617,6 +618,23 @@ background-color: #191C24;
          <width>194</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="date">
+        <date>
+         <year>2024</year>
+         <month>1</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="minimumDateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2024</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
        </property>
       </widget>
       <widget class="QPushButton" name="export_btn">
@@ -713,6 +731,19 @@ background-color: #191C24;
         </rect>
        </property>
       </widget>
+      <widget class="QPushButton" name="btnClearLog">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>100</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Clear</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="helpPage">
       <widget class="QWidget" name="widget_6" native="true">
@@ -806,7 +837,7 @@ background-color: #191C24;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>974</width>
+     <width>971</width>
      <height>21</height>
     </rect>
    </property>
