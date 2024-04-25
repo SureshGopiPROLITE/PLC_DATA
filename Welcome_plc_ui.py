@@ -10,11 +10,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
-class Ui_MainWindow(object):
+class Ui_WelcomeWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(613, 379)
+        MainWindow.resize(613, 407)
         MainWindow.setStyleSheet("background-color: rgb(20, 20, 20);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -242,9 +241,6 @@ class Ui_MainWindow(object):
         self.label_2.setStyleSheet("\n"
 "font: 14pt \"MS Shell Dlg 2\";")
         self.label_2.setObjectName("label_2")
-        self.connStatus = QtWidgets.QTextEdit(self.centralwidget)
-        self.connStatus.setGeometry(QtCore.QRect(50, 260, 521, 71))
-        self.connStatus.setObjectName("connStatus")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 613, 21))
@@ -263,13 +259,13 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Welcome To PLC Data Log APK"))
         self.btnConnectDb.setText(_translate("MainWindow", "Connect DB"))
         self.label_2.setText(_translate("MainWindow", "Click on connect btn to log db"))
-
+        self.btnConnectDb.clicked.connect(self.openWindow)
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_WelcomeWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
