@@ -79,7 +79,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.backup_path = filedialog.asksaveasfilename(defaultextension=".bak",
                                                     filetypes=[("Backup files", "*.bak"), ("All files", "*.*")])
         # self.backup_path = "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\PLCDB2.bak"
-        server_name = 'SURESHGOPI'
+        #server_name = 'SURESHGOPI'
+        server_name = 'localhost\sqlexpress'
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
@@ -193,12 +194,14 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         try:
             self.conn = pyodbc.connect(
             'DRIVER=SQL Server;'
-            'SERVER=SURESHGOPI;'
+            'SERVER=localhost\sqlexpress;'
+            #'SERVER=SURESHGOPI;'
             'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
             # Create SQLAlchemy engine
-            self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            #self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             # Execute SQL query and read data into DataFrame
             self.con = self.engine.connect()         
 
