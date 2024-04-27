@@ -47,9 +47,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.Ui.setupUi(self.window)
             Mainwindow.hide()
             self.window.show()
-
-            
-            self.window.closeEvent = self.closeEvent()     
     
             self.logImp = self.Ui.logImp
             self.logField = self.Ui.logField
@@ -59,6 +56,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.Ui.btnBackup.clicked.connect(self.select_backup_path)
             self.Ui.btnDownloadExcel.clicked.connect(self.modelExcel)
             self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
+            self.Ui.btnConnect.clicked.connect(self.timer)
             self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
             self.Ui.btnClearLog.clicked.connect(self.clear_logs)
             self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
@@ -107,13 +105,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.conn.commit()
 
     # Example usage
-
-
             
-    # def stop_logging(self):
-    #     # Method to stop the logging loop
-    #     self.local_connStatus = False
-
     def log_to_file(self, message):
         # timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S] ")
         with open('log.txt', 'a') as file:
@@ -124,15 +116,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.logField.clear()  # Clear the text editor
         with open('log.txt', 'w') as file:
             file.write('')  # Clear the log file
-
-    def closeEvent(self):
-        # Called when the Ui_MainWindow is closed
-        # a = PLCDataLogger()
-        Mainwindow.close_application()
-        
-        print("Ui_MainWindow closed")  # Stop the loop
-        # Call the default closeEvent method    
-
+  
     def modelExcel(self):
         self.dfPlc()
         self.logImp.append("The Referencre Excel where given in your Folder create the excel in that format then upload")
@@ -253,8 +237,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
             self.local_connStatus = False
-            # Retry connecting after a delay
-            # QTimer.singleShot(240000000, self.plcConnect())  # Retry after 5 seconds
         return self.local_connStatus
 
     def plcDisconnect(self):
@@ -349,11 +331,17 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 except Exception as e:
                     self.logImp.append(f"Error inserting data into MySQL table: {e}")
                 # print(self.dfPlcdb)
+
+    def timer(self):
+        monitor_timer = QTimer(self)
+        monitor_timer.timeout.connect(self.run_logging)
+        monitor_timer.start(5000)
+
         
            
     def run_logging(self):
         try: 
-            while self.local_connStatus == True:
+            if self.local_connStatus == True:
                 self.current_date = datetime.now()
                 message = 'Data fetching from PLC ' + str(self.current_date)
                 self.log_to_file(message)
