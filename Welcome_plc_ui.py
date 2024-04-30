@@ -10,10 +10,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_WelcomeWindow(object):
+
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(613, 407)
+        MainWindow.resize(876, 554)
         MainWindow.setStyleSheet("background-color: rgb(20, 20, 20);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -47,20 +48,20 @@ class Ui_WelcomeWindow(object):
 "color: #D7DBEC;\n"
 "}\n"
 "\n"
-"/* Global styles for buttons */\n"
+"\n"
+"\n"
+"\n"
 "QPushButton{\n"
-"/*background-color: #383838;*/\n"
-"border-radius: 5px;\n"
-"border:2px solid #D7DBEC;;\n"
-"font-weight: bold;\n"
-"font-size: 8pt;\n"
-"background:#2f373d; \n"
-"/*font-family: Noto Sans;*/\n"
-"font: 75 10pt \"Poppins\";\n"
-"color: #fff;\n"
-"height:40px;\n"
-"width:150px;\n"
+" font: 12pt \"Poppins\";\n"
+" color:white;\n"
+" height:40px;\n"
+" border-radius: 5px;\n"
+" height:40px;\n"
+" width:150px;\n"
+"border:2px solid #D7DBEC;\n"
 "}\n"
+"\n"
+"\n"
 "\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 166, 0);\n"
@@ -101,6 +102,7 @@ class Ui_WelcomeWindow(object):
 "border-style: solid;\n"
 "border-width: 2px;\n"
 "border-color: rgba(40, 40, 40, 0.2);\n"
+"\n"
 "}\n"
 "\n"
 "QLabel#SettingBg2{\n"
@@ -126,10 +128,11 @@ class Ui_WelcomeWindow(object):
 "}\n"
 "\n"
 "QLabel {\n"
-"font-size: 8pt;\n"
+"font-size: 12pt;\n"
 "font:75  \"Poppins\";\n"
 "font-weight: bold;\n"
 "color: #D7DBEC;\n"
+"background-color: #191C24;\n"
 "/*font-family: Noto Sans;*/\n"
 "}\n"
 "\n"
@@ -211,39 +214,47 @@ class Ui_WelcomeWindow(object):
 "}")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(40, 39, 531, 301))
+        self.widget.setGeometry(QtCore.QRect(10, 0, 861, 511))
         self.widget.setObjectName("widget")
-        self.label = QtWidgets.QLabel(self.widget)
-        self.label.setGeometry(QtCore.QRect(120, 0, 271, 61))
-        font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label.setFont(font)
-        self.label.setStyleSheet("\n"
-"font: 14pt \"MS Shell Dlg 2\";")
-        self.label.setObjectName("label")
-        self.btnConnectDb = QtWidgets.QPushButton(self.widget)
-        self.btnConnectDb.setGeometry(QtCore.QRect(190, 90, 131, 61))
+        self.connStatus = QtWidgets.QTextEdit(self.widget)
+        self.connStatus.setGeometry(QtCore.QRect(30, 410, 801, 91))
+        self.connStatus.setObjectName("connStatus")
+        self.widget_2 = QtWidgets.QWidget(self.widget)
+        self.widget_2.setGeometry(QtCore.QRect(30, 30, 801, 371))
+        self.widget_2.setStyleSheet("QWidget{\n"
+"background-color: #191C24;\n"
+"}")
+        self.widget_2.setObjectName("widget_2")
+        self.btnConnectDb = QtWidgets.QPushButton(self.widget_2)
+        self.btnConnectDb.setGeometry(QtCore.QRect(330, 250, 154, 44))
         self.btnConnectDb.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";")
         self.btnConnectDb.setObjectName("btnConnectDb")
-        self.label_2 = QtWidgets.QLabel(self.widget)
-        self.label_2.setGeometry(QtCore.QRect(140, 160, 291, 61))
+        self.label = QtWidgets.QLabel(self.widget_2)
+        self.label.setGeometry(QtCore.QRect(290, 30, 231, 61))
         font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(14)
-        font.setBold(False)
+        font.setPointSize(12)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setStyleSheet("")
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.widget)
+        self.label_2.setGeometry(QtCore.QRect(320, 350, 251, 23))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("\n"
-"font: 14pt \"MS Shell Dlg 2\";")
+        self.label_2.setStyleSheet("")
         self.label_2.setObjectName("label_2")
+        self.widget_2.raise_()
+        self.connStatus.raise_()
+        self.label_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 613, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 876, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -256,16 +267,16 @@ class Ui_WelcomeWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Welcome To PLC Data Log APK"))
         self.btnConnectDb.setText(_translate("MainWindow", "Connect DB"))
-        self.label_2.setText(_translate("MainWindow", "Click on connect btn to log db"))
-        self.btnConnectDb.clicked.connect(self.openWindow)
+        self.label.setText(_translate("MainWindow", "Welcome To PLCInsight Pro"))
+        self.label_2.setText(_translate("MainWindow", "Click on connect to Logging"))
+
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_WelcomeWindow()
+    ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

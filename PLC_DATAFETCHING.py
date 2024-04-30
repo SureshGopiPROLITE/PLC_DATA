@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow
+from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import *
@@ -18,7 +18,6 @@ print(gma())
 from sqlalchemy import create_engine, text
 from tkinter import Tk, filedialog
 from PyQt5.QtCore import QTimer
-# from Welcome_plc_ui import Ui_WelcomeWindow
 global local_connStatus
 global A
 
@@ -32,14 +31,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         super(PLCDataLogger, self).__init__()
         uic.loadUi('Welcome_plc.ui', self)
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
-        self.btnConnectDb.clicked.connect(self.dbConnection)
-        # self.logging_loop_active = False
-        # if self.local_connStatus == True and fetch:
-       
-        
-
-        
-    
+        self.btnConnectDb.clicked.connect(self.dbConnection)    
+   
     def openWindow(self):
         if self.local_A == True & self.dateExp == True:
             self.window = QtWidgets.QMainWindow()
@@ -47,6 +40,9 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.Ui.setupUi(self.window)
             Mainwindow.hide()
             self.window.show()
+            revision = "0.0.5"
+            self.versionSet = self.Ui.versionSet
+            self.versionSet.setText(revision)
     
             self.logImp = self.Ui.logImp
             self.logField = self.Ui.logField
@@ -79,8 +75,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.backup_path = filedialog.asksaveasfilename(defaultextension=".bak",
                                                     filetypes=[("Backup files", "*.bak"), ("All files", "*.*")])
         # self.backup_path = "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\PLCDB2.bak"
-        #server_name = 'SURESHGOPI'
-        server_name = 'localhost\sqlexpress'
+        server_name = 'SURESHGOPI'
+        # server_name = 'localhost\sqlexpress'
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
@@ -107,11 +103,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
     # Example usage
             
-    def log_to_file(self, message):
-        # timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S] ")
-        with open('log.txt', 'a') as file:
-            file.write( message + '\n')
-        self.logField.append(message)
+    def log_to_file(self, message): 
+        # timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S] ")  
+        with open('log.txt', 'a') as file:  
+            file.write( message + '\n')         
+        self.logField.append(message)               
 
     def clear_logs(self):
         self.logField.clear()  # Clear the text editor
@@ -193,49 +189,48 @@ class PLCDataLogger(QtWidgets.QMainWindow):
     def dbConnection(self):
         try:
             self.conn = pyodbc.connect(
-            'DRIVER=SQL Server;'
-            'SERVER=localhost\sqlexpress;'
-            #'SERVER=SURESHGOPI;'
-            'DATABASE=PLCDB2;'
+                'DRIVER=SQL Server;'
+                'SERVER=SURESHGOPI;'
+                'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
-            # Create SQLAlchemy engine
-            #self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-            self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
-            # Execute SQL query and read data into DataFrame
-            self.con = self.engine.connect()         
+            self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
+            
             self.authentication()
             self.restrict_soft()
             self.openWindow()
 
             monitor_timer = QTimer(self)
             monitor_timer.timeout.connect(self.check_variables)
-            monitor_timer.start(30000)
-            # Initialize QTimer for continuous monitoring
-
-            
-            
+            monitor_timer.start(3600000)
         except Exception as e:
             print("Error connecting to database:", e)
             self.logcon.append("Error connecting to database:" + str(e))
 
+
     def plcConnect(self):
         try:
-            self.current_date = datetime.now()
-            self.plc = snap7.client.Client()
-            self.plc.connect('192.168.0.1', 0, 1)
-            print("PLC Connected", self.plc)
-            print("DB Connected", self.cursor)
-            print("DB Connected", self.conn)
-            self.log.append('PLC is connected')
-            message = 'PLC is connected ' + str(self.current_date)
-            self.log_to_file(message)
-            self.local_connStatus = True
-            self.dfPlc()
-            self.run_logging()
-            
+            self.plcIP = self.Ui.inpIp.text()
+            if self.plcIP:  # Check if self.plcIP has a valid value
+                print(self.plcIP)
+                self.current_date = datetime.now()
+                self.plc = snap7.client.Client()
+                self.plc.connect(self.plcIP, 0, 1)
+                print("PLC Connected", self.plc)
+                print("DB Connected", self.cursor)
+                print("DB Connected", self.conn)
+                self.log.append('PLC is connected')
+                message = 'PLC is connected ' + str(self.current_date)
+                self.log_to_file(message)
+                self.local_connStatus = True
+                self.dfPlc()
+                self.run_logging()
+            else:
+                print("PLC IP address is not provided.")
+                # You might want to inform the user or take appropriate action here
         except Exception as e:
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
@@ -379,50 +374,75 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
         return value, timestamp     
-    
+
+
+    # def plcDataSnap7(self, db_number, data_type, start_offset, bit_offset):
+    #     if data_type == 'BOOL':
+    #         reading = self.plc.db_read(db_number, start_offset, 1)
+    #         value = snap7.util.get_bool(reading, 0, bit_offset)
+    #     elif data_type == 'REAL':
+    #         reading = self.plc.db_read(db_number, start_offset, 4)
+    #         value = struct.unpack('>f', reading)[0]
+    #     elif data_type == 'INT':
+    #         reading = self.plc.db_read(db_number, start_offset, 2)
+    #         value = struct.unpack('>h', reading)[0]
+    #     elif data_type == 'DINT':  # Add support for double integer (4 bytes)
+    #         reading = self.plc.db_read(db_number, start_offset, 4)
+    #         value = struct.unpack('>i', reading)[0]
+    #     else:
+    #         print("Unsupported data type:", data_type)
+    #         return None
+    #     return value
+
+
     def show_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
         to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
 
-        # Query database for data between specified timestamps
-        query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
-        self.cursor.execute(query, (from_time, to_time))
-        data = self.cursor.fetchall()
+        try:
+            # Query database for data between specified timestamps
+            query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
+            self.cursor.execute(query, (from_time, to_time))
+            data = self.cursor.fetchall()
 
-        # Populate data into a QStandardItemModel
-        model = QStandardItemModel(len(data), len(data[0]), self)
-        model.setHorizontalHeaderLabels(['ID', 'TimeStamp', 'Name', 'DataType', 'Value'])
-        for row_num, row_data in enumerate(data):
-            for col_num, value in enumerate(row_data):
-                item = QStandardItem(str(value))
-                model.setItem(row_num, col_num, item)
+            # Populate data into a QStandardItemModel
+            model = QStandardItemModel(len(data), len(data[0]), self)
+            model.setHorizontalHeaderLabels(['ID', 'TimeStamp', 'Name', 'DataType', 'Value'])
+            for row_num, row_data in enumerate(data):
+                for col_num, value in enumerate(row_data):
+                    item = QStandardItem(str(value))
+                    model.setItem(row_num, col_num, item)
 
-        # Set the model for the QTableView
-        self.Ui.table_view.setModel(model)
+            # Set the model for the QTableView
+            self.Ui.table_view.setModel(model)
+        except Exception as e:
+            self.logImp.append(f"Error: {e}")
 
     def export_data(self):
-        # Get the data from the QStandardItemModel
-        model = self.Ui.table_view.model()
-        if not model:
-            return  # No data to export
-                            
-        # Convert data to DataFrame
-        data = []
-        for row in range(model.rowCount()):
-            row_data = []
-            for column in range(model.columnCount()):
-                index = model.index(row, column)
-                row_data.append(model.data(index))
-            data.append(row_data)
+        try:
+            # Get the data from the QStandardItemModel
+            model = self.Ui.table_view.model()
+            if not model:
+                return  # No data to export
+                                
+            # Convert data to DataFrame
+            data = []
+            for row in range(model.rowCount()):
+                row_data = []
+                for column in range(model.columnCount()):
+                    index = model.index(row, column)
+                    row_data.append(model.data(index))
+                data.append(row_data)
 
-        # Create DataFrame
-        df = pd.DataFrame(data, columns=['ID', 'TimeStamp', 'Name', 'DataType', 'Value'])
+            # Create DataFrame
+            df = pd.DataFrame(data, columns=['ID', 'TimeStamp', 'Name', 'DataType', 'Value'])
 
-        # Export DataFrame to Excel file
-        file_name, _ = QFileDialog.getSaveFileName(self, "Save File", "", "Excel files (*.xlsx)")
-        if file_name:
-            df.to_excel(file_name, index=False)
-
+            # Export DataFrame to Excel file
+            file_name, _ = QFileDialog.getSaveFileName(self, "Save File", "", "Excel files (*.xlsx)")
+            if file_name:
+                df.to_excel(file_name, index=False)
+        except Exception as e:
+                self.logImp.append(f"Error: {e}")
 
 
 
@@ -439,7 +459,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
 
 
-
+    
 
 
 if __name__ == '__main__':

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>379</height>
+    <width>876</width>
+    <height>554</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,20 +49,20 @@ font-size: 8pt;
 color: #D7DBEC;
 }
 
-/* Global styles for buttons */
+
+
+
 QPushButton{
-/*background-color: #383838;*/
-border-radius: 5px;
-border:2px solid #D7DBEC;;
-font-weight: bold;
-font-size: 8pt;
-background:#2f373d; 
-/*font-family: Noto Sans;*/
-font: 75 10pt &quot;Poppins&quot;;
-color: #fff;
-height:40px;
-width:150px;
+ font: 12pt &quot;Poppins&quot;;
+ color:white;
+ height:40px;
+ border-radius: 5px;
+ height:40px;
+ width:150px;
+border:2px solid #D7DBEC;
 }
+
+
 
 QPushButton:hover{
 color:rgb(255, 166, 0);
@@ -103,6 +103,7 @@ border-radius: 5px;
 border-style: solid;
 border-width: 2px;
 border-color: rgba(40, 40, 40, 0.2);
+
 }
 
 QLabel#SettingBg2{
@@ -128,10 +129,11 @@ border-color:  rgba(40, 40, 40, 0.2);
 }
 
 QLabel {
-font-size: 8pt;
+font-size: 12pt;
 font:75  &quot;Poppins&quot;;
 font-weight: bold;
 color: #D7DBEC;
+background-color: #191C24;
 /*font-family: Noto Sans;*/
 }
 
@@ -215,90 +217,105 @@ font: 8pt &quot;Poppins&quot;;
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>39</y>
-      <width>531</width>
-      <height>301</height>
+      <x>10</x>
+      <y>0</y>
+      <width>861</width>
+      <height>511</height>
      </rect>
     </property>
-    <widget class="QLabel" name="label">
+    <widget class="QTextEdit" name="connStatus">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>0</y>
-       <width>271</width>
-       <height>61</height>
+       <x>30</x>
+       <y>410</y>
+       <width>801</width>
+       <height>91</height>
       </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Welcome To PLC Data Log APK</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btnConnectDb">
+    <widget class="QWidget" name="widget_2" native="true">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>90</y>
-       <width>131</width>
-       <height>61</height>
+       <x>30</x>
+       <y>30</y>
+       <width>801</width>
+       <height>371</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      <string notr="true">QWidget{
+background-color: #191C24;
+}</string>
      </property>
-     <property name="text">
-      <string>Connect DB</string>
-     </property>
+     <widget class="QPushButton" name="btnConnectDb">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>250</y>
+        <width>154</width>
+        <height>44</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Connect DB</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>30</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Welcome To PLCInsight Pro</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>160</y>
-       <width>291</width>
-       <height>61</height>
+       <x>320</x>
+       <y>350</y>
+       <width>251</width>
+       <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
        <italic>false</italic>
-       <bold>false</bold>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+      <string notr="true"/>
      </property>
      <property name="text">
-      <string>Click on connect btn to log db</string>
+      <string>Click on connect to Logging</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QTextEdit" name="connStatus">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>260</y>
-      <width>521</width>
-      <height>71</height>
-     </rect>
-    </property>
+    <zorder>widget_2</zorder>
+    <zorder>connStatus</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>label_2</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -306,7 +323,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>613</width>
+     <width>876</width>
      <height>21</height>
     </rect>
    </property>

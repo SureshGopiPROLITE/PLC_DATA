@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>971</width>
-    <height>891</height>
+    <width>1922</width>
+    <height>1058</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,20 +49,20 @@ font-size: 8pt;
 color: #D7DBEC;
 }
 
-/* Global styles for buttons */
+
+
+
 QPushButton{
-/*background-color: #383838;*/
-border-radius: 5px;
-border:2px solid #D7DBEC;;
-font-weight: bold;
-font-size: 8pt;
-background:#2f373d; 
-/*font-family: Noto Sans;*/
-font: 75 10pt &quot;Poppins&quot;;
-color: #fff;
-height:40px;
-width:150px;
+ font: 12pt &quot;Poppins&quot;;
+ color:white;
+ height:40px;
+ border-radius: 5px;
+ height:40px;
+ width:150px;
+border:2px solid #D7DBEC;
 }
+
+
 
 QPushButton:hover{
 color:rgb(255, 166, 0);
@@ -103,6 +103,7 @@ border-radius: 5px;
 border-style: solid;
 border-width: 2px;
 border-color: rgba(40, 40, 40, 0.2);
+
 }
 
 QLabel#SettingBg2{
@@ -128,10 +129,11 @@ border-color:  rgba(40, 40, 40, 0.2);
 }
 
 QLabel {
-font-size: 8pt;
+font-size: 12pt;
 font:75  &quot;Poppins&quot;;
 font-weight: bold;
 color: #D7DBEC;
+background-color: #191C24;
 /*font-family: Noto Sans;*/
 }
 
@@ -217,8 +219,8 @@ font: 8pt &quot;Poppins&quot;;
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>951</width>
-      <height>841</height>
+      <width>1901</width>
+      <height>1080</height>
      </rect>
     </property>
     <widget class="QWidget" name="widget_2" native="true">
@@ -226,8 +228,8 @@ font: 8pt &quot;Poppins&quot;;
       <rect>
        <x>0</x>
        <y>-10</y>
-       <width>951</width>
-       <height>101</height>
+       <width>1871</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -262,7 +264,7 @@ border-color: rgb(251, 220, 175);
          <string notr="true">font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
         <property name="text">
-         <string>PLC Data</string>
+         <string>PLCInsight Pro</string>
         </property>
        </widget>
       </item>
@@ -272,15 +274,15 @@ border-color: rgb(251, 220, 175);
      <property name="geometry">
       <rect>
        <x>-1</x>
-       <y>90</y>
-       <width>191</width>
-       <height>751</height>
+       <y>70</y>
+       <width>261</width>
+       <height>941</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">
 QPushButton{
- font: 12pt &quot;Poppins&quot;;
+ font: 14pt &quot;Poppins&quot;;
  color:white;
  text-align:left;
  height:40px;
@@ -310,24 +312,30 @@ background-color: #191C24;
           <property name="font">
            <font>
             <family>Poppins</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
            </font>
           </property>
           <property name="text">
-           <string>Home</string>
+           <string>  Home</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_icons.qrc">
+           <iconset resource="Icons/main_resource.qrc">
             <normaloff>:/Icons/home.png</normaloff>:/Icons/home.png</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>25</width>
+            <height>25</height>
            </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -336,24 +344,30 @@ background-color: #191C24;
           <property name="font">
            <font>
             <family>Poppins</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
            </font>
           </property>
           <property name="text">
-           <string>Export</string>
+           <string>  Export</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_icons.qrc">
+           <iconset resource="Icons/main_resource.qrc">
             <normaloff>:/Icons/export.png</normaloff>:/Icons/export.png</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>25</width>
+            <height>25</height>
            </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -362,24 +376,30 @@ background-color: #191C24;
           <property name="font">
            <font>
             <family>Poppins</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
            </font>
           </property>
           <property name="text">
-           <string>Log</string>
+           <string>  Log</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_icons.qrc">
-            <normaloff>:/Icons/lod.png</normaloff>:/Icons/lod.png</iconset>
+           <iconset resource="Icons/main_resource.qrc">
+            <normaloff>:/Icons/log.png</normaloff>:/Icons/log.png</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>25</width>
+            <height>25</height>
            </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -388,24 +408,30 @@ background-color: #191C24;
           <property name="font">
            <font>
             <family>Poppins</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
            </font>
           </property>
           <property name="text">
-           <string>Help</string>
+           <string>  Help</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_icons.qrc">
+           <iconset resource="Icons/main_resource.qrc">
             <normaloff>:/Icons/help.png</normaloff>:/Icons/help.png</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>25</width>
+            <height>25</height>
            </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -414,24 +440,30 @@ background-color: #191C24;
           <property name="font">
            <font>
             <family>Poppins</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
            </font>
           </property>
           <property name="text">
-           <string>About</string>
+           <string>  About</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_icons.qrc">
-            <normaloff>:/Icons/lod.png</normaloff>:/Icons/lod.png</iconset>
+           <iconset resource="Icons/main_resource.qrc">
+            <normaloff>:/Icons/about.png</normaloff>:/Icons/about.png</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>25</width>
+            <height>25</height>
            </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -440,24 +472,30 @@ background-color: #191C24;
           <property name="font">
            <font>
             <family>Poppins</family>
-            <pointsize>12</pointsize>
+            <pointsize>14</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
            </font>
           </property>
           <property name="text">
-           <string>Import Excel</string>
+           <string>  Settings</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_icons.qrc">
+           <iconset resource="Icons/main_resource.qrc">
             <normaloff>:/Icons/import.png</normaloff>:/Icons/import.png</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>25</width>
+            <height>25</height>
            </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -481,23 +519,23 @@ background-color: #191C24;
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>280</x>
        <y>100</y>
-       <width>741</width>
-       <height>751</height>
+       <width>1601</width>
+       <height>911</height>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="homePage">
       <widget class="QWidget" name="widget_4" native="true">
        <property name="geometry">
         <rect>
          <x>-10</x>
-         <y>20</y>
-         <width>751</width>
-         <height>741</height>
+         <y>0</y>
+         <width>1601</width>
+         <height>911</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -506,20 +544,69 @@ background-color: #191C24;
 }
 </string>
        </property>
+       <widget class="QTextEdit" name="textStatus">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>90</y>
+          <width>1101</width>
+          <height>771</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="inpIp">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>11</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
        <widget class="QWidget" name="gridLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>20</y>
+          <x>550</x>
+          <y>0</y>
           <width>631</width>
-          <height>123</height>
+          <height>71</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
          <item row="0" column="0">
           <widget class="QPushButton" name="btnConnect">
            <property name="text">
             <string>Connect</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -528,51 +615,76 @@ background-color: #191C24;
            <property name="text">
             <string>Disconnect</string>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
         </layout>
+        <zorder>btnDisconnect</zorder>
+        <zorder>btnConnect</zorder>
        </widget>
-       <widget class="QTextEdit" name="textStatus">
+       <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>180</y>
-          <width>631</width>
-          <height>521</height>
+          <x>100</x>
+          <y>10</y>
+          <width>121</width>
+          <height>41</height>
          </rect>
         </property>
+        <property name="text">
+         <string>Enter PLC IP  :</string>
+        </property>
        </widget>
+       <zorder>label_6</zorder>
+       <zorder>textStatus</zorder>
+       <zorder>inpIp</zorder>
+       <zorder>gridLayoutWidget</zorder>
       </widget>
      </widget>
      <widget class="QWidget" name="exportPage">
-      <widget class="QLabel" name="label_3">
+      <widget class="QTableView" name="table_view">
        <property name="geometry">
         <rect>
-         <x>310</x>
-         <y>40</y>
-         <width>61</width>
-         <height>21</height>
+         <x>70</x>
+         <y>90</y>
+         <width>1391</width>
+         <height>781</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>60</width>
+         <height>44</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>8</pointsize>
+         <pointsize>12</pointsize>
          <weight>75</weight>
          <italic>false</italic>
          <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>To :</string>
+        <string>  From :</string>
        </property>
       </widget>
       <widget class="QDateTimeEdit" name="from_time">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>40</y>
-         <width>191</width>
-         <height>31</height>
+         <x>146</x>
+         <y>24</y>
+         <width>252</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="dateTime">
@@ -610,13 +722,34 @@ background-color: #191C24;
         <enum>Qt::LocalTime</enum>
        </property>
       </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>22</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>  To :</string>
+       </property>
+      </widget>
       <widget class="QDateTimeEdit" name="to_time">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>40</y>
-         <width>194</width>
-         <height>22</height>
+         <x>532</x>
+         <y>21</y>
+         <width>251</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="date">
@@ -637,114 +770,127 @@ background-color: #191C24;
         </datetime>
        </property>
       </widget>
-      <widget class="QPushButton" name="export_btn">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>570</x>
-         <y>90</y>
-         <width>111</width>
-         <height>51</height>
+         <x>820</x>
+         <y>0</y>
+         <width>651</width>
+         <height>80</height>
         </rect>
        </property>
-       <property name="font">
-        <font>
-         <family>Poppins</family>
-         <pointsize>10</pointsize>
-         <weight>9</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Export Excel</string>
-       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>20</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="show_data_btn">
+          <property name="font">
+           <font>
+            <family>Poppins</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Show Data</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="export_btn">
+          <property name="font">
+           <font>
+            <family>Poppins</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Export Excel</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
-      <widget class="QPushButton" name="show_data_btn">
-       <property name="geometry">
-        <rect>
-         <x>570</x>
-         <y>160</y>
-         <width>111</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Poppins</family>
-         <pointsize>10</pointsize>
-         <weight>9</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Show Data</string>
-       </property>
-      </widget>
-      <widget class="QTableView" name="table_view">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>80</y>
-         <width>541</width>
-         <height>511</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>40</y>
-         <width>51</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-         <weight>75</weight>
-         <italic>false</italic>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>From :</string>
-       </property>
-      </widget>
-      <zorder>label_3</zorder>
-      <zorder>to_time</zorder>
-      <zorder>export_btn</zorder>
-      <zorder>show_data_btn</zorder>
-      <zorder>table_view</zorder>
-      <zorder>label_2</zorder>
-      <zorder>from_time</zorder>
      </widget>
      <widget class="QWidget" name="logPage">
       <widget class="QTextEdit" name="logField">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>80</y>
-         <width>731</width>
-         <height>631</height>
+         <x>70</x>
+         <y>90</y>
+         <width>1391</width>
+         <height>761</height>
         </rect>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>220</x>
+         <x>420</x>
          <y>10</y>
-         <width>316</width>
-         <height>51</height>
+         <width>631</width>
+         <height>71</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>20</number>
+        </property>
         <item row="0" column="0">
          <widget class="QPushButton" name="btnClearLog">
           <property name="text">
            <string>Clear</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -752,6 +898,12 @@ background-color: #191C24;
          <widget class="QPushButton" name="btnBackup">
           <property name="text">
            <string>BackUP</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -762,10 +914,10 @@ background-color: #191C24;
       <widget class="QWidget" name="widget_6" native="true">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>721</width>
-         <height>721</height>
+         <x>0</x>
+         <y>0</y>
+         <width>1581</width>
+         <height>871</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -779,10 +931,10 @@ background-color: #191C24;
       <widget class="QWidget" name="widget_7" native="true">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>721</width>
-         <height>721</height>
+         <x>0</x>
+         <y>0</y>
+         <width>1581</width>
+         <height>881</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -790,16 +942,151 @@ background-color: #191C24;
 background-color: #191C24;
 }</string>
        </property>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>1290</x>
+          <y>813</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 8pt &quot;Poppins&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Software  Version   : </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="versionSet">
+        <property name="geometry">
+         <rect>
+          <x>1400</x>
+          <y>813</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 8pt &quot;Poppins&quot;;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="activateLicense">
+        <property name="geometry">
+         <rect>
+          <x>1134</x>
+          <y>830</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Activate</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="licenseEnter">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>832</y>
+          <width>409</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="licenseLabel">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>810</y>
+          <width>181</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Enter License Key:</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>40</y>
+          <width>1401</width>
+          <height>711</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Poppins&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Poppins'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;PLCInsight Pro&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Introduction:&lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PLCInsight Pro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, PLCInsight Pro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.&lt;/li&gt;
+&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Visualizing your data is made easy with PLCInsight Pro's intuitive interface, allowing you to explore your data in meaningful ways. Whether you're monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.&lt;/li&gt;
+&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Experience the next level of PLC data management with PLCInsight Pro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.&lt;/li&gt;&lt;/ul&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Who Can Benefit?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Manufacturers&lt;/span&gt;: Streamline production processes, minimize downtime, and optimize resource utilization with real-time insights into equipment performance and production metrics.&lt;/li&gt;
+&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Automation Engineers&lt;/span&gt;: Enhance system performance and reliability by monitoring PLC data in real time and proactively addressing issues before they escalate.&lt;/li&gt;
+&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Plant Managers&lt;/span&gt;: Gain visibility into plant operations, track key performance indicators, and make data-driven decisions to improve overall efficiency and productivity.&lt;/li&gt;
+&lt;li style=&quot; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Maintenance Teams&lt;/span&gt;: Predict equipment failures, schedule preventive maintenance tasks, and ensure optimal equipment performance to minimize costly downtime&lt;/li&gt;&lt;/ul&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Contact Us  :  &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;info@proliteautomation.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>800</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 8pt &quot;Poppins&quot;;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="importPage">
       <widget class="QWidget" name="widget_5" native="true">
        <property name="geometry">
         <rect>
-         <x>-20</x>
-         <y>-20</y>
-         <width>741</width>
-         <height>621</height>
+         <x>-140</x>
+         <y>0</y>
+         <width>1731</width>
+         <height>761</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -811,20 +1098,60 @@ background-color: #191C24;
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>210</y>
-          <width>331</width>
-          <height>91</height>
+          <x>390</x>
+          <y>300</y>
+          <width>1011</width>
+          <height>261</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
+         <property name="leftMargin">
+          <number>25</number>
+         </property>
+         <property name="topMargin">
+          <number>25</number>
+         </property>
+         <property name="rightMargin">
+          <number>40</number>
+         </property>
+         <property name="bottomMargin">
+          <number>30</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>35</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>30</number>
+         </property>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="btnDownloadExcel">
+           <property name="font">
+            <font>
+             <family>Poppins</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Download reference file</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
           <widget class="QPushButton" name="btnImpExcel">
            <property name="font">
             <font>
              <family>Poppins</family>
-             <pointsize>10</pointsize>
-             <weight>9</weight>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
@@ -832,21 +1159,31 @@ background-color: #191C24;
            <property name="text">
             <string>Open</string>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="btnDownloadExcel">
-           <property name="font">
-            <font>
-             <family>Poppins</family>
-             <pointsize>10</pointsize>
-             <weight>9</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">font: 12pt &quot;Poppins&quot;;</string>
            </property>
            <property name="text">
-            <string>Downloda reference file</string>
+            <string>Open the excel file and upload in DB</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="styleSheet">
+            <string notr="true">font: 12pt &quot;Poppins&quot;;</string>
+           </property>
+           <property name="text">
+            <string>For referencr click the download Btn and make the excel format as it in reference file</string>
            </property>
           </widget>
          </item>
@@ -857,9 +1194,9 @@ background-color: #191C24;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>650</y>
-         <width>741</width>
-         <height>91</height>
+         <y>780</y>
+         <width>1591</width>
+         <height>131</height>
         </rect>
        </property>
       </widget>
@@ -872,7 +1209,7 @@ background-color: #191C24;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>971</width>
+     <width>1922</width>
      <height>21</height>
     </rect>
    </property>
@@ -880,7 +1217,7 @@ background-color: #191C24;
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Icons/main_icons.qrc"/>
+  <include location="Icons/main_resource.qrc"/>
  </resources>
  <connections/>
 </ui>
