@@ -228,7 +228,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 self.local_connStatus = True
                 self.dfPlc()
                 self.run_logging()
-            else:
+            elif self.plcIP == "":
+                self.log.append(f'PLC IP: {e}') 
                 print("PLC IP address is not provided.")
                 # You might want to inform the user or take appropriate action here
         except Exception as e:
@@ -246,6 +247,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             message = 'PLC data fetching Disconnected' + str(self.current_date)
             self.log_to_file(message)
         except Exception as e:
+            self.log.append('PLC is Disconnected Error: {e}')
             print("Error while disconnecting:", e)
             self.local_connStatus = False
             

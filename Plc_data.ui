@@ -291,12 +291,12 @@ QPushButton{
 }
 QPushButton:checked{
 color:rgb(255, 166, 0);
-background-color: rgb(88, 88, 88);
+background-color:#18202f;
 
 }
 
 QPushButton:hover{
-background-color:#343434;
+background-color:#18202f;
 }
 
 QWidget{
