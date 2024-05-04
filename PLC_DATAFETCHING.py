@@ -47,8 +47,8 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.logImp = self.Ui.logImp
             self.logField = self.Ui.logField
             self.log = self.Ui.textStatus
-            self.Ui.show_data_btn.clicked.connect(self.show_data)
-            self.Ui.export_btn.clicked.connect(self.export_data)
+            self.Ui.show_data_btn.clicked.connect(lambda: self.thread_and_handle(self.show_data))
+            self.Ui.export_btn.clicked.connect(lambda: self.thread_and_handle(self.export_data))
             self.Ui.btnBackup.clicked.connect(self.select_backup_path)
             self.Ui.btnDownloadExcel.clicked.connect(self.modelExcel)
             self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
@@ -66,7 +66,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         else:
             self.logcon.append('Error: Contact admin')
 
-
     def select_backup_path(self):
         root = Tk()
         root.withdraw()  # Hide the main window
@@ -80,7 +79,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
-
 
     def backup_database(self, server, database):
         try:
@@ -100,9 +98,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             # Close cursor and connection
             self.cursor.commit()
             self.conn.commit()
-
-    # Example usage
-            
+           
     def log_to_file(self, message): 
         # timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S] ")  
         with open('log.txt', 'a') as file:  
@@ -124,7 +120,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
             # Write DataFrame to Excel
             self,self.dfPlcdb.to_excel(writer, sheet_name='Sheet1', index=False)
-
 
     def restrict_soft(self):
         query = text('SELECT * FROM Info_DB')
@@ -210,25 +205,24 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             print("Error connecting to database:", e)
             self.logcon.append("Error connecting to database:" + str(e))
 
-
     def plcConnect(self):
         try:
             self.plcIP = self.Ui.inpIp.text()
-            if self.plcIP:  # Check if self.plcIP has a valid value
-                print(self.plcIP)
-                self.current_date = datetime.now()
-                self.plc = snap7.client.Client()
-                self.plc.connect(self.plcIP, 0, 1)
-                print("PLC Connected", self.plc)
-                print("DB Connected", self.cursor)
-                print("DB Connected", self.conn)
-                self.log.append('PLC is connected')
-                message = 'PLC is connected ' + str(self.current_date)
-                self.log_to_file(message)
-                self.local_connStatus = True
-                self.dfPlc()
-                self.run_logging()
-            elif self.plcIP == "":
+             
+            print(self.plcIP)
+            self.current_date = datetime.now()
+            self.plc = snap7.client.Client()
+            self.plc.connect(self.plcIP, 0, 1)
+            print("PLC Connected", self.plc)
+            print("DB Connected", self.cursor)
+            print("DB Connected", self.conn)
+            self.log.append('PLC is connected')
+            message = 'PLC is connected ' + str(self.current_date)
+            self.log_to_file(message)
+            self.local_connStatus = True
+            self.dfPlc()
+            self.run_logging()
+            if self.plcIP == "":
                 self.log.append(f'PLC IP: {e}') 
                 print("PLC IP address is not provided.")
                 # You might want to inform the user or take appropriate action here
@@ -336,9 +330,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         monitor_timer = QTimer(self)
         monitor_timer.timeout.connect(self.run_logging)
         monitor_timer.start(5000)
-
-        
-           
+       
     def run_logging(self):
         try: 
             if self.local_connStatus == True:
@@ -357,26 +349,29 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                                     VALUES (?, ?, ?, ?)''', values)      
                 self.conn.commit()
                   
-        except KeyboardInterrupt:
-            print("Program terminated by user.") 
+        except Exception as e:
+            self.logField.append(f"Error : {e}") 
 
     def plcDataSnap7(self, db_number, data_type, start_offset, bit_offset):
-        if data_type == 'BOOL':
-            reading = self.plc.db_read(db_number, start_offset, 1)
-            value = snap7.util.get_bool(reading, 0, bit_offset)
-        elif data_type == 'REAL':
-            reading = self.plc.db_read(db_number, start_offset, 4)
-            value = struct.unpack('>f', reading)[0]
-        elif data_type == 'INT':
-            reading = self.plc.db_read(db_number, start_offset, 2)
-            value = struct.unpack('>h', reading)[0]
-        else:
-            print("Unsupported data type:", data_type)
-            return None
-        
-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
-        return value, timestamp     
+        try: 
+            if data_type == 'BOOL':
+                reading = self.plc.db_read(db_number, start_offset, 1)
+                value = snap7.util.get_bool(reading, 0, bit_offset)
+            elif data_type == 'REAL':
+                reading = self.plc.db_read(db_number, start_offset, 4)
+                value = struct.unpack('>f', reading)[0]
+            elif data_type == 'INT':
+                reading = self.plc.db_read(db_number, start_offset, 2)
+                value = struct.unpack('>h', reading)[0]
+            else:
+                print("Unsupported data type:", data_type)
+                return None
+            
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
 
+            return value, timestamp  
+        except Exception as e:
+            self.logField.append(f"Error : {e}")   
 
     # def plcDataSnap7(self, db_number, data_type, start_offset, bit_offset):
     #     if data_type == 'BOOL':
@@ -395,7 +390,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
     #         print("Unsupported data type:", data_type)
     #         return None
     #     return value
-
 
     def show_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
@@ -446,8 +440,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         except Exception as e:
                 self.logImp.append(f"Error: {e}")
 
-
-
     def check_variables(self):
         self.restrict_soft()
         # Check if self.local_A or self.dateExp is False
@@ -458,10 +450,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
     def close_application(self):
         # Close the application
         self.Ui.close()
-
-
-
-    
 
 
 if __name__ == '__main__':

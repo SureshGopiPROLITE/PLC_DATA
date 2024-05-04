@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1922</width>
-    <height>1058</height>
+    <height>1102</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -228,7 +228,7 @@ font: 8pt &quot;Poppins&quot;;
       <rect>
        <x>0</x>
        <y>-10</y>
-       <width>1871</width>
+       <width>1881</width>
        <height>81</height>
       </rect>
      </property>
@@ -276,7 +276,7 @@ border-color: rgb(251, 220, 175);
        <x>-1</x>
        <y>70</y>
        <width>261</width>
-       <height>941</height>
+       <height>931</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -534,7 +534,7 @@ background-color: #191C24;
         <rect>
          <x>-10</x>
          <y>0</y>
-         <width>1601</width>
+         <width>1611</width>
          <height>911</height>
         </rect>
        </property>
@@ -544,7 +544,7 @@ background-color: #191C24;
 }
 </string>
        </property>
-       <widget class="QTextEdit" name="textStatus">
+       <widget class="QTextBrowser" name="textStatus">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -558,7 +558,7 @@ background-color: #191C24;
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>11</y>
+          <y>20</y>
           <width>201</width>
           <height>41</height>
          </rect>
@@ -575,8 +575,8 @@ background-color: #191C24;
        <widget class="QWidget" name="gridLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>0</y>
+          <x>560</x>
+          <y>10</y>
           <width>631</width>
           <height>71</height>
          </rect>
@@ -630,8 +630,8 @@ background-color: #191C24;
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>10</y>
+          <x>110</x>
+          <y>20</y>
           <width>121</width>
           <height>41</height>
          </rect>
@@ -650,7 +650,7 @@ background-color: #191C24;
       <widget class="QTableView" name="table_view">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>90</x>
          <y>90</y>
          <width>1391</width>
          <height>781</height>
@@ -770,144 +770,182 @@ background-color: #191C24;
         </datetime>
        </property>
       </widget>
-      <widget class="QWidget" name="layoutWidget">
+      <widget class="QWidget" name="widget_8" native="true">
        <property name="geometry">
         <rect>
-         <x>820</x>
+         <x>0</x>
          <y>0</y>
-         <width>651</width>
-         <height>80</height>
+         <width>1601</width>
+         <height>911</height>
         </rect>
        </property>
-       <layout class="QGridLayout" name="gridLayout_4">
-        <property name="leftMargin">
-         <number>10</number>
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+background-color: #191C24;
+}
+</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>0</y>
+          <width>651</width>
+          <height>80</height>
+         </rect>
         </property>
-        <property name="topMargin">
-         <number>10</number>
-        </property>
-        <property name="rightMargin">
-         <number>10</number>
-        </property>
-        <property name="bottomMargin">
-         <number>10</number>
-        </property>
-        <property name="horizontalSpacing">
-         <number>20</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>0</number>
-        </property>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="show_data_btn">
-          <property name="font">
-           <font>
-            <family>Poppins</family>
-            <pointsize>12</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Show Data</string>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="export_btn">
-          <property name="font">
-           <font>
-            <family>Poppins</family>
-            <pointsize>12</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Export Excel</string>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="show_data_btn">
+           <property name="font">
+            <font>
+             <family>Poppins</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Show Data</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="export_btn">
+           <property name="font">
+            <font>
+             <family>Poppins</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Export Excel</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
+      <zorder>widget_8</zorder>
+      <zorder>table_view</zorder>
+      <zorder>label_2</zorder>
+      <zorder>from_time</zorder>
+      <zorder>label_3</zorder>
+      <zorder>to_time</zorder>
      </widget>
      <widget class="QWidget" name="logPage">
-      <widget class="QTextEdit" name="logField">
+      <widget class="QWidget" name="widget_9" native="true">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>0</x>
+         <y>0</y>
+         <width>1601</width>
+         <height>911</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+background-color: #191C24;
+}
+</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>10</y>
+          <width>631</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnClearLog">
+           <property name="text">
+            <string>Clear</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btnBackup">
+           <property name="text">
+            <string>BackUP</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QTextBrowser" name="logField">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
          <y>90</y>
-         <width>1391</width>
+         <width>1401</width>
          <height>761</height>
         </rect>
        </property>
-      </widget>
-      <widget class="QWidget" name="layoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>420</x>
-         <y>10</y>
-         <width>631</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <property name="leftMargin">
-         <number>10</number>
-        </property>
-        <property name="topMargin">
-         <number>10</number>
-        </property>
-        <property name="rightMargin">
-         <number>10</number>
-        </property>
-        <property name="bottomMargin">
-         <number>10</number>
-        </property>
-        <property name="horizontalSpacing">
-         <number>20</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="btnClearLog">
-          <property name="text">
-           <string>Clear</string>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="btnBackup">
-          <property name="text">
-           <string>BackUP</string>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
       </widget>
      </widget>
      <widget class="QWidget" name="helpPage">
@@ -916,8 +954,8 @@ background-color: #191C24;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1581</width>
-         <height>871</height>
+         <width>1601</width>
+         <height>911</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -933,8 +971,8 @@ background-color: #191C24;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1581</width>
-         <height>881</height>
+         <width>1601</width>
+         <height>911</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1061,22 +1099,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Contact Us  :  &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;info@proliteautomation.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>800</y>
-          <width>171</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 8pt &quot;Poppins&quot;;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="importPage">
@@ -1085,7 +1107,7 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>-140</x>
          <y>0</y>
-         <width>1731</width>
+         <width>1741</width>
          <height>761</height>
         </rect>
        </property>
@@ -1190,13 +1212,13 @@ background-color: #191C24;
         </layout>
        </widget>
       </widget>
-      <widget class="QTextEdit" name="logImp">
+      <widget class="QTextBrowser" name="logImp">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>780</y>
-         <width>1591</width>
-         <height>131</height>
+         <width>1601</width>
+         <height>121</height>
         </rect>
        </property>
       </widget>
