@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1922, 1102)
-        MainWindow.setStyleSheet("background-color: rgb(20, 20, 20);")
+        MainWindow.resize(1917, 1052)
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
 "QFrame#mainFrame{\n"
@@ -42,7 +42,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(88, 88, 88);\n"
 "}\n"
 "QCheckBox{\n"
-"font:  \"Poppins\";\n"
+"font:  \"Open Sans\";\n"
 "font-weight: bold;\n"
 "font-size: 8pt;\n"
 "color: #D7DBEC;\n"
@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QPushButton{\n"
-" font: 12pt \"Poppins\";\n"
+" font: 12pt \"Open Sans\";\n"
 " color:white;\n"
 " height:40px;\n"
 " border-radius: 5px;\n"
@@ -120,7 +120,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QLabel#SettingBg4{\n"
-"font: 14pt \"Poppins\";\n"
+"font: 14pt \"Open Sans\";\n"
 "border-radius: 5px;\n"
 "border-style: solid;\n"
 "border-width: 2px;\n"
@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
 "\n"
 "QLabel {\n"
 "font-size: 12pt;\n"
-"font:75  \"Poppins\";\n"
+"font:75  \"Open Sans\";\n"
 "font-weight: bold;\n"
 "color: #D7DBEC;\n"
 "background-color: #191C24;\n"
@@ -180,7 +180,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QHeaderView::section { \n"
-"font: 75 10pt \"Poppins\";\n"
+"font: 75 10pt \"Open Sans\";\n"
 "color: white;\n"
 "background-color:#989898; \n"
 "}\n"
@@ -191,13 +191,13 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QTableView::item { \n"
-"font: 75 12pt \"Poppins\";\n"
+"font: 75 12pt \"Open Sans\";\n"
 "color:white; \n"
 "background:#2f373d; \n"
 "font-weight:900; \n"
 "}\n"
 "QTableView::item:selected {\n"
-"font: 75 12pt \"Poppins\"; \n"
+"font: 75 12pt \"Open Sans\"; \n"
 "color:black; \n"
 "background:#7cc8b9; \n"
 "font-weight:900; \n"
@@ -210,26 +210,35 @@ class Ui_MainWindow(object):
 "QTextEdit{\n"
 "background-color: rgb(25, 28, 36);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 8pt \"Poppins\";\n"
+"font: 8pt \"Open Sans\";\n"
 "}")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(10, 0, 1901, 1080))
         self.widget.setObjectName("widget")
         self.widget_2 = QtWidgets.QWidget(self.widget)
-        self.widget_2.setGeometry(QtCore.QRect(0, -10, 1881, 81))
-        self.widget_2.setStyleSheet("QWidget{\n"
-"background-color: rgb(25, 28, 36);\n"
-"}\n"
-"QPushButton{\n"
-" font: 12pt \"Poppins\";\n"
+        self.widget_2.setGeometry(QtCore.QRect(0, 0, 1881, 51))
+        self.widget_2.setStyleSheet("\n"
+"Qlabel{\n"
+" font: 14pt \"Open Sans\";\n"
+" color:#103782;\n"
+" text-align:left;\n"
+" height:40px;\n"
 " border:none;\n"
+" padding-left:10px;\n"
 "}\n"
 "QPushButton:checked{\n"
-"color: rgb(248, 172, 35);\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-color: rgb(248, 172, 35);\n"
-"border-color: rgb(251, 220, 175);\n"
+"color:#103782;\n"
+"background-color:#ECF1F7;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#ECF1F7;\n"
+"}\n"
+"\n"
+"QWidget{\n"
+"background-color: #F7F8F9;\n"
 "}\n"
 "")
         self.widget_2.setObjectName("widget_2")
@@ -238,38 +247,36 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_4 = QtWidgets.QLabel(self.widget_2)
         font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(24)
-        font.setBold(False)
+        font.setPointSize(12)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("font: 24pt \"MS Shell Dlg 2\";")
+        self.label_4.setStyleSheet("color : #103782;")
         self.label_4.setObjectName("label_4")
         self.verticalLayout_3.addWidget(self.label_4)
         self.widget_3 = QtWidgets.QWidget(self.widget)
-        self.widget_3.setGeometry(QtCore.QRect(-1, 70, 261, 931))
-        self.widget_3.setStyleSheet("\n"
-"QPushButton{\n"
-" font: 14pt \"Poppins\";\n"
-" color:white;\n"
+        self.widget_3.setGeometry(QtCore.QRect(0, 50, 261, 961))
+        self.widget_3.setStyleSheet("QPushButton{\n"
+" font: 14pt \"Open Sans\";\n"
+" color:#171725;\n"
 " text-align:left;\n"
 " height:40px;\n"
 " border:none;\n"
 " padding-left:10px;\n"
 "}\n"
 "QPushButton:checked{\n"
-"color:rgb(255, 166, 0);\n"
-"background-color:#18202f;\n"
+"color:#103782;\n"
+"background-color:#eaedf2;\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#18202f;\n"
+"background-color:#ECF1F7;\n"
 "}\n"
 "\n"
 "QWidget{\n"
-"background-color: #191C24;\n"
+"background-color: #F7F8F9;\n"
 "}\n"
 "")
         self.widget_3.setObjectName("widget_3")
@@ -280,14 +287,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.navHome = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.navHome.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icons/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/Icons/home (3).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.navHome.setIcon(icon)
         self.navHome.setIconSize(QtCore.QSize(25, 25))
         self.navHome.setCheckable(True)
@@ -296,14 +303,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.navHome)
         self.navExport = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.navExport.setFont(font)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/Icons/export.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/Icons/logout.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.navExport.setIcon(icon1)
         self.navExport.setIconSize(QtCore.QSize(25, 25))
         self.navExport.setCheckable(True)
@@ -312,14 +319,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.navExport)
         self.navLog = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.navLog.setFont(font)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/Icons/log.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/Icons/log (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.navLog.setIcon(icon2)
         self.navLog.setIconSize(QtCore.QSize(25, 25))
         self.navLog.setCheckable(True)
@@ -328,14 +335,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.navLog)
         self.navHelp = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.navHelp.setFont(font)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/Icons/help.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/Icons/question.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.navHelp.setIcon(icon3)
         self.navHelp.setIconSize(QtCore.QSize(25, 25))
         self.navHelp.setCheckable(True)
@@ -344,14 +351,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.navHelp)
         self.navAbout = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.navAbout.setFont(font)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/Icons/about.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/Icons/info (2).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.navAbout.setIcon(icon4)
         self.navAbout.setIconSize(QtCore.QSize(25, 25))
         self.navAbout.setCheckable(True)
@@ -360,14 +367,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.navAbout)
         self.navImp = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
         self.navImp.setFont(font)
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/Icons/import.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(":/Icons/import (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.navImp.setIcon(icon5)
         self.navImp.setIconSize(QtCore.QSize(25, 25))
         self.navImp.setCheckable(True)
@@ -378,29 +385,29 @@ class Ui_MainWindow(object):
         self.verticalLayout.addItem(spacerItem)
         self.verticalLayout_2.addLayout(self.verticalLayout)
         self.stackedWidget = QtWidgets.QStackedWidget(self.widget)
-        self.stackedWidget.setGeometry(QtCore.QRect(280, 100, 1601, 911))
+        self.stackedWidget.setGeometry(QtCore.QRect(280, 90, 1601, 921))
         self.stackedWidget.setObjectName("stackedWidget")
         self.homePage = QtWidgets.QWidget()
         self.homePage.setObjectName("homePage")
         self.widget_4 = QtWidgets.QWidget(self.homePage)
-        self.widget_4.setGeometry(QtCore.QRect(-10, 0, 1611, 911))
+        self.widget_4.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_4.setStyleSheet("QWidget{\n"
 "background-color: #191C24;\n"
 "}\n"
 "")
         self.widget_4.setObjectName("widget_4")
         self.textStatus = QtWidgets.QTextBrowser(self.widget_4)
-        self.textStatus.setGeometry(QtCore.QRect(90, 90, 1101, 771))
+        self.textStatus.setGeometry(QtCore.QRect(90, 130, 1101, 771))
         self.textStatus.setObjectName("textStatus")
         self.inpIp = QtWidgets.QLineEdit(self.widget_4)
-        self.inpIp.setGeometry(QtCore.QRect(240, 20, 201, 41))
+        self.inpIp.setGeometry(QtCore.QRect(240, 36, 201, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.inpIp.setFont(font)
         self.inpIp.setStyleSheet("color: rgb(255, 255, 255);")
         self.inpIp.setObjectName("inpIp")
         self.gridLayoutWidget = QtWidgets.QWidget(self.widget_4)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(550, 0, 631, 71))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(560, 20, 631, 71))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(10, 10, 10, 10)
@@ -419,7 +426,7 @@ class Ui_MainWindow(object):
         self.btnDisconnect.raise_()
         self.btnConnect.raise_()
         self.label_6 = QtWidgets.QLabel(self.widget_4)
-        self.label_6.setGeometry(QtCore.QRect(110, 20, 121, 41))
+        self.label_6.setGeometry(QtCore.QRect(110, 35, 121, 41))
         self.label_6.setObjectName("label_6")
         self.label_6.raise_()
         self.textStatus.raise_()
@@ -463,7 +470,7 @@ class Ui_MainWindow(object):
         self.to_time.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
         self.to_time.setObjectName("to_time")
         self.widget_8 = QtWidgets.QWidget(self.exportPage)
-        self.widget_8.setGeometry(QtCore.QRect(0, 0, 1601, 911))
+        self.widget_8.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_8.setStyleSheet("QWidget{\n"
 "background-color: #191C24;\n"
 "}\n"
@@ -479,7 +486,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.setObjectName("gridLayout_4")
         self.show_data_btn = QtWidgets.QPushButton(self.layoutWidget)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
@@ -491,7 +498,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.show_data_btn, 0, 2, 1, 1)
         self.export_btn = QtWidgets.QPushButton(self.layoutWidget)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
@@ -511,7 +518,7 @@ class Ui_MainWindow(object):
         self.logPage = QtWidgets.QWidget()
         self.logPage.setObjectName("logPage")
         self.widget_9 = QtWidgets.QWidget(self.logPage)
-        self.widget_9.setGeometry(QtCore.QRect(0, 0, 1601, 911))
+        self.widget_9.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_9.setStyleSheet("QWidget{\n"
 "background-color: #191C24;\n"
 "}\n"
@@ -541,7 +548,7 @@ class Ui_MainWindow(object):
         self.helpPage = QtWidgets.QWidget()
         self.helpPage.setObjectName("helpPage")
         self.widget_6 = QtWidgets.QWidget(self.helpPage)
-        self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 911))
+        self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_6.setStyleSheet("QWidget{\n"
 "background-color: #191C24;\n"
 "}")
@@ -550,18 +557,18 @@ class Ui_MainWindow(object):
         self.aboutPage = QtWidgets.QWidget()
         self.aboutPage.setObjectName("aboutPage")
         self.widget_7 = QtWidgets.QWidget(self.aboutPage)
-        self.widget_7.setGeometry(QtCore.QRect(0, 0, 1601, 911))
+        self.widget_7.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_7.setStyleSheet("QWidget{\n"
 "background-color: #191C24;\n"
 "}")
         self.widget_7.setObjectName("widget_7")
         self.label_7 = QtWidgets.QLabel(self.widget_7)
         self.label_7.setGeometry(QtCore.QRect(1290, 813, 171, 51))
-        self.label_7.setStyleSheet("font: 8pt \"Poppins\";")
+        self.label_7.setStyleSheet("font: 8pt \"Open Sans\";")
         self.label_7.setObjectName("label_7")
         self.versionSet = QtWidgets.QLabel(self.widget_7)
         self.versionSet.setGeometry(QtCore.QRect(1400, 813, 171, 51))
-        self.versionSet.setStyleSheet("font: 8pt \"Poppins\";")
+        self.versionSet.setStyleSheet("font: 8pt \"Open Sans\";")
         self.versionSet.setText("")
         self.versionSet.setObjectName("versionSet")
         self.activateLicense = QtWidgets.QPushButton(self.widget_7)
@@ -581,7 +588,7 @@ class Ui_MainWindow(object):
         self.licenseLabel.setObjectName("licenseLabel")
         self.textBrowser = QtWidgets.QTextBrowser(self.widget_7)
         self.textBrowser.setGeometry(QtCore.QRect(90, 40, 1401, 711))
-        self.textBrowser.setStyleSheet("font: 9pt \"Poppins\";\n"
+        self.textBrowser.setStyleSheet("font: 9pt \"Open Sans\";\n"
 "color: rgb(255, 255, 255);")
         self.textBrowser.setObjectName("textBrowser")
         self.stackedWidget.addWidget(self.aboutPage)
@@ -604,7 +611,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.btnDownloadExcel = QtWidgets.QPushButton(self.layoutWidget2)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
@@ -616,7 +623,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.btnDownloadExcel, 1, 1, 1, 1)
         self.btnImpExcel = QtWidgets.QPushButton(self.layoutWidget2)
         font = QtGui.QFont()
-        font.setFamily("Poppins")
+        font.setFamily("Open Sans")
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
@@ -627,20 +634,20 @@ class Ui_MainWindow(object):
         self.btnImpExcel.setObjectName("btnImpExcel")
         self.gridLayout_2.addWidget(self.btnImpExcel, 0, 1, 1, 1)
         self.label = QtWidgets.QLabel(self.layoutWidget2)
-        self.label.setStyleSheet("font: 12pt \"Poppins\";")
+        self.label.setStyleSheet("font: 12pt \"Open Sans\";")
         self.label.setObjectName("label")
         self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.layoutWidget2)
-        self.label_5.setStyleSheet("font: 12pt \"Poppins\";")
+        self.label_5.setStyleSheet("font: 12pt \"Open Sans\";")
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.logImp = QtWidgets.QTextBrowser(self.importPage)
-        self.logImp.setGeometry(QtCore.QRect(0, 780, 1601, 121))
+        self.logImp.setGeometry(QtCore.QRect(0, 780, 1601, 141))
         self.logImp.setObjectName("logImp")
         self.stackedWidget.addWidget(self.importPage)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1922, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1917, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -676,7 +683,7 @@ class Ui_MainWindow(object):
         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Poppins\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'Open Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">PLCInsight Pro</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"

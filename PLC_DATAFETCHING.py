@@ -17,12 +17,20 @@ from getmac import get_mac_address as gma
 print(gma())
 from sqlalchemy import create_engine, text
 from tkinter import Tk, filedialog
+from cryptography.fernet import Fernet
 from PyQt5.QtCore import QTimer
+import os
+import smtplib
+import ssl
+from email.message import EmailMessage
+from email.mime.base import MIMEBase
+from email import encoders
+
+
 global local_connStatus
-global A
 
 executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
-global plc
+
 
 
 class PLCDataLogger(QtWidgets.QMainWindow):
@@ -30,41 +38,159 @@ class PLCDataLogger(QtWidgets.QMainWindow):
     def __init__(self): 
         super(PLCDataLogger, self).__init__()
         uic.loadUi('Welcome_plc.ui', self)
+
+        
+        idfont = QFontDatabase.addApplicationFont(
+             "open-sans/Opensans-Semibold.ttf")
+        
+        if idfont < 0:
+            print("Font Error")
+        families = QFontDatabase.applicationFontFamilies(idfont)
+        print("Font Family name : ", families[0])
+        self.setFont(QFont("Open Sans"))
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
-        self.btnConnectDb.clicked.connect(self.dbConnection)    
-   
+        self.activateLicense.clicked.connect(self.licence)
+        self.btnConnectDb.clicked.connect(self.dbConnection)
+        
+
+
     def openWindow(self):
         if self.local_A == True & self.dateExp == True:
-            self.window = QtWidgets.QMainWindow()
-            self.Ui = Ui_MainWindow()
-            self.Ui.setupUi(self.window)
-            Mainwindow.hide()
-            self.window.show()
-            revision = "0.0.5"
-            self.versionSet = self.Ui.versionSet
-            self.versionSet.setText(revision)
-    
-            self.logImp = self.Ui.logImp
-            self.logField = self.Ui.logField
-            self.log = self.Ui.textStatus
-            self.Ui.show_data_btn.clicked.connect(lambda: self.thread_and_handle(self.show_data))
-            self.Ui.export_btn.clicked.connect(lambda: self.thread_and_handle(self.export_data))
-            self.Ui.btnBackup.clicked.connect(self.select_backup_path)
-            self.Ui.btnDownloadExcel.clicked.connect(self.modelExcel)
-            self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
-            self.Ui.btnConnect.clicked.connect(self.timer)
-            self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
-            self.Ui.btnClearLog.clicked.connect(self.clear_logs)
-            self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
-            self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
-            self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
-            self.Ui.navHelp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.helpPage))
-            self.Ui.navImp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.importPage))
-            self.Ui.navAbout.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.aboutPage))
-            self.Ui.btnImpExcel.clicked.connect(self.open_excel_file)
+            if gma(0) == self.macCheck:
+
+                self.window = QtWidgets.QMainWindow()
+                self.Ui = Ui_MainWindow()
+                self.Ui.setupUi(self.window)
+                Mainwindow.hide()
+                idfont = QFontDatabase.addApplicationFont(
+                "open-sans/Opensans-Semibold.ttf")
+            
+                if idfont < 0:
+                    print("Font Error")
+                families = QFontDatabase.applicationFontFamilies(idfont)
+                print("Font Family name : ", families[0])
+                self.setFont(QFont("Open Sans"))
+                self.window.show()
+                revision = "0.0.5"
+                self.versionSet = self.Ui.versionSet
+                self.versionSet.setText(revision)
+        
+                self.logImp = self.Ui.logImp
+                self.logField = self.Ui.logField
+                self.log = self.Ui.textStatus
+                self.Ui.show_data_btn.clicked.connect(lambda: self.thread_and_handle(self.show_data))
+                self.Ui.export_btn.clicked.connect(lambda: self.thread_and_handle(self.export_data))
+                self.Ui.btnBackup.clicked.connect(self.select_backup_path)
+                self.Ui.btnDownloadExcel.clicked.connect(self.modelExcel)
+                self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
+                self.Ui.btnConnect.clicked.connect(self.timer)
+                self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
+                self.Ui.btnClearLog.clicked.connect(self.clear_logs)
+                self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
+                self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
+                self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
+                self.Ui.navHelp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.helpPage))
+                self.Ui.navImp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.importPage))
+                self.Ui.navAbout.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.aboutPage))
+                self.Ui.btnImpExcel.clicked.connect(self.open_excel_file)
+            else:
+                self.logcon.append('Error: Invalid Licence Contact Admin ')
             
         else:
             self.logcon.append('Error: Contact admin')
+
+
+
+    def send_email(self):
+        # Define email sender and receiver
+        email_sender = 'saravan2406@gmail.com'
+        #email_password = os.environ.get("EMAIL_PASSWORD")
+        email_password = 'utefbkprwxtdanvc'
+        email_receiver = 'saravanan@proliteautomation.com, sureshgopi@proliteautomation.com'
+        email_receiver2 = 'sureshgopi@proliteautomation.com'
+
+        # Set the subject and body of the email
+        subject = 'Urgent : Data Logger Connection Error!!!'
+        body = f"""Urgent Notice: Our records indicate that your data logger connection has been disrupted. 
+        Please take immediate action to restore the connection to prevent any potential data loss. 
+        Your prompt attention to this matter is greatly appreciated. 
+
+        Please note that this email is sent from an automated system, and replies to this message will not be monitored. 
+        If you require assistance or have any questions, please contact our support team directly.
+
+        """
+        em = EmailMessage()
+        em['From'] = email_sender
+        em['To'] = email_receiver
+        em['Cc'] = email_receiver2
+        em['Subject'] = subject
+        em.set_content(body)
+        # Make the message multipart
+        em.add_alternative(body, subtype='html')
+        """
+        # Attach the image file
+        with open('plcimage.jpg', 'rb') as attachment_file:
+            file_data = attachment_file.read()
+            file_name = attachment_file.name.split("/")[-1]
+        attachment = MIMEBase('application', 'octet-stream')
+        attachment.set_payload(file_data)
+        encoders.encode_base64(attachment)
+        attachment.add_header('Content-Disposition', f'attachment; filename="{file_name}"')
+        em.attach(attachment)
+        """
+        # Add SSL (layer of security)
+        context = ssl.create_default_context()
+        # Log in and send the email
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+            smtp.login(email_sender, email_password)
+            smtp.sendmail(email_sender, email_receiver, em.as_string())
+
+    def licence(self):
+        self.mac_ver = '00c:9a:3c:f4:b0:55'
+        self.lic = self.licenseEnter.text()
+        print("Licence key", self.lic)
+        try:
+            # Construct the SQL query string with CAST function to convert Particulars to nvarchar
+            query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+            # Execute the query with parameters
+            self.cursor.execute(query, (self.lic, "Activation_Key"))
+            self.cursor.commit()
+        except Exception as e:
+            print(f"Error updating license: {e}")
+
+
+
+
+    def encrypt (self):
+        # Fixed encryption key (ensure it's kept secure)
+        crypto_key = b'9tvb2SoOaB11TA4YN3CydnGq4IfvSVSZJy25B6bdskM='
+        # Initialize Fernet with the encryption key
+        fernet = Fernet(crypto_key)
+        # Encrypt the MAC address
+        enc_mac = fernet.encrypt(self.mac_ver.encode())
+        return enc_mac
+
+
+    def decrypt (self):
+        for index, row in self.dfInfo.iterrows():
+            if row['Particulars'] == 'Activation_Key':
+                self.lic = row['Info']
+                print("Licience:", self.lic)
+
+        # Fixed encryption key (ensure it's kept secure)
+        crypto_key = b'9tvb2SoOaB11TA4YN3CydnGq4IfvSVSZJy25B6bdskM='
+
+        # Initialize Fernet with the encryption key
+        fernet = Fernet(crypto_key)
+        # Encrypt the MAC address
+
+        enc_macid = self.lic.encode('utf-8')
+        print("Print Enc mac " ,enc_macid)
+        # Decrypt the encrypted MAC address (optional)
+        dec_mac = fernet.decrypt(enc_macid).decode()
+        self.macCheck = dec_mac[1:]
+        self.softwaretypeCheck = int(dec_mac[0])
+        return dec_mac
 
     def select_backup_path(self):
         root = Tk()
@@ -193,9 +319,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
+
             
             self.authentication()
             self.restrict_soft()
+            self.decrypt()
             self.openWindow()
 
             monitor_timer = QTimer(self)
@@ -230,6 +358,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
             self.local_connStatus = False
+            self.send_email()
         return self.local_connStatus
 
     def plcDisconnect(self):
@@ -259,7 +388,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 self.logImp.append("Data inserted into MySQL table successfully.")
             except Exception as e:
                 self.logImp.append(f"Error reading Excel file: {e}")
-
+    
     def insert_data_into_mysql(self):
         try:
             # Truncate the table to clear all existing data
@@ -291,7 +420,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.dfPlc()
         except Exception as e:
             self.logImp.append(f"Error inserting data into MySQL table: {e}")
-        
+
     def dfPlc(self):        
         for index, row in self.dfInfo.iterrows():
             if row['Particulars'] == 'Software_type':
@@ -330,7 +459,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         monitor_timer = QTimer(self)
         monitor_timer.timeout.connect(self.run_logging)
         monitor_timer.start(5000)
-       
+
     def run_logging(self):
         try: 
             if self.local_connStatus == True:
@@ -348,10 +477,12 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
                                     VALUES (?, ?, ?, ?)''', values)      
                 self.conn.commit()
-                  
+                
         except Exception as e:
-            self.logField.append(f"Error : {e}") 
-
+            self.local_connStatus = False
+            self.logField.append(f"Error : {e}")
+            self.send_email() 
+      
     def plcDataSnap7(self, db_number, data_type, start_offset, bit_offset):
         try: 
             if data_type == 'BOOL':
@@ -390,7 +521,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
     #         print("Unsupported data type:", data_type)
     #         return None
     #     return value
-
+    
     def show_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
         to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
@@ -453,6 +584,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
 
 if __name__ == '__main__':
+
     app = QtWidgets.QApplication(sys.argv)
     Mainwindow = PLCDataLogger()
     Mainwindow.show()

@@ -42,7 +42,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(88, 88, 88);\n"
 "}\n"
 "QCheckBox{\n"
-"font:  \"Poppins\";\n"
+"font:  \"Open Sans\";\n"
 "font-weight: bold;\n"
 "font-size: 8pt;\n"
 "color: #D7DBEC;\n"
@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QPushButton{\n"
-" font: 12pt \"Poppins\";\n"
+" font: 12pt \"Open Sans\";\n"
 " color:white;\n"
 " height:40px;\n"
 " border-radius: 5px;\n"
@@ -120,17 +120,17 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QLabel#SettingBg4{\n"
-"font: 14pt \"Poppins\";\n"
+"font: 14pt \"Open Sans\";\n"
 "border-radius: 5px;\n"
-"border-style: solid;\n"
+"border-style: Semibold;\n"
 "border-width: 2px;\n"
 "border-color:  rgba(40, 40, 40, 0.2);\n"
 "}\n"
 "\n"
 "QLabel {\n"
 "font-size: 12pt;\n"
-"font:75  \"Poppins\";\n"
-"font-weight: bold;\n"
+"font:75  \"Open Sans\";\n"
+"font-weight: Semibold;\n"
 "color: #D7DBEC;\n"
 "background-color: #191C24;\n"
 "/*font-family: Noto Sans;*/\n"
@@ -180,7 +180,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QHeaderView::section { \n"
-"font: 75 10pt \"Poppins\";\n"
+"font: 75 10pt \"Open Sans\";\n"
 "color: white;\n"
 "background-color:#989898; \n"
 "}\n"
@@ -191,13 +191,13 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QTableView::item { \n"
-"font: 75 12pt \"Poppins\";\n"
+"font: 75 12pt \"Open Sans\";\n"
 "color:white; \n"
 "background:#2f373d; \n"
 "font-weight:900; \n"
 "}\n"
 "QTableView::item:selected {\n"
-"font: 75 12pt \"Poppins\"; \n"
+"font: 75 12pt \"open Sans\"; \n"
 "color:black; \n"
 "background:#7cc8b9; \n"
 "font-weight:900; \n"
@@ -210,7 +210,7 @@ class Ui_MainWindow(object):
 "QTextEdit{\n"
 "background-color: rgb(25, 28, 36);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 8pt \"Poppins\";\n"
+"font: 8pt \"Open Sans\";\n"
 "}")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
@@ -226,28 +226,45 @@ class Ui_MainWindow(object):
 "}")
         self.widget_2.setObjectName("widget_2")
         self.btnConnectDb = QtWidgets.QPushButton(self.widget_2)
-        self.btnConnectDb.setGeometry(QtCore.QRect(330, 250, 154, 44))
+        self.btnConnectDb.setGeometry(QtCore.QRect(50, 310, 154, 44))
         self.btnConnectDb.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";")
         self.btnConnectDb.setObjectName("btnConnectDb")
         self.label = QtWidgets.QLabel(self.widget_2)
         self.label.setGeometry(QtCore.QRect(290, 30, 231, 61))
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setBold(True)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(9)
         self.label.setFont(font)
         self.label.setStyleSheet("")
         self.label.setObjectName("label")
+        self.activateLicense = QtWidgets.QPushButton(self.widget_2)
+        self.activateLicense.setGeometry(QtCore.QRect(610, 260, 81, 21))
+        self.activateLicense.setObjectName("activateLicense")
+        self.licenseLabel = QtWidgets.QLabel(self.widget_2)
+        self.licenseLabel.setGeometry(QtCore.QRect(196, 240, 181, 19))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.licenseLabel.setFont(font)
+        self.licenseLabel.setObjectName("licenseLabel")
+        self.licenseEnter = QtWidgets.QLineEdit(self.widget_2)
+        self.licenseEnter.setGeometry(QtCore.QRect(196, 262, 409, 20))
+        self.licenseEnter.setStyleSheet("color: rgb(255, 255, 255);")
+        self.licenseEnter.setObjectName("licenseEnter")
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(320, 350, 251, 23))
         font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
+        font.setFamily("Open Sans")
+        font.setPointSize(14)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(50)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("")
+        self.label_2.setStyleSheet("font: 14pt \"Open Sans\";")
         self.label_2.setObjectName("label_2")
         self.widget_2.raise_()
         self.connStatus.raise_()
@@ -269,6 +286,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btnConnectDb.setText(_translate("MainWindow", "Connect DB"))
         self.label.setText(_translate("MainWindow", "Welcome To PLCInsight Pro"))
+        self.activateLicense.setText(_translate("MainWindow", "Activate"))
+        self.licenseLabel.setText(_translate("MainWindow", "Enter License Key:"))
         self.label_2.setText(_translate("MainWindow", "Click on connect to Logging"))
 
 

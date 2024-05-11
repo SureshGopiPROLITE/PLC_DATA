@@ -43,7 +43,7 @@ color:rgb(255, 166, 0);
 background-color: rgb(88, 88, 88);
 }
 QCheckBox{
-font:  &quot;Poppins&quot;;
+font:  &quot;Open Sans&quot;;
 font-weight: bold;
 font-size: 8pt;
 color: #D7DBEC;
@@ -53,7 +53,7 @@ color: #D7DBEC;
 
 
 QPushButton{
- font: 12pt &quot;Poppins&quot;;
+ font: 12pt &quot;Open Sans&quot;;
  color:white;
  height:40px;
  border-radius: 5px;
@@ -121,17 +121,17 @@ border-color: rgba(40, 40, 40, 0.2);
 }
 
 QLabel#SettingBg4{
-font: 14pt &quot;Poppins&quot;;
+font: 14pt &quot;Open Sans&quot;;
 border-radius: 5px;
-border-style: solid;
+border-style: Semibold;
 border-width: 2px;
 border-color:  rgba(40, 40, 40, 0.2);
 }
 
 QLabel {
 font-size: 12pt;
-font:75  &quot;Poppins&quot;;
-font-weight: bold;
+font:75  &quot;Open Sans&quot;;
+font-weight: Semibold;
 color: #D7DBEC;
 background-color: #191C24;
 /*font-family: Noto Sans;*/
@@ -181,7 +181,7 @@ background-color: rgb(209, 209, 209);
 }
 
 QHeaderView::section { 
-font: 75 10pt &quot;Poppins&quot;;
+font: 75 10pt &quot;Open Sans&quot;;
 color: white;
 background-color:#989898; 
 }
@@ -192,13 +192,13 @@ color: rgb(255, 255, 255);
 }
 
 QTableView::item { 
-font: 75 12pt &quot;Poppins&quot;;
+font: 75 12pt &quot;Open Sans&quot;;
 color:white; 
 background:#2f373d; 
 font-weight:900; 
 }
 QTableView::item:selected {
-font: 75 12pt &quot;Poppins&quot;; 
+font: 75 12pt &quot;open Sans&quot;; 
 color:black; 
 background:#7cc8b9; 
 font-weight:900; 
@@ -211,7 +211,7 @@ background-color: rgb(25, 28, 36);
 QTextEdit{
 background-color: rgb(25, 28, 36);
 color: rgb(255, 255, 255);
-font: 8pt &quot;Poppins&quot;;
+font: 8pt &quot;Open Sans&quot;;
 }</string>
    </property>
    <widget class="QWidget" name="widget" native="true">
@@ -250,8 +250,8 @@ background-color: #191C24;
      <widget class="QPushButton" name="btnConnectDb">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>250</y>
+        <x>50</x>
+        <y>310</y>
         <width>154</width>
         <height>44</height>
        </rect>
@@ -275,9 +275,9 @@ background-color: #191C24;
       <property name="font">
        <font>
         <pointsize>12</pointsize>
-        <weight>75</weight>
+        <weight>9</weight>
         <italic>false</italic>
-        <bold>true</bold>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -285,6 +285,53 @@ background-color: #191C24;
       </property>
       <property name="text">
        <string>Welcome To PLCInsight Pro</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="activateLicense">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>260</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Activate</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="licenseLabel">
+      <property name="geometry">
+       <rect>
+        <x>196</x>
+        <y>240</y>
+        <width>181</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Enter License Key:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="licenseEnter">
+      <property name="geometry">
+       <rect>
+        <x>196</x>
+        <y>262</y>
+        <width>409</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </widget>
@@ -299,14 +346,15 @@ background-color: #191C24;
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
+       <family>Open Sans</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
-       <bold>true</bold>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">font: 14pt &quot;Open Sans&quot;;</string>
      </property>
      <property name="text">
       <string>Click on connect to Logging</string>
@@ -314,7 +362,6 @@ background-color: #191C24;
     </widget>
     <zorder>widget_2</zorder>
     <zorder>connStatus</zorder>
-    <zorder>layoutWidget</zorder>
     <zorder>label_2</zorder>
    </widget>
   </widget>

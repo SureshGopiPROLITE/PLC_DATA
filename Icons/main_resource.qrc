@@ -1,5 +1,13 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>logout.png</file>
+    <file>log (1).png</file>
+    <file>question.png</file>
+    <file>import (1).png</file>
+    <file>info (2).png</file>
+    <file>help-web-button.png</file>
+    <file>home (3).png</file>
+    <file>export (1).png</file>
     <file>about.png</file>
     <file>log.png</file>
     <file>export.png</file>
