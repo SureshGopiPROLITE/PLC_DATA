@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1917</width>
-    <height>977</height>
+    <height>1078</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -533,7 +533,7 @@ background-color: #F7F8F9;
       </rect>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="homePage">
       <widget class="QWidget" name="widget_4" native="true">
@@ -1040,6 +1040,9 @@ background-color: #191C24;
           <width>409</width>
           <height>20</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
        </widget>
        <widget class="QLabel" name="licenseLabel">

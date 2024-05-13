@@ -51,13 +51,10 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
         self.activateLicense.clicked.connect(self.licence)
         self.btnConnectDb.clicked.connect(self.dbConnection)
-        
-
 
     def openWindow(self):
-        if self.local_A == True & self.dateExp == True:
-            if gma(0) == self.macCheck:
-
+        try:
+            if self.dateExp == False and gma(0) == self.macCheck:
                 self.window = QtWidgets.QMainWindow()
                 self.Ui = Ui_MainWindow()
                 self.Ui.setupUi(self.window)
@@ -82,6 +79,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 self.Ui.export_btn.clicked.connect(lambda: self.thread_and_handle(self.export_data))
                 self.Ui.btnBackup.clicked.connect(self.select_backup_path)
                 self.Ui.btnDownloadExcel.clicked.connect(self.modelExcel)
+                self.Ui.activateLicense.clicked.connect(self.licence_main)
                 self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
                 self.Ui.btnConnect.clicked.connect(self.timer)
                 self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
@@ -93,11 +91,12 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 self.Ui.navImp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.importPage))
                 self.Ui.navAbout.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.aboutPage))
                 self.Ui.btnImpExcel.clicked.connect(self.open_excel_file)
+                
             else:
-                self.logcon.append('Error: Invalid Licence Contact Admin ')
-            
-        else:
-            self.logcon.append('Error: Contact admin')
+                self.logcon.append('Error Licence expired: Contact admin')
+
+        except Exception as e:
+            print(f"Error on opening: {e}")
 
 
 
@@ -146,36 +145,109 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             smtp.sendmail(email_sender, email_receiver, em.as_string())
 
     def licence(self):
+        self.conn = pyodbc.connect(
+            'DRIVER=SQL Server;'
+            'SERVER=SURESHGOPI;'
+            'DATABASE=PLCDB2;'
+        )
+        self.cursor = self.conn.cursor()
+        self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+        self.con = self.engine.connect()
+
+        self.logcon.append('SQL DB is connected')
+
+        self.lic = self.licenseEnter.text()
+        print("Licence key", self.lic)
+        # Construct the SQL query string with CAST function to convert Particulars to nvarchar
+        query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+        # Execute the query with parameters
+        self.cursor.execute(query, (self.lic, "Activation_Key"))
+        self.cursor.commit()
+        self.date_enc()
+
+
+        # except Exception as e:
+        #     print(f"Error updating license: {e}")
+
+    def licence_main(self):
+        self.mac_ver = '00c:9a:3c:f4:b0:55'
+        self.lic = self.Ui.licenseEnter.text()
+        print("Licence key", self.lic)
+        try:
+            if self.lic == "":
+                for index, row in self.dfInfo.iterrows():
+                    if row['Particulars'] == 'Activation_Key':
+                        lic = row['Info']
+                        print("Licience:", lic)
+                self.lic = self.decrypt(lic)
+
+            else:
+                # Construct the SQL query string with CAST function to convert Particulars to nvarchar
+                query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+                # Execute the query with parameters
+                self.cursor.execute(query, (self.lic, "Activation_Key"))
+                self.cursor.commit()
+        except Exception as e:
+            print(f"Error updating license: {e}")
+    def licence_dec(self):
+        query = text('SELECT * FROM Info_DB')
+        self.dfInfo = pd.read_sql_query(query, self.con)
         self.mac_ver = '00c:9a:3c:f4:b0:55'
         self.lic = self.licenseEnter.text()
         print("Licence key", self.lic)
         try:
-            # Construct the SQL query string with CAST function to convert Particulars to nvarchar
-            query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
-            # Execute the query with parameters
-            self.cursor.execute(query, (self.lic, "Activation_Key"))
-            self.cursor.commit()
+            for index, row in self.dfInfo.iterrows():
+                if row['Particulars'] == 'Activation_Key':
+                    lic = row['Info']
+                    print("Licience:", lic)
+            self.lic = self.decrypt(lic)
+            self.macCheck = self.lic[1:]
+            self.softwaretypeCheck = int(self.lic[0])
+
         except Exception as e:
             print(f"Error updating license: {e}")
 
+    def date_enc(self):
+        # query = text('SELECT * FROM Info_DB')
+        # self.dfInfo = pd.read_sql_query(query, self.con)
+        # for index, row in self.dfInfo.iterrows():
+        #     if row['Particulars'] == 'Software_sold_date':
+        #         Software_sold_date = row['Info']
+        # Software_sold_date = self.encrypt(Software_sold_date)
+        date = '30/04/2024'
+        Software_sold_date = self.encrypt(date) 
+        print(Software_sold_date)
+        Software_sold_date = Software_sold_date.decode('utf-8')
+        try:
+            # Construct the SQL query string with CAST function to convert Particulars to nvarchar
+            query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+            # Execute the query with parameters
+            self.cursor.execute(query, (Software_sold_date, "Software_sold_date"))
+            self.cursor.commit()
+            # Software_sold_date = Software_sold_date.decode('utf-8')
+            soft = self.decrypt(Software_sold_date)
+            print(soft)
+            
+        except Exception as e:
+            print(f"Error updating license: {e}")
+        
 
-
-
-    def encrypt (self):
+    def encrypt (self, enc_msg):
         # Fixed encryption key (ensure it's kept secure)
         crypto_key = b'9tvb2SoOaB11TA4YN3CydnGq4IfvSVSZJy25B6bdskM='
         # Initialize Fernet with the encryption key
         fernet = Fernet(crypto_key)
         # Encrypt the MAC address
-        enc_mac = fernet.encrypt(self.mac_ver.encode())
+        # enc_msg = enc_msg.decode('utf-8')
+        enc_mac = fernet.encrypt(enc_msg.encode())
         return enc_mac
 
 
-    def decrypt (self):
-        for index, row in self.dfInfo.iterrows():
-            if row['Particulars'] == 'Activation_Key':
-                self.lic = row['Info']
-                print("Licience:", self.lic)
+    def decrypt (self, dec_msg):
+        # for index, row in self.dfInfo.iterrows():
+        #     if row['Particulars'] == 'Activation_Key':
+        #         self.lic = row['Info']
+        #         print("Licience:", self.lic)
 
         # Fixed encryption key (ensure it's kept secure)
         crypto_key = b'9tvb2SoOaB11TA4YN3CydnGq4IfvSVSZJy25B6bdskM='
@@ -184,12 +256,10 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         fernet = Fernet(crypto_key)
         # Encrypt the MAC address
 
-        enc_macid = self.lic.encode('utf-8')
+        enc_macid = dec_msg.encode('utf-8')
         print("Print Enc mac " ,enc_macid)
         # Decrypt the encrypted MAC address (optional)
         dec_mac = fernet.decrypt(enc_macid).decode()
-        self.macCheck = dec_mac[1:]
-        self.softwaretypeCheck = int(dec_mac[0])
         return dec_mac
 
     def select_backup_path(self):
@@ -247,16 +317,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             # Write DataFrame to Excel
             self,self.dfPlcdb.to_excel(writer, sheet_name='Sheet1', index=False)
 
-    def restrict_soft(self):
-        query = text('SELECT * FROM Info_DB')
-        self.dfInfo = pd.read_sql_query(query, self.con)
-        for index, row in self.dfInfo.iterrows():
-            if row['Particulars'] == 'Software_type':
-                software_type = row['Info']
-                print("Software Type:", software_type)
-                
-            elif row['Particulars'] == 'Software_sold_date':
+    def restrict_soft(self):      
+        for index, row in self.dfInfo.iterrows():               
+            if row['Particulars'] == 'Software_sold_date':
                 Software_sold_date = row['Info']
+                Software_sold_date = self.decrypt(Software_sold_date)
                 print("Release Date String:", Software_sold_date)
                 
                 try:
@@ -267,9 +332,11 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                     self.current_date = datetime.now()
                     print(self.current_date)
 
-                    if software_type == '0':
+                    if self.softwaretypeCheck == 0:
+                        a = (self.current_date - Software_date ).days
+                        print(a)
                         # Check if the software is within the allowed time period (1 month)
-                        if (self.current_date - Software_date).days > 30:
+                        if (self.current_date - Software_date ).days < 30:
                             self.dateExp = False
                             print("Date Expired:", self.dateExp) 
                         else:
@@ -320,10 +387,9 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
             self.logcon.append('SQL DB is connected')
 
-            
-            self.authentication()
+            # self.authentication()
+            self.licence_dec()
             self.restrict_soft()
-            self.decrypt()
             self.openWindow()
 
             monitor_timer = QTimer(self)

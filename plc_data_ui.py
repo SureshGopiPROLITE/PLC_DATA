@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1917, 1052)
+        MainWindow.resize(1917, 1078)
         MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -122,7 +122,7 @@ class Ui_MainWindow(object):
 "QLabel#SettingBg4{\n"
 "font: 14pt \"Open Sans\";\n"
 "border-radius: 5px;\n"
-"border-style: solid;\n"
+"border-style: Semibold;\n"
 "border-width: 2px;\n"
 "border-color:  rgba(40, 40, 40, 0.2);\n"
 "}\n"
@@ -130,7 +130,7 @@ class Ui_MainWindow(object):
 "QLabel {\n"
 "font-size: 12pt;\n"
 "font:75  \"Open Sans\";\n"
-"font-weight: bold;\n"
+"font-weight: Semibold;\n"
 "color: #D7DBEC;\n"
 "background-color: #191C24;\n"
 "/*font-family: Noto Sans;*/\n"
@@ -197,7 +197,7 @@ class Ui_MainWindow(object):
 "font-weight:900; \n"
 "}\n"
 "QTableView::item:selected {\n"
-"font: 75 12pt \"Open Sans\"; \n"
+"font: 75 12pt \"open Sans\"; \n"
 "color:black; \n"
 "background:#7cc8b9; \n"
 "font-weight:900; \n"
@@ -248,9 +248,9 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.widget_2)
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setBold(True)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(9)
         self.label_4.setFont(font)
         self.label_4.setStyleSheet("color : #103782;")
         self.label_4.setObjectName("label_4")
@@ -442,9 +442,9 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QtCore.QRect(80, 20, 60, 44))
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setBold(True)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(9)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.from_time = QtWidgets.QDateTimeEdit(self.exportPage)
@@ -459,9 +459,9 @@ class Ui_MainWindow(object):
         self.label_3.setGeometry(QtCore.QRect(480, 22, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setBold(True)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(9)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.to_time = QtWidgets.QDateTimeEdit(self.exportPage)
@@ -564,11 +564,11 @@ class Ui_MainWindow(object):
         self.widget_7.setObjectName("widget_7")
         self.label_7 = QtWidgets.QLabel(self.widget_7)
         self.label_7.setGeometry(QtCore.QRect(1290, 813, 171, 51))
-        self.label_7.setStyleSheet("font: 8pt \"Open Sans\";")
+        self.label_7.setStyleSheet("font: 8pt \"Poppins\";")
         self.label_7.setObjectName("label_7")
         self.versionSet = QtWidgets.QLabel(self.widget_7)
         self.versionSet.setGeometry(QtCore.QRect(1400, 813, 171, 51))
-        self.versionSet.setStyleSheet("font: 8pt \"Open Sans\";")
+        self.versionSet.setStyleSheet("font: 8pt \"Poppins\";")
         self.versionSet.setText("")
         self.versionSet.setObjectName("versionSet")
         self.activateLicense = QtWidgets.QPushButton(self.widget_7)
@@ -576,19 +576,20 @@ class Ui_MainWindow(object):
         self.activateLicense.setObjectName("activateLicense")
         self.licenseEnter = QtWidgets.QLineEdit(self.widget_7)
         self.licenseEnter.setGeometry(QtCore.QRect(720, 832, 409, 20))
+        self.licenseEnter.setStyleSheet("color: rgb(255, 255, 255);")
         self.licenseEnter.setObjectName("licenseEnter")
         self.licenseLabel = QtWidgets.QLabel(self.widget_7)
         self.licenseLabel.setGeometry(QtCore.QRect(720, 810, 181, 19))
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setBold(True)
+        font.setBold(False)
         font.setItalic(False)
-        font.setWeight(75)
+        font.setWeight(9)
         self.licenseLabel.setFont(font)
         self.licenseLabel.setObjectName("licenseLabel")
         self.textBrowser = QtWidgets.QTextBrowser(self.widget_7)
         self.textBrowser.setGeometry(QtCore.QRect(90, 40, 1401, 711))
-        self.textBrowser.setStyleSheet("font: 9pt \"Open Sans\";\n"
+        self.textBrowser.setStyleSheet("font: 9pt \"Poppins\";\n"
 "color: rgb(255, 255, 255);")
         self.textBrowser.setObjectName("textBrowser")
         self.stackedWidget.addWidget(self.aboutPage)
@@ -634,11 +635,11 @@ class Ui_MainWindow(object):
         self.btnImpExcel.setObjectName("btnImpExcel")
         self.gridLayout_2.addWidget(self.btnImpExcel, 0, 1, 1, 1)
         self.label = QtWidgets.QLabel(self.layoutWidget2)
-        self.label.setStyleSheet("font: 12pt \"Open Sans\";")
+        self.label.setStyleSheet("font: 12pt \"Poppins\";")
         self.label.setObjectName("label")
         self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.layoutWidget2)
-        self.label_5.setStyleSheet("font: 12pt \"Open Sans\";")
+        self.label_5.setStyleSheet("font: 12pt \"Poppins\";")
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.logImp = QtWidgets.QTextBrowser(self.importPage)
@@ -655,7 +656,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -683,7 +684,7 @@ class Ui_MainWindow(object):
         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Open Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:\'Poppins\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">PLCInsight Pro</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
