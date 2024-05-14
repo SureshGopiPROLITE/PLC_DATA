@@ -14,12 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1917, 1078)
+        MainWindow.resize(1911, 1068)
         MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
 "QFrame#mainFrame{\n"
-"background-color: #f0f0f0;\n"
+"background-color: #f3f4f7;\n"
 "}\n"
 "\n"
 "\n"
@@ -508,6 +508,11 @@ class Ui_MainWindow(object):
         self.export_btn.setAutoExclusive(True)
         self.export_btn.setObjectName("export_btn")
         self.gridLayout_4.addWidget(self.export_btn, 0, 1, 1, 1)
+        self.progressBar = QtWidgets.QProgressBar(self.widget_8)
+        self.progressBar.setGeometry(QtCore.QRect(1350, 890, 191, 21))
+        self.progressBar.setStyleSheet("color: rgb(255, 255, 255);")
+        self.progressBar.setProperty("value", 50)
+        self.progressBar.setObjectName("progressBar")
         self.widget_8.raise_()
         self.table_view.raise_()
         self.label_2.raise_()
@@ -648,7 +653,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.importPage)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1917, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1911, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -656,7 +661,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

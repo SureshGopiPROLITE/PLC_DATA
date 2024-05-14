@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel
+from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel, QDialog
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import *
@@ -26,14 +26,13 @@ from email.message import EmailMessage
 from email.mime.base import MIMEBase
 from email import encoders
 
-
 global local_connStatus
 
 executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
 
 
 
-class PLCDataLogger(QtWidgets.QMainWindow):
+class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
 
     def __init__(self): 
         super(PLCDataLogger, self).__init__()
@@ -52,6 +51,35 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.activateLicense.clicked.connect(self.licence)
         self.btnConnectDb.clicked.connect(self.dbConnection)
 
+    def popUp(self, msg):
+        parent_center = self.geometry().center() 
+        PopUp = QDialog(self)
+        PopUp.setWindowTitle("License Authentication")
+        # PopUp.setGeometry(300, 300, 400, 200)  # Set the geometry (x, y, width, height)
+        PopUp.setGeometry(parent_center.x() - 200, parent_center.y() - 100, 400, 200)  # Set the geometry (x, y, width, height)
+
+        layout = QVBoxLayout()
+
+        label = QLabel(msg, PopUp)
+        label.setStyleSheet("color: #171725;background-color: #ECF1F7;"
+                                "font-size: 16px; font-family: Open Sans;")  # Set the font color of the label to white
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label)
+
+        save_button = QPushButton("Close", PopUp)
+        save_button.setStyleSheet("color: #171725;background-color: #ECF1F7;"
+                                "font-size: 16px; font-family: Open Sans;")
+        layout.addWidget(save_button)
+
+        # Connecting the button's clicked signal to close the pop-up
+        save_button.clicked.connect(PopUp.accept)
+
+        PopUp.setLayout(layout)
+
+        # Executing the dialog as a modal (blocks the parent window until closed)
+        PopUp.exec_()
+
+
     def openWindow(self):
         try:
             if self.dateExp == False and gma(0) == self.macCheck:
@@ -68,14 +96,19 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 print("Font Family name : ", families[0])
                 self.setFont(QFont("Open Sans"))
                 self.window.show()
-                revision = "0.0.5"
+                revision =  self.dfInfo.loc[1, 'Info']
+                print(revision)
+                # revision = "0.0.5"
                 self.versionSet = self.Ui.versionSet
                 self.versionSet.setText(revision)
-        
+                Licence = self.dfInfo.loc[4, 'Info']
+                self.Ui.licenseEnter.setText(Licence)
+                
+                self.Ui.progressBar.hide()
                 self.logImp = self.Ui.logImp
                 self.logField = self.Ui.logField
                 self.log = self.Ui.textStatus
-                self.Ui.show_data_btn.clicked.connect(lambda: self.thread_and_handle(self.show_data))
+                self.Ui.show_data_btn.clicked.connect(lambda: self.thread_and_handle(lambda: self.show_data()))
                 self.Ui.export_btn.clicked.connect(lambda: self.thread_and_handle(self.export_data))
                 self.Ui.btnBackup.clicked.connect(self.select_backup_path)
                 self.Ui.btnDownloadExcel.clicked.connect(self.modelExcel)
@@ -99,25 +132,22 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             print(f"Error on opening: {e}")
 
 
-
-    def send_email(self):
-        # Define email sender and receiver
+    def send_email(self): 
+         # Define email sender and receiver
         email_sender = 'saravan2406@gmail.com'
         #email_password = os.environ.get("EMAIL_PASSWORD")
         email_password = 'utefbkprwxtdanvc'
-        email_receiver = 'saravanan@proliteautomation.com, sureshgopi@proliteautomation.com'
-        email_receiver2 = 'sureshgopi@proliteautomation.com'
+        email_receiver = 'saravanan@proliteautomation.com','sureshgopi@proliteautomation.com'
+        email_receiver2 = 'saravanan@proliteautomation.com'
 
         # Set the subject and body of the email
         subject = 'Urgent : Data Logger Connection Error!!!'
-        body = f"""Urgent Notice: Our records indicate that your data logger connection has been disrupted. 
-        Please take immediate action to restore the connection to prevent any potential data loss. 
-        Your prompt attention to this matter is greatly appreciated. 
-
-        Please note that this email is sent from an automated system, and replies to this message will not be monitored. 
-        If you require assistance or have any questions, please contact our support team directly.
-
-        """
+        body = """<p><b>Urgent Notice:</b> Our records indicate that your data logger connection has been disrupted.<br>
+Please take immediate action to restore the connection to prevent any potential data loss.<br>
+Your prompt attention to this matter is greatly appreciated.</p><br>
+<p>Please note that this email is sent from an automated system, and replies to this message will not be monitored.<br>
+If you require assistance or have any questions, please contact our support team directly.</p>"""
+        
         em = EmailMessage()
         em['From'] = email_sender
         em['To'] = email_receiver
@@ -166,29 +196,31 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         self.date_enc()
 
 
-        # except Exception as e:
-        #     print(f"Error updating license: {e}")
-
     def licence_main(self):
-        self.mac_ver = '00c:9a:3c:f4:b0:55'
-        self.lic = self.Ui.licenseEnter.text()
-        print("Licence key", self.lic)
+        lic = self.Ui.licenseEnter.text()
+        self.licc = self.Ui.licenseEnter.text()
+        print("Licence key", lic)
         try:
-            if self.lic == "":
-                for index, row in self.dfInfo.iterrows():
-                    if row['Particulars'] == 'Activation_Key':
-                        lic = row['Info']
-                        print("Licience:", lic)
-                self.lic = self.decrypt(lic)
-
-            else:
+            lic = self.decrypt(lic)
+            self.macCheck = lic[1:]
+            self.softwaretypeCheck = int(lic[0])
+            if gma(0) == self.macCheck:
                 # Construct the SQL query string with CAST function to convert Particulars to nvarchar
                 query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
                 # Execute the query with parameters
-                self.cursor.execute(query, (self.lic, "Activation_Key"))
+                self.cursor.execute(query, (self.licc, "Activation_Key"))
                 self.cursor.commit()
+                msg = "License verified!"
+                self.popUp(msg)
+            
+                
         except Exception as e:
+            msg = "Invalid License !!!"
+            self.popUp(msg)
             print(f"Error updating license: {e}")
+            self.close_application()
+
+
     def licence_dec(self):
         query = text('SELECT * FROM Info_DB')
         self.dfInfo = pd.read_sql_query(query, self.con)
@@ -208,12 +240,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             print(f"Error updating license: {e}")
 
     def date_enc(self):
-        # query = text('SELECT * FROM Info_DB')
-        # self.dfInfo = pd.read_sql_query(query, self.con)
-        # for index, row in self.dfInfo.iterrows():
-        #     if row['Particulars'] == 'Software_sold_date':
-        #         Software_sold_date = row['Info']
-        # Software_sold_date = self.encrypt(Software_sold_date)
         date = '30/04/2024'
         Software_sold_date = self.encrypt(date) 
         print(Software_sold_date)
@@ -244,12 +270,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
 
     def decrypt (self, dec_msg):
-        # for index, row in self.dfInfo.iterrows():
-        #     if row['Particulars'] == 'Activation_Key':
-        #         self.lic = row['Info']
-        #         print("Licience:", self.lic)
-
-        # Fixed encryption key (ensure it's kept secure)
         crypto_key = b'9tvb2SoOaB11TA4YN3CydnGq4IfvSVSZJy25B6bdskM='
 
         # Initialize Fernet with the encryption key
@@ -350,21 +370,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
     
         return self.dateExp
  
-    def authentication(self):
-        query = text('SELECT * FROM Info_DB')
-        self.dfInfo = pd.read_sql_query(query, self.con)
-        for index, row in self.dfInfo.iterrows():
-            if row['Particulars'] == 'Local_System_Macid':
-                if row['Info'] == gma():
-                    print(self.dfInfo)
-                    self.local_A = True
-                    return self.local_A
-                else:
-                    print(self.dfInfo)
-                    self.local_A = False
-                    self.logcon.append("License Invalid" )
-                    return self.local_A             
-                        
     def thread_and_handle(self, func):
         future = executor.submit(func)
         future.add_done_callback(self.handle_result)
@@ -379,6 +384,7 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.conn = pyodbc.connect(
                 'DRIVER=SQL Server;'
                 'SERVER=SURESHGOPI;'
+                
                 'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
@@ -387,7 +393,6 @@ class PLCDataLogger(QtWidgets.QMainWindow):
 
             self.logcon.append('SQL DB is connected')
 
-            # self.authentication()
             self.licence_dec()
             self.restrict_soft()
             self.openWindow()
@@ -488,43 +493,41 @@ class PLCDataLogger(QtWidgets.QMainWindow):
             self.logImp.append(f"Error inserting data into MySQL table: {e}")
 
     def dfPlc(self):        
-        for index, row in self.dfInfo.iterrows():
-            if row['Particulars'] == 'Software_type':
-                software_type = row['Info']
-                software_type = int(software_type)
-                print("Software Type:", software_type)
-                try:
-                    print("Software Type:", software_type)
-                    if software_type == 0 or software_type == 1:
-                        print("Software Type:", software_type)
-                        # Retrieve data from MySQL table after insertion
-                        select_query = text("SELECT  * FROM Data")
-                        # Load data into a DataFrame
-                        self.dfdemo = pd.read_sql_query(select_query, self.con)
+        try:
+            print("Software Type:", self.softwaretypeCheck)
+            if self.softwaretypeCheck == 0 or self.softwaretypeCheck == 1:
+                print("Software Type:", self.softwaretypeCheck)
+                # Retrieve data from MySQL table after insertion
+                select_query = text("SELECT  * FROM Data")
+                # Load data into a DataFrame
+                self.dfdemo = pd.read_sql_query(select_query, self.con)
 
-                        self.dfPlcdb = self.dfdemo.head(50)
-                        self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
-                        self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
-                        self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
-                        print(self.dfPlcdb)
-                        return self.dfPlcdb
-                    else:
-                        select_query = "SELECT  * FROM Data"
-                        self.dfPlcdb = pd.read_sql(select_query, self.engine)
-                        self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
-                        self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
-                        self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
-                        print(self.dfPlcdb)
-                        return self.dfPlcdb
-                    
-                except Exception as e:
-                    self.logImp.append(f"Error inserting data into MySQL table: {e}")
-                # print(self.dfPlcdb)
+                self.dfPlcdb = self.dfdemo.head(50)
+                self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
+                self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
+                self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
+                print(self.dfPlcdb)
+                return self.dfPlcdb
+            else:
+                select_query = "SELECT  * FROM Data"
+                self.dfPlcdb = pd.read_sql(select_query, self.engine)
+                self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
+                self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
+                self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
+                print(self.dfPlcdb)
+                return self.dfPlcdb
+            
+        except Exception as e:
+            self.logImp.append(f"Error inserting data into MySQL table: {e}")
+        # print(self.dfPlcdb)
 
     def timer(self):
         monitor_timer = QTimer(self)
         monitor_timer.timeout.connect(self.run_logging)
         monitor_timer.start(5000)
+    # def sleep(self):
+    #     self.run_logging()
+    #     time.sleep(5)
 
     def run_logging(self):
         try: 
@@ -556,7 +559,9 @@ class PLCDataLogger(QtWidgets.QMainWindow):
                 value = snap7.util.get_bool(reading, 0, bit_offset)
             elif data_type == 'REAL':
                 reading = self.plc.db_read(db_number, start_offset, 4)
-                value = struct.unpack('>f', reading)[0]
+                value = round(struct.unpack('>f', reading)[0], 2)
+                # real_value = snap7.util.get_real(reading, 188)
+                # value = round(real_value, 2)
             elif data_type == 'INT':
                 reading = self.plc.db_read(db_number, start_offset, 2)
                 value = struct.unpack('>h', reading)[0]
@@ -593,47 +598,35 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
 
         try:
+            self.Ui.progressBar.show()
             # Query database for data between specified timestamps
             query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
-            self.cursor.execute(query, (from_time, to_time))
-            data = self.cursor.fetchall()
-
-            # Populate data into a QStandardItemModel
-            model = QStandardItemModel(len(data), len(data[0]), self)
-            model.setHorizontalHeaderLabels(['ID', 'TimeStamp', 'Name', 'DataType', 'Value'])
-            for row_num, row_data in enumerate(data):
-                for col_num, value in enumerate(row_data):
-                    item = QStandardItem(str(value))
-                    model.setItem(row_num, col_num, item)
-
-            # Set the model for the QTableView
-            self.Ui.table_view.setModel(model)
+            df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
+            print(df)
+            self.df = df
+            self.model = PandasTableModel(df)
+            self.Ui.table_view.setModel(self.model)
+            self.Ui.progressBar.hide()
+            # self.pdtable.setModel(self.model)
         except Exception as e:
             self.logImp.append(f"Error: {e}")
 
     def export_data(self):
+        from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
+        to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
         try:
-            # Get the data from the QStandardItemModel
-            model = self.Ui.table_view.model()
-            if not model:
+            self.Ui.progressBar.show()
+            query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
+            self.df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
+            #  # Check if DataFrame is available
+            if self.df is None:
                 return  # No data to export
-                                
-            # Convert data to DataFrame
-            data = []
-            for row in range(model.rowCount()):
-                row_data = []
-                for column in range(model.columnCount()):
-                    index = model.index(row, column)
-                    row_data.append(model.data(index))
-                data.append(row_data)
-
-            # Create DataFrame
-            df = pd.DataFrame(data, columns=['ID', 'TimeStamp', 'Name', 'DataType', 'Value'])
-
+                
             # Export DataFrame to Excel file
             file_name, _ = QFileDialog.getSaveFileName(self, "Save File", "", "Excel files (*.xlsx)")
             if file_name:
-                df.to_excel(file_name, index=False)
+                self.df.to_excel(file_name, index=False)
+            self.Ui.progressBar.hide()
         except Exception as e:
                 self.logImp.append(f"Error: {e}")
 
@@ -648,6 +641,32 @@ class PLCDataLogger(QtWidgets.QMainWindow):
         # Close the application
         self.Ui.close()
 
+
+
+class PandasTableModel(QAbstractTableModel):
+    def __init__(self, data):
+        super(PandasTableModel, self).__init__()
+        self._data = data
+
+    def rowCount(self, parent=None):
+        return self._data.shape[0]
+
+    def columnCount(self, parent=None):
+        return self._data.shape[1]
+
+    def data(self, index, role=Qt.DisplayRole):
+        if role == Qt.DisplayRole:
+            value = self._data.iloc[index.row(), index.column()]
+            return str(value)
+        return None
+
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
+        if role == Qt.DisplayRole:
+            if orientation == Qt.Horizontal:
+                return str(self._data.columns[section])
+            elif orientation == Qt.Vertical:
+                return str(section + 1)
+        return None
 
 if __name__ == '__main__':
 
