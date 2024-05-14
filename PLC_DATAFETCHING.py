@@ -177,11 +177,13 @@ If you require assistance or have any questions, please contact our support team
     def licence(self):
         self.conn = pyodbc.connect(
             'DRIVER=SQL Server;'
-            'SERVER=SURESHGOPI;'
+            #'SERVER=SURESHGOPI;'
+            'SERVER=Localhost\SQLEXPRESS;'
             'DATABASE=PLCDB2;'
         )
         self.cursor = self.conn.cursor()
-        self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+        #self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+        self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
         self.con = self.engine.connect()
 
         self.logcon.append('SQL DB is connected')
@@ -290,8 +292,8 @@ If you require assistance or have any questions, please contact our support team
         self.backup_path = filedialog.asksaveasfilename(defaultextension=".bak",
                                                     filetypes=[("Backup files", "*.bak"), ("All files", "*.*")])
         # self.backup_path = "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\PLCDB2.bak"
-        server_name = 'SURESHGOPI'
-        # server_name = 'localhost\sqlexpress'
+        #server_name = 'SURESHGOPI'
+        server_name = 'Localhost\SQLEXPRESS'
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
@@ -383,12 +385,13 @@ If you require assistance or have any questions, please contact our support team
         try:
             self.conn = pyodbc.connect(
                 'DRIVER=SQL Server;'
-                'SERVER=SURESHGOPI;'
-                
+                #'SERVER=SURESHGOPI;'
+                'SERVER=Localhost\SQLEXPRESS;'
                 'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
-            self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            #self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
