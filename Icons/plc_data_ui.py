@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(2027, 1091)
+        MainWindow.resize(1911, 1068)
         MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -38,8 +38,8 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:checked{\n"
-"color:#103782;\n"
-"background-color:#eaedf2;\n"
+"color:rgb(255, 166, 0);\n"
+"background-color: rgb(88, 88, 88);\n"
 "}\n"
 "QCheckBox{\n"
 "font:  \"Open Sans\";\n"
@@ -48,25 +48,23 @@ class Ui_MainWindow(object):
 "color: #D7DBEC;\n"
 "}\n"
 "\n"
-"QTextBrowser{\n"
-" font: 12pt \"Open Sans\";\n"
-"color:#171725;\n"
-"background-color: #F7F8F9;\n"
-"}\n"
+"\n"
+"\n"
 "\n"
 "QPushButton{\n"
 " font: 12pt \"Open Sans\";\n"
-" color:#171725;\n"
+" color:white;\n"
 " height:40px;\n"
 " border-radius: 5px;\n"
 " height:40px;\n"
 " width:150px;\n"
-"border:2px solid #464f5e;\n"
+"border:2px solid #D7DBEC;\n"
 "}\n"
 "\n"
 "\n"
+"\n"
 "QPushButton:hover{\n"
-"background-color:#ECF1F7;\n"
+"color:rgb(255, 166, 0);\n"
 "}\n"
 "\n"
 "/* Styles for Tab Widgets */\n"
@@ -75,6 +73,28 @@ class Ui_MainWindow(object):
 "/*background: rgb(245, 245, 245);*/\n"
 "\n"
 "} \n"
+"\n"
+"QTabBar::tab {\n"
+"/*background: rgb(230, 230, 230);*/ \n"
+"background-color: #191C24;\n"
+"color:#F1F1F2;\n"
+"border: 1px solid lightgray; \n"
+"padding: 10px 30px 10px 30px;\n"
+"margin:1px;\n"
+"} \n"
+"QTabBar::tab:hover {\n"
+"    background-color:#343434;\n"
+"    border-top-left-radius: 5px; \n"
+"    border-top-right-radius: 5px; \n"
+"    border-bottom-left-radius: 0px; \n"
+"    border-bottom-right-radius: 0px; \n"
+"} \n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    background: rgb(88,88,88);\n"
+"    color:rgb(255, 166, 0);\n"
+"    margin-bottom: -1px; \n"
+"}\n"
 "\n"
 "/* QLabel settings */\n"
 "QLabel#SettingBg1{\n"
@@ -111,15 +131,52 @@ class Ui_MainWindow(object):
 "font-size: 12pt;\n"
 "font:75  \"Open Sans\";\n"
 "font-weight: Semibold;\n"
-"color:#171725;\n"
-"background-color: #ECF1F7;\n"
+"color: #D7DBEC;\n"
+"background-color: #191C24;\n"
 "/*font-family: Noto Sans;*/\n"
 "}\n"
 "\n"
+"/* Global combobox settings */\n"
+"QComboBox{\n"
+"text-align: center;\n"
+"border-radius: 5px;\n"
+"border:2px solid #D7DBEC;\n"
+"color: #D7DBEC;\n"
+"padding: 2px;\n"
+"font-weight: bold;\n"
+"font-size: 8pt;\n"
+"height:40px;\n"
+"width:150px;\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"border: 0px; /* This seems to replace the whole arrow of the combo box */\n"
+"\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    text-align: center;\n"
+"    qproperty-alignment: AlignCenter;\n"
+"    background-color: white; /* Background color */\n"
+"    color: #F1F1F2; /* Text color */\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow {\n"
+"image: url(img/Arrows-Down-4-icon.png);\n"
+"width: 10px;\n"
+"height: 10px;\n"
+"}\n"
+"\n"
+"QComboBox:hover{\n"
+"color:rgb(255, 166, 0);\n"
+"background-color:white;\n"
+"/*border: 2px solid #252429;\n"
+"color: #252429;*/\n"
+"}\n"
 "\n"
 "QTableView{\n"
-"color:#171725;\n"
-"background-color: #F7F8F9;\n"
+"color: rgb(31, 31, 31);\n"
+"background-color: rgb(209, 209, 209);\n"
 "}\n"
 "\n"
 "QHeaderView::section { \n"
@@ -129,8 +186,8 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QDateTimeEdit{\n"
-"color:#171725;\n"
-"background-color: #F7F8F9;\n"
+"background-color: rgb(81, 81, 81);\n"
+"color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QTableView::item { \n"
@@ -145,23 +202,19 @@ class Ui_MainWindow(object):
 "background:#7cc8b9; \n"
 "font-weight:900; \n"
 "}\n"
-"\n"
+"QTableView{\n"
+"color: rgb(31, 31, 31);\n"
+"background-color: rgb(25, 28, 36);\n"
+"}\n"
 "\n"
 "QTextEdit{\n"
-"color:#171725;\n"
-"background-color: #F7F8F9;\n"
+"background-color: rgb(25, 28, 36);\n"
+"color: rgb(255, 255, 255);\n"
 "font: 8pt \"Open Sans\";\n"
-"}\n"
-"\n"
-"\n"
-"QWidget{\n"
-"background-color: #F7F8F9;\n"
-"}\n"
-"")
+"}")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(10, 0, 1901, 1080))
-        self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.widget.setObjectName("widget")
         self.widget_2 = QtWidgets.QWidget(self.widget)
         self.widget_2.setGeometry(QtCore.QRect(0, 0, 1881, 51))
@@ -171,6 +224,7 @@ class Ui_MainWindow(object):
 " color:#103782;\n"
 " text-align:left;\n"
 " height:40px;\n"
+" border:none;\n"
 " padding-left:10px;\n"
 "}\n"
 "QPushButton:checked{\n"
@@ -185,25 +239,24 @@ class Ui_MainWindow(object):
 "\n"
 "QWidget{\n"
 "background-color: #F7F8F9;\n"
-"border-bottom-color:#707070;\n"
-"border-style: solid;\n"
-"border-width: 2px;\n"
-"\n"
 "}\n"
 "")
         self.widget_2.setObjectName("widget_2")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_2)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_4 = QtWidgets.QLabel(self.widget_2)
-        self.label_4.setGeometry(QtCore.QRect(9, 13, 105, 19))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("border: none;")
+        self.label_4.setStyleSheet("color : #103782;")
         self.label_4.setObjectName("label_4")
+        self.verticalLayout_3.addWidget(self.label_4)
         self.widget_3 = QtWidgets.QWidget(self.widget)
-        self.widget_3.setGeometry(QtCore.QRect(0, 51, 261, 961))
+        self.widget_3.setGeometry(QtCore.QRect(0, 50, 261, 961))
         self.widget_3.setStyleSheet("QPushButton{\n"
 " font: 14pt \"Open Sans\";\n"
 " color:#171725;\n"
@@ -339,23 +392,19 @@ class Ui_MainWindow(object):
         self.widget_4 = QtWidgets.QWidget(self.homePage)
         self.widget_4.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_4.setStyleSheet("QWidget{\n"
-"background-color: #ECF1F7;\n"
+"background-color: #191C24;\n"
 "}\n"
 "")
         self.widget_4.setObjectName("widget_4")
         self.textStatus = QtWidgets.QTextBrowser(self.widget_4)
         self.textStatus.setGeometry(QtCore.QRect(90, 130, 1101, 771))
-        self.textStatus.setStyleSheet("color:#171725;\n"
-"background-color: #F7F8F9;\n"
-"font: 8pt \"Open Sans\";\n"
-"")
         self.textStatus.setObjectName("textStatus")
         self.inpIp = QtWidgets.QLineEdit(self.widget_4)
         self.inpIp.setGeometry(QtCore.QRect(240, 36, 201, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.inpIp.setFont(font)
-        self.inpIp.setStyleSheet("")
+        self.inpIp.setStyleSheet("color: rgb(255, 255, 255);")
         self.inpIp.setObjectName("inpIp")
         self.gridLayoutWidget = QtWidgets.QWidget(self.widget_4)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(560, 20, 631, 71))
@@ -422,9 +471,8 @@ class Ui_MainWindow(object):
         self.to_time.setObjectName("to_time")
         self.widget_8 = QtWidgets.QWidget(self.exportPage)
         self.widget_8.setGeometry(QtCore.QRect(0, 0, 1601, 921))
-        self.widget_8.setStyleSheet("\n"
-"QWidget{\n"
-"background-color: #ECF1F7;\n"
+        self.widget_8.setStyleSheet("QWidget{\n"
+"background-color: #191C24;\n"
 "}\n"
 "")
         self.widget_8.setObjectName("widget_8")
@@ -462,7 +510,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.export_btn, 0, 1, 1, 1)
         self.progressBar = QtWidgets.QProgressBar(self.widget_8)
         self.progressBar.setGeometry(QtCore.QRect(1350, 890, 191, 21))
-        self.progressBar.setStyleSheet("")
+        self.progressBar.setStyleSheet("color: rgb(255, 255, 255);")
         self.progressBar.setProperty("value", 50)
         self.progressBar.setObjectName("progressBar")
         self.widget_8.raise_()
@@ -477,9 +525,8 @@ class Ui_MainWindow(object):
         self.widget_9 = QtWidgets.QWidget(self.logPage)
         self.widget_9.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_9.setStyleSheet("QWidget{\n"
-"background-color: #ECF1F7;\n"
+"background-color: #191C24;\n"
 "}\n"
-"\n"
 "")
         self.widget_9.setObjectName("widget_9")
         self.layoutWidget1 = QtWidgets.QWidget(self.widget_9)
@@ -508,9 +555,8 @@ class Ui_MainWindow(object):
         self.widget_6 = QtWidgets.QWidget(self.helpPage)
         self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_6.setStyleSheet("QWidget{\n"
-"background-color: #ECF1F7;\n"
-"}\n"
-"")
+"background-color: #191C24;\n"
+"}")
         self.widget_6.setObjectName("widget_6")
         self.stackedWidget.addWidget(self.helpPage)
         self.aboutPage = QtWidgets.QWidget()
@@ -518,9 +564,8 @@ class Ui_MainWindow(object):
         self.widget_7 = QtWidgets.QWidget(self.aboutPage)
         self.widget_7.setGeometry(QtCore.QRect(0, 0, 1601, 921))
         self.widget_7.setStyleSheet("QWidget{\n"
-"background-color: #ECF1F7;\n"
-"}\n"
-"")
+"background-color: #191C24;\n"
+"}")
         self.widget_7.setObjectName("widget_7")
         self.label_7 = QtWidgets.QLabel(self.widget_7)
         self.label_7.setGeometry(QtCore.QRect(1290, 813, 171, 51))
@@ -536,7 +581,7 @@ class Ui_MainWindow(object):
         self.activateLicense.setObjectName("activateLicense")
         self.licenseEnter = QtWidgets.QLineEdit(self.widget_7)
         self.licenseEnter.setGeometry(QtCore.QRect(720, 832, 409, 20))
-        self.licenseEnter.setStyleSheet("")
+        self.licenseEnter.setStyleSheet("color: rgb(255, 255, 255);")
         self.licenseEnter.setObjectName("licenseEnter")
         self.licenseLabel = QtWidgets.QLabel(self.widget_7)
         self.licenseLabel.setGeometry(QtCore.QRect(720, 810, 181, 19))
@@ -549,9 +594,8 @@ class Ui_MainWindow(object):
         self.licenseLabel.setObjectName("licenseLabel")
         self.textBrowser = QtWidgets.QTextBrowser(self.widget_7)
         self.textBrowser.setGeometry(QtCore.QRect(90, 40, 1401, 711))
-        self.textBrowser.setStyleSheet("font: 14pt \"Open Sans\";\n"
-" color:#171725;\n"
-"background-color: #F7F8F9;")
+        self.textBrowser.setStyleSheet("font: 9pt \"Poppins\";\n"
+"color: rgb(255, 255, 255);")
         self.textBrowser.setObjectName("textBrowser")
         self.stackedWidget.addWidget(self.aboutPage)
         self.importPage = QtWidgets.QWidget()
@@ -559,7 +603,7 @@ class Ui_MainWindow(object):
         self.widget_5 = QtWidgets.QWidget(self.importPage)
         self.widget_5.setGeometry(QtCore.QRect(-140, 0, 1741, 761))
         self.widget_5.setStyleSheet("QWidget{\n"
-"background-color: #ECF1F7;\n"
+"background-color: #191C24;\n"
 "}\n"
 "")
         self.widget_5.setObjectName("widget_5")
@@ -596,23 +640,20 @@ class Ui_MainWindow(object):
         self.btnImpExcel.setObjectName("btnImpExcel")
         self.gridLayout_2.addWidget(self.btnImpExcel, 0, 1, 1, 1)
         self.label = QtWidgets.QLabel(self.layoutWidget2)
-        self.label.setStyleSheet("")
+        self.label.setStyleSheet("font: 12pt \"Poppins\";")
         self.label.setObjectName("label")
         self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.layoutWidget2)
-        self.label_5.setStyleSheet("")
+        self.label_5.setStyleSheet("font: 12pt \"Poppins\";")
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.logImp = QtWidgets.QTextBrowser(self.importPage)
         self.logImp.setGeometry(QtCore.QRect(0, 780, 1601, 141))
         self.logImp.setObjectName("logImp")
         self.stackedWidget.addWidget(self.importPage)
-        self.widget_3.raise_()
-        self.stackedWidget.raise_()
-        self.widget_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 2027, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1911, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -620,7 +661,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -648,35 +689,35 @@ class Ui_MainWindow(object):
         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Open Sans\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">PLCInsight Pro</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt;\">                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Introduction:</span></p>\n"
-"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">PLCInsight Pro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, PLCInsight Pro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Visualizing your data is made easy with PLCInsight Pro\'s intuitive interface, allowing you to explore your data in meaningful ways. Whether you\'re monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Experience the next level of PLC data management with PLCInsight Pro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.</li></ul>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Who Can Benefit?</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Manufacturers</span>: Streamline production processes, minimize downtime, and optimize resource utilization with real-time insights into equipment performance and production metrics.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Automation Engineers</span>: Enhance system performance and reliability by monitoring PLC data in real time and proactively addressing issues before they escalate.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Plant Managers</span>: Gain visibility into plant operations, track key performance indicators, and make data-driven decisions to improve overall efficiency and productivity.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Maintenance Teams</span>: Predict equipment failures, schedule preventive maintenance tasks, and ensure optimal equipment performance to minimize costly downtime</li></ul>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Contact Us  :  </span><span style=\" font-family:\'Poppins\'; font-size:10pt;\">info@proliteautomation.com</span></p></body></html>"))
+"</style></head><body style=\" font-family:\'Poppins\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">PLCInsight Pro</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Introduction:</span></p>\n"
+"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">PLCInsight Pro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, PLCInsight Pro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.</li>\n"
+"<li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Visualizing your data is made easy with PLCInsight Pro\'s intuitive interface, allowing you to explore your data in meaningful ways. Whether you\'re monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.</li>\n"
+"<li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Experience the next level of PLC data management with PLCInsight Pro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.</li></ul>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Who Can Benefit?</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Manufacturers</span>: Streamline production processes, minimize downtime, and optimize resource utilization with real-time insights into equipment performance and production metrics.</li>\n"
+"<li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Automation Engineers</span>: Enhance system performance and reliability by monitoring PLC data in real time and proactively addressing issues before they escalate.</li>\n"
+"<li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Plant Managers</span>: Gain visibility into plant operations, track key performance indicators, and make data-driven decisions to improve overall efficiency and productivity.</li>\n"
+"<li style=\" font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Maintenance Teams</span>: Predict equipment failures, schedule preventive maintenance tasks, and ensure optimal equipment performance to minimize costly downtime</li></ul>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Contact Us  :  </span><span style=\" font-size:10pt;\">info@proliteautomation.com</span></p></body></html>"))
         self.btnDownloadExcel.setText(_translate("MainWindow", "Download reference file"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
         self.label.setText(_translate("MainWindow", "Open the excel file and upload in DB"))
         self.label_5.setText(_translate("MainWindow", "For referencr click the download Btn and make the excel format as it in reference file"))
-# import main_resource_rc
+import main_resource_rc
 
 
 if __name__ == "__main__":

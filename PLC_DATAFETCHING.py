@@ -178,10 +178,12 @@ If you require assistance or have any questions, please contact our support team
         self.conn = pyodbc.connect(
             'DRIVER=SQL Server;'
             'SERVER=SURESHGOPI;'
+            # 'SERVER=Localhost\SQLEXPRESS;'
             'DATABASE=PLCDB2;'
         )
         self.cursor = self.conn.cursor()
         self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+        # self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
         self.con = self.engine.connect()
 
         self.logcon.append('SQL DB is connected')
@@ -291,7 +293,7 @@ If you require assistance or have any questions, please contact our support team
                                                     filetypes=[("Backup files", "*.bak"), ("All files", "*.*")])
         # self.backup_path = "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\PLCDB2.bak"
         server_name = 'SURESHGOPI'
-        # server_name = 'localhost\sqlexpress'
+        # server_name = 'Localhost\SQLEXPRESS'
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
@@ -384,11 +386,12 @@ If you require assistance or have any questions, please contact our support team
             self.conn = pyodbc.connect(
                 'DRIVER=SQL Server;'
                 'SERVER=SURESHGOPI;'
-                
+                # 'SERVER=Localhost\SQLEXPRESS;'
                 'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
             self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            # self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
@@ -407,15 +410,22 @@ If you require assistance or have any questions, please contact our support team
     def plcConnect(self):
         try:
             self.plcIP = self.Ui.inpIp.text()
-             
             print(self.plcIP)
+            query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+            # Execute the query with parameters
+            self.cursor.execute(query, (self.plcIP, "Plc_IP"))
+            self.cursor.commit()
+            query = text('SELECT * FROM Info_DB')
+            self.dfInfo = pd.read_sql_query(query, self.con)
+            if self.plcIP == "":
+                self.plcIP = self.dfInfo.loc[0, 'Info']               
             self.current_date = datetime.now()
             self.plc = snap7.client.Client()
             self.plc.connect(self.plcIP, 0, 1)
-            print("PLC Connected", self.plc)
+            print("PLC Connected" , self.plc)
             print("DB Connected", self.cursor)
             print("DB Connected", self.conn)
-            self.log.append('PLC is connected')
+            self.log.append('PLC is connected'  +  str(self.current_date))
             message = 'PLC is connected ' + str(self.current_date)
             self.log_to_file(message)
             self.local_connStatus = True
@@ -436,7 +446,7 @@ If you require assistance or have any questions, please contact our support team
         try:
             self.current_date = datetime.now()
             self.plc.disconnect()
-            self.log.append('PLC is Disconnected')
+            self.log.append('PLC is Disconnected'+ str(self.current_date))
             self.local_connStatus = False
             message = 'PLC data fetching Disconnected' + str(self.current_date)
             self.log_to_file(message)
@@ -633,13 +643,15 @@ If you require assistance or have any questions, please contact our support team
     def check_variables(self):
         self.restrict_soft()
         # Check if self.local_A or self.dateExp is False
-        if self.local_A == False or self.dateExp == False:
+        if self.dateExp == True and gma(0) == self.macCheck:
             # Perform actions when either variable becomes False
             self.close_application()
 
     def close_application(self):
         # Close the application
         self.Ui.close()
+
+
 
 
 
@@ -674,4 +686,3 @@ if __name__ == '__main__':
     Mainwindow = PLCDataLogger()
     Mainwindow.show()
     sys.exit(app.exec_())
-
