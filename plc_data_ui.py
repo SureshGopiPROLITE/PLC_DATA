@@ -14,16 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(2027, 1091)
-        MainWindow.setStyleSheet("")
+        MainWindow.resize(1909, 1058)
+        MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
 "QFrame#mainFrame{\n"
 "background-color: #f3f4f7;\n"
 "}\n"
-"\n"
-"\n"
-"\n"
 "\n"
 "QFrame#contentFrame{\n"
 "background-color: #fff;\n"
@@ -64,7 +61,6 @@ class Ui_MainWindow(object):
 "border:2px solid #464f5e;\n"
 "}\n"
 "\n"
-"\n"
 "QPushButton:hover{\n"
 "background-color:#ECF1F7;\n"
 "}\n"
@@ -73,7 +69,6 @@ class Ui_MainWindow(object):
 "QTabWidget::pane {\n"
 "border:1px solid lightgray;\n"
 "/*background: rgb(245, 245, 245);*/\n"
-"\n"
 "} \n"
 "\n"
 "/* QLabel settings */\n"
@@ -82,7 +77,6 @@ class Ui_MainWindow(object):
 "border-style: solid;\n"
 "border-width: 2px;\n"
 "border-color: rgba(40, 40, 40, 0.2);\n"
-"\n"
 "}\n"
 "\n"
 "QLabel#SettingBg2{\n"
@@ -116,10 +110,10 @@ class Ui_MainWindow(object):
 "/*font-family: Noto Sans;*/\n"
 "}\n"
 "\n"
-"\n"
 "QTableView{\n"
 "color:#171725;\n"
-"background-color: #F7F8F9;\n"
+"background-color: #ECF1F7;\n"
+"\n"
 "}\n"
 "\n"
 "QHeaderView::section { \n"
@@ -139,6 +133,7 @@ class Ui_MainWindow(object):
 "background:#2f373d; \n"
 "font-weight:900; \n"
 "}\n"
+"\n"
 "QTableView::item:selected {\n"
 "font: 75 12pt \"open Sans\"; \n"
 "color:black; \n"
@@ -146,11 +141,10 @@ class Ui_MainWindow(object):
 "font-weight:900; \n"
 "}\n"
 "\n"
-"\n"
 "QTextEdit{\n"
 "color:#171725;\n"
 "background-color: #F7F8F9;\n"
-"font: 8pt \"Open Sans\";\n"
+"font: 10pt \"Open Sans\";\n"
 "}\n"
 "\n"
 "\n"
@@ -164,7 +158,7 @@ class Ui_MainWindow(object):
         self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.widget.setObjectName("widget")
         self.widget_2 = QtWidgets.QWidget(self.widget)
-        self.widget_2.setGeometry(QtCore.QRect(0, 0, 1881, 51))
+        self.widget_2.setGeometry(QtCore.QRect(0, 0, 1871, 51))
         self.widget_2.setStyleSheet("\n"
 "Qlabel{\n"
 " font: 14pt \"Open Sans\";\n"
@@ -185,7 +179,7 @@ class Ui_MainWindow(object):
 "\n"
 "QWidget{\n"
 "background-color: #F7F8F9;\n"
-"border-bottom-color:#707070;\n"
+"border-bottom-color:rgba(174, 177, 181,100);\n"
 "border-style: solid;\n"
 "border-width: 2px;\n"
 "\n"
@@ -332,12 +326,12 @@ class Ui_MainWindow(object):
         self.verticalLayout.addItem(spacerItem)
         self.verticalLayout_2.addLayout(self.verticalLayout)
         self.stackedWidget = QtWidgets.QStackedWidget(self.widget)
-        self.stackedWidget.setGeometry(QtCore.QRect(280, 90, 1601, 921))
+        self.stackedWidget.setGeometry(QtCore.QRect(270, 60, 1601, 951))
         self.stackedWidget.setObjectName("stackedWidget")
         self.homePage = QtWidgets.QWidget()
         self.homePage.setObjectName("homePage")
         self.widget_4 = QtWidgets.QWidget(self.homePage)
-        self.widget_4.setGeometry(QtCore.QRect(0, 0, 1601, 921))
+        self.widget_4.setGeometry(QtCore.QRect(0, 0, 1601, 951))
         self.widget_4.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -345,9 +339,10 @@ class Ui_MainWindow(object):
         self.widget_4.setObjectName("widget_4")
         self.textStatus = QtWidgets.QTextBrowser(self.widget_4)
         self.textStatus.setGeometry(QtCore.QRect(90, 130, 1101, 771))
-        self.textStatus.setStyleSheet("color:#171725;\n"
-"background-color: #F7F8F9;\n"
-"font: 8pt \"Open Sans\";\n"
+        self.textStatus.setStyleSheet("font: 10pt \"Open Sans\";\n"
+"color:#171725;\n"
+"background-color: rgb(247, 248, 249);\n"
+"\n"
 "")
         self.textStatus.setObjectName("textStatus")
         self.inpIp = QtWidgets.QLineEdit(self.widget_4)
@@ -388,6 +383,7 @@ class Ui_MainWindow(object):
         self.exportPage.setObjectName("exportPage")
         self.table_view = QtWidgets.QTableView(self.exportPage)
         self.table_view.setGeometry(QtCore.QRect(90, 90, 1391, 781))
+        self.table_view.setStyleSheet("background-color: rgb(236, 241, 247);")
         self.table_view.setObjectName("table_view")
         self.label_2 = QtWidgets.QLabel(self.exportPage)
         self.label_2.setGeometry(QtCore.QRect(80, 20, 60, 44))
@@ -397,6 +393,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.label_2.setFont(font)
+        self.label_2.setStyleSheet("background-color:#ECF1F7;")
         self.label_2.setObjectName("label_2")
         self.from_time = QtWidgets.QDateTimeEdit(self.exportPage)
         self.from_time.setGeometry(QtCore.QRect(146, 24, 252, 41))
@@ -407,13 +404,14 @@ class Ui_MainWindow(object):
         self.from_time.setTimeSpec(QtCore.Qt.LocalTime)
         self.from_time.setObjectName("from_time")
         self.label_3 = QtWidgets.QLabel(self.exportPage)
-        self.label_3.setGeometry(QtCore.QRect(480, 22, 51, 31))
+        self.label_3.setGeometry(QtCore.QRect(480, 24, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
         self.label_3.setFont(font)
+        self.label_3.setStyleSheet("background-color:#ECF1F7;")
         self.label_3.setObjectName("label_3")
         self.to_time = QtWidgets.QDateTimeEdit(self.exportPage)
         self.to_time.setGeometry(QtCore.QRect(532, 21, 251, 41))
@@ -421,7 +419,7 @@ class Ui_MainWindow(object):
         self.to_time.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
         self.to_time.setObjectName("to_time")
         self.widget_8 = QtWidgets.QWidget(self.exportPage)
-        self.widget_8.setGeometry(QtCore.QRect(0, 0, 1601, 921))
+        self.widget_8.setGeometry(QtCore.QRect(-10, 0, 1611, 951))
         self.widget_8.setStyleSheet("\n"
 "QWidget{\n"
 "background-color: #ECF1F7;\n"
@@ -475,7 +473,7 @@ class Ui_MainWindow(object):
         self.logPage = QtWidgets.QWidget()
         self.logPage.setObjectName("logPage")
         self.widget_9 = QtWidgets.QWidget(self.logPage)
-        self.widget_9.setGeometry(QtCore.QRect(0, 0, 1601, 921))
+        self.widget_9.setGeometry(QtCore.QRect(0, 0, 1601, 951))
         self.widget_9.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -501,12 +499,17 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.btnBackup, 0, 1, 1, 1)
         self.logField = QtWidgets.QTextBrowser(self.logPage)
         self.logField.setGeometry(QtCore.QRect(90, 90, 1401, 761))
+        self.logField.setStyleSheet("font: 10pt  \"Open Sans\";\n"
+"background-color: rgb(247, 248, 249);\n"
+"color:#171725;\n"
+"\n"
+"")
         self.logField.setObjectName("logField")
         self.stackedWidget.addWidget(self.logPage)
         self.helpPage = QtWidgets.QWidget()
         self.helpPage.setObjectName("helpPage")
         self.widget_6 = QtWidgets.QWidget(self.helpPage)
-        self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 921))
+        self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 951))
         self.widget_6.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -516,7 +519,7 @@ class Ui_MainWindow(object):
         self.aboutPage = QtWidgets.QWidget()
         self.aboutPage.setObjectName("aboutPage")
         self.widget_7 = QtWidgets.QWidget(self.aboutPage)
-        self.widget_7.setGeometry(QtCore.QRect(0, 0, 1601, 921))
+        self.widget_7.setGeometry(QtCore.QRect(0, 0, 1601, 951))
         self.widget_7.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -557,7 +560,7 @@ class Ui_MainWindow(object):
         self.importPage = QtWidgets.QWidget()
         self.importPage.setObjectName("importPage")
         self.widget_5 = QtWidgets.QWidget(self.importPage)
-        self.widget_5.setGeometry(QtCore.QRect(-140, 0, 1741, 761))
+        self.widget_5.setGeometry(QtCore.QRect(-140, 0, 1741, 781))
         self.widget_5.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -604,7 +607,7 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.logImp = QtWidgets.QTextBrowser(self.importPage)
-        self.logImp.setGeometry(QtCore.QRect(0, 780, 1601, 141))
+        self.logImp.setGeometry(QtCore.QRect(0, 810, 1601, 141))
         self.logImp.setObjectName("logImp")
         self.stackedWidget.addWidget(self.importPage)
         self.widget_3.raise_()
@@ -612,7 +615,7 @@ class Ui_MainWindow(object):
         self.widget_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 2027, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1909, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)

@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2027</width>
-    <height>1091</height>
+    <width>1909</width>
+    <height>1058</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -22,9 +22,6 @@
 QFrame#mainFrame{
 background-color: #f3f4f7;
 }
-
-
-
 
 QFrame#contentFrame{
 background-color: #fff;
@@ -65,7 +62,6 @@ QPushButton{
 border:2px solid #464f5e;
 }
 
-
 QPushButton:hover{
 background-color:#ECF1F7;
 }
@@ -74,7 +70,6 @@ background-color:#ECF1F7;
 QTabWidget::pane {
 border:1px solid lightgray;
 /*background: rgb(245, 245, 245);*/
-
 } 
 
 /* QLabel settings */
@@ -83,7 +78,6 @@ border-radius: 5px;
 border-style: solid;
 border-width: 2px;
 border-color: rgba(40, 40, 40, 0.2);
-
 }
 
 QLabel#SettingBg2{
@@ -117,10 +111,10 @@ background-color: #ECF1F7;
 /*font-family: Noto Sans;*/
 }
 
-
 QTableView{
 color:#171725;
-background-color: #F7F8F9;
+background-color: #ECF1F7;
+
 }
 
 QHeaderView::section { 
@@ -140,6 +134,7 @@ color:white;
 background:#2f373d; 
 font-weight:900; 
 }
+
 QTableView::item:selected {
 font: 75 12pt &quot;open Sans&quot;; 
 color:black; 
@@ -147,11 +142,10 @@ background:#7cc8b9;
 font-weight:900; 
 }
 
-
 QTextEdit{
 color:#171725;
 background-color: #F7F8F9;
-font: 8pt &quot;Open Sans&quot;;
+font: 10pt &quot;Open Sans&quot;;
 }
 
 
@@ -177,7 +171,7 @@ background-color: #F7F8F9;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1881</width>
+       <width>1871</width>
        <height>51</height>
       </rect>
      </property>
@@ -202,7 +196,7 @@ background-color:#ECF1F7;
 
 QWidget{
 background-color: #F7F8F9;
-border-bottom-color:#707070;
+border-bottom-color:rgba(174, 177, 181,100);
 border-style: solid;
 border-width: 2px;
 
@@ -482,10 +476,10 @@ background-color: #F7F8F9;
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>90</y>
+       <x>270</x>
+       <y>60</y>
        <width>1601</width>
-       <height>921</height>
+       <height>951</height>
       </rect>
      </property>
      <property name="currentIndex">
@@ -498,7 +492,7 @@ background-color: #F7F8F9;
          <x>0</x>
          <y>0</y>
          <width>1601</width>
-         <height>921</height>
+         <height>951</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -517,9 +511,10 @@ background-color: #ECF1F7;
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:#171725;
-background-color: #F7F8F9;
-font: 8pt &quot;Open Sans&quot;;
+         <string notr="true">font: 10pt &quot;Open Sans&quot;;
+color:#171725;
+background-color: rgb(247, 248, 249);
+
 </string>
         </property>
        </widget>
@@ -625,6 +620,9 @@ font: 8pt &quot;Open Sans&quot;;
          <height>781</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(236, 241, 247);</string>
+       </property>
       </widget>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
@@ -642,6 +640,9 @@ font: 8pt &quot;Open Sans&quot;;
          <italic>false</italic>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#ECF1F7;</string>
        </property>
        <property name="text">
         <string>  From :</string>
@@ -695,7 +696,7 @@ font: 8pt &quot;Open Sans&quot;;
        <property name="geometry">
         <rect>
          <x>480</x>
-         <y>22</y>
+         <y>24</y>
          <width>51</width>
          <height>31</height>
         </rect>
@@ -707,6 +708,9 @@ font: 8pt &quot;Open Sans&quot;;
          <italic>false</italic>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#ECF1F7;</string>
        </property>
        <property name="text">
         <string>  To :</string>
@@ -742,10 +746,10 @@ font: 8pt &quot;Open Sans&quot;;
       <widget class="QWidget" name="widget_8" native="true">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>-10</x>
          <y>0</y>
-         <width>1601</width>
-         <height>921</height>
+         <width>1611</width>
+         <height>951</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -860,7 +864,7 @@ background-color: #ECF1F7;
          <x>0</x>
          <y>0</y>
          <width>1601</width>
-         <height>921</height>
+         <height>951</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -933,6 +937,13 @@ background-color: #ECF1F7;
          <height>761</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt  &quot;Open Sans&quot;;
+background-color: rgb(247, 248, 249);
+color:#171725;
+
+</string>
+       </property>
       </widget>
      </widget>
      <widget class="QWidget" name="helpPage">
@@ -942,7 +953,7 @@ background-color: #ECF1F7;
          <x>0</x>
          <y>0</y>
          <width>1601</width>
-         <height>921</height>
+         <height>951</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -960,7 +971,7 @@ background-color: #ECF1F7;
          <x>0</x>
          <y>0</y>
          <width>1601</width>
-         <height>921</height>
+         <height>951</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1101,7 +1112,7 @@ p, li { white-space: pre-wrap; }
          <x>-140</x>
          <y>0</y>
          <width>1741</width>
-         <height>761</height>
+         <height>781</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1209,7 +1220,7 @@ background-color: #ECF1F7;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>780</y>
+         <y>810</y>
          <width>1601</width>
          <height>141</height>
         </rect>
@@ -1227,7 +1238,7 @@ background-color: #ECF1F7;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2027</width>
+     <width>1909</width>
      <height>21</height>
     </rect>
    </property>

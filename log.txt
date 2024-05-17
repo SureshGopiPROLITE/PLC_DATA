@@ -1459,3 +1459,542 @@ Data fetching from PLC 2024-05-15 19:13:19.705299
 Data fetching from PLC 2024-05-15 19:13:20.760534
 Data fetching from PLC 2024-05-15 19:13:21.464395
 Data fetching from PLC 2024-05-15 19:13:23.629974
+PLC is connected 2024-05-17 11:07:17.714857
+Data fetching from PLC 2024-05-17 11:07:17.814655
+Data fetching from PLC 2024-05-17 11:07:18.071476
+PLC data fetching Disconnected2024-05-17 11:07:29.138345
+PLC is connected 2024-05-17 11:07:30.824982
+Data fetching from PLC 2024-05-17 11:07:30.941341
+Data fetching from PLC 2024-05-17 11:07:31.197781
+PLC is connected 2024-05-17 13:04:16.322777
+Data fetching from PLC 2024-05-17 13:04:16.443912
+Data fetching from PLC 2024-05-17 13:04:21.309121
+Data fetching from PLC 2024-05-17 13:04:26.309126
+Data fetching from PLC 2024-05-17 13:04:31.312889
+Data fetching from PLC 2024-05-17 13:04:36.312745
+Data fetching from PLC 2024-05-17 13:04:41.315663
+Data fetching from PLC 2024-05-17 13:04:46.319744
+Data fetching from PLC 2024-05-17 13:04:51.322050
+Data fetching from PLC 2024-05-17 13:04:56.309465
+Data fetching from PLC 2024-05-17 13:05:01.309813
+Data fetching from PLC 2024-05-17 13:05:06.311079
+Data fetching from PLC 2024-05-17 13:05:11.319273
+Data fetching from PLC 2024-05-17 13:05:16.319639
+Data fetching from PLC 2024-05-17 13:05:21.306866
+Data fetching from PLC 2024-05-17 13:05:26.307732
+Data fetching from PLC 2024-05-17 13:05:31.313881
+Data fetching from PLC 2024-05-17 13:05:36.315457
+Data fetching from PLC 2024-05-17 13:05:41.317547
+Data fetching from PLC 2024-05-17 13:05:46.309359
+Data fetching from PLC 2024-05-17 13:05:51.319598
+Data fetching from PLC 2024-05-17 13:05:56.319300
+Data fetching from PLC 2024-05-17 13:06:01.321437
+Data fetching from PLC 2024-05-17 13:06:06.308167
+Data fetching from PLC 2024-05-17 13:06:11.309916
+Data fetching from PLC 2024-05-17 13:06:16.316616
+Data fetching from PLC 2024-05-17 13:06:21.314290
+Data fetching from PLC 2024-05-17 13:06:26.316648
+Data fetching from PLC 2024-05-17 13:06:31.315411
+Data fetching from PLC 2024-05-17 13:06:36.308264
+Data fetching from PLC 2024-05-17 13:06:41.312861
+Data fetching from PLC 2024-05-17 13:06:46.313830
+Data fetching from PLC 2024-05-17 13:06:51.316719
+Data fetching from PLC 2024-05-17 13:06:56.311450
+Data fetching from PLC 2024-05-17 13:07:01.310430
+Data fetching from PLC 2024-05-17 13:07:06.317636
+Data fetching from PLC 2024-05-17 13:07:11.311107
+Data fetching from PLC 2024-05-17 13:07:16.310344
+Data fetching from PLC 2024-05-17 13:07:21.314352
+Data fetching from PLC 2024-05-17 13:07:26.316024
+Data fetching from PLC 2024-05-17 13:07:31.312668
+Data fetching from PLC 2024-05-17 13:07:36.321643
+Data fetching from PLC 2024-05-17 13:07:41.309949
+Data fetching from PLC 2024-05-17 13:07:46.309789
+Data fetching from PLC 2024-05-17 13:07:51.316165
+Data fetching from PLC 2024-05-17 13:07:56.309135
+Data fetching from PLC 2024-05-17 13:08:01.319030
+Data fetching from PLC 2024-05-17 13:08:06.319379
+Data fetching from PLC 2024-05-17 13:08:11.311390
+Data fetching from PLC 2024-05-17 13:08:16.315561
+Data fetching from PLC 2024-05-17 13:08:21.311390
+Data fetching from PLC 2024-05-17 13:08:26.311206
+Data fetching from PLC 2024-05-17 13:08:31.316730
+Data fetching from PLC 2024-05-17 13:08:36.309070
+Data fetching from PLC 2024-05-17 13:08:41.313792
+Data fetching from PLC 2024-05-17 13:08:46.310090
+Data fetching from PLC 2024-05-17 13:08:51.308417
+Data fetching from PLC 2024-05-17 13:08:56.308493
+Data fetching from PLC 2024-05-17 13:09:01.309478
+Data fetching from PLC 2024-05-17 13:09:06.310161
+Data fetching from PLC 2024-05-17 13:09:11.308072
+Data fetching from PLC 2024-05-17 13:09:16.308995
+Data fetching from PLC 2024-05-17 13:09:21.311312
+Data fetching from PLC 2024-05-17 13:09:26.310569
+Data fetching from PLC 2024-05-17 13:09:31.318199
+Data fetching from PLC 2024-05-17 13:09:36.306709
+Data fetching from PLC 2024-05-17 13:09:41.308071
+Data fetching from PLC 2024-05-17 13:09:46.308103
+Data fetching from PLC 2024-05-17 13:09:51.315755
+Data fetching from PLC 2024-05-17 13:09:56.308102
+Data fetching from PLC 2024-05-17 13:10:01.311456
+Data fetching from PLC 2024-05-17 13:10:06.309645
+Data fetching from PLC 2024-05-17 13:10:11.315629
+Data fetching from PLC 2024-05-17 13:10:16.311191
+Data fetching from PLC 2024-05-17 13:10:21.309901
+Data fetching from PLC 2024-05-17 13:10:26.315491
+Data fetching from PLC 2024-05-17 13:10:31.307251
+Data fetching from PLC 2024-05-17 13:10:36.307460
+Data fetching from PLC 2024-05-17 13:10:41.313972
+Data fetching from PLC 2024-05-17 13:10:46.316969
+Data fetching from PLC 2024-05-17 13:10:51.314103
+Data fetching from PLC 2024-05-17 13:10:56.318991
+Data fetching from PLC 2024-05-17 13:11:01.320833
+Data fetching from PLC 2024-05-17 13:11:06.307715
+Data fetching from PLC 2024-05-17 13:11:11.313318
+Data fetching from PLC 2024-05-17 13:11:16.310724
+Data fetching from PLC 2024-05-17 13:11:21.318656
+Data fetching from PLC 2024-05-17 13:11:26.318603
+Data fetching from PLC 2024-05-17 13:11:31.309861
+Data fetching from PLC 2024-05-17 13:11:36.316307
+Data fetching from PLC 2024-05-17 13:11:41.320684
+Data fetching from PLC 2024-05-17 13:11:46.312875
+Data fetching from PLC 2024-05-17 13:11:51.321530
+Data fetching from PLC 2024-05-17 13:11:56.316598
+Data fetching from PLC 2024-05-17 13:12:01.321433
+Data fetching from PLC 2024-05-17 13:12:06.312309
+Data fetching from PLC 2024-05-17 13:12:11.312288
+Data fetching from PLC 2024-05-17 13:12:16.316789
+Data fetching from PLC 2024-05-17 13:12:21.314403
+Data fetching from PLC 2024-05-17 13:12:26.307327
+Data fetching from PLC 2024-05-17 13:12:31.311469
+Data fetching from PLC 2024-05-17 13:12:36.314881
+Data fetching from PLC 2024-05-17 13:12:41.321123
+Data fetching from PLC 2024-05-17 13:12:46.316175
+Data fetching from PLC 2024-05-17 13:12:51.314733
+Data fetching from PLC 2024-05-17 13:12:56.312298
+Data fetching from PLC 2024-05-17 13:13:01.313860
+Data fetching from PLC 2024-05-17 13:13:06.321100
+Data fetching from PLC 2024-05-17 13:13:11.311517
+Data fetching from PLC 2024-05-17 13:13:16.308757
+Data fetching from PLC 2024-05-17 13:13:21.311701
+Data fetching from PLC 2024-05-17 13:13:26.306773
+Data fetching from PLC 2024-05-17 13:13:31.317760
+Data fetching from PLC 2024-05-17 13:13:36.316247
+Data fetching from PLC 2024-05-17 13:13:41.318733
+Data fetching from PLC 2024-05-17 13:13:46.309706
+Data fetching from PLC 2024-05-17 13:13:51.319530
+Data fetching from PLC 2024-05-17 13:13:56.317170
+Data fetching from PLC 2024-05-17 13:14:01.311974
+Data fetching from PLC 2024-05-17 13:14:06.308990
+Data fetching from PLC 2024-05-17 13:14:11.312080
+Data fetching from PLC 2024-05-17 13:14:16.321431
+Data fetching from PLC 2024-05-17 13:14:21.317682
+Data fetching from PLC 2024-05-17 13:14:26.319205
+Data fetching from PLC 2024-05-17 13:14:31.312076
+Data fetching from PLC 2024-05-17 13:14:36.321529
+Data fetching from PLC 2024-05-17 13:14:41.317097
+Data fetching from PLC 2024-05-17 13:14:46.313240
+Data fetching from PLC 2024-05-17 13:14:51.318064
+Data fetching from PLC 2024-05-17 13:14:56.317731
+Data fetching from PLC 2024-05-17 13:15:01.320085
+Data fetching from PLC 2024-05-17 13:15:06.320170
+Data fetching from PLC 2024-05-17 13:15:11.317036
+Data fetching from PLC 2024-05-17 13:15:16.310060
+Data fetching from PLC 2024-05-17 13:15:21.316764
+Data fetching from PLC 2024-05-17 13:15:26.313913
+Data fetching from PLC 2024-05-17 13:15:31.311357
+Data fetching from PLC 2024-05-17 13:15:36.317378
+Data fetching from PLC 2024-05-17 13:15:41.320667
+Data fetching from PLC 2024-05-17 13:15:46.317801
+Data fetching from PLC 2024-05-17 13:15:51.308042
+Data fetching from PLC 2024-05-17 13:15:56.312944
+Data fetching from PLC 2024-05-17 13:16:01.314932
+Data fetching from PLC 2024-05-17 13:16:06.314634
+Data fetching from PLC 2024-05-17 13:16:11.321618
+Data fetching from PLC 2024-05-17 13:16:16.309226
+Data fetching from PLC 2024-05-17 13:16:21.315257
+Data fetching from PLC 2024-05-17 13:16:26.313216
+Data fetching from PLC 2024-05-17 13:16:31.310267
+Data fetching from PLC 2024-05-17 13:16:36.311269
+Data fetching from PLC 2024-05-17 13:16:41.309850
+Data fetching from PLC 2024-05-17 13:16:46.319285
+Data fetching from PLC 2024-05-17 13:16:51.319782
+Data fetching from PLC 2024-05-17 13:16:56.307370
+Data fetching from PLC 2024-05-17 13:17:01.315891
+Data fetching from PLC 2024-05-17 13:17:06.306449
+Data fetching from PLC 2024-05-17 13:17:11.319578
+Data fetching from PLC 2024-05-17 13:17:16.307889
+Data fetching from PLC 2024-05-17 13:17:21.318963
+Data fetching from PLC 2024-05-17 13:17:26.317809
+Data fetching from PLC 2024-05-17 13:17:31.316719
+Data fetching from PLC 2024-05-17 13:17:36.309919
+Data fetching from PLC 2024-05-17 13:17:41.311860
+Data fetching from PLC 2024-05-17 13:17:46.311606
+Data fetching from PLC 2024-05-17 13:17:51.319105
+Data fetching from PLC 2024-05-17 13:17:56.316404
+Data fetching from PLC 2024-05-17 13:18:01.310427
+Data fetching from PLC 2024-05-17 13:18:06.319272
+Data fetching from PLC 2024-05-17 13:18:11.317989
+Data fetching from PLC 2024-05-17 13:18:16.316664
+Data fetching from PLC 2024-05-17 13:18:21.320972
+Data fetching from PLC 2024-05-17 13:18:26.320474
+Data fetching from PLC 2024-05-17 13:18:31.321146
+Data fetching from PLC 2024-05-17 13:18:36.315589
+Data fetching from PLC 2024-05-17 13:18:41.311569
+Data fetching from PLC 2024-05-17 13:18:46.308772
+Data fetching from PLC 2024-05-17 13:18:51.307980
+Data fetching from PLC 2024-05-17 13:18:56.309450
+Data fetching from PLC 2024-05-17 13:19:01.319644
+Data fetching from PLC 2024-05-17 13:19:06.307336
+Data fetching from PLC 2024-05-17 13:19:11.314320
+Data fetching from PLC 2024-05-17 13:19:16.311894
+Data fetching from PLC 2024-05-17 13:19:21.320379
+Data fetching from PLC 2024-05-17 13:19:26.307513
+Data fetching from PLC 2024-05-17 13:19:31.308362
+Data fetching from PLC 2024-05-17 13:19:36.310852
+Data fetching from PLC 2024-05-17 13:19:41.320382
+Data fetching from PLC 2024-05-17 13:19:46.318125
+Data fetching from PLC 2024-05-17 13:19:51.309320
+Data fetching from PLC 2024-05-17 13:19:56.316291
+Info-2024-05-17 16:39:47.140116-  PLC is connected 
+Data fetching from PLC 2024-05-17 16:39:47.263823
+Data fetching from PLC 2024-05-17 16:39:52.135022
+Data fetching from PLC 2024-05-17 16:39:57.140454
+Data fetching from PLC 2024-05-17 16:40:02.147521
+Data fetching from PLC 2024-05-17 16:40:07.147257
+Data fetching from PLC 2024-05-17 16:40:12.142806
+Data fetching from PLC 2024-05-17 16:40:17.143130
+Data fetching from PLC 2024-05-17 16:40:22.140513
+Data fetching from PLC 2024-05-17 16:40:27.136172
+Data fetching from PLC 2024-05-17 16:40:32.136588
+Data fetching from PLC 2024-05-17 16:40:37.139603
+Info  - 2024-05-17 16:54:00.553409 -  PLC is connected 
+Data fetching from PLC 2024-05-17 16:54:00.659598
+Data fetching from PLC 2024-05-17 16:54:05.535938
+Data fetching from PLC 2024-05-17 16:54:10.530315
+Data fetching from PLC 2024-05-17 16:54:15.526615
+Data fetching from PLC 2024-05-17 16:54:20.525300
+Data fetching from PLC 2024-05-17 16:54:25.538684
+Data fetching from PLC 2024-05-17 16:54:30.539419
+Data fetching from PLC 2024-05-17 16:54:35.526730
+Data fetching from PLC 2024-05-17 16:54:40.531253
+Data fetching from PLC 2024-05-17 16:54:45.527848
+Data fetching from PLC 2024-05-17 16:54:50.524995
+Data fetching from PLC 2024-05-17 16:54:55.541119
+Data fetching from PLC 2024-05-17 16:55:00.543768
+Data fetching from PLC 2024-05-17 16:55:05.554419
+Data fetching from PLC 2024-05-17 16:55:10.547156
+Data fetching from PLC 2024-05-17 16:55:15.542154
+Data fetching from PLC 2024-05-17 16:55:20.551861
+Data fetching from PLC 2024-05-17 16:55:25.558835
+Data fetching from PLC 2024-05-17 16:55:30.554813
+Data fetching from PLC 2024-05-17 16:55:35.541435
+Data fetching from PLC 2024-05-17 16:55:40.546876
+Data fetching from PLC 2024-05-17 16:55:45.549772
+Data fetching from PLC 2024-05-17 16:55:50.554703
+Data fetching from PLC 2024-05-17 16:55:55.548609
+Data fetching from PLC 2024-05-17 16:56:00.554099
+Data fetching from PLC 2024-05-17 16:56:05.548255
+Data fetching from PLC 2024-05-17 16:56:10.545425
+Data fetching from PLC 2024-05-17 16:56:15.542254
+Data fetching from PLC 2024-05-17 16:56:20.542747
+Data fetching from PLC 2024-05-17 16:56:25.552325
+Data fetching from PLC 2024-05-17 16:56:30.553685
+Data fetching from PLC 2024-05-17 16:56:35.546284
+Data fetching from PLC 2024-05-17 16:56:40.544663
+Data fetching from PLC 2024-05-17 16:56:45.553003
+Data fetching from PLC 2024-05-17 16:56:50.544296
+Data fetching from PLC 2024-05-17 16:56:55.547655
+Data fetching from PLC 2024-05-17 16:57:00.547913
+Data fetching from PLC 2024-05-17 16:57:05.540586
+Data fetching from PLC 2024-05-17 16:57:10.545320
+Data fetching from PLC 2024-05-17 16:57:15.547569
+Data fetching from PLC 2024-05-17 16:57:20.552106
+Data fetching from PLC 2024-05-17 16:57:25.557389
+Data fetching from PLC 2024-05-17 16:57:30.542728
+Data fetching from PLC 2024-05-17 16:57:35.540692
+Data fetching from PLC 2024-05-17 16:57:40.542132
+Data fetching from PLC 2024-05-17 16:57:45.554515
+Data fetching from PLC 2024-05-17 16:57:50.541743
+Data fetching from PLC 2024-05-17 16:57:55.551040
+Data fetching from PLC 2024-05-17 16:58:00.548379
+Data fetching from PLC 2024-05-17 16:58:05.546929
+Data fetching from PLC 2024-05-17 16:58:10.546994
+Data fetching from PLC 2024-05-17 16:58:15.550508
+Data fetching from PLC 2024-05-17 16:58:20.542602
+Data fetching from PLC 2024-05-17 16:58:25.542309
+Data fetching from PLC 2024-05-17 16:58:30.542081
+Data fetching from PLC 2024-05-17 16:58:35.555296
+Data fetching from PLC 2024-05-17 16:58:40.549455
+Data fetching from PLC 2024-05-17 16:58:45.544237
+Data fetching from PLC 2024-05-17 16:58:50.543191
+Data fetching from PLC 2024-05-17 16:58:55.551808
+Data fetching from PLC 2024-05-17 16:59:00.549585
+Data fetching from PLC 2024-05-17 16:59:05.543737
+Data fetching from PLC 2024-05-17 16:59:10.552033
+Data fetching from PLC 2024-05-17 16:59:15.550704
+Data fetching from PLC 2024-05-17 16:59:20.551696
+Data fetching from PLC 2024-05-17 16:59:25.548165
+Data fetching from PLC 2024-05-17 16:59:30.555912
+Data fetching from PLC 2024-05-17 16:59:35.545342
+Data fetching from PLC 2024-05-17 16:59:40.549245
+Data fetching from PLC 2024-05-17 16:59:45.543425
+Data fetching from PLC 2024-05-17 16:59:50.547842
+Data fetching from PLC 2024-05-17 16:59:55.548345
+Data fetching from PLC 2024-05-17 17:00:00.546897
+Data fetching from PLC 2024-05-17 17:00:05.549701
+Data fetching from PLC 2024-05-17 17:00:10.541285
+Data fetching from PLC 2024-05-17 17:00:15.552665
+Data fetching from PLC 2024-05-17 17:00:20.546657
+Data fetching from PLC 2024-05-17 17:00:25.540605
+Data fetching from PLC 2024-05-17 17:00:30.551234
+Data fetching from PLC 2024-05-17 17:00:35.540734
+Data fetching from PLC 2024-05-17 17:00:40.551073
+Data fetching from PLC 2024-05-17 17:00:45.554784
+Data fetching from PLC 2024-05-17 17:00:50.552466
+Data fetching from PLC 2024-05-17 17:00:55.545784
+Data fetching from PLC 2024-05-17 17:01:00.544613
+Data fetching from PLC 2024-05-17 17:01:05.551550
+Data fetching from PLC 2024-05-17 17:01:10.546860
+Data fetching from PLC 2024-05-17 17:01:15.544080
+Data fetching from PLC 2024-05-17 17:01:20.552961
+Data fetching from PLC 2024-05-17 17:01:25.544770
+Data fetching from PLC 2024-05-17 17:01:30.557618
+Data fetching from PLC 2024-05-17 17:01:35.565886
+Data fetching from PLC 2024-05-17 17:01:40.560259
+Data fetching from PLC 2024-05-17 17:01:45.569311
+Data fetching from PLC 2024-05-17 17:01:50.566705
+Data fetching from PLC 2024-05-17 17:01:55.562639
+Data fetching from PLC 2024-05-17 17:02:00.562616
+Data fetching from PLC 2024-05-17 17:02:05.561406
+PLC data fetching Disconnected2024-05-17 17:02:10.239933
+Info  - 2024-05-17 17:04:51.240426 -  PLC is connected 
+Data fetching from PLC 2024-05-17 17:04:51.349408
+Data fetching from PLC 2024-05-17 17:04:56.234493
+Alert  - 2024-05-17 17:04:56.841008 -  PLC data fetching Disconnected 
+Info  - 2024-05-17 17:13:55.937158 -  PLC is connected 
+Data fetching from PLC 2024-05-17 17:13:56.040891
+Data fetching from PLC 2024-05-17 17:14:00.932416
+Data fetching from PLC 2024-05-17 17:14:05.933022
+Data fetching from PLC 2024-05-17 17:14:10.941778
+Data fetching from PLC 2024-05-17 17:14:15.935446
+Data fetching from PLC 2024-05-17 17:14:20.952243
+Data fetching from PLC 2024-05-17 17:14:25.939590
+Data fetching from PLC 2024-05-17 17:14:30.931450
+Data fetching from PLC 2024-05-17 17:14:35.933897
+Data fetching from PLC 2024-05-17 17:14:40.940701
+Data fetching from PLC 2024-05-17 17:14:45.934012
+Data fetching from PLC 2024-05-17 17:14:50.944765
+Data fetching from PLC 2024-05-17 17:14:55.940672
+Data fetching from PLC 2024-05-17 17:15:00.946549
+Data fetching from PLC 2024-05-17 17:15:05.937055
+Data fetching from PLC 2024-05-17 17:15:10.940566
+Data fetching from PLC 2024-05-17 17:15:15.931600
+Data fetching from PLC 2024-05-17 17:15:20.936558
+Data fetching from PLC 2024-05-17 17:15:25.942407
+Data fetching from PLC 2024-05-17 17:15:30.936146
+Data fetching from PLC 2024-05-17 17:15:35.943291
+Data fetching from PLC 2024-05-17 17:15:40.946680
+Data fetching from PLC 2024-05-17 17:15:45.938884
+Data fetching from PLC 2024-05-17 17:15:50.937077
+Data fetching from PLC 2024-05-17 17:15:55.935281
+Data fetching from PLC 2024-05-17 17:16:00.942189
+Data fetching from PLC 2024-05-17 17:16:05.937264
+Data fetching from PLC 2024-05-17 17:16:10.942751
+Data fetching from PLC 2024-05-17 17:16:15.945422
+Data fetching from PLC 2024-05-17 17:16:20.931475
+Data fetching from PLC 2024-05-17 17:16:25.933245
+Data fetching from PLC 2024-05-17 17:16:30.945443
+Data fetching from PLC 2024-05-17 17:16:35.933135
+Data fetching from PLC 2024-05-17 17:16:40.935949
+Data fetching from PLC 2024-05-17 17:16:45.938483
+Data fetching from PLC 2024-05-17 17:16:50.939254
+Data fetching from PLC 2024-05-17 17:16:55.935955
+Data fetching from PLC 2024-05-17 17:17:00.943128
+Data fetching from PLC 2024-05-17 17:17:05.936769
+Data fetching from PLC 2024-05-17 17:17:10.936673
+Data fetching from PLC 2024-05-17 17:17:15.932115
+Data fetching from PLC 2024-05-17 17:17:20.940066
+Data fetching from PLC 2024-05-17 17:17:25.932804
+Data fetching from PLC 2024-05-17 17:17:30.942617
+Data fetching from PLC 2024-05-17 17:17:35.934022
+Data fetching from PLC 2024-05-17 17:17:40.934404
+Data fetching from PLC 2024-05-17 17:17:45.944406
+Data fetching from PLC 2024-05-17 17:17:50.941672
+Data fetching from PLC 2024-05-17 17:17:55.946448
+Data fetching from PLC 2024-05-17 17:18:00.933330
+Data fetching from PLC 2024-05-17 17:18:05.931851
+Data fetching from PLC 2024-05-17 17:18:10.932758
+Data fetching from PLC 2024-05-17 17:18:15.944745
+Data fetching from PLC 2024-05-17 17:18:20.931383
+Data fetching from PLC 2024-05-17 17:18:25.944595
+Data fetching from PLC 2024-05-17 17:18:30.939327
+Data fetching from PLC 2024-05-17 17:18:35.931182
+Data fetching from PLC 2024-05-17 17:18:40.938315
+Data fetching from PLC 2024-05-17 17:18:45.938421
+Data fetching from PLC 2024-05-17 17:18:50.936741
+Data fetching from PLC 2024-05-17 17:18:55.941041
+Data fetching from PLC 2024-05-17 17:19:00.934524
+Data fetching from PLC 2024-05-17 17:19:05.940277
+Data fetching from PLC 2024-05-17 17:19:10.932434
+Data fetching from PLC 2024-05-17 17:19:15.934391
+Data fetching from PLC 2024-05-17 17:19:20.944113
+Data fetching from PLC 2024-05-17 17:19:25.944893
+Data fetching from PLC 2024-05-17 17:19:30.933037
+Data fetching from PLC 2024-05-17 17:19:35.938734
+Data fetching from PLC 2024-05-17 17:19:40.933723
+Data fetching from PLC 2024-05-17 17:19:45.940455
+Data fetching from PLC 2024-05-17 17:19:50.933977
+Data fetching from PLC 2024-05-17 17:19:55.934523
+Data fetching from PLC 2024-05-17 17:20:00.934577
+Data fetching from PLC 2024-05-17 17:20:05.933386
+Data fetching from PLC 2024-05-17 17:20:10.932999
+Data fetching from PLC 2024-05-17 17:20:15.935071
+Data fetching from PLC 2024-05-17 17:20:20.934459
+Data fetching from PLC 2024-05-17 17:20:25.933021
+Data fetching from PLC 2024-05-17 17:20:30.931818
+Data fetching from PLC 2024-05-17 17:20:35.944271
+Data fetching from PLC 2024-05-17 17:20:40.933826
+Data fetching from PLC 2024-05-17 17:20:45.938699
+Data fetching from PLC 2024-05-17 17:20:50.936466
+Data fetching from PLC 2024-05-17 17:20:55.937641
+Data fetching from PLC 2024-05-17 17:21:00.945021
+Data fetching from PLC 2024-05-17 17:21:05.931925
+Data fetching from PLC 2024-05-17 17:21:10.942190
+Data fetching from PLC 2024-05-17 17:21:15.943840
+Data fetching from PLC 2024-05-17 17:21:20.935070
+Data fetching from PLC 2024-05-17 17:21:25.940235
+Data fetching from PLC 2024-05-17 17:21:30.943742
+Data fetching from PLC 2024-05-17 17:21:35.932251
+Data fetching from PLC 2024-05-17 17:21:40.935422
+Data fetching from PLC 2024-05-17 17:21:45.932881
+Data fetching from PLC 2024-05-17 17:21:50.936856
+Data fetching from PLC 2024-05-17 17:21:55.944147
+Data fetching from PLC 2024-05-17 17:22:00.938975
+Data fetching from PLC 2024-05-17 17:22:05.936339
+Data fetching from PLC 2024-05-17 17:22:10.939248
+Data fetching from PLC 2024-05-17 17:22:15.945237
+Data fetching from PLC 2024-05-17 17:22:20.933909
+Data fetching from PLC 2024-05-17 17:22:25.936913
+Data fetching from PLC 2024-05-17 17:22:30.940008
+Data fetching from PLC 2024-05-17 17:22:35.938108
+Data fetching from PLC 2024-05-17 17:22:40.935355
+Data fetching from PLC 2024-05-17 17:22:45.939947
+Data fetching from PLC 2024-05-17 17:22:50.939735
+Data fetching from PLC 2024-05-17 17:22:55.938705
+Data fetching from PLC 2024-05-17 17:23:00.934527
+Data fetching from PLC 2024-05-17 17:23:05.940369
+Data fetching from PLC 2024-05-17 17:23:10.931645
+Data fetching from PLC 2024-05-17 17:23:15.932512
+Data fetching from PLC 2024-05-17 17:23:20.931482
+Data fetching from PLC 2024-05-17 17:23:25.933906
+Data fetching from PLC 2024-05-17 17:23:30.945316
+Data fetching from PLC 2024-05-17 17:23:35.944642
+Data fetching from PLC 2024-05-17 17:23:40.946321
+Data fetching from PLC 2024-05-17 17:23:45.934986
+Data fetching from PLC 2024-05-17 17:23:50.933618
+Data fetching from PLC 2024-05-17 17:23:55.938163
+Info  - 2024-05-17 17:26:52.035962 -  PLC is connected 
+Logging  - 2024-05-17 17:26:52.135146 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:26:57.027679 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:02.028631 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:07.039883 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:12.033604 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:17.039192 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:22.029957 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:27.029249 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:32.036096 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:37.027401 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:42.029845 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:47.034427 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:27:52.026800 -  Data fetching from PLC 
+"Alert"  - 2024-05-17 17:27:52.629355 -  PLC data fetching Disconnected 
+Info  - 2024-05-17 17:27:58.927441 -  PLC is connected 
+Logging  - 2024-05-17 17:27:59.013137 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:02.038058 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:03.931153 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:07.040146 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:08.925943 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:12.028120 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:13.917588 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:28:17.026714 -  Data fetching from PLC 
+"Alert"  - 2024-05-17 17:28:17.657584 -  PLC data fetching Disconnected 
+Info  - 2024-05-17 17:31:17.281235 -  PLC is connected 
+Logging  - 2024-05-17 17:31:17.385142 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:22.287212 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:27.290758 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:32.304137 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:37.294787 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:42.293005 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:47.296129 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:52.291972 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:31:57.292867 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:02.303298 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:07.294502 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:12.297612 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:17.290955 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:22.291891 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:27.301574 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:32.302525 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:37.294678 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:42.305377 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:47.302668 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:52.298536 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:32:57.299545 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:02.294074 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:07.302056 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:12.298730 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:17.296927 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:22.301940 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:27.294827 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:32.303944 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:37.296873 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:42.296176 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:47.291855 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:52.298895 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:33:57.302109 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:02.306293 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:07.320753 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:12.312527 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:17.319784 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:22.308794 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:27.312130 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:32.308717 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:37.310384 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:42.310750 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:47.314829 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:52.317293 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:34:57.320496 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:02.306609 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:07.318431 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:12.309154 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:17.310941 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:22.306687 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:27.308553 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:32.309849 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:37.317782 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:42.311585 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:47.316865 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:52.309127 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:35:57.317012 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:02.314966 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:07.313363 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:12.319126 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:17.318388 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:22.315951 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:27.311021 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:32.308097 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:37.317436 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:42.321482 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:47.313307 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:52.316442 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:36:57.307691 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:02.322222 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:07.309008 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:12.310623 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:17.316793 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:22.307200 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:27.308182 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:32.311100 -  Data fetching from PLC 
+Logging  - 2024-05-17 17:37:37.307011 -  Data fetching from PLC 
+"Alert"  - 2024-05-17 17:37:38.837314 -  PLC data fetching Disconnected 

@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel, QDialog
+from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel, QDialog, QHeaderView
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import *
@@ -98,7 +98,6 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.window.show()
                 revision =  self.dfInfo.loc[1, 'Info']
                 print(revision)
-                # revision = "0.0.5"
                 self.versionSet = self.Ui.versionSet
                 self.versionSet.setText(revision)
                 Licence = self.dfInfo.loc[4, 'Info']
@@ -310,6 +309,8 @@ If you require assistance or have any questions, please contact our support team
             # Execute the backup command
             self.cursor.execute(backup_command)
             print(f"Backup of database '{database}' completed successfully.")
+            message = 'File Backuped Successful'
+            self.log_to_file(message)
         except Exception as e:
             print(f"Error occurred: {str(e)}")
         finally:
@@ -411,27 +412,40 @@ If you require assistance or have any questions, please contact our support team
         try:
             self.plcIP = self.Ui.inpIp.text()
             print(self.plcIP)
-            query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
-            # Execute the query with parameters
-            self.cursor.execute(query, (self.plcIP, "Plc_IP"))
-            self.cursor.commit()
             query = text('SELECT * FROM Info_DB')
             self.dfInfo = pd.read_sql_query(query, self.con)
             if self.plcIP == "":
                 self.plcIP = self.dfInfo.loc[0, 'Info']               
-            self.current_date = datetime.now()
-            self.plc = snap7.client.Client()
-            self.plc.connect(self.plcIP, 0, 1)
-            print("PLC Connected" , self.plc)
-            print("DB Connected", self.cursor)
-            print("DB Connected", self.conn)
-            self.log.append('PLC is connected'  +  str(self.current_date))
-            message = 'PLC is connected ' + str(self.current_date)
-            self.log_to_file(message)
-            self.local_connStatus = True
-            self.dfPlc()
-            self.run_logging()
-            if self.plcIP == "":
+                self.current_date = datetime.now()
+                self.plc = snap7.client.Client()
+                self.plc.connect(self.plcIP, 0, 1)
+                print("PLC Connected" , self.plc)
+                print("DB Connected", self.cursor)
+                print("DB Connected", self.conn)
+                self.log.append('PLC is connected'  +  str(self.current_date))
+                message = 'Info  - '  + str(self.current_date) + ' -  PLC is connected ' 
+                self.log_to_file(message)
+                self.local_connStatus = True
+                self.dfPlc()
+                self.run_logging()
+            elif self.plcIP:
+                query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+                # Execute the query with parameters
+                self.cursor.execute(query, (self.plcIP, "Plc_IP"))
+                self.cursor.commit()
+                self.current_date = datetime.now()
+                self.plc = snap7.client.Client()
+                self.plc.connect(self.plcIP, 0, 1)
+                print("PLC Connected" , self.plc)
+                print("DB Connected", self.cursor)
+                print("DB Connected", self.conn)
+                self.log.append('PLC is connected'  +  str(self.current_date))
+                message = 'Info  - '  + str(self.current_date) + ' -  PLC is connected ' 
+                self.log_to_file(message)
+                self.local_connStatus = True
+                self.dfPlc()
+                self.run_logging()
+            else:
                 self.log.append(f'PLC IP: {e}') 
                 print("PLC IP address is not provided.")
                 # You might want to inform the user or take appropriate action here
@@ -448,7 +462,8 @@ If you require assistance or have any questions, please contact our support team
             self.plc.disconnect()
             self.log.append('PLC is Disconnected'+ str(self.current_date))
             self.local_connStatus = False
-            message = 'PLC data fetching Disconnected' + str(self.current_date)
+            # message = 'PLC data fetching Disconnected' + str(self.current_date)
+            message = '"Alert"  - '  + str(self.current_date) + ' -  PLC data fetching Disconnected ' 
             self.log_to_file(message)
         except Exception as e:
             self.log.append('PLC is Disconnected Error: {e}')
@@ -543,7 +558,8 @@ If you require assistance or have any questions, please contact our support team
         try: 
             if self.local_connStatus == True:
                 self.current_date = datetime.now()
-                message = 'Data fetching from PLC ' + str(self.current_date)
+                message = 'Data fetching from PLC '
+                message = 'Logging  - '  + str(self.current_date) + ' -  Data fetching from PLC ' 
                 self.log_to_file(message)
                 print("1")
                 # Apply the plcDataSnap7 function to each row of the DataFrame
@@ -603,6 +619,34 @@ If you require assistance or have any questions, please contact our support team
     #         return None
     #     return value
     
+    # def show_data(self):
+    #     from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
+    #     to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
+
+    #     try:
+    #         self.Ui.progressBar.show()            
+    #         # Query database for data between specified timestamps
+    #         query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
+    #         df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
+    #         print(df)
+    #         self.df = df
+    #         self.model = PandasTableModel(df)
+    #         self.Ui.table_view.setModel(self.model)
+    #         self.Ui.table_view.setSortingEnabled(True)
+    #         self.Ui.table_view.resizeColumnToContents(0)
+    #         # header = self.Ui.table_view.horizontalHeader()
+    #         # header.setSectionResizeMode(0, 1000)
+    #         # header.setSectionResizeMode(1, QHeaderView.ResizeToContents)
+    #         # header.setSectionResizeMode(2, QHeaderView.ResizeToContents)
+    #         # header.setSectionResizeMode(3, QHeaderView.ResizeToContents)
+    #         # header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
+    #         # # header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
+    #         # self.Ui.table_view.horizontalHeader().setStretchLastSection(True)
+    #         self.Ui.progressBar.hide()
+    #         # self.pdtable.setModel(self.model)
+    #     except Exception as e:
+    #         self.logImp.append(f"Error: {e}")
+
     def show_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
         to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
@@ -616,16 +660,26 @@ If you require assistance or have any questions, please contact our support team
             self.df = df
             self.model = PandasTableModel(df)
             self.Ui.table_view.setModel(self.model)
-            self.Ui.progressBar.hide()
-            # self.pdtable.setModel(self.model)
+            self.Ui.table_view.setSortingEnabled(True)
+
+           # Set a fixed width for all columns
+            self.Ui.table_view.setColumnWidth(0, 100)
+            self.Ui.table_view.setColumnWidth(1, 150)
+            self.Ui.table_view.setColumnWidth(2, 280)
+            self.Ui.table_view.setColumnWidth(3, 100)
+            self.Ui.table_view.setColumnWidth(4, 100)
+
         except Exception as e:
-            self.logImp.append(f"Error: {e}")
+            print(f"An error occurred: {e}")
+        finally:
+            self.Ui.progressBar.hide()
+
 
     def export_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
         to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
         try:
-            self.Ui.progressBar.show()
+            self.Ui.progressBar.show()            
             query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
             self.df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
             #  # Check if DataFrame is available
