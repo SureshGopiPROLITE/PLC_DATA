@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel, QDialog, QHeaderView
+from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel, QDialog, QHeaderView,QHBoxLayout,  QSpacerItem, QSizePolicy
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import *
@@ -25,6 +25,8 @@ import ssl
 from email.message import EmailMessage
 from email.mime.base import MIMEBase
 from email import encoders
+from PyQt5 import QtCore, QtWidgets, QtWebEngineWidgets
+import plotly.express as px
 
 global local_connStatus
 
@@ -79,6 +81,47 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         # Executing the dialog as a modal (blocks the parent window until closed)
         PopUp.exec_()
 
+    def graph(self):
+        self.Ui.progressBar.show()
+        layout = QDialog(self)
+        vlayout = QVBoxLayout()
+        layout.setWindowTitle("Plot Graph")
+        self.button = QtWidgets.QPushButton('Plot', self)
+        self.browser = QtWebEngineWidgets.QWebEngineView(self)
+
+        
+        vlayout.addWidget(self.button, alignment=QtCore.Qt.AlignHCenter)
+        vlayout.addWidget(self.browser)
+
+        # Enable the maximize button
+        layout.setWindowFlags(self.windowFlags() | Qt.WindowMaximizeButtonHint)
+      
+        self.button.clicked.connect(self.plot_graph)
+        layout.resize(1000,800)
+        layout.setLayout(vlayout)
+        layout.exec_()
+        self.Ui.progressBar.hide()
+
+    def plot_graph(self):
+        try:
+            self.Ui.progressBar.show()
+            # self.browser = self.Ui.plotGraph
+            df = self.df
+            print("DF completed")
+            # fig = px.line(df, x="TimeStamp", y="Value", color="Name")
+            fig = px.line(df, x="TimeStamp", y="Value", color = "Name", markers=True)    
+            print("Fig completed")                                                                              
+            self.browser.setHtml(fig.to_html(include_plotlyjs='cdn'))  
+            # for i in range (1,20):
+            #     df1 = df.head(10000*i)
+            #     fig = px.line(df1, x="TimeStamp", y="Value", color = "Name", markers=True)
+            #     self.browser.setHtml(fig.to_html(include_plotlyjs='cdn')) 
+            #     time.sleep(5000)
+            print("HTML completed") 
+            self.Ui.progressBar.hide()
+        except Exception as e:
+            print(f"Error: {e}")
+        
 
     def openWindow(self):
         try:
@@ -116,6 +159,8 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.btnConnect.clicked.connect(self.timer)
                 self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
                 self.Ui.btnClearLog.clicked.connect(self.clear_logs)
+                # self.Ui.btnShowGraph.clicked.connect(self.plot_graph)
+                self.Ui.btnShowGraph.clicked.connect(self.graph)
                 self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
                 self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
                 self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
@@ -452,6 +497,8 @@ If you require assistance or have any questions, please contact our support team
         except Exception as e:
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
+            self.logField.append(f"Error : {e}")
+            self.monitor_timer.stop()
             self.local_connStatus = False
             self.send_email()
         return self.local_connStatus
@@ -462,6 +509,7 @@ If you require assistance or have any questions, please contact our support team
             self.plc.disconnect()
             self.log.append('PLC is Disconnected'+ str(self.current_date))
             self.local_connStatus = False
+            self.monitor_timer.stop()
             # message = 'PLC data fetching Disconnected' + str(self.current_date)
             message = '"Alert"  - '  + str(self.current_date) + ' -  PLC data fetching Disconnected ' 
             self.log_to_file(message)
@@ -547,9 +595,19 @@ If you require assistance or have any questions, please contact our support team
         # print(self.dfPlcdb)
 
     def timer(self):
-        monitor_timer = QTimer(self)
-        monitor_timer.timeout.connect(self.run_logging)
-        monitor_timer.start(5000)
+        self.monitor_timer = QTimer(self)
+        self.monitor_timer.timeout.connect(self.timer1)
+        self.monitor_timer.start(5000)
+        
+    def timer1 (self):
+        if self.local_conn == False:                
+            self.plcConnect() 
+        elif self.local_connStatus == True:
+            self.run_logging()
+        else:
+            print("true")
+
+
     # def sleep(self):
     #     self.run_logging()
     #     time.sleep(5)
@@ -572,9 +630,11 @@ If you require assistance or have any questions, please contact our support team
                 self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
                                     VALUES (?, ?, ?, ?)''', values)      
                 self.conn.commit()
+                self.local_conn = True
                 
         except Exception as e:
-            self.local_connStatus = False
+            self.monitor_timer.stop()
+            self.local_conn = False
             self.logField.append(f"Error : {e}")
             self.send_email() 
       
@@ -599,6 +659,7 @@ If you require assistance or have any questions, please contact our support team
 
             return value, timestamp  
         except Exception as e:
+            self.monitor_timer.stop()
             self.logField.append(f"Error : {e}")   
 
     # def plcDataSnap7(self, db_number, data_type, start_offset, bit_offset):
@@ -663,11 +724,11 @@ If you require assistance or have any questions, please contact our support team
             self.Ui.table_view.setSortingEnabled(True)
 
            # Set a fixed width for all columns
-            self.Ui.table_view.setColumnWidth(0, 100)
-            self.Ui.table_view.setColumnWidth(1, 150)
-            self.Ui.table_view.setColumnWidth(2, 280)
-            self.Ui.table_view.setColumnWidth(3, 100)
-            self.Ui.table_view.setColumnWidth(4, 100)
+            self.Ui.table_view.setColumnWidth(0, 150)
+            self.Ui.table_view.setColumnWidth(1, 300)
+            self.Ui.table_view.setColumnWidth(2, 500)
+            self.Ui.table_view.setColumnWidth(3, 150)
+            self.Ui.table_view.setColumnWidth(4, 150)
 
         except Exception as e:
             print(f"An error occurred: {e}")
@@ -704,9 +765,6 @@ If you require assistance or have any questions, please contact our support team
     def close_application(self):
         # Close the application
         self.Ui.close()
-
-
-
 
 
 class PandasTableModel(QAbstractTableModel):

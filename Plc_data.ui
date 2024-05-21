@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1909</width>
-    <height>1058</height>
+    <width>1925</width>
+    <height>1063</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,72 +35,16 @@ QWidget#page_License {
 background-color: #f0f0f0;
 }
 
-QPushButton:checked{
-color:#103782;
-background-color:#eaedf2;
-}
-QCheckBox{
-font:  &quot;Open Sans&quot;;
-font-weight: bold;
-font-size: 8pt;
-color: #D7DBEC;
-}
 
 QTextBrowser{
- font: 12pt &quot;Open Sans&quot;;
+font: 12pt &quot;Open Sans&quot;;
 color:#171725;
 background-color: #F7F8F9;
 }
 
-QPushButton{
- font: 12pt &quot;Open Sans&quot;;
- color:#171725;
- height:40px;
- border-radius: 5px;
- height:40px;
- width:150px;
-border:2px solid #464f5e;
-}
 
-QPushButton:hover{
-background-color:#ECF1F7;
-}
 
-/* Styles for Tab Widgets */
-QTabWidget::pane {
-border:1px solid lightgray;
-/*background: rgb(245, 245, 245);*/
-} 
 
-/* QLabel settings */
-QLabel#SettingBg1{
-border-radius: 5px;
-border-style: solid;
-border-width: 2px;
-border-color: rgba(40, 40, 40, 0.2);
-}
-
-QLabel#SettingBg2{
-border-radius: 5px;
-border-style: solid;
-border-width: 2px;
-border-color: rgba(40, 40, 40, 0.2);
-}
-
-QLabel#SettingBg3{
-border-radius: 5px;
-border-style: solid;
-border-width: 2px;
-border-color: rgba(40, 40, 40, 0.2);
-}
-
-QLabel#SettingBg4{
-font: 14pt &quot;Open Sans&quot;;
-border-radius: 5px;
-border-style: Semibold;
-border-width: 2px;
-border-color:  rgba(40, 40, 40, 0.2);
-}
 
 QLabel {
 font-size: 12pt;
@@ -482,6 +426,9 @@ background-color: #F7F8F9;
        <height>951</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -521,8 +468,8 @@ background-color: rgb(247, 248, 249);
        <widget class="QLineEdit" name="inpIp">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>36</y>
+          <x>344</x>
+          <y>41</y>
           <width>201</width>
           <height>41</height>
          </rect>
@@ -539,21 +486,21 @@ background-color: rgb(247, 248, 249);
        <widget class="QWidget" name="gridLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>560</x>
-          <y>20</y>
-          <width>631</width>
-          <height>71</height>
+          <x>628</x>
+          <y>10</y>
+          <width>711</width>
+          <height>101</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
          <property name="leftMargin">
-          <number>10</number>
+          <number>150</number>
          </property>
          <property name="topMargin">
           <number>10</number>
          </property>
          <property name="rightMargin">
-          <number>10</number>
+          <number>150</number>
          </property>
          <property name="bottomMargin">
           <number>10</number>
@@ -563,6 +510,25 @@ background-color: rgb(247, 248, 249);
          </property>
          <item row="0" column="0">
           <widget class="QPushButton" name="btnConnect">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Connect</string>
            </property>
@@ -572,10 +538,32 @@ background-color: rgb(247, 248, 249);
            <property name="autoExclusive">
             <bool>true</bool>
            </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="0" column="1">
           <widget class="QPushButton" name="btnDisconnect">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Disconnect</string>
            </property>
@@ -584,6 +572,9 @@ background-color: rgb(247, 248, 249);
            </property>
            <property name="autoExclusive">
             <bool>true</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -594,8 +585,8 @@ background-color: rgb(247, 248, 249);
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>35</y>
+          <x>158</x>
+          <y>41</y>
           <width>121</width>
           <height>41</height>
          </rect>
@@ -614,7 +605,7 @@ background-color: rgb(247, 248, 249);
       <widget class="QTableView" name="table_view">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>80</x>
          <y>90</y>
          <width>1391</width>
          <height>781</height>
@@ -798,6 +789,25 @@ background-color: #ECF1F7;
              <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Show Data</string>
            </property>
@@ -820,8 +830,68 @@ background-color: #ECF1F7;
              <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Export Excel</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="btnShowGraph">
+           <property name="font">
+            <font>
+             <family>Open Sans</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
+           <property name="text">
+            <string>Show Graph</string>
            </property>
            <property name="checkable">
             <bool>true</bool>
@@ -877,21 +947,21 @@ background-color: #ECF1F7;
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>440</x>
+          <x>380</x>
           <y>10</y>
-          <width>631</width>
+          <width>711</width>
           <height>71</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <property name="leftMargin">
-          <number>10</number>
+          <number>150</number>
          </property>
          <property name="topMargin">
           <number>10</number>
          </property>
          <property name="rightMargin">
-          <number>10</number>
+          <number>150</number>
          </property>
          <property name="bottomMargin">
           <number>10</number>
@@ -901,6 +971,25 @@ background-color: #ECF1F7;
          </property>
          <item row="0" column="0">
           <widget class="QPushButton" name="btnClearLog">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Clear</string>
            </property>
@@ -914,6 +1003,25 @@ background-color: #ECF1F7;
          </item>
          <item row="0" column="1">
           <widget class="QPushButton" name="btnBackup">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>BackUP</string>
            </property>
@@ -1020,6 +1128,25 @@ background-color: #ECF1F7;
           <width>81</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
         </property>
         <property name="text">
          <string>Activate</string>
@@ -1138,7 +1265,7 @@ background-color: #ECF1F7;
           <number>25</number>
          </property>
          <property name="rightMargin">
-          <number>40</number>
+          <number>150</number>
          </property>
          <property name="bottomMargin">
           <number>30</number>
@@ -1160,6 +1287,25 @@ background-color: #ECF1F7;
              <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Download reference file</string>
            </property>
@@ -1168,6 +1314,26 @@ background-color: #ECF1F7;
            </property>
            <property name="autoExclusive">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>For referencr click the download Btn and make the excel format as it in reference file</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Open the excel file and upload in DB</string>
            </property>
           </widget>
          </item>
@@ -1182,6 +1348,25 @@ background-color: #ECF1F7;
              <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#1F62E2;
+border-radius: 5px;
+border:2px solid #1F62E2;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#145b9e;
+}
+QPushButton:checked{
+
+background-color:#1F62E2;
+}</string>
+           </property>
            <property name="text">
             <string>Open</string>
            </property>
@@ -1190,26 +1375,6 @@ background-color: #ECF1F7;
            </property>
            <property name="autoExclusive">
             <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>Open the excel file and upload in DB</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>For referencr click the download Btn and make the excel format as it in reference file</string>
            </property>
           </widget>
          </item>
@@ -1238,7 +1403,7 @@ background-color: #ECF1F7;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1909</width>
+     <width>1925</width>
      <height>21</height>
     </rect>
    </property>

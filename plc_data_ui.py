@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1909, 1058)
+        MainWindow.resize(1925, 1063)
         MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -34,72 +34,16 @@ class Ui_MainWindow(object):
 "background-color: #f0f0f0;\n"
 "}\n"
 "\n"
-"QPushButton:checked{\n"
-"color:#103782;\n"
-"background-color:#eaedf2;\n"
-"}\n"
-"QCheckBox{\n"
-"font:  \"Open Sans\";\n"
-"font-weight: bold;\n"
-"font-size: 8pt;\n"
-"color: #D7DBEC;\n"
-"}\n"
 "\n"
 "QTextBrowser{\n"
-" font: 12pt \"Open Sans\";\n"
+"font: 12pt \"Open Sans\";\n"
 "color:#171725;\n"
 "background-color: #F7F8F9;\n"
 "}\n"
 "\n"
-"QPushButton{\n"
-" font: 12pt \"Open Sans\";\n"
-" color:#171725;\n"
-" height:40px;\n"
-" border-radius: 5px;\n"
-" height:40px;\n"
-" width:150px;\n"
-"border:2px solid #464f5e;\n"
-"}\n"
 "\n"
-"QPushButton:hover{\n"
-"background-color:#ECF1F7;\n"
-"}\n"
 "\n"
-"/* Styles for Tab Widgets */\n"
-"QTabWidget::pane {\n"
-"border:1px solid lightgray;\n"
-"/*background: rgb(245, 245, 245);*/\n"
-"} \n"
 "\n"
-"/* QLabel settings */\n"
-"QLabel#SettingBg1{\n"
-"border-radius: 5px;\n"
-"border-style: solid;\n"
-"border-width: 2px;\n"
-"border-color: rgba(40, 40, 40, 0.2);\n"
-"}\n"
-"\n"
-"QLabel#SettingBg2{\n"
-"border-radius: 5px;\n"
-"border-style: solid;\n"
-"border-width: 2px;\n"
-"border-color: rgba(40, 40, 40, 0.2);\n"
-"}\n"
-"\n"
-"QLabel#SettingBg3{\n"
-"border-radius: 5px;\n"
-"border-style: solid;\n"
-"border-width: 2px;\n"
-"border-color: rgba(40, 40, 40, 0.2);\n"
-"}\n"
-"\n"
-"QLabel#SettingBg4{\n"
-"font: 14pt \"Open Sans\";\n"
-"border-radius: 5px;\n"
-"border-style: Semibold;\n"
-"border-width: 2px;\n"
-"border-color:  rgba(40, 40, 40, 0.2);\n"
-"}\n"
 "\n"
 "QLabel {\n"
 "font-size: 12pt;\n"
@@ -327,6 +271,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.verticalLayout)
         self.stackedWidget = QtWidgets.QStackedWidget(self.widget)
         self.stackedWidget.setGeometry(QtCore.QRect(270, 60, 1601, 951))
+        self.stackedWidget.setStyleSheet("")
         self.stackedWidget.setObjectName("stackedWidget")
         self.homePage = QtWidgets.QWidget()
         self.homePage.setObjectName("homePage")
@@ -346,33 +291,69 @@ class Ui_MainWindow(object):
 "")
         self.textStatus.setObjectName("textStatus")
         self.inpIp = QtWidgets.QLineEdit(self.widget_4)
-        self.inpIp.setGeometry(QtCore.QRect(240, 36, 201, 41))
+        self.inpIp.setGeometry(QtCore.QRect(344, 41, 201, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.inpIp.setFont(font)
         self.inpIp.setStyleSheet("")
         self.inpIp.setObjectName("inpIp")
         self.gridLayoutWidget = QtWidgets.QWidget(self.widget_4)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(560, 20, 631, 71))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(628, 10, 711, 101))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setContentsMargins(10, 10, 10, 10)
+        self.gridLayout.setContentsMargins(150, 10, 150, 10)
         self.gridLayout.setHorizontalSpacing(20)
         self.gridLayout.setObjectName("gridLayout")
         self.btnConnect = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.btnConnect.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.btnConnect.setCheckable(True)
         self.btnConnect.setAutoExclusive(True)
+        self.btnConnect.setAutoDefault(False)
         self.btnConnect.setObjectName("btnConnect")
         self.gridLayout.addWidget(self.btnConnect, 0, 0, 1, 1)
         self.btnDisconnect = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.btnDisconnect.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.btnDisconnect.setCheckable(True)
         self.btnDisconnect.setAutoExclusive(True)
+        self.btnDisconnect.setAutoDefault(False)
         self.btnDisconnect.setObjectName("btnDisconnect")
         self.gridLayout.addWidget(self.btnDisconnect, 0, 1, 1, 1)
         self.btnDisconnect.raise_()
         self.btnConnect.raise_()
         self.label_6 = QtWidgets.QLabel(self.widget_4)
-        self.label_6.setGeometry(QtCore.QRect(110, 35, 121, 41))
+        self.label_6.setGeometry(QtCore.QRect(158, 41, 121, 41))
         self.label_6.setObjectName("label_6")
         self.label_6.raise_()
         self.textStatus.raise_()
@@ -382,7 +363,7 @@ class Ui_MainWindow(object):
         self.exportPage = QtWidgets.QWidget()
         self.exportPage.setObjectName("exportPage")
         self.table_view = QtWidgets.QTableView(self.exportPage)
-        self.table_view.setGeometry(QtCore.QRect(90, 90, 1391, 781))
+        self.table_view.setGeometry(QtCore.QRect(80, 90, 1391, 781))
         self.table_view.setStyleSheet("background-color: rgb(236, 241, 247);")
         self.table_view.setObjectName("table_view")
         self.label_2 = QtWidgets.QLabel(self.exportPage)
@@ -442,6 +423,23 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.show_data_btn.setFont(font)
+        self.show_data_btn.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.show_data_btn.setCheckable(True)
         self.show_data_btn.setAutoExclusive(True)
         self.show_data_btn.setObjectName("show_data_btn")
@@ -454,10 +452,56 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.export_btn.setFont(font)
+        self.export_btn.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.export_btn.setCheckable(True)
         self.export_btn.setAutoExclusive(True)
         self.export_btn.setObjectName("export_btn")
         self.gridLayout_4.addWidget(self.export_btn, 0, 1, 1, 1)
+        self.btnShowGraph = QtWidgets.QPushButton(self.layoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Open Sans")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.btnShowGraph.setFont(font)
+        self.btnShowGraph.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
+        self.btnShowGraph.setCheckable(True)
+        self.btnShowGraph.setAutoExclusive(True)
+        self.btnShowGraph.setObjectName("btnShowGraph")
+        self.gridLayout_4.addWidget(self.btnShowGraph, 0, 3, 1, 1)
         self.progressBar = QtWidgets.QProgressBar(self.widget_8)
         self.progressBar.setGeometry(QtCore.QRect(1350, 890, 191, 21))
         self.progressBar.setStyleSheet("")
@@ -481,18 +525,52 @@ class Ui_MainWindow(object):
 "")
         self.widget_9.setObjectName("widget_9")
         self.layoutWidget1 = QtWidgets.QWidget(self.widget_9)
-        self.layoutWidget1.setGeometry(QtCore.QRect(440, 10, 631, 71))
+        self.layoutWidget1.setGeometry(QtCore.QRect(380, 10, 711, 71))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.layoutWidget1)
-        self.gridLayout_3.setContentsMargins(10, 10, 10, 10)
+        self.gridLayout_3.setContentsMargins(150, 10, 150, 10)
         self.gridLayout_3.setHorizontalSpacing(20)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.btnClearLog = QtWidgets.QPushButton(self.layoutWidget1)
+        self.btnClearLog.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.btnClearLog.setCheckable(True)
         self.btnClearLog.setAutoExclusive(True)
         self.btnClearLog.setObjectName("btnClearLog")
         self.gridLayout_3.addWidget(self.btnClearLog, 0, 0, 1, 1)
         self.btnBackup = QtWidgets.QPushButton(self.layoutWidget1)
+        self.btnBackup.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.btnBackup.setCheckable(True)
         self.btnBackup.setAutoExclusive(True)
         self.btnBackup.setObjectName("btnBackup")
@@ -536,6 +614,23 @@ class Ui_MainWindow(object):
         self.versionSet.setObjectName("versionSet")
         self.activateLicense = QtWidgets.QPushButton(self.widget_7)
         self.activateLicense.setGeometry(QtCore.QRect(1134, 830, 81, 21))
+        self.activateLicense.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.activateLicense.setObjectName("activateLicense")
         self.licenseEnter = QtWidgets.QLineEdit(self.widget_7)
         self.licenseEnter.setGeometry(QtCore.QRect(720, 832, 409, 20))
@@ -570,7 +665,7 @@ class Ui_MainWindow(object):
         self.layoutWidget2.setGeometry(QtCore.QRect(390, 300, 1011, 261))
         self.layoutWidget2.setObjectName("layoutWidget2")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.layoutWidget2)
-        self.gridLayout_2.setContentsMargins(25, 25, 40, 30)
+        self.gridLayout_2.setContentsMargins(25, 25, 150, 30)
         self.gridLayout_2.setHorizontalSpacing(35)
         self.gridLayout_2.setVerticalSpacing(30)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -582,10 +677,35 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.btnDownloadExcel.setFont(font)
+        self.btnDownloadExcel.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.btnDownloadExcel.setCheckable(True)
         self.btnDownloadExcel.setAutoExclusive(True)
         self.btnDownloadExcel.setObjectName("btnDownloadExcel")
         self.gridLayout_2.addWidget(self.btnDownloadExcel, 1, 1, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.layoutWidget2)
+        self.label_5.setStyleSheet("")
+        self.label_5.setObjectName("label_5")
+        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self.layoutWidget2)
+        self.label.setStyleSheet("")
+        self.label.setObjectName("label")
+        self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
         self.btnImpExcel = QtWidgets.QPushButton(self.layoutWidget2)
         font = QtGui.QFont()
         font.setFamily("Open Sans")
@@ -594,18 +714,27 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.btnImpExcel.setFont(font)
+        self.btnImpExcel.setStyleSheet("QPushButton{\n"
+"background-color:#1F62E2;\n"
+"border-radius: 5px;\n"
+"border:2px solid #1F62E2;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#145b9e;\n"
+"}\n"
+"QPushButton:checked{\n"
+"\n"
+"background-color:#1F62E2;\n"
+"}")
         self.btnImpExcel.setCheckable(True)
         self.btnImpExcel.setAutoExclusive(True)
         self.btnImpExcel.setObjectName("btnImpExcel")
         self.gridLayout_2.addWidget(self.btnImpExcel, 0, 1, 1, 1)
-        self.label = QtWidgets.QLabel(self.layoutWidget2)
-        self.label.setStyleSheet("")
-        self.label.setObjectName("label")
-        self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
-        self.label_5 = QtWidgets.QLabel(self.layoutWidget2)
-        self.label_5.setStyleSheet("")
-        self.label_5.setObjectName("label_5")
-        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.logImp = QtWidgets.QTextBrowser(self.importPage)
         self.logImp.setGeometry(QtCore.QRect(0, 810, 1601, 141))
         self.logImp.setObjectName("logImp")
@@ -615,7 +744,7 @@ class Ui_MainWindow(object):
         self.widget_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1909, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1925, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -643,6 +772,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "  To :"))
         self.show_data_btn.setText(_translate("MainWindow", "Show Data"))
         self.export_btn.setText(_translate("MainWindow", "Export Excel"))
+        self.btnShowGraph.setText(_translate("MainWindow", "Show Graph"))
         self.btnClearLog.setText(_translate("MainWindow", "Clear"))
         self.btnBackup.setText(_translate("MainWindow", "BackUP"))
         self.label_7.setText(_translate("MainWindow", "Software  Version   : "))
@@ -676,9 +806,9 @@ class Ui_MainWindow(object):
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Contact Us  :  </span><span style=\" font-family:\'Poppins\'; font-size:10pt;\">info@proliteautomation.com</span></p></body></html>"))
         self.btnDownloadExcel.setText(_translate("MainWindow", "Download reference file"))
-        self.btnImpExcel.setText(_translate("MainWindow", "Open"))
-        self.label.setText(_translate("MainWindow", "Open the excel file and upload in DB"))
         self.label_5.setText(_translate("MainWindow", "For referencr click the download Btn and make the excel format as it in reference file"))
+        self.label.setText(_translate("MainWindow", "Open the excel file and upload in DB"))
+        self.btnImpExcel.setText(_translate("MainWindow", "Open"))
 # import main_resource_rc
 
 
