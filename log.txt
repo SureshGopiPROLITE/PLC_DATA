@@ -4117,3 +4117,4 @@ Logging  - 2024-05-21 12:54:41.721606 -  Data fetching from PLC
 Logging  - 2024-05-21 12:54:46.748425 -  Data fetching from PLC 
 Logging  - 2024-05-21 12:54:51.752811 -  Data fetching from PLC 
 Logging  - 2024-05-21 12:54:56.762505 -  Data fetching from PLC 
+"Alert"  - 2024-05-22 15:05:55.543867 -  PLC data fetching Disconnected 

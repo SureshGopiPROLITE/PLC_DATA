@@ -221,13 +221,13 @@ If you require assistance or have any questions, please contact our support team
     def licence(self):
         self.conn = pyodbc.connect(
             'DRIVER=SQL Server;'
-            'SERVER=SURESHGOPI;'
-            # 'SERVER=Localhost\SQLEXPRESS;'
+            # 'SERVER=SURESHGOPI;'
+            'SERVER=Localhost\SQLEXPRESS;'
             'DATABASE=PLCDB2;'
         )
         self.cursor = self.conn.cursor()
-        self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-        # self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
+        # self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+        self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
         self.con = self.engine.connect()
 
         self.logcon.append('SQL DB is connected')
@@ -336,8 +336,8 @@ If you require assistance or have any questions, please contact our support team
         self.backup_path = filedialog.asksaveasfilename(defaultextension=".bak",
                                                     filetypes=[("Backup files", "*.bak"), ("All files", "*.*")])
         # self.backup_path = "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\PLCDB2.bak"
-        server_name = 'SURESHGOPI'
-        # server_name = 'Localhost\SQLEXPRESS'
+        # server_name = 'SURESHGOPI'
+        server_name = 'Localhost\SQLEXPRESS'
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
@@ -431,13 +431,13 @@ If you require assistance or have any questions, please contact our support team
         try:
             self.conn = pyodbc.connect(
                 'DRIVER=SQL Server;'
-                'SERVER=SURESHGOPI;'
-                # 'SERVER=Localhost\SQLEXPRESS;'
+                # 'SERVER=SURESHGOPI;'
+                'SERVER=Localhost\SQLEXPRESS;'
                 'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
-            self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-            # self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
+            # self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
@@ -466,7 +466,7 @@ If you require assistance or have any questions, please contact our support team
                 self.plc.connect(self.plcIP, 0, 1)
                 print("PLC Connected" , self.plc)
                 print("DB Connected", self.cursor)
-                print("DB Connected", self.conn)
+                print("DB Connected", self.con)
                 self.log.append('PLC is connected'  +  str(self.current_date))
                 message = 'Info  - '  + str(self.current_date) + ' -  PLC is connected ' 
                 self.log_to_file(message)
@@ -711,13 +711,13 @@ If you require assistance or have any questions, please contact our support team
     def show_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
         to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
+        print("Time : ", from_time, to_time)
 
         try:
             self.Ui.progressBar.show()
-            # Query database for data between specified timestamps
-            query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
-            df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
-            print(df)
+            # Query database for data between specified timestamps   
+            query = f"""SELECT * FROM plc_data WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'"""
+            df = pd.read_sql_query(query, self.conn)
             self.df = df
             self.model = PandasTableModel(df)
             self.Ui.table_view.setModel(self.model)
@@ -742,7 +742,7 @@ If you require assistance or have any questions, please contact our support team
         try:
             self.Ui.progressBar.show()            
             query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
-            self.df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
+            self.df = pd.read_sql_query(query, self.conn, params=(from_time, to_time))
             #  # Check if DataFrame is available
             if self.df is None:
                 return  # No data to export
