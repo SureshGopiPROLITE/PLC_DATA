@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1925, 1063)
+        MainWindow.resize(1925, 1167)
         MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -41,7 +41,13 @@ class Ui_MainWindow(object):
 "background-color: #F7F8F9;\n"
 "}\n"
 "\n"
+"QDateTimeEdit {\n"
+"font-size: 12pt;\n"
+"font:75  \"Open Sans\";\n"
+"font-weight: Semibold;\n"
+"color:#171725;\n"
 "\n"
+"}\n"
 "\n"
 "\n"
 "\n"
@@ -99,7 +105,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(10, 0, 1901, 1080))
-        self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.widget.setStyleSheet("background-color: #F7F8F9;")
         self.widget.setObjectName("widget")
         self.widget_2 = QtWidgets.QWidget(self.widget)
         self.widget_2.setGeometry(QtCore.QRect(0, 0, 1871, 51))
@@ -270,7 +276,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addItem(spacerItem)
         self.verticalLayout_2.addLayout(self.verticalLayout)
         self.stackedWidget = QtWidgets.QStackedWidget(self.widget)
-        self.stackedWidget.setGeometry(QtCore.QRect(270, 60, 1601, 951))
+        self.stackedWidget.setGeometry(QtCore.QRect(270, 50, 1601, 961))
         self.stackedWidget.setStyleSheet("")
         self.stackedWidget.setObjectName("stackedWidget")
         self.homePage = QtWidgets.QWidget()
@@ -291,7 +297,7 @@ class Ui_MainWindow(object):
 "")
         self.textStatus.setObjectName("textStatus")
         self.inpIp = QtWidgets.QLineEdit(self.widget_4)
-        self.inpIp.setGeometry(QtCore.QRect(344, 41, 201, 41))
+        self.inpIp.setGeometry(QtCore.QRect(286, 41, 201, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.inpIp.setFont(font)
@@ -353,7 +359,7 @@ class Ui_MainWindow(object):
         self.btnDisconnect.raise_()
         self.btnConnect.raise_()
         self.label_6 = QtWidgets.QLabel(self.widget_4)
-        self.label_6.setGeometry(QtCore.QRect(158, 41, 121, 41))
+        self.label_6.setGeometry(QtCore.QRect(100, 41, 121, 41))
         self.label_6.setObjectName("label_6")
         self.label_6.raise_()
         self.textStatus.raise_()
@@ -400,7 +406,7 @@ class Ui_MainWindow(object):
         self.to_time.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
         self.to_time.setObjectName("to_time")
         self.widget_8 = QtWidgets.QWidget(self.exportPage)
-        self.widget_8.setGeometry(QtCore.QRect(-10, 0, 1611, 951))
+        self.widget_8.setGeometry(QtCore.QRect(-10, 0, 1611, 960))
         self.widget_8.setStyleSheet("\n"
 "QWidget{\n"
 "background-color: #ECF1F7;\n"
@@ -408,7 +414,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_8.setObjectName("widget_8")
         self.layoutWidget = QtWidgets.QWidget(self.widget_8)
-        self.layoutWidget.setGeometry(QtCore.QRect(830, 0, 651, 80))
+        self.layoutWidget.setGeometry(QtCore.QRect(840, 0, 651, 80))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout_4.setContentsMargins(10, 10, 10, 10)
@@ -503,7 +509,7 @@ class Ui_MainWindow(object):
         self.btnShowGraph.setObjectName("btnShowGraph")
         self.gridLayout_4.addWidget(self.btnShowGraph, 0, 3, 1, 1)
         self.progressBar = QtWidgets.QProgressBar(self.widget_8)
-        self.progressBar.setGeometry(QtCore.QRect(1350, 890, 191, 21))
+        self.progressBar.setGeometry(QtCore.QRect(1290, 890, 191, 21))
         self.progressBar.setStyleSheet("")
         self.progressBar.setProperty("value", 50)
         self.progressBar.setObjectName("progressBar")
@@ -525,7 +531,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_9.setObjectName("widget_9")
         self.layoutWidget1 = QtWidgets.QWidget(self.widget_9)
-        self.layoutWidget1.setGeometry(QtCore.QRect(380, 10, 711, 71))
+        self.layoutWidget1.setGeometry(QtCore.QRect(440, 10, 710, 71))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.layoutWidget1)
         self.gridLayout_3.setContentsMargins(150, 10, 150, 10)
@@ -587,7 +593,7 @@ class Ui_MainWindow(object):
         self.helpPage = QtWidgets.QWidget()
         self.helpPage.setObjectName("helpPage")
         self.widget_6 = QtWidgets.QWidget(self.helpPage)
-        self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 951))
+        self.widget_6.setGeometry(QtCore.QRect(0, 0, 1601, 961))
         self.widget_6.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -604,7 +610,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_7.setObjectName("widget_7")
         self.label_7 = QtWidgets.QLabel(self.widget_7)
-        self.label_7.setGeometry(QtCore.QRect(1290, 813, 171, 51))
+        self.label_7.setGeometry(QtCore.QRect(1320, 813, 170, 51))
         self.label_7.setStyleSheet("font: 8pt \"Poppins\";")
         self.label_7.setObjectName("label_7")
         self.versionSet = QtWidgets.QLabel(self.widget_7)
@@ -752,7 +758,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -783,6 +789,8 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Open Sans\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">PLCInsight Pro</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt; font-weight:600;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt; font-weight:600;\"><br /></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt;\">                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Introduction:</span></p>\n"
@@ -806,10 +814,10 @@ class Ui_MainWindow(object):
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Contact Us  :  </span><span style=\" font-family:\'Poppins\'; font-size:10pt;\">info@proliteautomation.com</span></p></body></html>"))
         self.btnDownloadExcel.setText(_translate("MainWindow", "Download reference file"))
-        self.label_5.setText(_translate("MainWindow", "For referencr click the download Btn and make the excel format as it in reference file"))
-        self.label.setText(_translate("MainWindow", "Open the excel file and upload in DB"))
+        self.label_5.setText(_translate("MainWindow", "For Reference, Download the PLC DB Configurable file"))
+        self.label.setText(_translate("MainWindow", "Upload the new PLC DB Configuration"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
-# import main_resource_rc
+#import main_resource_rc
 
 
 if __name__ == "__main__":

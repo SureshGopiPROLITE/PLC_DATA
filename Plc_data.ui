@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1925</width>
-    <height>1063</height>
+    <height>1167</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,7 +42,13 @@ color:#171725;
 background-color: #F7F8F9;
 }
 
+QDateTimeEdit {
+font-size: 12pt;
+font:75  &quot;Open Sans&quot;;
+font-weight: Semibold;
+color:#171725;
 
+}
 
 
 
@@ -108,7 +114,7 @@ background-color: #F7F8F9;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: #F7F8F9;</string>
     </property>
     <widget class="QWidget" name="widget_2" native="true">
      <property name="geometry">
@@ -421,16 +427,16 @@ background-color: #F7F8F9;
      <property name="geometry">
       <rect>
        <x>270</x>
-       <y>60</y>
+       <y>50</y>
        <width>1601</width>
-       <height>951</height>
+       <height>961</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="homePage">
       <widget class="QWidget" name="widget_4" native="true">
@@ -468,7 +474,7 @@ background-color: rgb(247, 248, 249);
        <widget class="QLineEdit" name="inpIp">
         <property name="geometry">
          <rect>
-          <x>344</x>
+          <x>286</x>
           <y>41</y>
           <width>201</width>
           <height>41</height>
@@ -585,7 +591,7 @@ background-color:#1F62E2;
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>158</x>
+          <x>100</x>
           <y>41</y>
           <width>121</width>
           <height>41</height>
@@ -740,7 +746,7 @@ background-color:#1F62E2;
          <x>-10</x>
          <y>0</y>
          <width>1611</width>
-         <height>951</height>
+         <height>960</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -753,7 +759,7 @@ background-color: #ECF1F7;
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>830</x>
+          <x>840</x>
           <y>0</y>
           <width>651</width>
           <height>80</height>
@@ -906,7 +912,7 @@ background-color:#1F62E2;
        <widget class="QProgressBar" name="progressBar">
         <property name="geometry">
          <rect>
-          <x>1350</x>
+          <x>1290</x>
           <y>890</y>
           <width>191</width>
           <height>21</height>
@@ -947,9 +953,9 @@ background-color: #ECF1F7;
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>380</x>
+          <x>440</x>
           <y>10</y>
-          <width>711</width>
+          <width>710</width>
           <height>71</height>
          </rect>
         </property>
@@ -1061,7 +1067,7 @@ color:#171725;
          <x>0</x>
          <y>0</y>
          <width>1601</width>
-         <height>951</height>
+         <height>961</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1091,9 +1097,9 @@ background-color: #ECF1F7;
        <widget class="QLabel" name="label_7">
         <property name="geometry">
          <rect>
-          <x>1290</x>
+          <x>1320</x>
           <y>813</y>
-          <width>171</width>
+          <width>170</width>
           <height>51</height>
          </rect>
         </property>
@@ -1206,6 +1212,8 @@ background-color: #F7F8F9;</string>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Open Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;PLCInsight Pro&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt;&quot;&gt;                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;Introduction:&lt;/span&gt;&lt;/p&gt;
@@ -1323,7 +1331,7 @@ background-color:#1F62E2;
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>For referencr click the download Btn and make the excel format as it in reference file</string>
+            <string>For Reference, Download the PLC DB Configurable file</string>
            </property>
           </widget>
          </item>
@@ -1333,7 +1341,7 @@ background-color:#1F62E2;
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Open the excel file and upload in DB</string>
+            <string>Upload the new PLC DB Configuration</string>
            </property>
           </widget>
          </item>

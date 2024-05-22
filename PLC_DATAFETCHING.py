@@ -1,8 +1,16 @@
 import sys
+import os
+import smtplib
+import ssl
+
 from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel, QDialog, QHeaderView,QHBoxLayout,  QSpacerItem, QSizePolicy
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import *
+from PyQt5.QtCore import QTimer
+from PyQt5 import QtWidgets, QtGui, uic
+from PyQt5 import QtCore, QtWidgets, QtWebEngineWidgets
+
 import pyodbc
 import pandas as pd
 import snap7
@@ -10,7 +18,7 @@ import struct
 import datetime
 from datetime import datetime
 import time
-from PyQt5 import QtWidgets, QtGui, uic
+
 import concurrent.futures
 from plc_data_ui import Ui_MainWindow
 from getmac import get_mac_address as gma
@@ -18,21 +26,16 @@ print(gma())
 from sqlalchemy import create_engine, text
 from tkinter import Tk, filedialog
 from cryptography.fernet import Fernet
-from PyQt5.QtCore import QTimer
-import os
-import smtplib
-import ssl
+
 from email.message import EmailMessage
 from email.mime.base import MIMEBase
 from email import encoders
-from PyQt5 import QtCore, QtWidgets, QtWebEngineWidgets
+
 import plotly.express as px
 
 global local_connStatus
 
 executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
-
-
 
 class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
 
@@ -40,7 +43,6 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         super(PLCDataLogger, self).__init__()
         uic.loadUi('Welcome_plc.ui', self)
 
-        
         idfont = QFontDatabase.addApplicationFont(
              "open-sans/Opensans-Semibold.ttf")
         
@@ -109,7 +111,8 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             df = self.df
             print("DF completed")
             # fig = px.line(df, x="TimeStamp", y="Value", color="Name")
-            fig = px.line(df, x="TimeStamp", y="Value", color = "Name", markers=True)    
+            fig = px.line(df, x="TimeStamp", y="Value", color = "Name", markers=True) 
+            #fig.update_yaxes(range(0,100))   
             print("Fig completed")                                                                              
             self.browser.setHtml(fig.to_html(include_plotlyjs='cdn'))  
             # for i in range (1,20):
@@ -376,7 +379,7 @@ If you require assistance or have any questions, please contact our support team
   
     def modelExcel(self):
         self.dfPlc()
-        self.logImp.append("The Referencre Excel where given in your Folder create the excel in that format then upload")
+        self.logImp.append("The Reference file Successfully downloaded")
         # Define the file path
         file_path = 'ReferenceExcel.xlsx'
 
@@ -484,8 +487,9 @@ If you require assistance or have any questions, please contact our support team
                 print("PLC Connected" , self.plc)
                 print("DB Connected", self.cursor)
                 print("DB Connected", self.conn)
-                self.log.append('PLC is connected'  +  str(self.current_date))
+                
                 message = 'Info  - '  + str(self.current_date) + ' -  PLC is connected ' 
+                self.log.append(message)
                 self.log_to_file(message)
                 self.local_connStatus = True
                 self.dfPlc()
@@ -506,12 +510,12 @@ If you require assistance or have any questions, please contact our support team
     def plcDisconnect(self):
         try:
             self.current_date = datetime.now()
-            self.plc.disconnect()
-            self.log.append('PLC is Disconnected'+ str(self.current_date))
+            self.plc.disconnect()            
             self.local_connStatus = False
             self.monitor_timer.stop()
             # message = 'PLC data fetching Disconnected' + str(self.current_date)
-            message = '"Alert"  - '  + str(self.current_date) + ' -  PLC data fetching Disconnected ' 
+            message = '"Alert"  - '  + str(self.current_date) + ' -  PLC is Disconnected ' 
+            self.log.append(message)
             self.log_to_file(message)
         except Exception as e:
             self.log.append('PLC is Disconnected Error: {e}')
@@ -529,7 +533,7 @@ If you require assistance or have any questions, please contact our support team
                 self.dfPlcExcel = pd.read_excel(file_name)
                 # self.thread_and_handle(self.insert_data_into_mysql())
                 self.insert_data_into_mysql()
-                self.logImp.append("Data inserted into MySQL table successfully.")
+                #self.logImp.append("Data inserted into MySQL table successfully.")
             except Exception as e:
                 self.logImp.append(f"Error reading Excel file: {e}")
     
@@ -560,10 +564,10 @@ If you require assistance or have any questions, please contact our support team
             # Commit changes            
             self.conn.commit()
 
-            self.logImp.append("Data inserted into MySQL table successfully.")
+            self.logImp.append("PLC Data information successfully updated.")
             self.dfPlc()
         except Exception as e:
-            self.logImp.append(f"Error inserting data into MySQL table: {e}")
+            self.logImp.append(f"Error inserting data : {e}")
 
     def dfPlc(self):        
         try:
