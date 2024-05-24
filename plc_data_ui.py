@@ -46,9 +46,8 @@ class Ui_MainWindow(object):
 "font:75  \"Open Sans\";\n"
 "font-weight: Semibold;\n"
 "color:#171725;\n"
-"\n"
+"background-color: #F7F8F9;\n"
 "}\n"
-"\n"
 "\n"
 "\n"
 "QLabel {\n"
@@ -60,6 +59,52 @@ class Ui_MainWindow(object):
 "/*font-family: Noto Sans;*/\n"
 "}\n"
 "\n"
+"QTextEdit{\n"
+"color:#171725;\n"
+"background-color: #F7F8F9;\n"
+"font: 10pt \"Open Sans\";\n"
+"}\n"
+"\n"
+"\n"
+"QWidget{\n"
+"background-color: #F7F8F9;\n"
+"}\n"
+"\n"
+"\n"
+"/************************************************/\n"
+"QTableWidget {\n"
+"    font-family: Open Sans;\n"
+"    font-size: 20pt;\n"
+"    background-color: #f5f5f5;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #E5E5E5;\n"
+"    color: #171725;\n"
+"    border: 1px solid #cccccc;\n"
+"    padding: 4px;\n"
+"}\n"
+"\n"
+"QTableWidget::item {\n"
+"    font-size: 14pt;\n"
+"    height: 40px;  /* Set all cells to 40px height */\n"
+"    border: 1px solid #cccccc;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"\n"
+"/* Alternate row coloring for visual distinction */\n"
+"QTableWidget::item:nth-child(odd) {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+"\n"
+"/* Highlight selected row */\n"
+"QTableWidget::item:selected {\n"
+"    background-color: #d3d3d3;\n"
+"}\n"
+"\n"
+"/************************************************/\n"
+"/*\n"
 "QTableView{\n"
 "color:#171725;\n"
 "background-color: #ECF1F7;\n"
@@ -70,11 +115,6 @@ class Ui_MainWindow(object):
 "font: 75 10pt \"Open Sans\";\n"
 "color: white;\n"
 "background-color:#989898; \n"
-"}\n"
-"\n"
-"QDateTimeEdit{\n"
-"color:#171725;\n"
-"background-color: #F7F8F9;\n"
 "}\n"
 "\n"
 "QTableView::item { \n"
@@ -90,17 +130,8 @@ class Ui_MainWindow(object):
 "background:#7cc8b9; \n"
 "font-weight:900; \n"
 "}\n"
+"*/\n"
 "\n"
-"QTextEdit{\n"
-"color:#171725;\n"
-"background-color: #F7F8F9;\n"
-"font: 10pt \"Open Sans\";\n"
-"}\n"
-"\n"
-"\n"
-"QWidget{\n"
-"background-color: #F7F8F9;\n"
-"}\n"
 "")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
@@ -149,13 +180,15 @@ class Ui_MainWindow(object):
         self.widget_3 = QtWidgets.QWidget(self.widget)
         self.widget_3.setGeometry(QtCore.QRect(0, 51, 261, 961))
         self.widget_3.setStyleSheet("QPushButton{\n"
-" font: 14pt \"Open Sans\";\n"
+" font: 75 14pt \"Open Sans\" ;\n"
 " color:#171725;\n"
 " text-align:left;\n"
-" height:40px;\n"
+" height:52px;\n"
 " border:none;\n"
 " padding-left:10px;\n"
 "}\n"
+"\n"
+"\n"
 "QPushButton:checked{\n"
 "color:#103782;\n"
 "background-color:#eaedf2;\n"
@@ -175,6 +208,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setSpacing(1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.navHome = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
@@ -182,7 +216,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(9)
         self.navHome.setFont(font)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/Icons/home (3).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -198,7 +232,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(9)
         self.navExport.setFont(font)
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/Icons/logout.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -214,7 +248,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(9)
         self.navLog.setFont(font)
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/Icons/log (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -230,7 +264,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(9)
         self.navHelp.setFont(font)
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/Icons/question.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -246,7 +280,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(9)
         self.navAbout.setFont(font)
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap(":/Icons/info (2).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -262,7 +296,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(9)
         self.navImp.setFont(font)
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap(":/Icons/import (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -371,6 +405,9 @@ class Ui_MainWindow(object):
         self.table_view = QtWidgets.QTableView(self.exportPage)
         self.table_view.setGeometry(QtCore.QRect(80, 90, 1391, 781))
         self.table_view.setStyleSheet("background-color: rgb(236, 241, 247);")
+        self.table_view.setAlternatingRowColors(True)
+        self.table_view.setIconSize(QtCore.QSize(0, 100))
+        self.table_view.setShowGrid(False)
         self.table_view.setObjectName("table_view")
         self.label_2 = QtWidgets.QLabel(self.exportPage)
         self.label_2.setGeometry(QtCore.QRect(80, 20, 60, 44))
@@ -758,7 +795,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

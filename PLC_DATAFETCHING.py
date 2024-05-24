@@ -269,7 +269,7 @@ If you require assistance or have any questions, please contact our support team
             print(f"Error updating license: {e}")
             self.close_application()
 
-
+    # Decrypt Licence key
     def licence_dec(self):
         query = text('SELECT * FROM Info_DB')
         self.dfInfo = pd.read_sql_query(query, self.con)
@@ -394,6 +394,7 @@ If you require assistance or have any questions, please contact our support team
                 Software_sold_date = row['Info']
                 Software_sold_date = self.decrypt(Software_sold_date)
                 print("Release Date String:", Software_sold_date)
+                self.dateExp = False
                 
                 try:
                     # Assuming the date format is 'DD/MM/YYYY'
@@ -470,8 +471,9 @@ If you require assistance or have any questions, please contact our support team
                 print("PLC Connected" , self.plc)
                 print("DB Connected", self.cursor)
                 print("DB Connected", self.con)
-                self.log.append('PLC is connected'  +  str(self.current_date))
+                #self.log.append('PLC is connected'  +  str(self.current_date))
                 message = 'Info  - '  + str(self.current_date) + ' -  PLC is connected ' 
+                self.log.append(message)
                 self.log_to_file(message)
                 self.local_connStatus = True
                 self.dfPlc()
@@ -586,8 +588,8 @@ If you require assistance or have any questions, please contact our support team
                 print(self.dfPlcdb)
                 return self.dfPlcdb
             else:
-                select_query = "SELECT  * FROM Data"
-                self.dfPlcdb = pd.read_sql(select_query, self.engine)
+                select_query = text("SELECT  * FROM Data")
+                self.dfPlcdb = pd.read_sql_query(select_query, self.con)
                 self.dfPlcdb['db_number'] = pd.to_numeric(self.dfPlcdb['db_number'], errors='ignore', downcast='integer')
                 self.dfPlcdb['start_offset'] = pd.to_numeric(self.dfPlcdb['start_offset'], errors='ignore', downcast='integer')
                 self.dfPlcdb['bit_offset'] = pd.to_numeric(self.dfPlcdb['bit_offset'], errors='ignore', downcast='integer')
@@ -601,13 +603,16 @@ If you require assistance or have any questions, please contact our support team
     def timer(self):
         self.monitor_timer = QTimer(self)
         self.monitor_timer.timeout.connect(self.timer1)
-        self.monitor_timer.start(5000)
+        print("Timer done : ",datetime.now())
+        self.monitor_timer.start(5000)        
         
     def timer1 (self):
         if self.local_conn == False:                
             self.plcConnect() 
         elif self.local_connStatus == True:
-            self.run_logging()
+            #self.run_logging()
+            self.thread_and_handle(self.run_logging)
+            print("Logging done : ",datetime.now())
         else:
             print("true")
 
@@ -627,9 +632,8 @@ If you require assistance or have any questions, please contact our support team
                 # Apply the plcDataSnap7 function to each row of the DataFrame
                 self.dfPlcdb[['Value', 'timestamp']] = self.dfPlcdb.apply(lambda row: pd.Series(self.plcDataSnap7(row['db_number'], row['data_type'], row['start_offset'], row['bit_offset'])), axis=1)
                 # Assuming 'cursor' is your database cursor object
-                # Create a list of tuples containing the values to be inserted
-                values = [(row['timestamp'], row['Name'], row['data_type'], row['Value']) for _, row in self.dfPlcdb.iterrows()]
-
+                # Create a list of tuples containing the values to be inserted                
+                values = [(row['timestamp'], row['Name'], row['data_type'], row['Value']) for _, row in self.dfPlcdb.iterrows()]                
                 # Execute the query to insert multiple rows
                 self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
                                     VALUES (?, ?, ?, ?)''', values)      
