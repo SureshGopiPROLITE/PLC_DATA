@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1925</width>
-    <height>1167</height>
+    <height>1091</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -130,9 +130,25 @@ font: 75 12pt &quot;open Sans&quot;;
 color:black; 
 background:#7cc8b9; 
 font-weight:900; 
+	color: rgb(0, 0, 0);
 }
 */
 
+
+
+
+QComboBox{
+text-align: center;
+border-radius: 5px;
+border:2px solid #D7DBEC;
+color: #000000;
+padding: 2px;
+font-weight: bold;
+font-family: Open Sans;
+font-size: 10pt;
+height:40px;
+width:150px;
+}
 </string>
    </property>
    <widget class="QWidget" name="widget" native="true">
@@ -205,7 +221,7 @@ border-width: 2px;
        <string notr="true">border: none;</string>
       </property>
       <property name="text">
-       <string>PLCInsight Pro</string>
+       <string>InsightPro</string>
       </property>
      </widget>
     </widget>
@@ -214,42 +230,58 @@ border-width: 2px;
       <rect>
        <x>0</x>
        <y>51</y>
-       <width>261</width>
+       <width>271</width>
        <height>961</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{
+      <string notr="true">QWidget{
+background-color:  #F7F8F9;
+}
+QWidget{
+border-right-color:rgba(174, 177, 181,100);
+border-right-style: solid;
+border-width: 5px
+}
+
+
+QPushButton{
  font: 75 14pt &quot;Open Sans&quot; ;
  color:#171725;
  text-align:left;
  height:52px;
- border:none;
+ width : 250px;
+ border :none;
  padding-left:10px;
+padding-right:10px
+
 }
 
 
 QPushButton:checked{
 color:#103782;
 background-color:#eaedf2;
+border-left-color: rgb(16, 55, 130);
+border-left-style: outset;
+border-width: 3.2px;
+
 
 }
 
 QPushButton:hover{
 background-color:#ECF1F7;
 }
-
-QWidget{
-background-color: #F7F8F9;
-}
 </string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>9</number>
+      </property>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
-        <property name="spacing">
-         <number>1</number>
-        </property>
         <item>
          <widget class="QPushButton" name="navHome">
           <property name="font">
@@ -261,12 +293,16 @@ background-color: #F7F8F9;
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border-right-color:rgba(247, 248, 249,100);</string>
+          </property>
           <property name="text">
            <string>  Home</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_resource.qrc">
-            <normaloff>:/Icons/home (3).png</normaloff>:/Icons/home (3).png</iconset>
+           <iconset resource="main_resource.qrc">
+            <normaloff>:/Icons/home.png</normaloff>
+            <normalon>:/Icons/home_on.png</normalon>:/Icons/home.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -293,12 +329,16 @@ background-color: #F7F8F9;
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border-right-color:rgba(247, 248, 249,100);</string>
+          </property>
           <property name="text">
            <string>  Export</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_resource.qrc">
-            <normaloff>:/Icons/logout.png</normaloff>:/Icons/logout.png</iconset>
+           <iconset resource="main_resource.qrc">
+            <normaloff>:/Icons/logout.png</normaloff>
+            <normalon>:/Icons/logout_on.png</normalon>:/Icons/logout.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -325,12 +365,16 @@ background-color: #F7F8F9;
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border-right-color:rgba(247, 248, 249,100);</string>
+          </property>
           <property name="text">
            <string>  Log</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_resource.qrc">
-            <normaloff>:/Icons/log (1).png</normaloff>:/Icons/log (1).png</iconset>
+           <iconset resource="main_resource.qrc">
+            <normaloff>:/Icons/log.png</normaloff>
+            <normalon>:/Icons/log_on.png</normalon>:/Icons/log.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -357,12 +401,16 @@ background-color: #F7F8F9;
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border-right-color:rgba(247, 248, 249,100);</string>
+          </property>
           <property name="text">
            <string>  Help</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_resource.qrc">
-            <normaloff>:/Icons/question.png</normaloff>:/Icons/question.png</iconset>
+           <iconset resource="main_resource.qrc">
+            <normaloff>:/Icons/question.png</normaloff>
+            <normalon>:/Icons/question_on.png</normalon>:/Icons/question.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -389,12 +437,16 @@ background-color: #F7F8F9;
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border-right-color:rgba(247, 248, 249,100);</string>
+          </property>
           <property name="text">
            <string>  About</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_resource.qrc">
-            <normaloff>:/Icons/info (2).png</normaloff>:/Icons/info (2).png</iconset>
+           <iconset resource="main_resource.qrc">
+            <normaloff>:/Icons/info.png</normaloff>
+            <normalon>:/Icons/info_on.png</normalon>:/Icons/info.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -421,12 +473,17 @@ background-color: #F7F8F9;
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">
+width : 250px;</string>
+          </property>
           <property name="text">
            <string>  Settings</string>
           </property>
           <property name="icon">
-           <iconset resource="Icons/main_resource.qrc">
-            <normaloff>:/Icons/import (1).png</normaloff>:/Icons/import (1).png</iconset>
+           <iconset resource="main_resource.qrc">
+            <normaloff>:/Icons/import.png</normaloff>
+            <normalon>:/Icons/import_on.png</normalon>:/Icons/import.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -450,7 +507,7 @@ background-color: #F7F8F9;
           <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
-            <height>118</height>
+            <height>40</height>
            </size>
           </property>
          </spacer>
@@ -472,7 +529,7 @@ background-color: #F7F8F9;
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="homePage">
       <widget class="QWidget" name="widget_4" native="true">
@@ -481,7 +538,7 @@ background-color: #F7F8F9;
          <x>0</x>
          <y>0</y>
          <width>1601</width>
-         <height>951</height>
+         <height>961</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -554,9 +611,9 @@ background-color: rgb(247, 248, 249);
           <widget class="QPushButton" name="btnConnect">
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -564,11 +621,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -589,9 +647,9 @@ background-color:#1F62E2;
           <widget class="QPushButton" name="btnDisconnect">
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -599,11 +657,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -672,7 +731,7 @@ background-color:#1F62E2;
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>80</x>
+         <x>186</x>
          <y>20</y>
          <width>60</width>
          <height>44</height>
@@ -696,7 +755,7 @@ background-color:#1F62E2;
       <widget class="QDateTimeEdit" name="from_time">
        <property name="geometry">
         <rect>
-         <x>146</x>
+         <x>248</x>
          <y>24</y>
          <width>252</width>
          <height>41</height>
@@ -740,7 +799,7 @@ background-color:#1F62E2;
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
-         <x>480</x>
+         <x>508</x>
          <y>24</y>
          <width>51</width>
          <height>31</height>
@@ -764,7 +823,7 @@ background-color:#1F62E2;
       <widget class="QDateTimeEdit" name="to_time">
        <property name="geometry">
         <rect>
-         <x>532</x>
+         <x>557</x>
          <y>21</y>
          <width>251</width>
          <height>41</height>
@@ -845,9 +904,9 @@ background-color: #ECF1F7;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -855,12 +914,16 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
+border:2px solid #103782;
+background-color:#103782;
+}
 
-background-color:#1F62E2;
-}</string>
+
+</string>
            </property>
            <property name="text">
             <string>Show Data</string>
@@ -886,9 +949,9 @@ background-color:#1F62E2;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -896,11 +959,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -927,9 +991,9 @@ background-color:#1F62E2;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -937,11 +1001,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -972,6 +1037,49 @@ background-color:#1F62E2;
         <property name="value">
          <number>50</number>
         </property>
+       </widget>
+       <widget class="QComboBox" name="hrSelect">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>30</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string>1 Hr</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4 Hr</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8 Hr</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>12 Hr</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>24 Hr</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Custom</string>
+         </property>
+        </item>
        </widget>
       </widget>
       <zorder>widget_8</zorder>
@@ -1027,9 +1135,9 @@ background-color: #ECF1F7;
           <widget class="QPushButton" name="btnClearLog">
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -1037,11 +1145,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -1059,9 +1168,9 @@ background-color:#1F62E2;
           <widget class="QPushButton" name="btnBackup">
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -1069,11 +1178,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -1185,9 +1295,9 @@ background-color: #ECF1F7;
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -1195,11 +1305,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
         </property>
         <property name="text">
@@ -1259,15 +1370,15 @@ background-color: #F7F8F9;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Open Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;PLCInsight Pro&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;InsightPro&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt;&quot;&gt;                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt;&quot;&gt;                          Welcome to InsightPro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;Introduction:&lt;/span&gt;&lt;/p&gt;
-&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Poppins'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PLCInsight Pro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, PLCInsight Pro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.&lt;/li&gt;
-&lt;li style=&quot; font-family:'Poppins'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Visualizing your data is made easy with PLCInsight Pro's intuitive interface, allowing you to explore your data in meaningful ways. Whether you're monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.&lt;/li&gt;
-&lt;li style=&quot; font-family:'Poppins'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Experience the next level of PLC data management with PLCInsight Pro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.&lt;/li&gt;&lt;/ul&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Poppins'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;InsightPro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, InsightPro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.&lt;/li&gt;
+&lt;li style=&quot; font-family:'Poppins'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Visualizing your data is made easy with InsightPro's intuitive interface, allowing you to explore your data in meaningful ways. Whether you're monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.&lt;/li&gt;
+&lt;li style=&quot; font-family:'Poppins'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Experience the next level of PLC data management with InsightPro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.&lt;/li&gt;&lt;/ul&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Poppins'; font-size:10pt; font-weight:600;&quot;&gt;Who Can Benefit?&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Poppins'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1345,9 +1456,9 @@ background-color: #ECF1F7;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -1355,11 +1466,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -1406,9 +1518,9 @@ background-color:#1F62E2;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -1416,11 +1528,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
            </property>
            <property name="text">
@@ -1467,7 +1580,7 @@ background-color:#1F62E2;
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Icons/main_resource.qrc"/>
+  <include location="main_resource.qrc"/>
  </resources>
  <connections/>
 </ui>

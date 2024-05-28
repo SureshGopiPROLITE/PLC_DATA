@@ -1,18 +1,16 @@
 <RCC>
-  <qresource prefix="Icons">
-    <file>logout.png</file>
-    <file>log (1).png</file>
-    <file>question.png</file>
-    <file>import (1).png</file>
-    <file>info (2).png</file>
-    <file>help-web-button.png</file>
-    <file>home (3).png</file>
-    <file>export (1).png</file>
-    <file>about.png</file>
-    <file>log.png</file>
-    <file>export.png</file>
-    <file>help.png</file>
-    <file>home.png</file>
-    <file>import.png</file>
+  <qresource>
+    <file>Icons/home.png</file>
+    <file>Icons/home_on.png</file>
+    <file>Icons/import.png</file>
+    <file>Icons/import_on.png</file>
+    <file>Icons/info.png</file>
+    <file>Icons/info_on.png</file>
+    <file>Icons/log.png</file>
+    <file>Icons/log_on.png</file>
+    <file>Icons/logout.png</file>
+    <file>Icons/logout_on.png</file>
+    <file>Icons/question.png</file>
+    <file>Icons/question_on.png</file>
   </qresource>
 </RCC>

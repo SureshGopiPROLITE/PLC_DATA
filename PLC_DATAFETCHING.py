@@ -162,7 +162,6 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.btnConnect.clicked.connect(self.timer)
                 self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
                 self.Ui.btnClearLog.clicked.connect(self.clear_logs)
-                # self.Ui.btnShowGraph.clicked.connect(self.plot_graph)
                 self.Ui.btnShowGraph.clicked.connect(self.graph)
                 self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
                 self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
@@ -289,7 +288,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         </body>
         </html>
         """
-
+        
         em = EmailMessage()
         em['From'] = email_sender
         em['To'] = email_receiver
@@ -320,13 +319,13 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     def licence(self):
         self.conn = pyodbc.connect(
             'DRIVER=SQL Server;'
-            # 'SERVER=SURESHGOPI;'
-            'SERVER=Localhost\SQLEXPRESS;'
+            'SERVER=SURESHGOPI;'
+            # 'SERVER=Localhost\SQLEXPRESS;'
             'DATABASE=PLCDB2;'
         )
         self.cursor = self.conn.cursor()
-        # self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-        self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
+        self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+        # self.engine = create_engine('mssql+pyodbc://Localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
         self.con = self.engine.connect()
 
         self.logcon.append('SQL DB is connected')
@@ -413,7 +412,9 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         enc_mac = fernet.encrypt(enc_msg.encode())
         return enc_mac
 
+    
 
+             
     def decrypt (self, dec_msg):
         crypto_key = b'9tvb2SoOaB11TA4YN3CydnGq4IfvSVSZJy25B6bdskM='
 
@@ -435,8 +436,8 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         self.backup_path = filedialog.asksaveasfilename(defaultextension=".bak",
                                                     filetypes=[("Backup files", "*.bak"), ("All files", "*.*")])
         # self.backup_path = "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\PLCDB2.bak"
-        # server_name = 'SURESHGOPI'
-        server_name = 'Localhost\SQLEXPRESS'
+        server_name = 'SURESHGOPI'
+        # server_name = 'Localhost\SQLEXPRESS'
         database = 'PLCDB2'
 
         self.backup_database(server_name, database)
@@ -531,16 +532,21 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         try:
             self.conn = pyodbc.connect(
                 'DRIVER=SQL Server;'
-                # 'SERVER=SURESHGOPI;'
-                'SERVER=Localhost\SQLEXPRESS;'
+                'SERVER=SURESHGOPI;'
+                # 'SERVER=Localhost\SQLEXPRESS;'
                 'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
-            # self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-            self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
+            self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            # self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
+
+
+            query = text('EXEC sp_spaceused')
+            self.noData = pd.read_sql_query(query, self.con)
+            print(self.noData.loc[0, "Data"])
 
             self.licence_dec()
             self.restrict_soft()
@@ -754,7 +760,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.log_to_file(message)
                 
         except Exception as e:
-            self.monitor_timer.stop()
+            # self.monitor_timer.stop()
             self.local_conn = False                        
             message = f"Error - {str(self.current_date)} - {e}"                        
             self.log_to_file(message)
@@ -804,50 +810,151 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     #         return None
     #     return value
     
-    # def show_data(self):
-    #     from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
-    #     to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
 
-    #     try:
-    #         self.Ui.progressBar.show()            
-    #         # Query database for data between specified timestamps
-    #         query = "SELECT * FROM plc_data WHERE TimeStamp BETWEEN ? AND ?"
-    #         df = pd.read_sql_query(query, self.con, params=(from_time, to_time))
-    #         print(df)
-    #         self.df = df
-    #         self.model = PandasTableModel(df)
-    #         self.Ui.table_view.setModel(self.model)
-    #         self.Ui.table_view.setSortingEnabled(True)
-    #         self.Ui.table_view.resizeColumnToContents(0)
-    #         # header = self.Ui.table_view.horizontalHeader()
-    #         # header.setSectionResizeMode(0, 1000)
-    #         # header.setSectionResizeMode(1, QHeaderView.ResizeToContents)
-    #         # header.setSectionResizeMode(2, QHeaderView.ResizeToContents)
-    #         # header.setSectionResizeMode(3, QHeaderView.ResizeToContents)
-    #         # header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
-    #         # # header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
-    #         # self.Ui.table_view.horizontalHeader().setStretchLastSection(True)
-    #         self.Ui.progressBar.hide()
-    #         # self.pdtable.setModel(self.model)
-    #     except Exception as e:
-    #         self.logImp.append(f"Error: {e}")
+    # def dbTableBackup(self):
+
 
     def show_data(self):
-        from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
-        to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
-        print("Time : ", from_time, to_time)
-
+        hours = self.Ui.hrSelect.currentText()
+        print("Hr", hours)
+        
+        
         try:
             self.Ui.progressBar.show()
-            # Query database for data between specified timestamps   
-            query = f"""SELECT * FROM plc_data WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'"""
-            df = pd.read_sql_query(query, self.conn)
+            if hours == "Custom":
+                from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
+                to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
+                print("Time : ", from_time, to_time)
+                # Query database for data between specified timestamps   
+                query = f"""SELECT * FROM plc_data WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'"""
+                df = pd.read_sql_query(query, self.conn)
+
+            elif hours == "1 Hr":
+                sql = f"""
+                SELECT *
+                FROM plc_data
+                WHERE TimeStamp >= DATEADD(HOUR, -1, GETDATE())
+                ORDER BY TimeStamp ASC; 
+                """
+                df = pd.read_sql_query(sql, self.con)
+                
+
+            elif hours == "4 Hr":
+                sql = f"""
+                SELECT *
+                FROM plc_data
+                WHERE TimeStamp >= DATEADD(HOUR, -4, GETDATE())
+                ORDER BY TimeStamp ASC; 
+                """
+                df = pd.read_sql_query(sql, self.con)
+                
+            elif hours == "8 Hr":
+                sql = f"""
+                SELECT *
+                FROM plc_data
+                WHERE TimeStamp >= DATEADD(HOUR, -8, GETDATE())
+                ORDER BY TimeStamp ASC; 
+                """
+                df = pd.read_sql_query(sql, self.con)
+
+            elif hours == "12 Hr":
+                sql = f"""
+                SELECT *
+                FROM plc_data
+                WHERE TimeStamp >= DATEADD(HOUR, -12, GETDATE())
+                ORDER BY TimeStamp ASC; 
+                """
+                df = pd.read_sql_query(sql, self.con)
+                
+
+            elif hours == "24 Hr":
+                sql = f"""
+                SELECT *
+                FROM plc_data
+                WHERE TimeStamp >= DATEADD(HOUR, -12, GETDATE())
+                ORDER BY TimeStamp ASC; 
+                """
+                df = pd.read_sql_query(sql, self.con)
+                
+            # elif hours == "1 Week":
+            #     sql = """
+            #     SELECT *
+            #     FROM your_table_name
+            #     WHERE timestamp_column >= DATEADD(WEEK, -1, GETDATE())
+            #     ORDER BY timestamp_column ASC;
+            #     """
+            #     df = pd.read_sql_query(sql, self.con)
+            #     self.df = df
+            #     self.model = PandasTableModel(df)
+            #     self.Ui.table_view.setModel(self.model)
+
+            # elif hours == "2 Weeks":
+            #     sql = """
+            #     SELECT *
+            #     FROM your_table_name
+            #     WHERE timestamp_column >= DATEADD(WEEK, -2, GETDATE())
+            #     ORDER BY timestamp_column ASC;
+            #     """
+            #     df = pd.read_sql_query(sql, self.con)
+            #     self.df = df
+            #     self.model = PandasTableModel(df)
+            #     self.Ui.table_view.setModel(self.model)
+
+            # elif hours == "4 Weeks":
+            #     sql = """
+            #     SELECT *
+            #     FROM your_table_name
+            #     WHERE timestamp_column >= DATEADD(WEEK, -4, GETDATE())
+            #     ORDER BY timestamp_column ASC;
+            #     """
+            #     df = pd.read_sql_query(sql, self.con)
+            #     self.df = df
+            #     self.model = PandasTableModel(df)
+            #     self.Ui.table_view.setModel(self.model)
+
+            # elif hours == "3 Months":
+            #     sql = """
+            #     SELECT *
+            #     FROM your_table_name
+            #     WHERE timestamp_column >= DATEADD(MONTH, -3, GETDATE())
+            #     ORDER BY timestamp_column ASC;
+            #     """
+            #     df = pd.read_sql_query(sql, self.con)
+            #     self.df = df
+            #     self.model = PandasTableModel(df)
+            #     self.Ui.table_view.setModel(self.model)
+
+            # elif hours == "6 Months":
+            #     sql = """
+            #     SELECT *
+            #     FROM your_table_name
+            #     WHERE timestamp_column >= DATEADD(MONTH, -6, GETDATE())
+            #     ORDER BY timestamp_column ASC;
+            #     """
+            #     df = pd.read_sql_query(sql, self.con)
+            #     self.df = df
+            #     self.model = PandasTableModel(df)
+            #     self.Ui.table_view.setModel(self.model)
+
+            # elif hours == "1 Year":
+            #     sql = """
+            #     SELECT *
+            #     FROM your_table_name
+            #     WHERE timestamp_column >= DATEADD(YEAR, -1, GETDATE())
+            #     ORDER BY timestamp_column ASC;
+            #     """
+            #     df = pd.read_sql_query(sql, self.con)
+            #     self.df = df
+            #     self.model = PandasTableModel(df)
+            #     self.Ui.table_view.setModel(self.model)
+
+            else:
+                print("Select valid hr")
+
             self.df = df
             self.model = PandasTableModel(df)
             self.Ui.table_view.setModel(self.model)
-            self.Ui.table_view.setSortingEnabled(True)
 
-           # Set a fixed width for all columns
             self.Ui.table_view.setColumnWidth(0, 150)
             self.Ui.table_view.setColumnWidth(1, 300)
             self.Ui.table_view.setColumnWidth(2, 500)

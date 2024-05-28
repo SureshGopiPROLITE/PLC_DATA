@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1925, 1167)
+        MainWindow.resize(1925, 986)
         MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -129,9 +129,25 @@ class Ui_MainWindow(object):
 "color:black; \n"
 "background:#7cc8b9; \n"
 "font-weight:900; \n"
+"    color: rgb(0, 0, 0);\n"
 "}\n"
 "*/\n"
 "\n"
+"\n"
+"\n"
+"\n"
+"QComboBox{\n"
+"text-align: center;\n"
+"border-radius: 5px;\n"
+"border:2px solid #D7DBEC;\n"
+"color: #000000;\n"
+"padding: 2px;\n"
+"font-weight: bold;\n"
+"font-family: Open Sans;\n"
+"font-size: 10pt;\n"
+"height:40px;\n"
+"width:150px;\n"
+"}\n"
 "")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
@@ -178,37 +194,49 @@ class Ui_MainWindow(object):
         self.label_4.setStyleSheet("border: none;")
         self.label_4.setObjectName("label_4")
         self.widget_3 = QtWidgets.QWidget(self.widget)
-        self.widget_3.setGeometry(QtCore.QRect(0, 51, 261, 961))
-        self.widget_3.setStyleSheet("QPushButton{\n"
+        self.widget_3.setGeometry(QtCore.QRect(0, 51, 271, 891))
+        self.widget_3.setStyleSheet("QWidget{\n"
+"background-color: #F7F8F9;\n"
+"}\n"
+"QWidget{\n"
+"border-right-color:rgba(174, 177, 181,100);\n"
+"border-right-style: solid;\n"
+"border-width: 5px\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton{\n"
 " font: 75 14pt \"Open Sans\" ;\n"
 " color:#171725;\n"
 " text-align:left;\n"
 " height:52px;\n"
-" border:none;\n"
+" width : 250px;\n"
+" border :none;\n"
 " padding-left:10px;\n"
+"padding-right:10px\n"
+"\n"
 "}\n"
 "\n"
 "\n"
 "QPushButton:checked{\n"
 "color:#103782;\n"
 "background-color:#eaedf2;\n"
+"border-left-color: rgb(16, 55, 130);\n"
+"border-left-style: outset;\n"
+"border-width: 3.2px;\n"
+"\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "background-color:#ECF1F7;\n"
 "}\n"
-"\n"
-"QWidget{\n"
-"background-color: #F7F8F9;\n"
-"}\n"
 "")
         self.widget_3.setObjectName("widget_3")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_3)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setContentsMargins(0, 0, 15, 9)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setSpacing(1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.navHome = QtWidgets.QPushButton(self.widget_3)
         font = QtGui.QFont()
@@ -218,8 +246,10 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.navHome.setFont(font)
+        self.navHome.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icons/home (3).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/Icons/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/Icons/home_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navHome.setIcon(icon)
         self.navHome.setIconSize(QtCore.QSize(25, 25))
         self.navHome.setCheckable(True)
@@ -234,8 +264,10 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.navExport.setFont(font)
+        self.navExport.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/Icons/logout.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/Icons/logout_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navExport.setIcon(icon1)
         self.navExport.setIconSize(QtCore.QSize(25, 25))
         self.navExport.setCheckable(True)
@@ -250,8 +282,10 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.navLog.setFont(font)
+        self.navLog.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/Icons/log (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/Icons/log.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/Icons/log_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navLog.setIcon(icon2)
         self.navLog.setIconSize(QtCore.QSize(25, 25))
         self.navLog.setCheckable(True)
@@ -266,8 +300,10 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.navHelp.setFont(font)
+        self.navHelp.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/Icons/question.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/Icons/question_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navHelp.setIcon(icon3)
         self.navHelp.setIconSize(QtCore.QSize(25, 25))
         self.navHelp.setCheckable(True)
@@ -282,8 +318,10 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.navAbout.setFont(font)
+        self.navAbout.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/Icons/info (2).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/Icons/info.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/Icons/info_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navAbout.setIcon(icon4)
         self.navAbout.setIconSize(QtCore.QSize(25, 25))
         self.navAbout.setCheckable(True)
@@ -298,15 +336,18 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.navImp.setFont(font)
+        self.navImp.setStyleSheet("\n"
+"width : 250px;")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/Icons/import (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(":/Icons/import.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(":/Icons/import_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navImp.setIcon(icon5)
         self.navImp.setIconSize(QtCore.QSize(25, 25))
         self.navImp.setCheckable(True)
         self.navImp.setAutoExclusive(True)
         self.navImp.setObjectName("navImp")
         self.verticalLayout.addWidget(self.navImp)
-        spacerItem = QtWidgets.QSpacerItem(20, 118, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
         self.verticalLayout_2.addLayout(self.verticalLayout)
         self.stackedWidget = QtWidgets.QStackedWidget(self.widget)
@@ -316,7 +357,7 @@ class Ui_MainWindow(object):
         self.homePage = QtWidgets.QWidget()
         self.homePage.setObjectName("homePage")
         self.widget_4 = QtWidgets.QWidget(self.homePage)
-        self.widget_4.setGeometry(QtCore.QRect(0, 0, 1601, 951))
+        self.widget_4.setGeometry(QtCore.QRect(0, 0, 1601, 961))
         self.widget_4.setStyleSheet("QWidget{\n"
 "background-color: #ECF1F7;\n"
 "}\n"
@@ -346,9 +387,9 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName("gridLayout")
         self.btnConnect = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.btnConnect.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -356,11 +397,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnConnect.setCheckable(True)
         self.btnConnect.setAutoExclusive(True)
@@ -369,9 +411,9 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.btnConnect, 0, 0, 1, 1)
         self.btnDisconnect = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.btnDisconnect.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -379,11 +421,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnDisconnect.setCheckable(True)
         self.btnDisconnect.setAutoExclusive(True)
@@ -410,7 +453,7 @@ class Ui_MainWindow(object):
         self.table_view.setShowGrid(False)
         self.table_view.setObjectName("table_view")
         self.label_2 = QtWidgets.QLabel(self.exportPage)
-        self.label_2.setGeometry(QtCore.QRect(80, 20, 60, 44))
+        self.label_2.setGeometry(QtCore.QRect(186, 20, 60, 44))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
@@ -420,7 +463,7 @@ class Ui_MainWindow(object):
         self.label_2.setStyleSheet("background-color:#ECF1F7;")
         self.label_2.setObjectName("label_2")
         self.from_time = QtWidgets.QDateTimeEdit(self.exportPage)
-        self.from_time.setGeometry(QtCore.QRect(146, 24, 252, 41))
+        self.from_time.setGeometry(QtCore.QRect(248, 24, 252, 41))
         self.from_time.setDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
         self.from_time.setDate(QtCore.QDate(2024, 1, 1))
         self.from_time.setTime(QtCore.QTime(0, 0, 0))
@@ -428,7 +471,7 @@ class Ui_MainWindow(object):
         self.from_time.setTimeSpec(QtCore.Qt.LocalTime)
         self.from_time.setObjectName("from_time")
         self.label_3 = QtWidgets.QLabel(self.exportPage)
-        self.label_3.setGeometry(QtCore.QRect(480, 24, 51, 31))
+        self.label_3.setGeometry(QtCore.QRect(508, 24, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
@@ -438,7 +481,7 @@ class Ui_MainWindow(object):
         self.label_3.setStyleSheet("background-color:#ECF1F7;")
         self.label_3.setObjectName("label_3")
         self.to_time = QtWidgets.QDateTimeEdit(self.exportPage)
-        self.to_time.setGeometry(QtCore.QRect(532, 21, 251, 41))
+        self.to_time.setGeometry(QtCore.QRect(557, 21, 251, 41))
         self.to_time.setDate(QtCore.QDate(2024, 1, 1))
         self.to_time.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2024, 1, 1), QtCore.QTime(0, 0, 0)))
         self.to_time.setObjectName("to_time")
@@ -467,9 +510,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.show_data_btn.setFont(font)
         self.show_data_btn.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -477,12 +520,16 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
+"}\n"
 "\n"
-"background-color:#1F62E2;\n"
-"}")
+"\n"
+"")
         self.show_data_btn.setCheckable(True)
         self.show_data_btn.setAutoExclusive(True)
         self.show_data_btn.setObjectName("show_data_btn")
@@ -496,9 +543,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.export_btn.setFont(font)
         self.export_btn.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -506,11 +553,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.export_btn.setCheckable(True)
         self.export_btn.setAutoExclusive(True)
@@ -525,9 +573,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btnShowGraph.setFont(font)
         self.btnShowGraph.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -535,11 +583,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnShowGraph.setCheckable(True)
         self.btnShowGraph.setAutoExclusive(True)
@@ -550,6 +599,16 @@ class Ui_MainWindow(object):
         self.progressBar.setStyleSheet("")
         self.progressBar.setProperty("value", 50)
         self.progressBar.setObjectName("progressBar")
+        self.hrSelect = QtWidgets.QComboBox(self.widget_8)
+        self.hrSelect.setGeometry(QtCore.QRect(90, 30, 101, 41))
+        self.hrSelect.setStyleSheet("")
+        self.hrSelect.setObjectName("hrSelect")
+        self.hrSelect.addItem("")
+        self.hrSelect.addItem("")
+        self.hrSelect.addItem("")
+        self.hrSelect.addItem("")
+        self.hrSelect.addItem("")
+        self.hrSelect.addItem("")
         self.widget_8.raise_()
         self.table_view.raise_()
         self.label_2.raise_()
@@ -576,9 +635,9 @@ class Ui_MainWindow(object):
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.btnClearLog = QtWidgets.QPushButton(self.layoutWidget1)
         self.btnClearLog.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -586,11 +645,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnClearLog.setCheckable(True)
         self.btnClearLog.setAutoExclusive(True)
@@ -598,9 +658,9 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.btnClearLog, 0, 0, 1, 1)
         self.btnBackup = QtWidgets.QPushButton(self.layoutWidget1)
         self.btnBackup.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -608,11 +668,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnBackup.setCheckable(True)
         self.btnBackup.setAutoExclusive(True)
@@ -658,9 +719,9 @@ class Ui_MainWindow(object):
         self.activateLicense = QtWidgets.QPushButton(self.widget_7)
         self.activateLicense.setGeometry(QtCore.QRect(1134, 830, 81, 21))
         self.activateLicense.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -668,11 +729,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.activateLicense.setObjectName("activateLicense")
         self.licenseEnter = QtWidgets.QLineEdit(self.widget_7)
@@ -721,9 +783,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btnDownloadExcel.setFont(font)
         self.btnDownloadExcel.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -731,11 +793,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnDownloadExcel.setCheckable(True)
         self.btnDownloadExcel.setAutoExclusive(True)
@@ -758,9 +821,9 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btnImpExcel.setFont(font)
         self.btnImpExcel.setStyleSheet("QPushButton{\n"
-"background-color:#1F62E2;\n"
+"background-color:#103782;\n"
 "border-radius: 5px;\n"
-"border:2px solid #1F62E2;\n"
+"border:2px solid #103782;\n"
 "height:40px;\n"
 "width:150px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -768,11 +831,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color:#145b9e;\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
 "}\n"
 "QPushButton:checked{\n"
-"\n"
-"background-color:#1F62E2;\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
 "}")
         self.btnImpExcel.setCheckable(True)
         self.btnImpExcel.setAutoExclusive(True)
@@ -795,7 +859,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -816,6 +880,12 @@ class Ui_MainWindow(object):
         self.show_data_btn.setText(_translate("MainWindow", "Show Data"))
         self.export_btn.setText(_translate("MainWindow", "Export Excel"))
         self.btnShowGraph.setText(_translate("MainWindow", "Show Graph"))
+        self.hrSelect.setItemText(0, _translate("MainWindow", "1 Hr"))
+        self.hrSelect.setItemText(1, _translate("MainWindow", "4 Hr"))
+        self.hrSelect.setItemText(2, _translate("MainWindow", "8 Hr"))
+        self.hrSelect.setItemText(3, _translate("MainWindow", "12 Hr"))
+        self.hrSelect.setItemText(4, _translate("MainWindow", "24 Hr"))
+        self.hrSelect.setItemText(5, _translate("MainWindow", "Custom"))
         self.btnClearLog.setText(_translate("MainWindow", "Clear"))
         self.btnBackup.setText(_translate("MainWindow", "BackUP"))
         self.label_7.setText(_translate("MainWindow", "Software  Version   : "))
@@ -854,7 +924,7 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "For Reference, Download the PLC DB Configurable file"))
         self.label.setText(_translate("MainWindow", "Upload the new PLC DB Configuration"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
-#import main_resource_rc
+import main_resource_rc
 
 
 if __name__ == "__main__":

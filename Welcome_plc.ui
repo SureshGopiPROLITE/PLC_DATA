@@ -35,10 +35,7 @@ QWidget#page_License {
 background-color: #f0f0f0;
 }
 
-QPushButton:checked{
-color:#103782;
-background-color:#eaedf2;
-}
+
 QCheckBox{
 font:  &quot;Open Sans&quot;;
 font-weight: bold;
@@ -52,20 +49,23 @@ color:#171725;
 background-color: #F7F8F9;
 }
 QPushButton{
- background-color: #1F62E2;
- border-radius: 5px;
- border:2px solid #1F62E2;
- height:40px;
- width:150px;
- font: 12pt &quot;Open Sans&quot;;
- color:#FFFFFF;
+background-color:#103782;
+border-radius: 5px;
+border:2px solid #103782;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
 }
-
 
 QPushButton:hover{
-background-color:#ECF1F7;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
+QPushButton:checked{
 
+background-color:#103782;
+}
 /* Styles for Tab Widgets */
 QTabWidget::pane {
 border:1px solid lightgray;
@@ -206,9 +206,9 @@ background-color: #ECF1F7;
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -216,11 +216,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
       </property>
       <property name="text">
@@ -262,9 +263,9 @@ background-color:#1F62E2;
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton{
-background-color:#1F62E2;
+background-color:#103782;
 border-radius: 5px;
-border:2px solid #1F62E2;
+border:2px solid #103782;
 height:40px;
 width:150px;
 font: 12pt &quot;Open Sans&quot;;
@@ -272,11 +273,12 @@ color:#FFFFFF;
 }
 
 QPushButton:hover{
-background-color:#145b9e;
+background-color:#1F62E2;
+border:2px solid#1F62E2;
 }
 QPushButton:checked{
-
-background-color:#1F62E2;
+border:2px solid #103782;
+background-color:#103782;
 }</string>
       </property>
       <property name="text">
@@ -314,7 +316,7 @@ background-color:#1F62E2;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
+       <string notr="true"/>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
