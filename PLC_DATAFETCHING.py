@@ -10,13 +10,14 @@ from PyQt5.QtCore import *
 from PyQt5.QtCore import QTimer
 from PyQt5 import QtWidgets, QtGui, uic
 from PyQt5 import QtCore, QtWidgets, QtWebEngineWidgets
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 import pyodbc
 import pandas as pd
 import snap7
 import struct
 import datetime
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 
 import concurrent.futures
@@ -32,6 +33,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 import plotly.express as px
+import plotly.graph_objects as go
 
 global local_connStatus
 
@@ -54,6 +56,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
         self.activateLicense.clicked.connect(self.licence)
         self.btnConnectDb.clicked.connect(self.dbConnection)
+        self.btnConnectDb.clicked.connect(self.timerTable)
 
     def popUp(self, msg):
         parent_center = self.geometry().center() 
@@ -104,6 +107,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         layout.exec_()
         self.Ui.progressBar.hide()
 
+
     def plot_graph(self):
         try:
             self.Ui.progressBar.show()
@@ -124,7 +128,119 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             self.Ui.progressBar.hide()
         except Exception as e:
             print(f"Error: {e}")
-        
+
+    def barGraph(self):
+            try:
+                # self.Ui.verticalLayout_web.removeWidget(self)
+                while self.Ui.verticalLayout_bar.count():
+                    widget = self.Ui.verticalLayout_bar.takeAt(0).widget()
+                    if widget is  None:
+                        widget.deleteLater()
+                
+                self.browser = QWebEngineView(self.Ui.homePage)  # Create the QWebEngineView
+
+                self.browser.setSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+                self.browser.setMinimumSize(721, 471) 
+
+                self.browser.setStyleSheet("color: #171725; background-color: #F7F8F9; font-size: 16px; font-family: Open Sans;")
+               
+                self.Ui.verticalLayout_bar.addWidget(self.browser)
+
+                self.show_bar()
+
+            
+            except Exception as e:
+                print(f"Error: {e}")
+    
+    def show_bar(self):
+        try:
+            
+            sql = """
+                    SELECT *
+                    FROM plc_data
+                    WHERE TimeStamp >= DATEADD(WEEK, -1, GETDATE())
+                    """
+            self.df_bargh = pd.read_sql_query(sql, self.con)
+            df = self.df_bargh
+
+            df['TimeStamp'] = pd.to_datetime(df['TimeStamp'], errors='coerce', infer_datetime_format=True)
+
+            # Set the TimeStamp column as the index
+            df.set_index('TimeStamp', inplace=True)
+
+            # Resample by day and count the number of entries for each day
+            daily_counts = df.resample('D').size()
+
+            # Convert the resampled data into a DataFrame for plotting
+            daily_counts_df = daily_counts.reset_index(name='count')
+
+            # Create the bar graph using Plotly
+            fig = px.bar(daily_counts_df, x='TimeStamp', y='count', title='Count of Data Points per Day')
+
+            self.browser.setHtml(fig.to_html(include_plotlyjs='cdn'))
+
+        except Exception as e:
+            print(f"Error: {e}")
+
+    def speedGraph(self):
+        try:
+            # self.Ui.verticalLayout_web.removeWidget(self)
+            while self.Ui.verticalLayout_web.count():
+                widget = self.Ui.verticalLayout_web.takeAt(0).widget()
+                if widget is None:
+                    widget.deleteLater()
+            
+            self.browser = QWebEngineView(self.Ui.homePage)  # Create the QWebEngineView
+            self.browser.setSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+            self.browser.setMinimumSize(721, 471)
+            self.browser.setStyleSheet("color: #171725; background-color: #F7F8F9; font-size: 16px; font-family: Open Sans;")
+            
+            self.Ui.verticalLayout_web.addWidget(self.browser)
+
+            self.show_graph()
+
+        # self.button.clicked.connect(self.show_graph)
+        # self.resize(1000,800)
+        # self.show_graph()
+        # Set the URL to load if needed
+        # self.browser.setUrl(QUrl("https://www.example.com")) 
+        except Exception as e:
+            print(f"Error: {e}")
+
+
+    def show_graph(self):
+        try:
+            if self.local_connStatus == True:
+                # Convert self.Total_seconds to float or int, depending on your data type
+                value = float(self.Total_seconds)  # Assuming Total_seconds is a string representation of a number
+                
+                fig = go.Figure(go.Indicator(
+                    mode="gauge+number",
+                    value=value,
+                    domain={'x': [0, 1], 'y': [0, 1]},
+                    title={'text': "Speed in sec of Data Fetching from PLC"},
+                    gauge = {
+                'axis': {'range': [None, 2], 'tickwidth': 1, 'tickcolor': "darkblue"},
+                'bar': {'color': "darkblue"},
+                'bgcolor': "white",
+                'borderwidth': 2,
+                'bordercolor': "gray",
+                'steps': [
+                    {'range': [0, 0.5], 'color': 'cyan'},
+                    {'range': [0.5, 1], 'color': 'royalblue'}],
+                'threshold': {
+                    'line': {'color': "red", 'width': 4},
+                    'thickness': 0.75,
+                    'value': 1.8}}))
+                fig.update_layout(paper_bgcolor = "#ECF1F7", font = {'color': "#171725", 'family': "Black"})
+                
+            
+                self.browser.setHtml(fig.to_html(include_plotlyjs='cdn'))
+
+
+        except Exception as e:
+            print(f"Error: {e}")
+
 
     def openWindow(self):
         try:
@@ -150,6 +266,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.licenseEnter.setText(Licence)
                 
                 self.Ui.progressBar.hide()
+                
                 self.logImp = self.Ui.logImp
                 self.logField = self.Ui.logField
                 self.log = self.Ui.textStatus
@@ -160,9 +277,11 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.activateLicense.clicked.connect(self.licence_main)
                 self.Ui.btnConnect.clicked.connect(lambda: self.thread_and_handle(self.plcConnect))
                 self.Ui.btnConnect.clicked.connect(self.timer)
+                self.Ui.navHome.clicked.connect(self.speedGraph)
+                self.Ui.navHome.clicked.connect(self.barGraph)
                 self.Ui.btnDisconnect.clicked.connect(lambda: self.thread_and_handle(self.plcDisconnect))
                 self.Ui.btnClearLog.clicked.connect(self.clear_logs)
-                self.Ui.btnShowGraph.clicked.connect(self.graph)
+                self.Ui.btnShowGraph.clicked.connect(self.graph)          
                 self.Ui.navHome.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.homePage))
                 self.Ui.navExport.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.exportPage))
                 self.Ui.navLog.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.logPage))
@@ -176,7 +295,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
 
         except Exception as e:
             print(f"Error on opening: {e}")
-
+                                                            
 
     def send_email(self): 
          # Define email sender and receiver
@@ -340,6 +459,8 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         self.date_enc()
 
 
+
+
     def licence_main(self):
         lic = self.Ui.licenseEnter.text()
         self.licc = self.Ui.licenseEnter.text()
@@ -412,7 +533,6 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         enc_mac = fernet.encrypt(enc_msg.encode())
         return enc_mac
 
-    
 
              
     def decrypt (self, dec_msg):
@@ -528,28 +648,65 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         print(connStatus)
             # Now you can use the result as needed
                                                                            
+
+
     def dbConnection(self):
         try:
             self.conn = pyodbc.connect(
                 'DRIVER=SQL Server;'
                 'SERVER=SURESHGOPI;'
-                # 'SERVER=Localhost\SQLEXPRESS;'
                 'DATABASE=PLCDB2;'
             )
             self.cursor = self.conn.cursor()
             self.engine = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
-            # self.engine = create_engine('mssql+pyodbc://localhost\SQLEXPRESS/PLCDB2?driver=SQL+Server')
             self.con = self.engine.connect()
 
             self.logcon.append('SQL DB is connected')
 
+            # query = '''
+            # USE PLCDB2;
+            # EXEC sp_spaceused;
+            # '''
 
-            query = text('EXEC sp_spaceused')
-            self.noData = pd.read_sql_query(query, self.con)
-            print(self.noData.loc[0, "Data"])
+            # # Execute the query and fetch the results using a raw connection
+            # connection = self.engine.raw_connection()
+        
+            # try:
+            #     cursor = connection.cursor()
+
+            #     # Execute USE statement separately
+            #     cursor.execute("USE PLCDB2;")
+
+            #     # Execute sp_spaceused separately
+            #     cursor.execute("EXEC sp_spaceused;")
+
+            #     # Fetch the first result set
+            #     first_result_set = cursor.fetchall()
+            #     first_columns = [desc[0] for desc in cursor.description]
+
+            #     # Move to the next result set
+            #     cursor.nextset()
+
+            #     # Fetch the second result set
+            #     second_result_set = cursor.fetchall()
+            #     second_columns = [desc[0] for desc in cursor.description]
+            # finally:
+            #     cursor.close()
+            #     connection.close()
+
+            # # Convert the result sets to DataFrames
+            # df1 = pd.DataFrame(first_result_set, columns=first_columns)
+            # df2 = pd.DataFrame(second_result_set, columns=second_columns)
+
+            # print("First DataFrame:")
+            # print(df1)
+
+            # print("\nSecond DataFrame:")
+            # print(df2)
 
             self.licence_dec()
             self.restrict_soft()
+            self.archive_old_data()
             self.openWindow()
 
             monitor_timer = QTimer(self)
@@ -559,17 +716,26 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             print("Error connecting to database:", e)
             self.logcon.append("Error connecting to database:" + str(e))
 
+
     def plcConnect(self):
         try:
+            
+
             self.plcIP = self.Ui.inpIp.text()
+            self.rackandslot = self.Ui.inpRackSlot.text()
+            rack, slot = map(int, self.rackandslot.split(','))
             print(self.plcIP)
             query = text('SELECT * FROM Info_DB')
             self.dfInfo = pd.read_sql_query(query, self.con)
             if self.plcIP == "":
+                # self.rackandslot = self.dfInfo.loc[5, 'Rack_slot']
+                # rack, slot = int(map(int, self.rackandslot.split(',')))
+                
                 self.plcIP = self.dfInfo.loc[0, 'Info']               
                 self.current_date = datetime.now()
                 self.plc = snap7.client.Client()
-                self.plc.connect(self.plcIP, 0, 1)
+                # self.plc.connect(self.plcIP, 0, 1)
+                self.plc.connect(self.plcIP, rack, slot)
                 print("PLC Connected" , self.plc)
                 print("DB Connected", self.cursor)
                 print("DB Connected", self.con)
@@ -579,8 +745,12 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.log_to_file(message)
                 self.local_connStatus = True
                 self.dfPlc()
+                # self.insert_data_from_notepad()
                 self.run_logging()
             elif self.plcIP:
+                # query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+                # self.cursor.execute(query, (self.rackandslot, "Rack_slot"))
+
                 query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
                 # Execute the query with parameters
                 self.cursor.execute(query, (self.plcIP, "Plc_IP"))
@@ -588,9 +758,13 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.current_date = datetime.now()
                 self.plc = snap7.client.Client()
                 self.plc.connect(self.plcIP, 0, 1)
+                # self.plc.connect(self.plcIP, rack, slot)
                 print("PLC Connected" , self.plc)
                 print("DB Connected", self.cursor)
                 print("DB Connected", self.conn)
+
+
+                
                 
                 message = 'Info  - '  + str(self.current_date) + ' -  PLC is connected ' 
                 self.log.append(message)
@@ -598,10 +772,13 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.local_connStatus = True
                 self.dfPlc()
                 self.run_logging()
+
             else:
                 self.log.append(f'PLC IP: {e}') 
                 print("PLC IP address is not provided.")
                 # You might want to inform the user or take appropriate action here
+
+            
         except Exception as e:
             self.log.append(f'PLC is not connected: {e}') 
             print("Not connecting", e)
@@ -706,7 +883,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         self.monitor_timer = QTimer(self)
         self.monitor_timer.timeout.connect(self.timer1)
         print("Timer done : ",datetime.now())
-        self.monitor_timer.start(5000)        
+        self.monitor_timer.start(2000)        
         
     def timer1 (self):
         if self.local_conn == False:                
@@ -717,11 +894,88 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             print("Logging done : ",datetime.now())
         else:
             print("true")
+    
+    def timerTable(self):
+        monitor_timer = QTimer(self)
+        monitor_timer.timeout.connect(self.archive_old_data)
+        monitor_timer.start(86400000)  
 
+    def timerDataInsert(self):
+        monitor_timer = QTimer(self)
+        monitor_timer.timeout.connect(self.insert_data_from_notepad)
+        monitor_timer.start(10000)
 
-    # def sleep(self):
+    # def sleep(self): 
     #     self.run_logging()
     #     time.sleep(5)
+   
+    # def run_logging(self):
+    #     try:
+    #         if self.local_connStatus == True:
+    #             current_date = datetime.now()
+    #             timestamp = current_date.strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+    #             print("1")
+                
+    #             # Assuming plcDataSnap7 function returns data in (name, data_type, value) format
+    #             self.dfPlcdb[['Value', 'timestamp']] = self.dfPlcdb.apply(lambda row: pd.Series(self.plcDataSnap7(row['db_number'], row['data_type'], row['start_offset'], row['bit_offset'])), axis=1)
+                
+    #             # Prepare values as a list of tuples
+    #             values = [(row['timestamp'], row['Name'], row['data_type'], row['Value']) for _, row in self.dfPlcdb.iterrows()]
+                
+    #             # Convert list of tuples to string format
+    #             values_string = "\n".join([f"{timestamp}, {name}, {data_type}, {value}" for timestamp, name, data_type, value in values])
+                
+
+    #             # Append the string to 'ValuesData.txt'
+    #             with open('ValuesData.txt', 'a') as file:
+    #                 file.write(values_string + '\n')  # Add a newline after each entry
+                
+    #             # print("Data appended successfully to 'ValuesData.txt'")
+    #             # print(values)
+    #             self.local_conn = True
+    #             #########Calculate 1st and last data timestamp difference################
+    #             end_time_str = self.dfPlcdb.loc[len(self.dfPlcdb)-1, 'timestamp']
+    #             start_time_str = self.dfPlcdb.loc[0, 'timestamp']
+    #             date_format = "%Y-%m-%d %H:%M:%S.%f"
+    #             start_time = datetime.strptime(start_time_str, date_format)
+    #             end_time = datetime.strptime(end_time_str, date_format)
+    #             time_difference = end_time - start_time
+    #             Total_seconds = str(time_difference.total_seconds())
+    #             message = 'Logging  - ' + str(timestamp) + ' -  Data fetching from PLC in ' + Total_seconds + 'secs'
+    #             self.log_to_file(message)
+
+    #     except Exception as e:
+    #         self.local_conn = False
+    #         message = f"Error - {str(self.current_date)} - {e}"
+    #         self.log_to_file(message)
+    #         self.send_email()
+
+    # def insert_data_from_notepad(self):
+    #     try:
+    #         with open('ValuesData.txt', 'r') as file:
+    #             lines = file.readlines()
+
+    #         if lines:
+    #             all_values = []
+    #             for line in lines:
+    #                 # Assuming each line is in format "timestamp, name, data_type, value"
+    #                 timestamp, name, data_type, value = line.strip().split(', ')
+    #                 all_values.append((timestamp, name, data_type, value))
+
+    #             # Assuming 'conn' is your database connection and 'cursor' is your cursor object
+    #             self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value) VALUES (?, ?, ?, ?)''', all_values)
+    #             self.conn.commit()
+
+    #         with open('ValuesData.txt', 'w') as file:
+    #             file.truncate(0)
+            
+    #         self.local_conn = True
+
+    #     except Exception as e:
+    #         self.local_conn = False
+    #         message = f"Error during inserting from notepad - {str(datetime.now())} - {e}"
+    #         self.log_to_file(message)
+    #         self.send_email()
 
     def run_logging(self):
         try: 
@@ -738,10 +992,31 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                             
                 values = [(row['timestamp'], row['Name'], row['data_type'], row['Value']) for _, row in self.dfPlcdb.iterrows()]                
                 # Execute the query to insert multiple rows
+                start = datetime.now()
                 self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
-                                    VALUES (?, ?, ?, ?)''', values)      
+                                    VALUES (?, ?, ?, ?)''', values)
+                end = datetime.now()
+                # Inserting data to txt fife foe optmize the time
+                # with open('ValuesData.txt', 'a') as file:  
+                #     file.write(str(values) + '\n') 
+                result = end - start
+                print("insert indb difference time", result )
                 self.conn.commit()
+
+
                 self.local_conn = True
+
+
+                selected_columns = ['timestamp', 'Name', 'data_type', 'Value']
+                self.df = self.dfPlcdb[selected_columns]
+                self.model = PandasTableModel(self.df)
+                self.Ui.liveTableDataView.setModel(self.model)            
+
+                # Set column widths for better display
+                self.Ui.liveTableDataView.setColumnWidth(0, 200)
+                self.Ui.liveTableDataView.setColumnWidth(1, 200)
+                self.Ui.liveTableDataView.setColumnWidth(2, 100)
+                self.Ui.liveTableDataView.setColumnWidth(3, 100)
 
                 #########Calculate 1st and last data timestamp difference################
                 # Define the date strings with milliseconds and the format they follow
@@ -752,11 +1027,13 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 start_time = datetime.strptime(start_time_str, date_format)
                 end_time = datetime.strptime(end_time_str, date_format)
 
+                
+                
                 # Calculate the time difference
                 time_difference = end_time - start_time
-                Total_seconds= str(time_difference.total_seconds())
+                self.Total_seconds= str(time_difference.total_seconds())
                 #print("Total seconds:", time_difference.total_seconds())
-                message = 'Logging  - '  + str(timestamp) + ' -  Data fetching from PLC ' + 'in ' + Total_seconds + 'secs' 
+                message = 'Logging  - '  + str(timestamp) + ' -  Data fetching from PLC ' + 'in ' + self.Total_seconds + 'secs' 
                 self.log_to_file(message)
                 
         except Exception as e:
@@ -811,150 +1088,252 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     #     return value
     
 
-    # def dbTableBackup(self):
+    def archive_old_data(self):
+        try:
+            # Calculate cutoff date for archival (30 days ago)
+            cutoff_date = datetime.now() - timedelta(days=30)
+            cutoff_date_str = cutoff_date.strftime('%Y-%m-%d')
+            
+            # Move records older than cutoff_date from plc_data to plc_data_archive
+            self.cursor.execute(f'''INSERT INTO plc_data_archive (TimeStamp, Name, DataType, Value)
+                                   SELECT TimeStamp, Name, DataType, Value
+                                   FROM plc_data
+                                   WHERE TimeStamp < ?''', (cutoff_date_str,))
+            
+            # Delete records older than cutoff_date from plc_data
+            self.cursor.execute(f'''DELETE FROM plc_data
+                                   WHERE TimeStamp < ?''', (cutoff_date_str,))
+            
+            # Commit changes
+            self.conn.commit()
+        
+        except Exception as e:
+            message = f"Error archiving data: {e}"
+            self.log_to_file(message)
+            # Handle error as needed
 
 
+    # def show_data(self):  
+    #     hours = self.Ui.hrSelect.currentText()
+    #     print("Hr", hours)
+        
+        
+    #     try:
+    #         self.Ui.progressBar.show()
+    #         if hours == "Custom":
+    #             from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
+    #             to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
+    #             print("Time : ", from_time, to_time)
+    #             # Query database for data between specified timestamps   
+    #             query = f"""SELECT * FROM plc_data WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'"""
+    #             df = pd.read_sql_query(query, self.conn)
+
+    #         elif hours == "1 Hr":
+    #             sql = f"""
+    #             SELECT *
+    #             FROM plc_data
+    #             WHERE TimeStamp >= DATEADD(HOUR, -1, GETDATE())
+    #             ORDER BY TimeStamp ASC; 
+    #             """
+    #             df = pd.read_sql_query(sql, self.con)
+                
+
+    #         elif hours == "4 Hr":
+    #             sql = f"""
+    #             SELECT *
+    #             FROM plc_data
+    #             WHERE TimeStamp >= DATEADD(HOUR, -4, GETDATE())
+    #             ORDER BY TimeStamp ASC; 
+    #             """
+    #             df = pd.read_sql_query(sql, self.con)
+                
+    #         elif hours == "8 Hr":
+    #             sql = f"""
+    #             SELECT *
+    #             FROM plc_data
+    #             WHERE TimeStamp >= DATEADD(HOUR, -8, GETDATE())
+    #             ORDER BY TimeStamp ASC; 
+    #             """
+    #             df = pd.read_sql_query(sql, self.con)
+
+    #         elif hours == "12 Hr":
+    #             sql = f"""
+    #             SELECT *
+    #             FROM plc_data
+    #             WHERE TimeStamp >= DATEADD(HOUR, -12, GETDATE())
+    #             ORDER BY TimeStamp ASC; 
+    #             """
+    #             df = pd.read_sql_query(sql, self.con)
+                
+
+    #         elif hours == "24 Hr":
+    #             sql = f"""
+    #             SELECT *
+    #             FROM plc_data
+    #             WHERE TimeStamp >= DATEADD(HOUR, -12, GETDATE())
+    #             ORDER BY TimeStamp ASC; 
+    #             """
+    #             df = pd.read_sql_query(sql, self.con)
+                
+    #         # elif hours == "1 Week":
+    #         #     sql = """
+    #         #     SELECT *
+    #         #     FROM your_table_name
+    #         #     WHERE timestamp_column >= DATEADD(WEEK, -1, GETDATE())
+    #         #     ORDER BY timestamp_column ASC;
+    #         #     """
+    #         #     df = pd.read_sql_query(sql, self.con)
+    #         #     self.df = df
+    #         #     self.model = PandasTableModel(df)
+    #         #     self.Ui.table_view.setModel(self.model)
+
+    #         # elif hours == "2 Weeks":
+    #         #     sql = """
+    #         #     SELECT *
+    #         #     FROM your_table_name
+    #         #     WHERE timestamp_column >= DATEADD(WEEK, -2, GETDATE())
+    #         #     ORDER BY timestamp_column ASC;
+    #         #     """
+    #         #     df = pd.read_sql_query(sql, self.con)
+    #         #     self.df = df
+    #         #     self.model = PandasTableModel(df)
+    #         #     self.Ui.table_view.setModel(self.model)
+
+    #         # elif hours == "4 Weeks":
+    #         #     sql = """
+    #         #     SELECT *
+    #         #     FROM your_table_name
+    #         #     WHERE timestamp_column >= DATEADD(WEEK, -4, GETDATE())
+    #         #     ORDER BY timestamp_column ASC;
+    #         #     """
+    #         #     df = pd.read_sql_query(sql, self.con)
+    #         #     self.df = df
+    #         #     self.model = PandasTableModel(df)
+    #         #     self.Ui.table_view.setModel(self.model)
+
+    #         # elif hours == "3 Months":
+    #         #     sql = """
+    #         #     SELECT *
+    #         #     FROM your_table_name
+    #         #     WHERE timestamp_column >= DATEADD(MONTH, -3, GETDATE())
+    #         #     ORDER BY timestamp_column ASC;
+    #         #     """
+    #         #     df = pd.read_sql_query(sql, self.con)
+    #         #     self.df = df
+    #         #     self.model = PandasTableModel(df)
+    #         #     self.Ui.table_view.setModel(self.model)
+
+    #         # elif hours == "6 Months":
+    #         #     sql = """
+    #         #     SELECT *
+    #         #     FROM your_table_name
+    #         #     WHERE timestamp_column >= DATEADD(MONTH, -6, GETDATE())
+    #         #     ORDER BY timestamp_column ASC;
+    #         #     """
+    #         #     df = pd.read_sql_query(sql, self.con)
+    #         #     self.df = df
+    #         #     self.model = PandasTableModel(df)
+    #         #     self.Ui.table_view.setModel(self.model)
+
+    #         # elif hours == "1 Year":
+    #         #     sql = """
+    #         #     SELECT *
+    #         #     FROM your_table_name
+    #         #     WHERE timestamp_column >= DATEADD(YEAR, -1, GETDATE())
+    #         #     ORDER BY timestamp_column ASC;
+    #         #     """
+    #         #     df = pd.read_sql_query(sql, self.con)
+    #         #     self.df = df
+    #         #     self.model = PandasTableModel(df)
+    #         #     self.Ui.table_view.setModel(self.model)
+
+    #         else:
+    #             print("Select valid hr")
+
+    #         self.df = df
+    #         self.model = PandasTableModel(df)
+    #         self.Ui.table_view.setModel(self.model)
+
+    #         self.Ui.table_view.setColumnWidth(0, 150)
+    #         self.Ui.table_view.setColumnWidth(1, 300)
+    #         self.Ui.table_view.setColumnWidth(2, 500)
+    #         self.Ui.table_view.setColumnWidth(3, 150)
+    #         self.Ui.table_view.setColumnWidth(4, 150)
+
+    #     except Exception as e:
+    #         print(f"An error occurred: {e}")
+    #     finally:
+    #         self.Ui.progressBar.hide()
+    
     def show_data(self):
-        hours = self.Ui.hrSelect.currentText()
-        print("Hr", hours)
-        
-        
         try:
             self.Ui.progressBar.show()
+            hours = self.Ui.hrSelect.currentText()
+            
             if hours == "Custom":
                 from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)
                 to_time = self.Ui.to_time.dateTime().toString(Qt.ISODate)
                 print("Time : ", from_time, to_time)
-                # Query database for data between specified timestamps   
-                query = f"""SELECT * FROM plc_data WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'"""
-                df = pd.read_sql_query(query, self.conn)
-
-            elif hours == "1 Hr":
-                sql = f"""
-                SELECT *
-                FROM plc_data
-                WHERE TimeStamp >= DATEADD(HOUR, -1, GETDATE())
-                ORDER BY TimeStamp ASC; 
-                """
-                df = pd.read_sql_query(sql, self.con)
                 
+                from_time_dt = datetime.fromisoformat(from_time)
+                to_time_dt = datetime.fromisoformat(to_time)
 
-            elif hours == "4 Hr":
-                sql = f"""
-                SELECT *
-                FROM plc_data
-                WHERE TimeStamp >= DATEADD(HOUR, -4, GETDATE())
-                ORDER BY TimeStamp ASC; 
-                """
-                df = pd.read_sql_query(sql, self.con)
+                # Calculate the difference
+                date_diff = to_time_dt - from_time_dt
+                print("Date Difference:", date_diff)    
                 
-            elif hours == "8 Hr":
-                sql = f"""
-                SELECT *
-                FROM plc_data
-                WHERE TimeStamp >= DATEADD(HOUR, -8, GETDATE())
-                ORDER BY TimeStamp ASC; 
-                """
-                df = pd.read_sql_query(sql, self.con)
+                if date_diff.days >= 30:
+                        
+                    # Query database for data between specified timestamps from both tables
+                    query = f"""
+                    SELECT * FROM plc_data
+                    WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'
+                    
+                    UNION ALL
+                    
+                    SELECT * FROM plc_data_archive
+                    WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'
+                    ORDER BY TimeStamp ASC; 
+                    """
+                    df = pd.read_sql_query(query, self.conn)
+                else:
+                    print(date_diff)
+                    # Query database for data between specified timestamps   
+                    query = f"""SELECT * FROM plc_data WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'"""
+                    df = pd.read_sql_query(query, self.conn)
+                    
 
-            elif hours == "12 Hr":
-                sql = f"""
-                SELECT *
-                FROM plc_data
-                WHERE TimeStamp >= DATEADD(HOUR, -12, GETDATE())
-                ORDER BY TimeStamp ASC; 
-                """
-                df = pd.read_sql_query(sql, self.con)
+            elif hours in ["1 Hr", "4 Hr", "8 Hr", "12 Hr", "24 Hr"]:
+                # Determine the hour range for predefined selections
+                if hours == "1 Hr":
+                    hours_ago = 1
+                elif hours == "4 Hr":
+                    hours_ago = 4
+                elif hours == "8 Hr":
+                    hours_ago = 8
+                elif hours == "12 Hr":
+                    hours_ago = 12
+                elif hours == "24 Hr":
+                    hours_ago = 24
                 
-
-            elif hours == "24 Hr":
+                # Construct the SQL query based on the selected hours range
                 sql = f"""
-                SELECT *
-                FROM plc_data
-                WHERE TimeStamp >= DATEADD(HOUR, -12, GETDATE())
-                ORDER BY TimeStamp ASC; 
-                """
-                df = pd.read_sql_query(sql, self.con)
+                    SELECT *
+                    FROM plc_data
+                    WHERE TimeStamp >= DATEADD(HOUR, -{hours_ago}, GETDATE())
+                    ORDER BY TimeStamp ASC; 
+                    """
+                df = pd.read_sql_query(sql, self.conn)
                 
-            # elif hours == "1 Week":
-            #     sql = """
-            #     SELECT *
-            #     FROM your_table_name
-            #     WHERE timestamp_column >= DATEADD(WEEK, -1, GETDATE())
-            #     ORDER BY timestamp_column ASC;
-            #     """
-            #     df = pd.read_sql_query(sql, self.con)
-            #     self.df = df
-            #     self.model = PandasTableModel(df)
-            #     self.Ui.table_view.setModel(self.model)
-
-            # elif hours == "2 Weeks":
-            #     sql = """
-            #     SELECT *
-            #     FROM your_table_name
-            #     WHERE timestamp_column >= DATEADD(WEEK, -2, GETDATE())
-            #     ORDER BY timestamp_column ASC;
-            #     """
-            #     df = pd.read_sql_query(sql, self.con)
-            #     self.df = df
-            #     self.model = PandasTableModel(df)
-            #     self.Ui.table_view.setModel(self.model)
-
-            # elif hours == "4 Weeks":
-            #     sql = """
-            #     SELECT *
-            #     FROM your_table_name
-            #     WHERE timestamp_column >= DATEADD(WEEK, -4, GETDATE())
-            #     ORDER BY timestamp_column ASC;
-            #     """
-            #     df = pd.read_sql_query(sql, self.con)
-            #     self.df = df
-            #     self.model = PandasTableModel(df)
-            #     self.Ui.table_view.setModel(self.model)
-
-            # elif hours == "3 Months":
-            #     sql = """
-            #     SELECT *
-            #     FROM your_table_name
-            #     WHERE timestamp_column >= DATEADD(MONTH, -3, GETDATE())
-            #     ORDER BY timestamp_column ASC;
-            #     """
-            #     df = pd.read_sql_query(sql, self.con)
-            #     self.df = df
-            #     self.model = PandasTableModel(df)
-            #     self.Ui.table_view.setModel(self.model)
-
-            # elif hours == "6 Months":
-            #     sql = """
-            #     SELECT *
-            #     FROM your_table_name
-            #     WHERE timestamp_column >= DATEADD(MONTH, -6, GETDATE())
-            #     ORDER BY timestamp_column ASC;
-            #     """
-            #     df = pd.read_sql_query(sql, self.con)
-            #     self.df = df
-            #     self.model = PandasTableModel(df)
-            #     self.Ui.table_view.setModel(self.model)
-
-            # elif hours == "1 Year":
-            #     sql = """
-            #     SELECT *
-            #     FROM your_table_name
-            #     WHERE timestamp_column >= DATEADD(YEAR, -1, GETDATE())
-            #     ORDER BY timestamp_column ASC;
-            #     """
-            #     df = pd.read_sql_query(sql, self.con)
-            #     self.df = df
-            #     self.model = PandasTableModel(df)
-            #     self.Ui.table_view.setModel(self.model)
-
             else:
-                print("Select valid hr")
+                print("Select a valid time range")
 
+            # Set up the DataFrame and model for display
             self.df = df
             self.model = PandasTableModel(df)
-            self.Ui.table_view.setModel(self.model)
+            self.Ui.table_view.setModel(self.model)            
 
+            # Set column widths for better display
             self.Ui.table_view.setColumnWidth(0, 150)
             self.Ui.table_view.setColumnWidth(1, 300)
             self.Ui.table_view.setColumnWidth(2, 500)
@@ -965,7 +1344,6 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             print(f"An error occurred: {e}")
         finally:
             self.Ui.progressBar.hide()
-
 
     def export_data(self):
         from_time = self.Ui.from_time.dateTime().toString(Qt.ISODate)

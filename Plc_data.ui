@@ -175,7 +175,7 @@ width:150px;
      <property name="styleSheet">
       <string notr="true">
 Qlabel{
- font: 14pt &quot;Open Sans&quot;;
+ font: 75 14pt &quot;Open Sans&quot;;
  color:#103782;
  text-align:left;
  height:40px;
@@ -211,17 +211,19 @@ border-width: 2px;
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <family>Open Sans</family>
+        <pointsize>14</pointsize>
         <weight>9</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">border: none;</string>
+       <string notr="true">font: 75 14pt &quot;Open Sans&quot;;
+border: None;</string>
       </property>
       <property name="text">
-       <string>InsightPro</string>
+       <string>SKEW</string>
       </property>
      </widget>
     </widget>
@@ -253,7 +255,10 @@ QPushButton{
  width : 250px;
  border :none;
  padding-left:10px;
-padding-right:10px
+padding-right:10px;
+border-left-color:#F7F8F9;
+border-left-style: solid;
+border-width: 3.2px;
 
 }
 
@@ -274,6 +279,9 @@ background-color:#ECF1F7;
 </string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>1</number>
+      </property>
       <property name="rightMargin">
        <number>15</number>
       </property>
@@ -301,8 +309,8 @@ background-color:#ECF1F7;
           </property>
           <property name="icon">
            <iconset resource="main_resource.qrc">
-            <normaloff>:/Icons/home.png</normaloff>
-            <normalon>:/Icons/home_on.png</normalon>:/Icons/home.png</iconset>
+            <normaloff>:/Icons/Insight_Home3.5.png</normaloff>
+            <normalon>:/Icons/Insight_Home1_3.5.png</normalon>:/Icons/Insight_Home3.5.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -337,8 +345,8 @@ background-color:#ECF1F7;
           </property>
           <property name="icon">
            <iconset resource="main_resource.qrc">
-            <normaloff>:/Icons/logout.png</normaloff>
-            <normalon>:/Icons/logout_on.png</normalon>:/Icons/logout.png</iconset>
+            <normaloff>:/Icons/Insight_Export3.5.png</normaloff>
+            <normalon>:/Icons/Insight_Export1_3.5.png</normalon>:/Icons/Insight_Export3.5.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -373,8 +381,8 @@ background-color:#ECF1F7;
           </property>
           <property name="icon">
            <iconset resource="main_resource.qrc">
-            <normaloff>:/Icons/log.png</normaloff>
-            <normalon>:/Icons/log_on.png</normalon>:/Icons/log.png</iconset>
+            <normaloff>:/Icons/Insight_Lopg3.5.png</normaloff>
+            <normalon>:/Icons/Insight_Log1_3.5.png</normalon>:/Icons/Insight_Lopg3.5.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -409,8 +417,8 @@ background-color:#ECF1F7;
           </property>
           <property name="icon">
            <iconset resource="main_resource.qrc">
-            <normaloff>:/Icons/question.png</normaloff>
-            <normalon>:/Icons/question_on.png</normalon>:/Icons/question.png</iconset>
+            <normaloff>:/Icons/Insight_Help3.5.png</normaloff>
+            <normalon>:/Icons/Insight_Help1_3.5.png</normalon>:/Icons/Insight_Help3.5.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -445,8 +453,8 @@ background-color:#ECF1F7;
           </property>
           <property name="icon">
            <iconset resource="main_resource.qrc">
-            <normaloff>:/Icons/info.png</normaloff>
-            <normalon>:/Icons/info_on.png</normalon>:/Icons/info.png</iconset>
+            <normaloff>:/Icons/Insight_About3.5.png</normaloff>
+            <normalon>:/Icons/Insight_About1_3.5.png</normalon>:/Icons/Insight_About3.5.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -482,8 +490,8 @@ width : 250px;</string>
           </property>
           <property name="icon">
            <iconset resource="main_resource.qrc">
-            <normaloff>:/Icons/import.png</normaloff>
-            <normalon>:/Icons/import_on.png</normalon>:/Icons/import.png</iconset>
+            <normaloff>:/Icons/Insight_Settings3.5.png</normaloff>
+            <normalon>:/Icons/Insight_Settings1_3.5.png</normalon>:/Icons/Insight_Settings3.5.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -547,102 +555,34 @@ background-color: #ECF1F7;
 }
 </string>
        </property>
-       <widget class="QTextBrowser" name="textStatus">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>130</y>
-          <width>1101</width>
-          <height>771</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 10pt &quot;Open Sans&quot;;
-color:#171725;
-background-color: rgb(247, 248, 249);
-
-</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="inpIp">
-        <property name="geometry">
-         <rect>
-          <x>286</x>
-          <y>41</y>
-          <width>201</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-       </widget>
        <widget class="QWidget" name="gridLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>628</x>
+          <x>1100</x>
           <y>10</y>
-          <width>711</width>
-          <height>101</height>
+          <width>451</width>
+          <height>81</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
          <property name="leftMargin">
-          <number>150</number>
+          <number>20</number>
          </property>
          <property name="topMargin">
-          <number>10</number>
+          <number>0</number>
          </property>
          <property name="rightMargin">
-          <number>150</number>
+          <number>20</number>
          </property>
          <property name="bottomMargin">
-          <number>10</number>
+          <number>0</number>
          </property>
          <property name="horizontalSpacing">
           <number>20</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QPushButton" name="btnConnect">
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-background-color:#103782;
-border-radius: 5px;
-border:2px solid #103782;
-height:40px;
-width:150px;
-font: 12pt &quot;Open Sans&quot;;
-color:#FFFFFF;
-}
-
-QPushButton:hover{
-background-color:#1F62E2;
-border:2px solid#1F62E2;
-}
-QPushButton:checked{
-border:2px solid #103782;
-background-color:#103782;
-}</string>
-           </property>
-           <property name="text">
-            <string>Connect</string>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-           <property name="autoDefault">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
          <item row="0" column="1">
           <widget class="QPushButton" name="btnDisconnect">
            <property name="styleSheet">
@@ -679,27 +619,108 @@ background-color:#103782;
            </property>
           </widget>
          </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnConnect">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color:#103782;
+border-radius: 5px;
+border:2px solid #103782;
+height:40px;
+width:150px;
+font: 12pt &quot;Open Sans&quot;;
+color:#FFFFFF;
+}
+
+QPushButton:hover{
+background-color:#1F62E2;
+border:2px solid#1F62E2;
+}
+QPushButton:checked{
+border:2px solid #103782;
+background-color:#103782;
+}</string>
+           </property>
+           <property name="text">
+            <string>Connect</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
         </layout>
         <zorder>btnDisconnect</zorder>
         <zorder>btnConnect</zorder>
        </widget>
-       <widget class="QLabel" name="label_6">
+       <widget class="QWidget" name="gridLayoutWidget_2">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>41</y>
-          <width>121</width>
-          <height>41</height>
+          <x>80</x>
+          <y>90</y>
+          <width>1451</width>
+          <height>841</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Enter PLC IP  :</string>
-        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_web">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_11" native="true"/>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_bar">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_10" native="true"/>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QTextBrowser" name="textStatus">
+           <property name="styleSheet">
+            <string notr="true">font: 10pt &quot;Open Sans&quot;;
+color:#171725;
+background-color: rgb(247, 248, 249);
+
+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTableView" name="liveTableDataView">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(236, 241, 247);</string>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="showGrid">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
-       <zorder>label_6</zorder>
-       <zorder>textStatus</zorder>
-       <zorder>inpIp</zorder>
-       <zorder>gridLayoutWidget</zorder>
       </widget>
      </widget>
      <widget class="QWidget" name="exportPage">
@@ -1548,6 +1569,68 @@ background-color:#103782;
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>1250</x>
+          <y>130</y>
+          <width>161</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enter Rack and Slot :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="inpRackSlot">
+        <property name="geometry">
+         <rect>
+          <x>1442</x>
+          <y>140</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>1254</x>
+          <y>60</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enter PLC IP  :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="inpIp">
+        <property name="geometry">
+         <rect>
+          <x>1440</x>
+          <y>60</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
        </widget>
       </widget>
       <widget class="QTextBrowser" name="logImp">

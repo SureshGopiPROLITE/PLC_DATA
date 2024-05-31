@@ -1,16 +1,16 @@
 <RCC>
   <qresource>
-    <file>Icons/home.png</file>
-    <file>Icons/home_on.png</file>
-    <file>Icons/import.png</file>
-    <file>Icons/import_on.png</file>
-    <file>Icons/info.png</file>
-    <file>Icons/info_on.png</file>
-    <file>Icons/log.png</file>
-    <file>Icons/log_on.png</file>
-    <file>Icons/logout.png</file>
-    <file>Icons/logout_on.png</file>
-    <file>Icons/question.png</file>
-    <file>Icons/question_on.png</file>
+    <file>Icons/Insight_About1_3.5.png</file>
+    <file>Icons/Insight_About3.5.png</file>
+    <file>Icons/Insight_Export1_3.5.png</file>
+    <file>Icons/Insight_Export3.5.png</file>
+    <file>Icons/Insight_Help1_3.5.png</file>
+    <file>Icons/Insight_Help3.5.png</file>
+    <file>Icons/Insight_Home1_3.5.png</file>
+    <file>Icons/Insight_Home3.5.png</file>
+    <file>Icons/Insight_Log1_3.5.png</file>
+    <file>Icons/Insight_Lopg3.5.png</file>
+    <file>Icons/Insight_Settings1_3.5.png</file>
+    <file>Icons/Insight_Settings3.5.png</file>
   </qresource>
 </RCC>

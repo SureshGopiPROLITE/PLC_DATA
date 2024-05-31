@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1925, 986)
+        MainWindow.resize(1925, 1091)
         MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("/* Set background colors and properties */\n"
@@ -158,7 +158,7 @@ class Ui_MainWindow(object):
         self.widget_2.setGeometry(QtCore.QRect(0, 0, 1871, 51))
         self.widget_2.setStyleSheet("\n"
 "Qlabel{\n"
-" font: 14pt \"Open Sans\";\n"
+" font: 75 14pt \"Open Sans\";\n"
 " color:#103782;\n"
 " text-align:left;\n"
 " height:40px;\n"
@@ -186,17 +186,19 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.widget_2)
         self.label_4.setGeometry(QtCore.QRect(9, 13, 105, 19))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setFamily("Open Sans")
+        font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("border: none;")
+        self.label_4.setStyleSheet("font: 75 14pt \"Open Sans\";\n"
+"border: None;")
         self.label_4.setObjectName("label_4")
         self.widget_3 = QtWidgets.QWidget(self.widget)
-        self.widget_3.setGeometry(QtCore.QRect(0, 51, 271, 891))
+        self.widget_3.setGeometry(QtCore.QRect(0, 51, 271, 961))
         self.widget_3.setStyleSheet("QWidget{\n"
-"background-color: #F7F8F9;\n"
+"background-color:  #F7F8F9;\n"
 "}\n"
 "QWidget{\n"
 "border-right-color:rgba(174, 177, 181,100);\n"
@@ -213,7 +215,10 @@ class Ui_MainWindow(object):
 " width : 250px;\n"
 " border :none;\n"
 " padding-left:10px;\n"
-"padding-right:10px\n"
+"padding-right:10px;\n"
+"border-left-color:#F7F8F9;\n"
+"border-left-style: solid;\n"
+"border-width: 3.2px;\n"
 "\n"
 "}\n"
 "\n"
@@ -235,6 +240,7 @@ class Ui_MainWindow(object):
         self.widget_3.setObjectName("widget_3")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_3)
         self.verticalLayout_2.setContentsMargins(0, 0, 15, 9)
+        self.verticalLayout_2.setSpacing(1)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
@@ -248,8 +254,8 @@ class Ui_MainWindow(object):
         self.navHome.setFont(font)
         self.navHome.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icons/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap(":/Icons/home_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/Icons/Insight_Home3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/Icons/Insight_Home1_3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navHome.setIcon(icon)
         self.navHome.setIconSize(QtCore.QSize(25, 25))
         self.navHome.setCheckable(True)
@@ -266,8 +272,8 @@ class Ui_MainWindow(object):
         self.navExport.setFont(font)
         self.navExport.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/Icons/logout.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon1.addPixmap(QtGui.QPixmap(":/Icons/logout_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon1.addPixmap(QtGui.QPixmap(":/Icons/Insight_Export3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/Icons/Insight_Export1_3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navExport.setIcon(icon1)
         self.navExport.setIconSize(QtCore.QSize(25, 25))
         self.navExport.setCheckable(True)
@@ -284,8 +290,8 @@ class Ui_MainWindow(object):
         self.navLog.setFont(font)
         self.navLog.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/Icons/log.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon2.addPixmap(QtGui.QPixmap(":/Icons/log_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon2.addPixmap(QtGui.QPixmap(":/Icons/Insight_Lopg3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/Icons/Insight_Log1_3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navLog.setIcon(icon2)
         self.navLog.setIconSize(QtCore.QSize(25, 25))
         self.navLog.setCheckable(True)
@@ -302,8 +308,8 @@ class Ui_MainWindow(object):
         self.navHelp.setFont(font)
         self.navHelp.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/Icons/question.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon3.addPixmap(QtGui.QPixmap(":/Icons/question_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon3.addPixmap(QtGui.QPixmap(":/Icons/Insight_Help3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/Icons/Insight_Help1_3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navHelp.setIcon(icon3)
         self.navHelp.setIconSize(QtCore.QSize(25, 25))
         self.navHelp.setCheckable(True)
@@ -320,8 +326,8 @@ class Ui_MainWindow(object):
         self.navAbout.setFont(font)
         self.navAbout.setStyleSheet("border-right-color:rgba(247, 248, 249,100);")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/Icons/info.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon4.addPixmap(QtGui.QPixmap(":/Icons/info_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon4.addPixmap(QtGui.QPixmap(":/Icons/Insight_About3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/Icons/Insight_About1_3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navAbout.setIcon(icon4)
         self.navAbout.setIconSize(QtCore.QSize(25, 25))
         self.navAbout.setCheckable(True)
@@ -339,8 +345,8 @@ class Ui_MainWindow(object):
         self.navImp.setStyleSheet("\n"
 "width : 250px;")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/Icons/import.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon5.addPixmap(QtGui.QPixmap(":/Icons/import_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon5.addPixmap(QtGui.QPixmap(":/Icons/Insight_Settings3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(":/Icons/Insight_Settings1_3.5.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.navImp.setIcon(icon5)
         self.navImp.setIconSize(QtCore.QSize(25, 25))
         self.navImp.setCheckable(True)
@@ -363,52 +369,14 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.widget_4.setObjectName("widget_4")
-        self.textStatus = QtWidgets.QTextBrowser(self.widget_4)
-        self.textStatus.setGeometry(QtCore.QRect(90, 130, 1101, 771))
-        self.textStatus.setStyleSheet("font: 10pt \"Open Sans\";\n"
-"color:#171725;\n"
-"background-color: rgb(247, 248, 249);\n"
-"\n"
-"")
-        self.textStatus.setObjectName("textStatus")
-        self.inpIp = QtWidgets.QLineEdit(self.widget_4)
-        self.inpIp.setGeometry(QtCore.QRect(286, 41, 201, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.inpIp.setFont(font)
-        self.inpIp.setStyleSheet("")
-        self.inpIp.setObjectName("inpIp")
         self.gridLayoutWidget = QtWidgets.QWidget(self.widget_4)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(628, 10, 711, 101))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(1100, 10, 451, 81))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setContentsMargins(150, 10, 150, 10)
+        self.gridLayout.setContentsMargins(20, 0, 20, 0)
         self.gridLayout.setHorizontalSpacing(20)
+        self.gridLayout.setVerticalSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
-        self.btnConnect = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.btnConnect.setStyleSheet("QPushButton{\n"
-"background-color:#103782;\n"
-"border-radius: 5px;\n"
-"border:2px solid #103782;\n"
-"height:40px;\n"
-"width:150px;\n"
-"font: 12pt \"Open Sans\";\n"
-"color:#FFFFFF;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"background-color:#1F62E2;\n"
-"border:2px solid#1F62E2;\n"
-"}\n"
-"QPushButton:checked{\n"
-"border:2px solid #103782;\n"
-"background-color:#103782;\n"
-"}")
-        self.btnConnect.setCheckable(True)
-        self.btnConnect.setAutoExclusive(True)
-        self.btnConnect.setAutoDefault(False)
-        self.btnConnect.setObjectName("btnConnect")
-        self.gridLayout.addWidget(self.btnConnect, 0, 0, 1, 1)
         self.btnDisconnect = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.btnDisconnect.setStyleSheet("QPushButton{\n"
 "background-color:#103782;\n"
@@ -433,15 +401,67 @@ class Ui_MainWindow(object):
         self.btnDisconnect.setAutoDefault(False)
         self.btnDisconnect.setObjectName("btnDisconnect")
         self.gridLayout.addWidget(self.btnDisconnect, 0, 1, 1, 1)
+        self.btnConnect = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.btnConnect.setStyleSheet("QPushButton{\n"
+"background-color:#103782;\n"
+"border-radius: 5px;\n"
+"border:2px solid #103782;\n"
+"height:40px;\n"
+"width:150px;\n"
+"font: 12pt \"Open Sans\";\n"
+"color:#FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#1F62E2;\n"
+"border:2px solid#1F62E2;\n"
+"}\n"
+"QPushButton:checked{\n"
+"border:2px solid #103782;\n"
+"background-color:#103782;\n"
+"}")
+        self.btnConnect.setCheckable(True)
+        self.btnConnect.setAutoExclusive(True)
+        self.btnConnect.setAutoDefault(False)
+        self.btnConnect.setObjectName("btnConnect")
+        self.gridLayout.addWidget(self.btnConnect, 0, 0, 1, 1)
         self.btnDisconnect.raise_()
         self.btnConnect.raise_()
-        self.label_6 = QtWidgets.QLabel(self.widget_4)
-        self.label_6.setGeometry(QtCore.QRect(100, 41, 121, 41))
-        self.label_6.setObjectName("label_6")
-        self.label_6.raise_()
-        self.textStatus.raise_()
-        self.inpIp.raise_()
-        self.gridLayoutWidget.raise_()
+        self.gridLayoutWidget_2 = QtWidgets.QWidget(self.widget_4)
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(80, 90, 1451, 841))
+        self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
+        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.verticalLayout_web = QtWidgets.QVBoxLayout()
+        self.verticalLayout_web.setSpacing(0)
+        self.verticalLayout_web.setObjectName("verticalLayout_web")
+        self.widget_11 = QtWidgets.QWidget(self.gridLayoutWidget_2)
+        self.widget_11.setObjectName("widget_11")
+        self.verticalLayout_web.addWidget(self.widget_11)
+        self.gridLayout_5.addLayout(self.verticalLayout_web, 0, 1, 1, 1)
+        self.verticalLayout_bar = QtWidgets.QVBoxLayout()
+        self.verticalLayout_bar.setSpacing(0)
+        self.verticalLayout_bar.setObjectName("verticalLayout_bar")
+        self.widget_10 = QtWidgets.QWidget(self.gridLayoutWidget_2)
+        self.widget_10.setObjectName("widget_10")
+        self.verticalLayout_bar.addWidget(self.widget_10)
+        self.gridLayout_5.addLayout(self.verticalLayout_bar, 0, 0, 1, 1)
+        self.textStatus = QtWidgets.QTextBrowser(self.gridLayoutWidget_2)
+        self.textStatus.setStyleSheet("font: 10pt \"Open Sans\";\n"
+"color:#171725;\n"
+"background-color: rgb(247, 248, 249);\n"
+"\n"
+"")
+        self.textStatus.setObjectName("textStatus")
+        self.gridLayout_5.addWidget(self.textStatus, 1, 0, 1, 1)
+        self.liveTableDataView = QtWidgets.QTableView(self.gridLayoutWidget_2)
+        self.liveTableDataView.setStyleSheet("background-color: rgb(236, 241, 247);")
+        self.liveTableDataView.setAlternatingRowColors(True)
+        self.liveTableDataView.setIconSize(QtCore.QSize(0, 100))
+        self.liveTableDataView.setShowGrid(False)
+        self.liveTableDataView.setObjectName("liveTableDataView")
+        self.gridLayout_5.addWidget(self.liveTableDataView, 1, 1, 1, 1)
         self.stackedWidget.addWidget(self.homePage)
         self.exportPage = QtWidgets.QWidget()
         self.exportPage.setObjectName("exportPage")
@@ -842,6 +862,26 @@ class Ui_MainWindow(object):
         self.btnImpExcel.setAutoExclusive(True)
         self.btnImpExcel.setObjectName("btnImpExcel")
         self.gridLayout_2.addWidget(self.btnImpExcel, 0, 1, 1, 1)
+        self.label_8 = QtWidgets.QLabel(self.widget_5)
+        self.label_8.setGeometry(QtCore.QRect(1250, 130, 161, 61))
+        self.label_8.setObjectName("label_8")
+        self.inpRackSlot = QtWidgets.QLineEdit(self.widget_5)
+        self.inpRackSlot.setGeometry(QtCore.QRect(1442, 140, 201, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.inpRackSlot.setFont(font)
+        self.inpRackSlot.setStyleSheet("")
+        self.inpRackSlot.setObjectName("inpRackSlot")
+        self.label_6 = QtWidgets.QLabel(self.widget_5)
+        self.label_6.setGeometry(QtCore.QRect(1254, 60, 121, 41))
+        self.label_6.setObjectName("label_6")
+        self.inpIp = QtWidgets.QLineEdit(self.widget_5)
+        self.inpIp.setGeometry(QtCore.QRect(1440, 60, 201, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.inpIp.setFont(font)
+        self.inpIp.setStyleSheet("")
+        self.inpIp.setObjectName("inpIp")
         self.logImp = QtWidgets.QTextBrowser(self.importPage)
         self.logImp.setGeometry(QtCore.QRect(0, 810, 1601, 141))
         self.logImp.setObjectName("logImp")
@@ -865,16 +905,15 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_4.setText(_translate("MainWindow", "PLCInsight Pro"))
+        self.label_4.setText(_translate("MainWindow", "SKEW"))
         self.navHome.setText(_translate("MainWindow", "  Home"))
         self.navExport.setText(_translate("MainWindow", "  Export"))
         self.navLog.setText(_translate("MainWindow", "  Log"))
         self.navHelp.setText(_translate("MainWindow", "  Help"))
         self.navAbout.setText(_translate("MainWindow", "  About"))
         self.navImp.setText(_translate("MainWindow", "  Settings"))
-        self.btnConnect.setText(_translate("MainWindow", "Connect"))
         self.btnDisconnect.setText(_translate("MainWindow", "Disconnect"))
-        self.label_6.setText(_translate("MainWindow", "Enter PLC IP  :"))
+        self.btnConnect.setText(_translate("MainWindow", "Connect"))
         self.label_2.setText(_translate("MainWindow", "  From :"))
         self.label_3.setText(_translate("MainWindow", "  To :"))
         self.show_data_btn.setText(_translate("MainWindow", "Show Data"))
@@ -895,15 +934,15 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Open Sans\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">PLCInsight Pro</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">InsightPro</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt; font-weight:600;\"><br /></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt; font-weight:600;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt;\">                          Welcome to PLCInsight Pro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt;\">                          Welcome to InsightPro, your ultimate solution for efficient data handling, analytics, visualization from Programmable Logic Controllers (PLCs).</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Introduction:</span></p>\n"
-"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">PLCInsight Pro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, PLCInsight Pro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Visualizing your data is made easy with PLCInsight Pro\'s intuitive interface, allowing you to explore your data in meaningful ways. Whether you\'re monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.</li>\n"
-"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Experience the next level of PLC data management with PLCInsight Pro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.</li></ul>\n"
+"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">InsightPro is a cutting-edge software designed to streamline the process of fetching data from PLCs, empowering you to delve deep into your industrial operations. With its robust analytics engine, InsightPro provides unparalleled insights into your data, uncovering trends, anomalies, and correlations that drive informed decision-making.</li>\n"
+"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Visualizing your data is made easy with InsightPro\'s intuitive interface, allowing you to explore your data in meaningful ways. Whether you\'re monitoring production metrics, analyzing equipment performance, or optimizing processes, our visualization tools help you grasp the full picture with clarity and precision.</li>\n"
+"<li style=\" font-family:\'Poppins\'; font-size:10pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Experience the next level of PLC data management with InsightPro. Revolutionize your operations, maximize efficiency, and unlock the full potential of your industrial processes.</li></ul>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Poppins\'; font-size:10pt; font-weight:600;\">Who Can Benefit?</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Poppins\'; font-size:10pt;\"><br /></p>\n"
@@ -924,6 +963,8 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "For Reference, Download the PLC DB Configurable file"))
         self.label.setText(_translate("MainWindow", "Upload the new PLC DB Configuration"))
         self.btnImpExcel.setText(_translate("MainWindow", "Open"))
+        self.label_8.setText(_translate("MainWindow", "Enter Rack and Slot :"))
+        self.label_6.setText(_translate("MainWindow", "Enter PLC IP  :"))
 import main_resource_rc
 
 
