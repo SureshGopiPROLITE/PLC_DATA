@@ -55,6 +55,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         self.setFont(QFont("Open Sans"))
         self.logcon = self.findChild(QtWidgets.QTextEdit, 'connStatus')
         self.activateLicense.clicked.connect(self.licence)
+        self.btnConnectDb.clicked.connect(self.dbConnection1)
         self.btnConnectDb.clicked.connect(self.dbConnection)
         self.btnConnectDb.clicked.connect(self.timerTable)
 
@@ -154,13 +155,12 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     
     def show_bar(self):
         try:
-            
             sql = """
                     SELECT *
                     FROM plc_data
                     WHERE TimeStamp >= DATEADD(WEEK, -1, GETDATE())
                     """
-            self.df_bargh = pd.read_sql_query(sql, self.con)
+            self.df_bargh = pd.read_sql_query(sql, self.conn1)
             df = self.df_bargh
 
             df['TimeStamp'] = pd.to_datetime(df['TimeStamp'], errors='coerce', infer_datetime_format=True)
@@ -289,6 +289,11 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.navImp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.importPage))
                 self.Ui.navAbout.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.aboutPage))
                 self.Ui.btnImpExcel.clicked.connect(self.open_excel_file)
+                
+                self.Ui.liveTableDataView.setColumnWidth(0, 200)
+                self.Ui.liveTableDataView.setColumnWidth(1, 200)
+                self.Ui.liveTableDataView.setColumnWidth(2, 100)
+                self.Ui.liveTableDataView.setColumnWidth(3, 100)
                 
             else:
                 self.logcon.append('Error Licence expired: Contact admin')
@@ -649,6 +654,23 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             # Now you can use the result as needed
                                                                            
 
+    def dbConnection1(self):
+        try:
+            self.conn1 = pyodbc.connect(
+                'DRIVER=SQL Server;'
+                'SERVER=SURESHGOPI;'
+                'DATABASE=PLCDB2;'
+            )
+            self.cursor1 = self.conn1.cursor()
+            self.engine1 = create_engine('mssql+pyodbc://SURESHGOPI/PLCDB2?driver=SQL+Server')
+            self.con1 = self.engine1.connect()
+
+            self.logcon.append('SQL DB is connected')
+
+        except Exception as e:
+            print("Error connecting to database:", e)
+            self.logcon.append("Error connecting to database:" + str(e))
+
 
     def dbConnection(self):
         try:
@@ -723,14 +745,15 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
 
             self.plcIP = self.Ui.inpIp.text()
             self.rackandslot = self.Ui.inpRackSlot.text()
-            rack, slot = map(int, self.rackandslot.split(','))
+            # rack, slot = map(int, self.rackandslot.split(','))
             print(self.plcIP)
             query = text('SELECT * FROM Info_DB')
             self.dfInfo = pd.read_sql_query(query, self.con)
-            if self.plcIP == "":
-                # self.rackandslot = self.dfInfo.loc[5, 'Rack_slot']
-                # rack, slot = int(map(int, self.rackandslot.split(',')))
-                
+            if self.plcIP == "" and self.rackandslot == "":
+                self.rackandslot = self.dfInfo.loc[5, 'Info']
+                rack, slot = map(int, self.rackandslot.split(','))
+                # rack = int(rack)
+                # slot = int(slot)
                 self.plcIP = self.dfInfo.loc[0, 'Info']               
                 self.current_date = datetime.now()
                 self.plc = snap7.client.Client()
@@ -748,8 +771,9 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 # self.insert_data_from_notepad()
                 self.run_logging()
             elif self.plcIP:
-                # query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
-                # self.cursor.execute(query, (self.rackandslot, "Rack_slot"))
+                query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
+                self.cursor.execute(query, (self.rackandslot, "Info"))
+                rack, slot = map(int, self.rackandslot.split(','))
 
                 query = "UPDATE Info_DB SET Info = ? WHERE CAST(Particulars AS NVARCHAR(MAX)) = ?"
                 # Execute the query with parameters
@@ -757,8 +781,8 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.cursor.commit()
                 self.current_date = datetime.now()
                 self.plc = snap7.client.Client()
-                self.plc.connect(self.plcIP, 0, 1)
-                # self.plc.connect(self.plcIP, rack, slot)
+                # self.plc.connect(self.plcIP, 0, 1)
+                self.plc.connect(self.plcIP, rack, slot)
                 print("PLC Connected" , self.plc)
                 print("DB Connected", self.cursor)
                 print("DB Connected", self.conn)
@@ -883,13 +907,14 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
         self.monitor_timer = QTimer(self)
         self.monitor_timer.timeout.connect(self.timer1)
         print("Timer done : ",datetime.now())
-        self.monitor_timer.start(2000)        
+        self.monitor_timer.start(5000)        
         
     def timer1 (self):
         if self.local_conn == False:                
             self.plcConnect() 
         elif self.local_connStatus == True:
             #self.run_logging()
+            
             self.thread_and_handle(self.run_logging)
             print("Logging done : ",datetime.now())
         else:
@@ -978,7 +1003,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     #         self.send_email()
 
     def run_logging(self):
-        try: 
+        try:
             if self.local_connStatus == True:
                 self.current_date = datetime.now()
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
@@ -995,13 +1020,15 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 start = datetime.now()
                 self.cursor.executemany('''INSERT INTO plc_data (TimeStamp, Name, DataType, Value)
                                     VALUES (?, ?, ?, ?)''', values)
+                self.conn.commit()
                 end = datetime.now()
                 # Inserting data to txt fife foe optmize the time
                 # with open('ValuesData.txt', 'a') as file:  
                 #     file.write(str(values) + '\n') 
                 result = end - start
                 print("insert indb difference time", result )
-                self.conn.commit()
+
+                
 
 
                 self.local_conn = True
@@ -1013,10 +1040,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.liveTableDataView.setModel(self.model)            
 
                 # Set column widths for better display
-                self.Ui.liveTableDataView.setColumnWidth(0, 200)
-                self.Ui.liveTableDataView.setColumnWidth(1, 200)
-                self.Ui.liveTableDataView.setColumnWidth(2, 100)
-                self.Ui.liveTableDataView.setColumnWidth(3, 100)
+                
 
                 #########Calculate 1st and last data timestamp difference################
                 # Define the date strings with milliseconds and the format they follow
@@ -1026,7 +1050,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 # Convert the strings to datetime objects
                 start_time = datetime.strptime(start_time_str, date_format)
                 end_time = datetime.strptime(end_time_str, date_format)
-
+                
                 
                 
                 # Calculate the time difference
@@ -1290,12 +1314,12 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                     WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'
                     
                     UNION ALL
-                    
-                    SELECT * FROM plc_data_archive
+                   
+                     SELECT * FROM plc_data_archive
                     WHERE TimeStamp BETWEEN '{from_time}' AND '{to_time}'
                     ORDER BY TimeStamp ASC; 
                     """
-                    df = pd.read_sql_query(query, self.conn)
+                    df = pd.read_sql_query(query, self.conn1)
                 else:
                     print(date_diff)
                     # Query database for data between specified timestamps   
@@ -1323,7 +1347,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                     WHERE TimeStamp >= DATEADD(HOUR, -{hours_ago}, GETDATE())
                     ORDER BY TimeStamp ASC; 
                     """
-                df = pd.read_sql_query(sql, self.conn)
+                df = pd.read_sql_query(sql, self.conn1)
                 
             else:
                 print("Select a valid time range")
@@ -1374,7 +1398,6 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     def close_application(self):
         # Close the application
         self.Ui.close()
-
 
 class PandasTableModel(QAbstractTableModel):
     def __init__(self, data):
