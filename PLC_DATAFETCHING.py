@@ -156,7 +156,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
     def show_bar(self):
         try:
             sql = """
-                    SELECT *
+                    SELECT TimeStamp, Value
                     FROM plc_data
                     WHERE TimeStamp >= DATEADD(WEEK, -1, GETDATE())
                     """
@@ -289,11 +289,8 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.Ui.navImp.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.importPage))
                 self.Ui.navAbout.clicked.connect(lambda: self.Ui.stackedWidget.setCurrentWidget(self.Ui.aboutPage))
                 self.Ui.btnImpExcel.clicked.connect(self.open_excel_file)
+
                 
-                self.Ui.liveTableDataView.setColumnWidth(0, 200)
-                self.Ui.liveTableDataView.setColumnWidth(1, 200)
-                self.Ui.liveTableDataView.setColumnWidth(2, 100)
-                self.Ui.liveTableDataView.setColumnWidth(3, 100)
                 
             else:
                 self.logcon.append('Error Licence expired: Contact admin')
@@ -914,7 +911,16 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
             self.plcConnect() 
         elif self.local_connStatus == True:
             #self.run_logging()
-            
+            selected_columns = ['timestamp', 'Name', 'data_type', 'Value']
+            self.df = self.dfPlcdb[selected_columns]
+            self.model = PandasTableModel(self.df)
+            self.Ui.liveTableDataView.setModel(self.model)
+
+            self.Ui.liveTableDataView.setColumnWidth(0, 200)
+            self.Ui.liveTableDataView.setColumnWidth(1, 200)
+            self.Ui.liveTableDataView.setColumnWidth(2, 100)
+            self.Ui.liveTableDataView.setColumnWidth(3, 100 )
+
             self.thread_and_handle(self.run_logging)
             print("Logging done : ",datetime.now())
         else:
@@ -1034,10 +1040,7 @@ class PLCDataLogger(QtWidgets.QMainWindow, QDialog):
                 self.local_conn = True
 
 
-                selected_columns = ['timestamp', 'Name', 'data_type', 'Value']
-                self.df = self.dfPlcdb[selected_columns]
-                self.model = PandasTableModel(self.df)
-                self.Ui.liveTableDataView.setModel(self.model)            
+                            
 
                 # Set column widths for better display
                 
